@@ -1,0 +1,11 @@
+image_id,path,dataset,shear_stress,supplementation,replicate,section,channel_1
+Control_s1,Control/DeepLearning-training_D01_s1_w41364E118-F147-42AF-9791-4D9D748C297A.tif,ve_strat,static,Control,01,,VE-cadherin
+Control_s2,Control/DeepLearning-training_D01_s2_w4A7E19D0A-4511-4549-B0BD-E3800323A00D.tif,ve_strat,static,Control,02,,VE-cadherin
+Control_s3,Control/DeepLearning-training_D01_s3_w4C7A051C0-E492-44D9-887C-06022B784668.tif,ve_strat,static,Control,03,,VE-cadherin
+Control_s5,Control/DeepLearning-training_D01_s5_w4068E9BD7-48F9-4CFB-AEE5-601085529F84.tif,ve_strat,static,Control,05,,VE-cadherin
+Control_s6,Control/DeepLearning-training_D01_s6_w4362E6207-DFA6-42CF-B1E5-E8143FC2DFAE.tif,ve_strat,static,Control,06,,VE-cadherin
+Histamine_s1,Histamine/DeepLearning-training_E05_s1_w4593584EB-D0C5-4964-B7F6-FC536A161F42.tif,ve_strat,inflamed,Histamine,01,,VE-cadherin
+Histamine_s2,Histamine/DeepLearning-training_E05_s2_w480078C3B-1507-42C2-8E76-A612A6C2D76E.tif,ve_strat,inflamed,Histamine,02,,VE-cadherin
+Histamine_s4,Histamine/DeepLearning-training_E05_s4_w4D44544E4-4CE3-43E1-884D-6855C18019AE.tif,ve_strat,inflamed,Histamine,04,,VE-cadherin
+Histamine_s5,Histamine/DeepLearning-training_E05_s5_w43D202A3A-E338-4BA6-B512-F2194BCAF102.tif,ve_strat,inflamed,Histamine,05,,VE-cadherin
+Histamine_s6,Histamine/DeepLearning-training_E05_s6_w47254F1DF-3EA4-4B22-A4D3-42761421F622.tif,ve_strat,inflamed,Histamine,06,,VE-cadherin

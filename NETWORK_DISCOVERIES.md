@@ -8,21 +8,31 @@ Using graph/network analysis on the EndoPiGraph-AJmorph pipeline results, we ide
 
 ---
 
-## Discovery 1: Clustering Coefficient Increases Under Flow
+## ~~Discovery 1: Clustering Coefficient Increases Under Flow~~ (CONFOUNDED)
 
-**Finding:** The local clustering coefficient (probability that a cell's neighbors are also neighbors of each other) increases significantly under flow conditions.
+**Original finding:** Clustering coefficient appears to increase under flow.
 
 | Condition | Median Clustering | Mean | Std | n |
 |-----------|------------------|------|-----|---|
 | Static    | 0.376            | 0.381| 0.073| 30 |
 | 6 dyne    | 0.469            | 0.442| 0.055| 30 |
+| high_shear| 0.331            | 0.309| 0.122| 30 |
 
-**Per-image replicate statistics:**
-- Median difference: +0.093 [95% CI: 0.036, 0.127]
-- Mann-Whitney U = 222.0, **p = 7.70e-04**
-- Effect size r = 0.507 (large)
+**CRITICAL: Confounded by Graph Density**
 
-**Biological interpretation:** Flow reorganizes cells into tighter triangular neighborhoods, creating a more interconnected tissue architecture.
+Regression analysis controlling for mean degree:
+```
+clustering ~ condition + mean_degree + n_cells
+R² = 0.937 (mean degree explains 94% of variance!)
+
+is_6dyne coef: -0.039, p = 1.34e-04 (NEGATIVE after control)
+is_high_shear coef: -0.037, p = 3.53e-05 (NEGATIVE after control)
+mean_degree coef: 0.113, p = 7.69e-46
+```
+
+Normalized clustering (C/C_random): static vs 6dyne **p = 0.68** (NOT significant)
+
+**Conclusion:** The raw clustering increase is driven by changes in graph density (more edges = higher clustering mechanically). After controlling for density, the effect disappears. This finding is **withdrawn**.
 
 ---
 

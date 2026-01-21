@@ -50,12 +50,13 @@ def load_all_data(runs_dir: Path):
         image_id = img_dir.name
 
         # Determine condition from image name
+        # Note: "18-20dyn" means high shear (18-20 dyne/cm²)
         if "static" in image_id.lower():
             condition = "static"
         elif "6dyn" in image_id.lower() or "6dyne" in image_id.lower():
             condition = "6dyne"
-        elif "20dyn" in image_id.lower():
-            condition = "20dyne"
+        elif "18-20dyn" in image_id.lower() or "20dyn" in image_id.lower() or "high_shear" in image_id.lower():
+            condition = "high_shear"
         else:
             condition = "unknown"
 
@@ -71,7 +72,7 @@ def load_all_data(runs_dir: Path):
 
 
 def compute_per_image_clustering(cells_df, edges_df):
-    """Compute mean clustering coefficient per image."""
+    """Compute mean clustering coefficient per image, with density metrics."""
     results = []
 
     for image_id in cells_df["image_id"].unique():
@@ -89,10 +90,29 @@ def compute_per_image_clustering(cells_df, edges_df):
         clustering = nx.clustering(G)
         mean_clustering = np.mean(list(clustering.values())) if clustering else 0
 
+        # Compute mean degree (for density control)
+        degrees = [d for n, d in G.degree()]
+        mean_degree = np.mean(degrees) if degrees else 0
+
+        # Compute random baseline clustering (Erdos-Renyi expectation)
+        n_nodes = G.number_of_nodes()
+        n_edges_actual = G.number_of_edges()
+        if n_nodes > 1:
+            p = 2 * n_edges_actual / (n_nodes * (n_nodes - 1))  # edge probability
+            c_random = p  # Expected clustering for random graph
+        else:
+            c_random = 0
+
+        # Normalized clustering
+        c_normalized = mean_clustering / c_random if c_random > 0 else 0
+
         results.append({
             "image_id": image_id,
             "condition": condition,
             "mean_clustering": mean_clustering,
+            "mean_degree": mean_degree,
+            "c_random": c_random,
+            "c_normalized": c_normalized,
             "n_cells": len(img_cells),
             "n_edges": len(img_edges)
         })
@@ -260,7 +280,7 @@ def compute_per_image_area_degree_corr(cells_df, edges_df):
     return pd.DataFrame(results)
 
 
-def test_condition_difference(df, metric_col, condition_a="static", condition_b="6dyne"):
+def test_condition_difference(df, metric_col, condition_a="static", condition_b="6dyne", condition_c=None):
     """Mann-Whitney U test between conditions on per-image metric."""
     a = df[df["condition"] == condition_a][metric_col].dropna()
     b = df[df["condition"] == condition_b][metric_col].dropna()
@@ -349,22 +369,75 @@ def main():
 
     clustering_df = compute_per_image_clustering(cells, edges)
     print(f"\nPer-image clustering coefficients:")
-    for cond in ["static", "6dyne"]:
+    for cond in ["static", "6dyne", "high_shear"]:
         subset = clustering_df[clustering_df["condition"] == cond]["mean_clustering"]
         if len(subset) > 0:
             print(f"  {cond}: median={np.median(subset):.3f}, mean={np.mean(subset):.3f}, "
                   f"std={np.std(subset):.3f}, n={len(subset)}")
 
-    test1 = test_condition_difference(clustering_df, "mean_clustering")
-    if test1:
-        print(f"\nMann-Whitney U test (static vs 6dyne):")
-        print(f"  Median diff: {test1['median_diff']:.3f} [95% CI: {test1['ci_95_low']:.3f}, {test1['ci_95_high']:.3f}]")
-        print(f"  U = {test1['mann_whitney_U']:.1f}, p = {test1['p_value']:.2e}")
-        print(f"  Effect size r = {test1['effect_size_r']:.3f}")
-        results["discovery_1_clustering"] = {
-            "per_image_stats": clustering_df.to_dict(orient="records"),
-            "test": test1
+    # Test all pairwise comparisons
+    test1_pairs = {}
+    for cond_a, cond_b in [("static", "6dyne"), ("static", "high_shear"), ("6dyne", "high_shear")]:
+        test = test_condition_difference(clustering_df, "mean_clustering", cond_a, cond_b)
+        if test:
+            print(f"\nMann-Whitney U test ({cond_a} vs {cond_b}):")
+            print(f"  Median diff: {test['median_diff']:.3f} [95% CI: {test['ci_95_low']:.3f}, {test['ci_95_high']:.3f}]")
+            print(f"  U = {test['mann_whitney_U']:.1f}, p = {test['p_value']:.2e}")
+            print(f"  Effect size r = {test['effect_size_r']:.3f}")
+            test1_pairs[f"{cond_a}_vs_{cond_b}"] = test
+
+    # Density control: regression clustering ~ condition + mean_degree + n_cells
+    print("\n** Density Control: Regression Analysis **")
+    print("  Model: clustering ~ condition + mean_degree + n_cells")
+    try:
+        from scipy.stats import pearsonr
+        import statsmodels.api as sm
+        from statsmodels.formula.api import ols
+
+        # Create condition dummies
+        clustering_df["is_6dyne"] = (clustering_df["condition"] == "6dyne").astype(int)
+        clustering_df["is_high_shear"] = (clustering_df["condition"] == "high_shear").astype(int)
+
+        # Fit model
+        model = ols("mean_clustering ~ is_6dyne + is_high_shear + mean_degree + n_cells",
+                   data=clustering_df).fit()
+        print(f"\n  Regression results (controlling for density):")
+        print(f"    is_6dyne coef: {model.params['is_6dyne']:.4f}, p = {model.pvalues['is_6dyne']:.2e}")
+        print(f"    is_high_shear coef: {model.params['is_high_shear']:.4f}, p = {model.pvalues['is_high_shear']:.2e}")
+        print(f"    mean_degree coef: {model.params['mean_degree']:.4f}, p = {model.pvalues['mean_degree']:.2e}")
+        print(f"    R-squared: {model.rsquared:.3f}")
+
+        density_control = {
+            "is_6dyne_coef": float(model.params['is_6dyne']),
+            "is_6dyne_p": float(model.pvalues['is_6dyne']),
+            "is_high_shear_coef": float(model.params['is_high_shear']),
+            "is_high_shear_p": float(model.pvalues['is_high_shear']),
+            "mean_degree_coef": float(model.params['mean_degree']),
+            "mean_degree_p": float(model.pvalues['mean_degree']),
+            "r_squared": float(model.rsquared)
         }
+
+        # Also test normalized clustering (C / C_random)
+        print(f"\n  Normalized clustering (C / C_random):")
+        for cond in ["static", "6dyne", "high_shear"]:
+            subset = clustering_df[clustering_df["condition"] == cond]["c_normalized"]
+            if len(subset) > 0:
+                print(f"    {cond}: median={np.median(subset):.2f}, mean={np.mean(subset):.2f}")
+
+        test_norm = test_condition_difference(clustering_df, "c_normalized", "static", "6dyne")
+        if test_norm:
+            print(f"  Normalized clustering (static vs 6dyne): p = {test_norm['p_value']:.2e}")
+            density_control["normalized_test_static_vs_6dyne"] = test_norm
+
+    except ImportError:
+        print("  (statsmodels not available - skipping regression)")
+        density_control = None
+
+    results["discovery_1_clustering"] = {
+        "per_image_stats": clustering_df.to_dict(orient="records"),
+        "tests": test1_pairs,
+        "density_control": density_control
+    }
 
     # Discovery 2: Reticular junction percentage
     print("\n" + "-"*70)
@@ -373,22 +446,26 @@ def main():
 
     reticular_df = compute_per_image_reticular_pct(edges)
     print(f"\nPer-image reticular %:")
-    for cond in ["static", "6dyne"]:
+    for cond in ["static", "6dyne", "high_shear"]:
         subset = reticular_df[reticular_df["condition"] == cond]["reticular_pct"]
         if len(subset) > 0:
             print(f"  {cond}: median={np.median(subset):.1f}%, mean={np.mean(subset):.1f}%, "
                   f"std={np.std(subset):.1f}%, n={len(subset)}")
 
-    test2 = test_condition_difference(reticular_df, "reticular_pct")
-    if test2:
-        print(f"\nMann-Whitney U test (static vs 6dyne):")
-        print(f"  Median diff: {test2['median_diff']:.1f}% [95% CI: {test2['ci_95_low']:.1f}%, {test2['ci_95_high']:.1f}%]")
-        print(f"  U = {test2['mann_whitney_U']:.1f}, p = {test2['p_value']:.2e}")
-        print(f"  Effect size r = {test2['effect_size_r']:.3f}")
-        results["discovery_2_reticular"] = {
-            "per_image_stats": reticular_df.to_dict(orient="records"),
-            "test": test2
-        }
+    test2_pairs = {}
+    for cond_a, cond_b in [("static", "6dyne"), ("static", "high_shear"), ("6dyne", "high_shear")]:
+        test = test_condition_difference(reticular_df, "reticular_pct", cond_a, cond_b)
+        if test:
+            print(f"\nMann-Whitney U test ({cond_a} vs {cond_b}):")
+            print(f"  Median diff: {test['median_diff']:.1f}% [95% CI: {test['ci_95_low']:.1f}%, {test['ci_95_high']:.1f}%]")
+            print(f"  U = {test['mann_whitney_U']:.1f}, p = {test['p_value']:.2e}")
+            print(f"  Effect size r = {test['effect_size_r']:.3f}")
+            test2_pairs[f"{cond_a}_vs_{cond_b}"] = test
+
+    results["discovery_2_reticular"] = {
+        "per_image_stats": reticular_df.to_dict(orient="records"),
+        "tests": test2_pairs
+    }
 
     # Discovery 3: Degree-occupancy correlation
     print("\n" + "-"*70)
@@ -397,7 +474,7 @@ def main():
 
     deg_occ_df = compute_per_image_degree_occupancy_corr(cells, edges)
     print(f"\nPer-image Spearman r (degree vs occupancy):")
-    for cond in ["static", "6dyne"]:
+    for cond in ["static", "6dyne", "high_shear"]:
         subset = deg_occ_df[deg_occ_df["condition"] == cond]["spearman_r"]
         if len(subset) > 0:
             print(f"  {cond}: median r={np.median(subset):.3f}, mean r={np.mean(subset):.3f}, "
@@ -419,22 +496,26 @@ def main():
 
     triangle_df = compute_per_image_triangle_stats(cells, edges)
     print(f"\nPer-image all-reticular triangle %:")
-    for cond in ["static", "6dyne"]:
+    for cond in ["static", "6dyne", "high_shear"]:
         subset = triangle_df[triangle_df["condition"] == cond]["all_reticular_triangle_pct"]
         if len(subset) > 0:
             print(f"  {cond}: median={np.median(subset):.1f}%, mean={np.mean(subset):.1f}%, "
                   f"std={np.std(subset):.1f}%, n={len(subset)}")
 
-    test4 = test_condition_difference(triangle_df, "all_reticular_triangle_pct")
-    if test4:
-        print(f"\nMann-Whitney U test (static vs 6dyne):")
-        print(f"  Median diff: {test4['median_diff']:.1f}% [95% CI: {test4['ci_95_low']:.1f}%, {test4['ci_95_high']:.1f}%]")
-        print(f"  U = {test4['mann_whitney_U']:.1f}, p = {test4['p_value']:.2e}")
-        print(f"  Effect size r = {test4['effect_size_r']:.3f}")
-        results["discovery_4_triangles"] = {
-            "per_image_stats": triangle_df.to_dict(orient="records"),
-            "test": test4
-        }
+    test4_pairs = {}
+    for cond_a, cond_b in [("static", "6dyne"), ("static", "high_shear"), ("6dyne", "high_shear")]:
+        test = test_condition_difference(triangle_df, "all_reticular_triangle_pct", cond_a, cond_b)
+        if test:
+            print(f"\nMann-Whitney U test ({cond_a} vs {cond_b}):")
+            print(f"  Median diff: {test['median_diff']:.1f}% [95% CI: {test['ci_95_low']:.1f}%, {test['ci_95_high']:.1f}%]")
+            print(f"  U = {test['mann_whitney_U']:.1f}, p = {test['p_value']:.2e}")
+            print(f"  Effect size r = {test['effect_size_r']:.3f}")
+            test4_pairs[f"{cond_a}_vs_{cond_b}"] = test
+
+    results["discovery_4_triangles"] = {
+        "per_image_stats": triangle_df.to_dict(orient="records"),
+        "tests": test4_pairs
+    }
 
     # Discovery 5: Area-degree correlation
     print("\n" + "-"*70)
@@ -443,30 +524,33 @@ def main():
 
     area_deg_df = compute_per_image_area_degree_corr(cells, edges)
     print(f"\nPer-image Spearman r (area vs degree):")
-    for cond in ["static", "6dyne"]:
+    for cond in ["static", "6dyne", "high_shear"]:
         subset = area_deg_df[area_deg_df["condition"] == cond]["spearman_r"]
         if len(subset) > 0:
             print(f"  {cond}: median r={np.median(subset):.3f}, mean r={np.mean(subset):.3f}, "
                   f"range=[{np.min(subset):.3f}, {np.max(subset):.3f}], n={len(subset)}")
 
-    test5_static = test_correlation_differs_from_zero(area_deg_df[area_deg_df["condition"] == "static"])
-    test5_flow = test_correlation_differs_from_zero(area_deg_df[area_deg_df["condition"] == "6dyne"])
-    test5_compare = test_condition_difference(area_deg_df, "spearman_r")
+    # Test each condition differs from 0
+    test5_by_cond = {}
+    for cond in ["static", "6dyne", "high_shear"]:
+        test = test_correlation_differs_from_zero(area_deg_df[area_deg_df["condition"] == cond])
+        if test:
+            print(f"\n{cond}: median r = {test['median_r']:.3f}, differs from 0: p = {test['p_value']:.2e}")
+            test5_by_cond[cond] = test
 
-    if test5_static:
-        print(f"\nStatic: median r = {test5_static['median_r']:.3f}, differs from 0: p = {test5_static['p_value']:.2e}")
-    if test5_flow:
-        print(f"6dyne: median r = {test5_flow['median_r']:.3f}, differs from 0: p = {test5_flow['p_value']:.2e}")
-    if test5_compare:
-        print(f"\nCondition comparison:")
-        print(f"  Median diff: {test5_compare['median_diff']:.3f} [95% CI: {test5_compare['ci_95_low']:.3f}, {test5_compare['ci_95_high']:.3f}]")
-        print(f"  U = {test5_compare['mann_whitney_U']:.1f}, p = {test5_compare['p_value']:.2e}")
+    # Pairwise comparisons
+    test5_pairs = {}
+    print(f"\nPairwise condition comparisons:")
+    for cond_a, cond_b in [("static", "6dyne"), ("static", "high_shear"), ("6dyne", "high_shear")]:
+        test = test_condition_difference(area_deg_df, "spearman_r", cond_a, cond_b)
+        if test:
+            print(f"  {cond_a} vs {cond_b}: Median diff = {test['median_diff']:.3f}, p = {test['p_value']:.2e}")
+            test5_pairs[f"{cond_a}_vs_{cond_b}"] = test
 
     results["discovery_5_area_degree"] = {
         "per_image_stats": area_deg_df.to_dict(orient="records"),
-        "test_static": test5_static,
-        "test_flow": test5_flow,
-        "test_compare": test5_compare
+        "tests_differ_from_zero": test5_by_cond,
+        "tests_pairwise": test5_pairs
     }
 
     # Save results

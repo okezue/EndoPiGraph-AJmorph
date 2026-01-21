@@ -8,893 +8,1421 @@
     "per_image_stats": [
       {
         "image_id": "EGM2_regular_18-20dyn-01",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.4515110752398888,
+        "mean_degree": 4.779661016949152,
+        "c_random": 0.027157164869029277,
+        "c_normalized": 16.62585462869151,
         "n_cells": 177,
-        "n_edges": 423
+        "n_edges": 423,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-02",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.46765873015873016,
+        "mean_degree": 4.788888888888889,
+        "c_random": 0.02675356921166977,
+        "c_normalized": 17.4802369903878,
         "n_cells": 180,
-        "n_edges": 431
+        "n_edges": 431,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-03",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.4519820850009529,
+        "mean_degree": 4.578616352201258,
+        "c_random": 0.0289785845076029,
+        "c_normalized": 15.597107059607058,
         "n_cells": 159,
-        "n_edges": 364
+        "n_edges": 364,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-04",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.4112959338986736,
+        "mean_degree": 3.9452054794520546,
+        "c_random": 0.027208313651393482,
+        "c_normalized": 15.116553681657846,
         "n_cells": 146,
-        "n_edges": 288
+        "n_edges": 288,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-05",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.44261563453180214,
+        "mean_degree": 4.574850299401198,
+        "c_random": 0.027559339153019263,
+        "c_normalized": 16.060458927343742,
         "n_cells": 167,
-        "n_edges": 382
+        "n_edges": 382,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-06",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.4515821812596006,
+        "mean_degree": 4.503225806451613,
+        "c_random": 0.029241726015919563,
+        "c_normalized": 15.443075453677173,
         "n_cells": 155,
-        "n_edges": 349
+        "n_edges": 349,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-07",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.4341825902335456,
+        "mean_degree": 4.063694267515924,
+        "c_random": 0.026049322227666177,
+        "c_normalized": 16.66771159874608,
         "n_cells": 157,
-        "n_edges": 319
+        "n_edges": 319,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-08",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.4450160619803477,
+        "mean_degree": 4.7976190476190474,
+        "c_random": 0.02872825777017394,
+        "c_normalized": 15.490534286502028,
         "n_cells": 168,
-        "n_edges": 403
+        "n_edges": 403,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-09",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.4607644110275689,
+        "mean_degree": 4.484210526315789,
+        "c_random": 0.023725981620718463,
+        "c_normalized": 19.42024647887324,
         "n_cells": 190,
-        "n_edges": 426
+        "n_edges": 426,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-10",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.41348188848188844,
+        "mean_degree": 4.461538461538462,
+        "c_random": 0.028784119106699754,
+        "c_normalized": 14.364931125706985,
         "n_cells": 156,
-        "n_edges": 348
+        "n_edges": 348,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-51",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.15816326530612246,
+        "mean_degree": 2.2448979591836733,
+        "c_random": 0.023143277929728593,
+        "c_normalized": 6.834090909090909,
         "n_cells": 98,
-        "n_edges": 110
+        "n_edges": 110,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-52",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.2561224489795918,
+        "mean_degree": 2.3469387755102042,
+        "c_random": 0.02419524510835262,
+        "c_normalized": 10.585652173913042,
         "n_cells": 98,
-        "n_edges": 115
+        "n_edges": 115,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-53",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.16166666666666665,
+        "mean_degree": 2.1,
+        "c_random": 0.021212121212121213,
+        "c_normalized": 7.62142857142857,
         "n_cells": 100,
-        "n_edges": 105
+        "n_edges": 105,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-54",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.16730442176870747,
+        "mean_degree": 2.5714285714285716,
+        "c_random": 0.023166023166023165,
+        "c_normalized": 7.221974206349206,
         "n_cells": 112,
-        "n_edges": 144
+        "n_edges": 144,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-55",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.28003003003003,
+        "mean_degree": 2.774774774774775,
+        "c_random": 0.025225225225225224,
+        "c_normalized": 11.101190476190476,
         "n_cells": 111,
-        "n_edges": 154
+        "n_edges": 154,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-56",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.16666666666666666,
+        "mean_degree": 2.339622641509434,
+        "c_random": 0.022282120395327943,
+        "c_normalized": 7.479838709677419,
         "n_cells": 106,
-        "n_edges": 124
+        "n_edges": 124,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-57",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.12295345104333869,
+        "mean_degree": 1.9550561797752808,
+        "c_random": 0.022216547497446375,
+        "c_normalized": 5.53431855500821,
         "n_cells": 89,
-        "n_edges": 87
+        "n_edges": 87,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-58",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.1794871794871795,
+        "mean_degree": 1.9423076923076923,
+        "c_random": 0.018857356235997012,
+        "c_normalized": 9.518151815181518,
         "n_cells": 104,
-        "n_edges": 101
+        "n_edges": 101,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-59",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.10350877192982456,
+        "mean_degree": 1.7263157894736842,
+        "c_random": 0.018365061590145577,
+        "c_normalized": 5.636178861788618,
         "n_cells": 95,
-        "n_edges": 82
+        "n_edges": 82,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-60",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.07063492063492063,
+        "mean_degree": 1.5,
+        "c_random": 0.018072289156626505,
+        "c_normalized": 3.9084656084656086,
         "n_cells": 84,
-        "n_edges": 63
+        "n_edges": 63,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-61",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.3148299319727891,
+        "mean_degree": 3.4,
+        "c_random": 0.04927536231884058,
+        "c_normalized": 6.3891956782713075,
         "n_cells": 70,
-        "n_edges": 119
+        "n_edges": 119,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-62",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.2099502487562189,
+        "mean_degree": 2.8955223880597014,
+        "c_random": 0.0438715513342379,
+        "c_normalized": 4.785567010309278,
         "n_cells": 67,
-        "n_edges": 97
+        "n_edges": 97,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-63",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.3507111935683364,
+        "mean_degree": 2.961038961038961,
+        "c_random": 0.03896103896103896,
+        "c_normalized": 9.001587301587302,
         "n_cells": 77,
-        "n_edges": 114
+        "n_edges": 114,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-64",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.38235294117647056,
+        "mean_degree": 3.1470588235294117,
+        "c_random": 0.04697102721685689,
+        "c_normalized": 8.140186915887849,
         "n_cells": 68,
-        "n_edges": 107
+        "n_edges": 107,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-65",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.3399869536855838,
+        "mean_degree": 3.506849315068493,
+        "c_random": 0.0487062404870624,
+        "c_normalized": 6.980357142857143,
         "n_cells": 73,
-        "n_edges": 128
+        "n_edges": 128,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-66",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.3447330447330447,
+        "mean_degree": 3.0606060606060606,
+        "c_random": 0.047086247086247084,
+        "c_normalized": 7.321310702498821,
         "n_cells": 66,
-        "n_edges": 101
+        "n_edges": 101,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-67",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.27994634473507707,
+        "mean_degree": 3.295774647887324,
+        "c_random": 0.047082494969818915,
+        "c_normalized": 5.945868945868944,
         "n_cells": 71,
-        "n_edges": 117
+        "n_edges": 117,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-68",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.3540156361051883,
+        "mean_degree": 3.7313432835820897,
+        "c_random": 0.056535504296698326,
+        "c_normalized": 6.2618285714285715,
         "n_cells": 67,
-        "n_edges": 125
+        "n_edges": 125,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-69",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.2858024691358025,
+        "mean_degree": 2.7777777777777777,
+        "c_random": 0.05241090146750524,
+        "c_normalized": 5.453111111111111,
         "n_cells": 54,
-        "n_edges": 75
+        "n_edges": 75,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_18-20dyn-70",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "mean_clustering": 0.3224242424242424,
+        "mean_degree": 3.0545454545454547,
+        "c_random": 0.05656565656565657,
+        "c_normalized": 5.699999999999999,
         "n_cells": 55,
-        "n_edges": 84
+        "n_edges": 84,
+        "is_6dyne": 0,
+        "is_high_shear": 1
       },
       {
         "image_id": "EGM2_regular_6dyn-21",
         "condition": "6dyne",
         "mean_clustering": 0.49169570267131246,
+        "mean_degree": 5.060975609756097,
+        "c_random": 0.031048930121203053,
+        "c_normalized": 15.83615605278256,
         "n_cells": 164,
-        "n_edges": 415
+        "n_edges": 415,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-22",
         "condition": "6dyne",
         "mean_clustering": 0.46995464852607716,
+        "mean_degree": 5.057142857142857,
+        "c_random": 0.024196855775803144,
+        "c_normalized": 19.422137028069233,
         "n_cells": 210,
-        "n_edges": 531
+        "n_edges": 531,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-23",
         "condition": "6dyne",
         "mean_clustering": 0.4802929223219078,
+        "mean_degree": 5.004830917874396,
+        "c_random": 0.024295295717836875,
+        "c_normalized": 19.768967947539373,
         "n_cells": 207,
-        "n_edges": 518
+        "n_edges": 518,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-24",
         "condition": "6dyne",
         "mean_clustering": 0.4724537037037037,
+        "mean_degree": 5.083333333333333,
+        "c_random": 0.035547785547785545,
+        "c_normalized": 13.290664845173044,
         "n_cells": 144,
-        "n_edges": 366
+        "n_edges": 366,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-25",
         "condition": "6dyne",
         "mean_clustering": 0.47391150128580295,
+        "mean_degree": 5.083798882681564,
+        "c_random": 0.028560667880233506,
+        "c_normalized": 16.593151927437642,
         "n_cells": 179,
-        "n_edges": 455
+        "n_edges": 455,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-26",
         "condition": "6dyne",
         "mean_clustering": 0.461469884757556,
+        "mean_degree": 4.808219178082192,
+        "c_random": 0.033160132262635804,
+        "c_normalized": 13.916406638628862,
         "n_cells": 146,
-        "n_edges": 351
+        "n_edges": 351,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-27",
         "condition": "6dyne",
         "mean_clustering": 0.4720017636684303,
+        "mean_degree": 5.013888888888889,
+        "c_random": 0.035062160062160064,
+        "c_normalized": 13.461856395374399,
         "n_cells": 144,
-        "n_edges": 361
+        "n_edges": 361,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-28",
         "condition": "6dyne",
         "mean_clustering": 0.495599308099308,
+        "mean_degree": 5.141025641025641,
+        "c_random": 0.03316790736145575,
+        "c_normalized": 14.942133752919286,
         "n_cells": 156,
-        "n_edges": 401
+        "n_edges": 401,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-29",
         "condition": "6dyne",
         "mean_clustering": 0.48545186891961084,
+        "mean_degree": 4.596774193548387,
+        "c_random": 0.037372147915027534,
+        "c_normalized": 12.989670008354219,
         "n_cells": 124,
-        "n_edges": 285
+        "n_edges": 285,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-30",
         "condition": "6dyne",
         "mean_clustering": 0.4731240981240981,
+        "mean_degree": 5.238636363636363,
+        "c_random": 0.029935064935064936,
+        "c_normalized": 15.805013256206314,
         "n_cells": 176,
-        "n_edges": 461
+        "n_edges": 461,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-71",
         "condition": "6dyne",
         "mean_clustering": 0.3766439909297052,
+        "mean_degree": 4.12987012987013,
+        "c_random": 0.026992615227909345,
+        "c_normalized": 13.953593890386342,
         "n_cells": 154,
-        "n_edges": 318
+        "n_edges": 318,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-72",
         "condition": "6dyne",
         "mean_clustering": 0.36199186991869914,
+        "mean_degree": 4.048780487804878,
+        "c_random": 0.024839144096962442,
+        "c_normalized": 14.5734437751004,
         "n_cells": 164,
-        "n_edges": 332
+        "n_edges": 332,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-73",
         "condition": "6dyne",
         "mean_clustering": 0.38068535825545174,
+        "mean_degree": 3.5514018691588785,
+        "c_random": 0.03350379121847999,
+        "c_normalized": 11.362456140350877,
         "n_cells": 107,
-        "n_edges": 190
+        "n_edges": 190,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-74",
         "condition": "6dyne",
         "mean_clustering": 0.3108053603955243,
+        "mean_degree": 3.4754098360655736,
+        "c_random": 0.028722395339384907,
+        "c_normalized": 10.821011156034741,
         "n_cells": 122,
-        "n_edges": 212
+        "n_edges": 212,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-75",
         "condition": "6dyne",
         "mean_clustering": 0.34807256235827666,
+        "mean_degree": 3.0,
+        "c_random": 0.03614457831325301,
+        "c_normalized": 9.630007558578988,
         "n_cells": 84,
-        "n_edges": 126
+        "n_edges": 126,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-76",
         "condition": "6dyne",
         "mean_clustering": 0.33420115709835335,
+        "mean_degree": 3.5700934579439254,
+        "c_random": 0.03368012696173514,
+        "c_normalized": 9.922799800548493,
         "n_cells": 107,
-        "n_edges": 191
+        "n_edges": 191,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-77",
         "condition": "6dyne",
         "mean_clustering": 0.33949874686716786,
+        "mean_degree": 2.863157894736842,
+        "c_random": 0.03045912653975364,
+        "c_normalized": 11.146043417366943,
         "n_cells": 95,
-        "n_edges": 136
+        "n_edges": 136,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-78",
         "condition": "6dyne",
         "mean_clustering": 0.46055900621118007,
+        "mean_degree": 5.0144927536231885,
+        "c_random": 0.0366021368877605,
+        "c_normalized": 12.582844756399668,
         "n_cells": 138,
-        "n_edges": 346
+        "n_edges": 346,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-79",
         "condition": "6dyne",
         "mean_clustering": 0.428013728013728,
+        "mean_degree": 4.324324324324325,
+        "c_random": 0.03931203931203931,
+        "c_normalized": 10.887599206349206,
         "n_cells": 111,
-        "n_edges": 240
+        "n_edges": 240,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-80",
         "condition": "6dyne",
         "mean_clustering": 0.4674869947979193,
+        "mean_degree": 4.840336134453781,
+        "c_random": 0.04101979774960832,
+        "c_normalized": 11.39661871693122,
         "n_cells": 119,
-        "n_edges": 288
+        "n_edges": 288,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-81",
         "condition": "6dyne",
         "mean_clustering": 0.4146392496392496,
+        "mean_degree": 4.6,
+        "c_random": 0.04220183486238532,
+        "c_normalized": 9.825147437103958,
         "n_cells": 110,
-        "n_edges": 253
+        "n_edges": 253,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-82",
         "condition": "6dyne",
         "mean_clustering": 0.48212287313006735,
+        "mean_degree": 5.0071942446043165,
+        "c_random": 0.03628401626524867,
+        "c_normalized": 13.287472632731252,
         "n_cells": 139,
-        "n_edges": 348
+        "n_edges": 348,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-83",
         "condition": "6dyne",
         "mean_clustering": 0.48351746031746035,
+        "mean_degree": 4.928,
+        "c_random": 0.03974193548387097,
+        "c_normalized": 12.166429602143888,
         "n_cells": 125,
-        "n_edges": 308
+        "n_edges": 308,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-84",
         "condition": "6dyne",
         "mean_clustering": 0.4377742108079187,
+        "mean_degree": 3.752808988764045,
+        "c_random": 0.04264555669050051,
+        "c_normalized": 10.265412033076704,
         "n_cells": 89,
-        "n_edges": 167
+        "n_edges": 167,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-85",
         "condition": "6dyne",
         "mean_clustering": 0.48859213250517597,
+        "mean_degree": 4.869565217391305,
+        "c_random": 0.04271548436308162,
+        "c_normalized": 11.43829081632653,
         "n_cells": 115,
-        "n_edges": 280
+        "n_edges": 280,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-86",
         "condition": "6dyne",
         "mean_clustering": 0.45830280830280834,
+        "mean_degree": 4.923076923076923,
+        "c_random": 0.042440318302387266,
+        "c_normalized": 10.798759920634922,
         "n_cells": 117,
-        "n_edges": 288
+        "n_edges": 288,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-87",
         "condition": "6dyne",
         "mean_clustering": 0.4746168582375479,
+        "mean_degree": 4.948275862068965,
+        "c_random": 0.04302848575712144,
+        "c_normalized": 11.030294231513743,
         "n_cells": 116,
-        "n_edges": 287
+        "n_edges": 287,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-88",
         "condition": "6dyne",
         "mean_clustering": 0.4868089764641489,
+        "mean_degree": 4.879310344827586,
+        "c_random": 0.0424287856071964,
+        "c_normalized": 11.473554321610859,
         "n_cells": 116,
-        "n_edges": 283
+        "n_edges": 283,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-89",
         "condition": "6dyne",
         "mean_clustering": 0.45882123341139736,
+        "mean_degree": 4.852459016393443,
+        "c_random": 0.04010296707763176,
+        "c_normalized": 11.441079472329472,
         "n_cells": 122,
-        "n_edges": 296
+        "n_edges": 296,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_6dyn-90",
         "condition": "6dyne",
         "mean_clustering": 0.4877156659765356,
+        "mean_degree": 4.956521739130435,
+        "c_random": 0.043478260869565216,
+        "c_normalized": 11.217460317460318,
         "n_cells": 115,
-        "n_edges": 285
+        "n_edges": 285,
+        "is_6dyne": 1,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-11",
         "condition": "static",
         "mean_clustering": 0.47155745489078826,
+        "mean_degree": 4.102564102564102,
+        "c_random": 0.03536693191865606,
+        "c_normalized": 13.333287037037037,
         "n_cells": 117,
-        "n_edges": 240
+        "n_edges": 240,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-12",
         "condition": "static",
         "mean_clustering": 0.49183643154231393,
+        "mean_degree": 4.5,
+        "c_random": 0.03333333333333333,
+        "c_normalized": 14.755092946269418,
         "n_cells": 136,
-        "n_edges": 306
+        "n_edges": 306,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-13",
         "condition": "static",
         "mean_clustering": 0.47302681992337153,
+        "mean_degree": 4.827586206896552,
+        "c_random": 0.033524904214559385,
+        "c_normalized": 14.109714285714283,
         "n_cells": 145,
-        "n_edges": 350
+        "n_edges": 350,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-14",
         "condition": "static",
         "mean_clustering": 0.39555074555074554,
+        "mean_degree": 3.893939393939394,
+        "c_random": 0.02972472819801064,
+        "c_normalized": 13.307127416465937,
         "n_cells": 132,
-        "n_edges": 257
+        "n_edges": 257,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-15",
         "condition": "static",
         "mean_clustering": 0.4596676254394375,
+        "mean_degree": 4.214765100671141,
+        "c_random": 0.028478142572102304,
+        "c_normalized": 16.141067637245982,
         "n_cells": 149,
-        "n_edges": 314
+        "n_edges": 314,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-16",
         "condition": "static",
         "mean_clustering": 0.4719992129083039,
+        "mean_degree": 4.512396694214876,
+        "c_random": 0.03760330578512397,
+        "c_normalized": 12.55206698063841,
         "n_cells": 121,
-        "n_edges": 273
+        "n_edges": 273,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-17",
         "condition": "static",
         "mean_clustering": 0.4887621252204585,
+        "mean_degree": 4.527777777777778,
+        "c_random": 0.031662781662781664,
+        "c_normalized": 15.43648724315902,
         "n_cells": 144,
-        "n_edges": 326
+        "n_edges": 326,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-18",
         "condition": "static",
         "mean_clustering": 0.4573260073260073,
+        "mean_degree": 4.107692307692307,
+        "c_random": 0.03184257602862254,
+        "c_normalized": 14.362092027822365,
         "n_cells": 130,
-        "n_edges": 267
+        "n_edges": 267,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-19",
         "condition": "static",
         "mean_clustering": 0.46614668856048164,
+        "mean_degree": 4.496551724137931,
+        "c_random": 0.03122605363984674,
+        "c_normalized": 14.928133216476775,
         "n_cells": 145,
-        "n_edges": 326
+        "n_edges": 326,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-20",
         "condition": "static",
         "mean_clustering": 0.43253367003367005,
+        "mean_degree": 4.287878787878788,
+        "c_random": 0.03273189914411288,
+        "c_normalized": 13.214438555162937,
         "n_cells": 132,
-        "n_edges": 283
+        "n_edges": 283,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-31",
         "condition": "static",
         "mean_clustering": 0.4181605975723622,
+        "mean_degree": 3.7058823529411766,
+        "c_random": 0.03669190448456611,
+        "c_normalized": 11.396535651297553,
         "n_cells": 102,
-        "n_edges": 189
+        "n_edges": 189,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-32",
         "condition": "static",
         "mean_clustering": 0.3544285714285714,
+        "mean_degree": 3.4266666666666667,
+        "c_random": 0.022997762863534676,
+        "c_normalized": 15.411436909394107,
         "n_cells": 150,
-        "n_edges": 257
+        "n_edges": 257,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-33",
         "condition": "static",
         "mean_clustering": 0.33150183150183143,
+        "mean_degree": 2.6013986013986012,
+        "c_random": 0.01831970846055353,
+        "c_normalized": 18.095366103430617,
         "n_cells": 143,
-        "n_edges": 186
+        "n_edges": 186,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-34",
         "condition": "static",
         "mean_clustering": 0.30141287284144425,
+        "mean_degree": 3.21978021978022,
+        "c_random": 0.017788840993260883,
+        "c_normalized": 16.94392979034617,
         "n_cells": 182,
-        "n_edges": 293
+        "n_edges": 293,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-35",
         "condition": "static",
         "mean_clustering": 0.40075483091787434,
+        "mean_degree": 4.184782608695652,
+        "c_random": 0.02286766452839154,
+        "c_normalized": 17.524956709956708,
         "n_cells": 184,
-        "n_edges": 385
+        "n_edges": 385,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-36",
         "condition": "static",
         "mean_clustering": 0.3472244146277295,
+        "mean_degree": 3.657458563535912,
+        "c_random": 0.020319214241866175,
+        "c_normalized": 17.088476478204573,
         "n_cells": 181,
-        "n_edges": 331
+        "n_edges": 331,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-37",
         "condition": "static",
         "mean_clustering": 0.2900772874594864,
+        "mean_degree": 3.287958115183246,
+        "c_random": 0.01730504271149077,
+        "c_normalized": 16.76258720048529,
         "n_cells": 191,
-        "n_edges": 314
+        "n_edges": 314,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-38",
         "condition": "static",
         "mean_clustering": 0.2506519274376417,
+        "mean_degree": 2.8333333333333335,
+        "c_random": 0.016966067864271458,
+        "c_normalized": 14.773719487795116,
         "n_cells": 168,
-        "n_edges": 238
+        "n_edges": 238,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-39",
         "condition": "static",
         "mean_clustering": 0.3974099883855981,
+        "mean_degree": 3.9121951219512194,
+        "c_random": 0.01917742706838833,
+        "c_normalized": 20.72280014250089,
         "n_cells": 205,
-        "n_edges": 401
+        "n_edges": 401,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-40",
         "condition": "static",
         "mean_clustering": 0.4025868725868726,
+        "mean_degree": 4.205405405405405,
+        "c_random": 0.022855464159811986,
+        "c_normalized": 17.614469335291957,
         "n_cells": 185,
-        "n_edges": 389
+        "n_edges": 389,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-41",
         "condition": "static",
         "mean_clustering": 0.29124649859943974,
+        "mean_degree": 2.3823529411764706,
+        "c_random": 0.03555750658472344,
+        "c_normalized": 8.190858318636096,
         "n_cells": 68,
-        "n_edges": 81
+        "n_edges": 81,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-42",
         "condition": "static",
         "mean_clustering": 0.3403019744483159,
+        "mean_degree": 3.4146341463414633,
+        "c_random": 0.04215597711532671,
+        "c_normalized": 8.072448979591837,
         "n_cells": 82,
-        "n_edges": 140
+        "n_edges": 140,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-43",
         "condition": "static",
         "mean_clustering": 0.35663780663780664,
+        "mean_degree": 3.0,
+        "c_random": 0.046153846153846156,
+        "c_normalized": 7.727152477152477,
         "n_cells": 66,
-        "n_edges": 99
+        "n_edges": 99,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-44",
         "condition": "static",
         "mean_clustering": 0.3231173864894796,
+        "mean_degree": 3.7209302325581395,
+        "c_random": 0.04377564979480164,
+        "c_normalized": 7.381212797619049,
         "n_cells": 86,
-        "n_edges": 160
+        "n_edges": 160,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-45",
         "condition": "static",
         "mean_clustering": 0.2507042253521127,
+        "mean_degree": 2.535211267605634,
+        "c_random": 0.03621730382293763,
+        "c_normalized": 6.922222222222222,
         "n_cells": 71,
-        "n_edges": 90
+        "n_edges": 90,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-46",
         "condition": "static",
         "mean_clustering": 0.3515476190476191,
+        "mean_degree": 3.675,
+        "c_random": 0.04651898734177215,
+        "c_normalized": 7.557078069322969,
         "n_cells": 80,
-        "n_edges": 147
+        "n_edges": 147,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-47",
         "condition": "static",
         "mean_clustering": 0.30268817204301074,
+        "mean_degree": 2.838709677419355,
+        "c_random": 0.046536224219989424,
+        "c_normalized": 6.50435606060606,
         "n_cells": 62,
-        "n_edges": 88
+        "n_edges": 88,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-48",
         "condition": "static",
         "mean_clustering": 0.3524691358024691,
+        "mean_degree": 2.962962962962963,
+        "c_random": 0.055904961565338925,
+        "c_normalized": 6.304791666666666,
         "n_cells": 54,
-        "n_edges": 80
+        "n_edges": 80,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-49",
         "condition": "static",
         "mean_clustering": 0.4474789915966386,
+        "mean_degree": 3.3333333333333335,
+        "c_random": 0.06666666666666667,
+        "c_normalized": 6.712184873949579,
         "n_cells": 51,
-        "n_edges": 85
+        "n_edges": 85,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "EGM2_regular_static-50",
         "condition": "static",
         "mean_clustering": 0.2971751412429378,
+        "mean_degree": 2.3389830508474576,
+        "c_random": 0.04032729398012858,
+        "c_normalized": 7.369082125603863,
         "n_cells": 59,
-        "n_edges": 69
+        "n_edges": 69,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "resized1024_8bit_zMAX231005_slide_ebm2_statcont_488notch_555fak_647vecad-01-Scene-2-P2",
         "condition": "unknown",
         "mean_clustering": 0.0,
+        "mean_degree": 0.058823529411764705,
+        "c_random": 0.000877963125548727,
+        "c_normalized": 0.0,
         "n_cells": 68,
-        "n_edges": 2
+        "n_edges": 2,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "resized1024_8bit_zMAX231005_slide_ebm2_statcont_488notch_555fak_647vecad-01-Scene-4-P4",
         "condition": "unknown",
         "mean_clustering": 0.0,
+        "mean_degree": 0.03389830508474576,
+        "c_random": 0.0005844535359438924,
+        "c_normalized": 0.0,
         "n_cells": 59,
-        "n_edges": 1
+        "n_edges": 1,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "resized1024_8bit_zMAX231005_slide_egm2_2hfow_488phosphopax_emissionfix_555fak_647vecad_lowerres-02",
         "condition": "unknown",
         "mean_clustering": 0.0,
+        "mean_degree": 0.07017543859649122,
+        "c_random": 0.0012531328320802004,
+        "c_normalized": 0.0,
         "n_cells": 57,
-        "n_edges": 2
+        "n_edges": 2,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "resized1024_8bit_zMAX231005_slide_egm2_flowltr_30min_488notch_emissionfix_555fak_647vecad-01-Scene-3-P3",
         "condition": "unknown",
         "mean_clustering": 0.0,
+        "mean_degree": 0.08333333333333333,
+        "c_random": 0.0017730496453900709,
+        "c_normalized": 0.0,
         "n_cells": 48,
-        "n_edges": 2
+        "n_edges": 2,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       },
       {
         "image_id": "resized1024_8bit_zMAX231005_slide_egm2_flowltr_30min_488notch_emissionfix_555fak_647vecad-01-Scene-4-P4",
         "condition": "unknown",
         "mean_clustering": 0.0,
+        "mean_degree": 0.038461538461538464,
+        "c_random": 0.0007541478129713424,
+        "c_normalized": 0.0,
         "n_cells": 52,
-        "n_edges": 1
+        "n_edges": 1,
+        "is_6dyne": 0,
+        "is_high_shear": 0
       }
     ],
-    "test": {
-      "condition_a": "static",
-      "condition_b": "6dyne",
-      "n_a": 30,
-      "n_b": 30,
-      "median_a": 0.3760942760942761,
-      "median_b": 0.46872082166199824,
-      "median_diff": 0.09262654556772215,
-      "ci_95_low": 0.03618554161148349,
-      "ci_95_high": 0.12721501155923098,
-      "mann_whitney_U": 222.0,
-      "p_value": 0.0007697288698323856,
-      "effect_size_r": 0.5066666666666666
+    "tests": {
+      "static_vs_6dyne": {
+        "condition_a": "static",
+        "condition_b": "6dyne",
+        "n_a": 30,
+        "n_b": 30,
+        "median_a": 0.3760942760942761,
+        "median_b": 0.46872082166199824,
+        "median_diff": 0.09262654556772215,
+        "ci_95_low": 0.03618554161148349,
+        "ci_95_high": 0.12721501155923098,
+        "mann_whitney_U": 222.0,
+        "p_value": 0.0007697288698323856,
+        "effect_size_r": 0.5066666666666666
+      },
+      "static_vs_high_shear": {
+        "condition_a": "static",
+        "condition_b": "high_shear",
+        "n_a": 30,
+        "n_b": 30,
+        "median_a": 0.3760942760942761,
+        "median_b": 0.3312055980549131,
+        "median_diff": -0.04488867803936297,
+        "ci_95_low": -0.13106575752890348,
+        "ci_95_high": 0.016230697197467902,
+        "mann_whitney_U": 604.0,
+        "p_value": 0.023243447053671214,
+        "effect_size_r": -0.3422222222222222
+      },
+      "6dyne_vs_high_shear": {
+        "condition_a": "6dyne",
+        "condition_b": "high_shear",
+        "n_a": 30,
+        "n_b": 30,
+        "median_a": 0.46872082166199824,
+        "median_b": 0.3312055980549131,
+        "median_diff": -0.13751522360708512,
+        "ci_95_low": -0.2035822664154359,
+        "ci_95_high": -0.07609718240621333,
+        "mann_whitney_U": 776.0,
+        "p_value": 1.4918040168154105e-06,
+        "effect_size_r": -0.7244444444444444
+      }
+    },
+    "density_control": {
+      "is_6dyne_coef": -0.038604694770619626,
+      "is_6dyne_p": 0.00013378244142982354,
+      "is_high_shear_coef": -0.03670797431788176,
+      "is_high_shear_p": 3.5291024410915073e-05,
+      "mean_degree_coef": 0.11273090047734402,
+      "mean_degree_p": 7.689451107662497e-46,
+      "r_squared": 0.9374758581664903,
+      "normalized_test_static_vs_6dyne": {
+        "condition_a": "static",
+        "condition_b": "6dyne",
+        "n_a": 30,
+        "n_b": 30,
+        "median_a": 13.72150066137566,
+        "median_b": 11.819991961877374,
+        "median_diff": -1.9015086994982866,
+        "ci_95_low": -3.6515335844651773,
+        "ci_95_high": 2.010079662263594,
+        "mann_whitney_U": 478.0,
+        "p_value": 0.6843225867624494,
+        "effect_size_r": -0.06222222222222218
+      }
     }
   },
   "discovery_2_reticular": {
     "per_image_stats": [
       {
         "image_id": "EGM2_regular_18-20dyn-01",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 56.26477541371159,
         "n_reticular": 238,
         "n_total": 423
       },
       {
         "image_id": "EGM2_regular_18-20dyn-02",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 59.164733178654295,
         "n_reticular": 255,
         "n_total": 431
       },
       {
         "image_id": "EGM2_regular_18-20dyn-03",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 52.74725274725275,
         "n_reticular": 192,
         "n_total": 364
       },
       {
         "image_id": "EGM2_regular_18-20dyn-04",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 56.25,
         "n_reticular": 162,
         "n_total": 288
       },
       {
         "image_id": "EGM2_regular_18-20dyn-05",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 46.8586387434555,
         "n_reticular": 179,
         "n_total": 382
       },
       {
         "image_id": "EGM2_regular_18-20dyn-06",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 40.40114613180516,
         "n_reticular": 141,
         "n_total": 349
       },
       {
         "image_id": "EGM2_regular_18-20dyn-07",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 50.15673981191222,
         "n_reticular": 160,
         "n_total": 319
       },
       {
         "image_id": "EGM2_regular_18-20dyn-08",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 54.3424317617866,
         "n_reticular": 219,
         "n_total": 403
       },
       {
         "image_id": "EGM2_regular_18-20dyn-09",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 53.286384976525824,
         "n_reticular": 227,
         "n_total": 426
       },
       {
         "image_id": "EGM2_regular_18-20dyn-10",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 59.48275862068966,
         "n_reticular": 207,
         "n_total": 348
       },
       {
         "image_id": "EGM2_regular_18-20dyn-51",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 38.18181818181819,
         "n_reticular": 42,
         "n_total": 110
       },
       {
         "image_id": "EGM2_regular_18-20dyn-52",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 27.82608695652174,
         "n_reticular": 32,
         "n_total": 115
       },
       {
         "image_id": "EGM2_regular_18-20dyn-53",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 31.428571428571427,
         "n_reticular": 33,
         "n_total": 105
       },
       {
         "image_id": "EGM2_regular_18-20dyn-54",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 28.47222222222222,
         "n_reticular": 41,
         "n_total": 144
       },
       {
         "image_id": "EGM2_regular_18-20dyn-55",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 26.623376623376622,
         "n_reticular": 41,
         "n_total": 154
       },
       {
         "image_id": "EGM2_regular_18-20dyn-56",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 44.354838709677416,
         "n_reticular": 55,
         "n_total": 124
       },
       {
         "image_id": "EGM2_regular_18-20dyn-57",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 41.37931034482759,
         "n_reticular": 36,
         "n_total": 87
       },
       {
         "image_id": "EGM2_regular_18-20dyn-58",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 29.7029702970297,
         "n_reticular": 30,
         "n_total": 101
       },
       {
         "image_id": "EGM2_regular_18-20dyn-59",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 30.48780487804878,
         "n_reticular": 25,
         "n_total": 82
       },
       {
         "image_id": "EGM2_regular_18-20dyn-60",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 19.047619047619047,
         "n_reticular": 12,
         "n_total": 63
       },
       {
         "image_id": "EGM2_regular_18-20dyn-61",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 72.26890756302521,
         "n_reticular": 86,
         "n_total": 119
       },
       {
         "image_id": "EGM2_regular_18-20dyn-62",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 55.670103092783506,
         "n_reticular": 54,
         "n_total": 97
       },
       {
         "image_id": "EGM2_regular_18-20dyn-63",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 55.26315789473685,
         "n_reticular": 63,
         "n_total": 114
       },
       {
         "image_id": "EGM2_regular_18-20dyn-64",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 69.1588785046729,
         "n_reticular": 74,
         "n_total": 107
       },
       {
         "image_id": "EGM2_regular_18-20dyn-65",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 60.15625,
         "n_reticular": 77,
         "n_total": 128
       },
       {
         "image_id": "EGM2_regular_18-20dyn-66",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 54.45544554455446,
         "n_reticular": 55,
         "n_total": 101
       },
       {
         "image_id": "EGM2_regular_18-20dyn-67",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 64.95726495726495,
         "n_reticular": 76,
         "n_total": 117
       },
       {
         "image_id": "EGM2_regular_18-20dyn-68",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 69.6,
         "n_reticular": 87,
         "n_total": 125
       },
       {
         "image_id": "EGM2_regular_18-20dyn-69",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 62.66666666666667,
         "n_reticular": 47,
         "n_total": 75
       },
       {
         "image_id": "EGM2_regular_18-20dyn-70",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "reticular_pct": 61.904761904761905,
         "n_reticular": 52,
         "n_total": 84
@@ -1355,229 +1883,259 @@
         "n_total": 1
       }
     ],
-    "test": {
-      "condition_a": "static",
-      "condition_b": "6dyne",
-      "n_a": 30,
-      "n_b": 30,
-      "median_a": 51.54761904761905,
-      "median_b": 61.09447771124418,
-      "median_diff": 9.54685866362513,
-      "ci_95_low": 6.6580656309052175,
-      "ci_95_high": 16.58301879243714,
-      "mann_whitney_U": 133.5,
-      "p_value": 2.9836327535142894e-06,
-      "effect_size_r": 0.7033333333333334
+    "tests": {
+      "static_vs_6dyne": {
+        "condition_a": "static",
+        "condition_b": "6dyne",
+        "n_a": 30,
+        "n_b": 30,
+        "median_a": 51.54761904761905,
+        "median_b": 61.09447771124418,
+        "median_diff": 9.54685866362513,
+        "ci_95_low": 6.6580656309052175,
+        "ci_95_high": 16.58301879243714,
+        "mann_whitney_U": 133.5,
+        "p_value": 2.9836327535142894e-06,
+        "effect_size_r": 0.7033333333333334
+      },
+      "static_vs_high_shear": {
+        "condition_a": "static",
+        "condition_b": "high_shear",
+        "n_a": 30,
+        "n_b": 30,
+        "median_a": 51.54761904761905,
+        "median_b": 53.81440836915621,
+        "median_diff": 2.2667893215371606,
+        "ci_95_low": -8.401082772033885,
+        "ci_95_high": 6.86776144135635,
+        "mann_whitney_U": 430.0,
+        "p_value": 0.773119942467523,
+        "effect_size_r": 0.0444444444444444
+      },
+      "6dyne_vs_high_shear": {
+        "condition_a": "6dyne",
+        "condition_b": "high_shear",
+        "n_a": 30,
+        "n_b": 30,
+        "median_a": 61.09447771124418,
+        "median_b": 53.81440836915621,
+        "median_diff": -7.28006934208797,
+        "ci_95_low": -19.704291304982902,
+        "ci_95_high": -3.826053535901602,
+        "mann_whitney_U": 684.0,
+        "p_value": 0.0005561109783724005,
+        "effect_size_r": -0.52
+      }
     }
   },
   "discovery_3_degree_occupancy": {
     "per_image_stats": [
       {
         "image_id": "EGM2_regular_18-20dyn-01",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": -0.08845720087047354,
         "p_value": 0.24167719504209842,
         "n_cells": 177
       },
       {
         "image_id": "EGM2_regular_18-20dyn-02",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": -0.05152973498475071,
         "p_value": 0.4920927325913794,
         "n_cells": 180
       },
       {
         "image_id": "EGM2_regular_18-20dyn-03",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.0004733273006671871,
         "p_value": 0.9952906015354837,
         "n_cells": 158
       },
       {
         "image_id": "EGM2_regular_18-20dyn-04",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": -0.01947314387270753,
         "p_value": 0.8213100687178672,
         "n_cells": 137
       },
       {
         "image_id": "EGM2_regular_18-20dyn-05",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": -0.03365846083029738,
         "p_value": 0.6668290013494036,
         "n_cells": 166
       },
       {
         "image_id": "EGM2_regular_18-20dyn-06",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": -0.04628924585129652,
         "p_value": 0.567363785057728,
         "n_cells": 155
       },
       {
         "image_id": "EGM2_regular_18-20dyn-07",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": -0.10743543061817688,
         "p_value": 0.18476742862196305,
         "n_cells": 154
       },
       {
         "image_id": "EGM2_regular_18-20dyn-08",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.008305117433506955,
         "p_value": 0.9154258734119087,
         "n_cells": 166
       },
       {
         "image_id": "EGM2_regular_18-20dyn-09",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": -0.017262634264756396,
         "p_value": 0.813614898857424,
         "n_cells": 189
       },
       {
         "image_id": "EGM2_regular_18-20dyn-10",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.03978372593562109,
         "p_value": 0.6219436597165371,
         "n_cells": 156
       },
       {
         "image_id": "EGM2_regular_18-20dyn-51",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": -0.1460766794270675,
         "p_value": 0.17699680136716045,
         "n_cells": 87
       },
       {
         "image_id": "EGM2_regular_18-20dyn-52",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.08828324358595079,
         "p_value": 0.4053226165105227,
         "n_cells": 91
       },
       {
         "image_id": "EGM2_regular_18-20dyn-53",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": -0.11095476166063031,
         "p_value": 0.30625511532317534,
         "n_cells": 87
       },
       {
         "image_id": "EGM2_regular_18-20dyn-54",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": -0.13431405761383466,
         "p_value": 0.15988910045740298,
         "n_cells": 111
       },
       {
         "image_id": "EGM2_regular_18-20dyn-55",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": -0.1963143599617612,
         "p_value": 0.04370740910816251,
         "n_cells": 106
       },
       {
         "image_id": "EGM2_regular_18-20dyn-56",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.04636014802893236,
         "p_value": 0.6503345941975511,
         "n_cells": 98
       },
       {
         "image_id": "EGM2_regular_18-20dyn-57",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": -0.2678152158729028,
         "p_value": 0.015640136275564938,
         "n_cells": 81
       },
       {
         "image_id": "EGM2_regular_18-20dyn-58",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": -0.0643344435979137,
         "p_value": 0.5468924565674382,
         "n_cells": 90
       },
       {
         "image_id": "EGM2_regular_18-20dyn-59",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": -0.016055634299243754,
         "p_value": 0.8861581815138986,
         "n_cells": 82
       },
       {
         "image_id": "EGM2_regular_18-20dyn-60",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": -0.18211841125274408,
         "p_value": 0.14332013024697945,
         "n_cells": 66
       },
       {
         "image_id": "EGM2_regular_18-20dyn-61",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": -0.002202559023276207,
         "p_value": 0.985669486506074,
         "n_cells": 69
       },
       {
         "image_id": "EGM2_regular_18-20dyn-62",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": -0.16107882812989238,
         "p_value": 0.19989522206526456,
         "n_cells": 65
       },
       {
         "image_id": "EGM2_regular_18-20dyn-63",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.17146121137074374,
         "p_value": 0.1386111629263812,
         "n_cells": 76
       },
       {
         "image_id": "EGM2_regular_18-20dyn-64",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.04820106143212408,
         "p_value": 0.6985022329146795,
         "n_cells": 67
       },
       {
         "image_id": "EGM2_regular_18-20dyn-65",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": -0.154996392875434,
         "p_value": 0.19041191021532458,
         "n_cells": 73
       },
       {
         "image_id": "EGM2_regular_18-20dyn-66",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.030363340084406304,
         "p_value": 0.8087680566174624,
         "n_cells": 66
       },
       {
         "image_id": "EGM2_regular_18-20dyn-67",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": -0.09725250979322313,
         "p_value": 0.42317608101083914,
         "n_cells": 70
       },
       {
         "image_id": "EGM2_regular_18-20dyn-68",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": -0.10861945930392077,
         "p_value": 0.38531718423629,
         "n_cells": 66
       },
       {
         "image_id": "EGM2_regular_18-20dyn-69",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.3316187643242318,
         "p_value": 0.01744367506294206,
         "n_cells": 51
       },
       {
         "image_id": "EGM2_regular_18-20dyn-70",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.326421101611052,
         "p_value": 0.017057705367744067,
         "n_cells": 53
@@ -2018,210 +2576,210 @@
     "per_image_stats": [
       {
         "image_id": "EGM2_regular_18-20dyn-01",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 18.565400843881857,
         "n_all_reticular": 44,
         "n_triangles": 237
       },
       {
         "image_id": "EGM2_regular_18-20dyn-02",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 18.852459016393443,
         "n_all_reticular": 46,
         "n_triangles": 244
       },
       {
         "image_id": "EGM2_regular_18-20dyn-03",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 14.213197969543149,
         "n_all_reticular": 28,
         "n_triangles": 197
       },
       {
         "image_id": "EGM2_regular_18-20dyn-04",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 20.54794520547945,
         "n_all_reticular": 30,
         "n_triangles": 146
       },
       {
         "image_id": "EGM2_regular_18-20dyn-05",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 10.1010101010101,
         "n_all_reticular": 20,
         "n_triangles": 198
       },
       {
         "image_id": "EGM2_regular_18-20dyn-06",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 6.9364161849710975,
         "n_all_reticular": 12,
         "n_triangles": 173
       },
       {
         "image_id": "EGM2_regular_18-20dyn-07",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 16.216216216216218,
         "n_all_reticular": 24,
         "n_triangles": 148
       },
       {
         "image_id": "EGM2_regular_18-20dyn-08",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 17.982456140350877,
         "n_all_reticular": 41,
         "n_triangles": 228
       },
       {
         "image_id": "EGM2_regular_18-20dyn-09",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 20.27027027027027,
         "n_all_reticular": 45,
         "n_triangles": 222
       },
       {
         "image_id": "EGM2_regular_18-20dyn-10",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 15.168539325842698,
         "n_all_reticular": 27,
         "n_triangles": 178
       },
       {
         "image_id": "EGM2_regular_18-20dyn-51",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 4.761904761904762,
         "n_all_reticular": 1,
         "n_triangles": 21
       },
       {
         "image_id": "EGM2_regular_18-20dyn-52",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 4.761904761904762,
         "n_all_reticular": 1,
         "n_triangles": 21
       },
       {
         "image_id": "EGM2_regular_18-20dyn-53",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 12.5,
         "n_all_reticular": 2,
         "n_triangles": 16
       },
       {
         "image_id": "EGM2_regular_18-20dyn-54",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 0.0,
         "n_all_reticular": 0,
         "n_triangles": 26
       },
       {
         "image_id": "EGM2_regular_18-20dyn-55",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 11.11111111111111,
         "n_all_reticular": 4,
         "n_triangles": 36
       },
       {
         "image_id": "EGM2_regular_18-20dyn-56",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 15.789473684210526,
         "n_all_reticular": 3,
         "n_triangles": 19
       },
       {
         "image_id": "EGM2_regular_18-20dyn-57",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 0.0,
         "n_all_reticular": 0,
         "n_triangles": 11
       },
       {
         "image_id": "EGM2_regular_18-20dyn-58",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 0.0,
         "n_all_reticular": 0,
         "n_triangles": 14
       },
       {
         "image_id": "EGM2_regular_18-20dyn-59",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 0.0,
         "n_all_reticular": 0,
         "n_triangles": 9
       },
       {
         "image_id": "EGM2_regular_18-20dyn-60",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 0.0,
         "n_all_reticular": 0,
         "n_triangles": 5
       },
       {
         "image_id": "EGM2_regular_18-20dyn-61",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 41.02564102564102,
         "n_all_reticular": 16,
         "n_triangles": 39
       },
       {
         "image_id": "EGM2_regular_18-20dyn-62",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 14.285714285714285,
         "n_all_reticular": 3,
         "n_triangles": 21
       },
       {
         "image_id": "EGM2_regular_18-20dyn-63",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 19.444444444444446,
         "n_all_reticular": 7,
         "n_triangles": 36
       },
       {
         "image_id": "EGM2_regular_18-20dyn-64",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 28.57142857142857,
         "n_all_reticular": 10,
         "n_triangles": 35
       },
       {
         "image_id": "EGM2_regular_18-20dyn-65",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 17.77777777777778,
         "n_all_reticular": 8,
         "n_triangles": 45
       },
       {
         "image_id": "EGM2_regular_18-20dyn-66",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 20.0,
         "n_all_reticular": 6,
         "n_triangles": 30
       },
       {
         "image_id": "EGM2_regular_18-20dyn-67",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 25.71428571428571,
         "n_all_reticular": 9,
         "n_triangles": 35
       },
       {
         "image_id": "EGM2_regular_18-20dyn-68",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 34.0,
         "n_all_reticular": 17,
         "n_triangles": 50
       },
       {
         "image_id": "EGM2_regular_18-20dyn-69",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 14.285714285714285,
         "n_all_reticular": 3,
         "n_triangles": 21
       },
       {
         "image_id": "EGM2_regular_18-20dyn-70",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "all_reticular_triangle_pct": 32.142857142857146,
         "n_all_reticular": 9,
         "n_triangles": 28
@@ -2647,229 +3205,259 @@
         "n_triangles": 17
       }
     ],
-    "test": {
-      "condition_a": "static",
-      "condition_b": "6dyne",
-      "n_a": 30,
-      "n_b": 30,
-      "median_a": 15.876712328767123,
-      "median_b": 25.43334383863851,
-      "median_diff": 9.556631509871387,
-      "ci_95_low": 4.160339909241826,
-      "ci_95_high": 13.822023957078837,
-      "mann_whitney_U": 193.5,
-      "p_value": 0.00015372671283011007,
-      "effect_size_r": 0.5700000000000001
+    "tests": {
+      "static_vs_6dyne": {
+        "condition_a": "static",
+        "condition_b": "6dyne",
+        "n_a": 30,
+        "n_b": 30,
+        "median_a": 15.876712328767123,
+        "median_b": 25.43334383863851,
+        "median_diff": 9.556631509871387,
+        "ci_95_low": 4.160339909241826,
+        "ci_95_high": 13.822023957078837,
+        "mann_whitney_U": 193.5,
+        "p_value": 0.00015372671283011007,
+        "effect_size_r": 0.5700000000000001
+      },
+      "static_vs_high_shear": {
+        "condition_a": "static",
+        "condition_b": "high_shear",
+        "n_a": 30,
+        "n_b": 30,
+        "median_a": 15.876712328767123,
+        "median_b": 15.47900650502661,
+        "median_diff": -0.39770582374051244,
+        "ci_95_low": -4.071156773211568,
+        "ci_95_high": 3.0973000412239635,
+        "mann_whitney_U": 461.5,
+        "p_value": 0.8707538380570629,
+        "effect_size_r": -0.025555555555555554
+      },
+      "6dyne_vs_high_shear": {
+        "condition_a": "6dyne",
+        "condition_b": "high_shear",
+        "n_a": 30,
+        "n_b": 30,
+        "median_a": 25.43334383863851,
+        "median_b": 15.47900650502661,
+        "median_diff": -9.9543373336119,
+        "ci_95_low": -15.621377932806716,
+        "ci_95_high": -3.5055594075230982,
+        "mann_whitney_U": 680.0,
+        "p_value": 0.0006885194574662245,
+        "effect_size_r": -0.5111111111111111
+      }
     }
   },
   "discovery_5_area_degree": {
     "per_image_stats": [
       {
         "image_id": "EGM2_regular_18-20dyn-01",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.6162256249834279,
         "p_value": 6.866130537523768e-20,
         "n_cells": 177
       },
       {
         "image_id": "EGM2_regular_18-20dyn-02",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.6272306283450416,
         "p_value": 4.48950937843699e-21,
         "n_cells": 180
       },
       {
         "image_id": "EGM2_regular_18-20dyn-03",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.5593515214195034,
         "p_value": 2.187691175071105e-14,
         "n_cells": 158
       },
       {
         "image_id": "EGM2_regular_18-20dyn-04",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.608366095409225,
         "p_value": 3.1402551950572634e-15,
         "n_cells": 137
       },
       {
         "image_id": "EGM2_regular_18-20dyn-05",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.4853582688839361,
         "p_value": 3.413884958254374e-11,
         "n_cells": 166
       },
       {
         "image_id": "EGM2_regular_18-20dyn-06",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.5109560872963363,
         "p_value": 1.0984407446158693e-11,
         "n_cells": 155
       },
       {
         "image_id": "EGM2_regular_18-20dyn-07",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.5657200554752337,
         "p_value": 2.0925576640924832e-14,
         "n_cells": 154
       },
       {
         "image_id": "EGM2_regular_18-20dyn-08",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.5565750615642594,
         "p_value": 6.9163890355415835e-15,
         "n_cells": 166
       },
       {
         "image_id": "EGM2_regular_18-20dyn-09",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.6780920546296669,
         "p_value": 8.407750105167218e-27,
         "n_cells": 189
       },
       {
         "image_id": "EGM2_regular_18-20dyn-10",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.49138059691715114,
         "p_value": 7.349811645377218e-11,
         "n_cells": 156
       },
       {
         "image_id": "EGM2_regular_18-20dyn-51",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.40175591740584987,
         "p_value": 0.0001148053189713708,
         "n_cells": 87
       },
       {
         "image_id": "EGM2_regular_18-20dyn-52",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.3720330307168814,
         "p_value": 0.0002821471308831658,
         "n_cells": 91
       },
       {
         "image_id": "EGM2_regular_18-20dyn-53",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.4870594506092523,
         "p_value": 1.7193476423553411e-06,
         "n_cells": 87
       },
       {
         "image_id": "EGM2_regular_18-20dyn-54",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.3987379962364752,
         "p_value": 1.4603226326506177e-05,
         "n_cells": 111
       },
       {
         "image_id": "EGM2_regular_18-20dyn-55",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.376877613272273,
         "p_value": 6.832271986671523e-05,
         "n_cells": 106
       },
       {
         "image_id": "EGM2_regular_18-20dyn-56",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.4159719486098312,
         "p_value": 2.0461973525609532e-05,
         "n_cells": 98
       },
       {
         "image_id": "EGM2_regular_18-20dyn-57",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.6433316412282293,
         "p_value": 9.367418609424604e-11,
         "n_cells": 81
       },
       {
         "image_id": "EGM2_regular_18-20dyn-58",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.3898419957244074,
         "p_value": 0.00014581420378507835,
         "n_cells": 90
       },
       {
         "image_id": "EGM2_regular_18-20dyn-59",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.39763467097526883,
         "p_value": 0.0002162618732787909,
         "n_cells": 82
       },
       {
         "image_id": "EGM2_regular_18-20dyn-60",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.3205788920207689,
         "p_value": 0.008682997637457647,
         "n_cells": 66
       },
       {
         "image_id": "EGM2_regular_18-20dyn-61",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.6215358009614295,
         "p_value": 1.2041801665933032e-08,
         "n_cells": 69
       },
       {
         "image_id": "EGM2_regular_18-20dyn-62",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.49724680802285776,
         "p_value": 2.5116752912458818e-05,
         "n_cells": 65
       },
       {
         "image_id": "EGM2_regular_18-20dyn-63",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.440996716422415,
         "p_value": 6.685691766953979e-05,
         "n_cells": 76
       },
       {
         "image_id": "EGM2_regular_18-20dyn-64",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.41483243431507466,
         "p_value": 0.00048242180281914934,
         "n_cells": 67
       },
       {
         "image_id": "EGM2_regular_18-20dyn-65",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.5344735712961286,
         "p_value": 1.1133544774570348e-06,
         "n_cells": 73
       },
       {
         "image_id": "EGM2_regular_18-20dyn-66",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.5958298724644847,
         "p_value": 1.3074037350794522e-07,
         "n_cells": 66
       },
       {
         "image_id": "EGM2_regular_18-20dyn-67",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.6235137855831838,
         "p_value": 8.14595014876921e-09,
         "n_cells": 70
       },
       {
         "image_id": "EGM2_regular_18-20dyn-68",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.671907044877447,
         "p_value": 6.559432262199473e-10,
         "n_cells": 66
       },
       {
         "image_id": "EGM2_regular_18-20dyn-69",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.41188642003050163,
         "p_value": 0.0026726357299180973,
         "n_cells": 51
       },
       {
         "image_id": "EGM2_regular_18-20dyn-70",
-        "condition": "20dyne",
+        "condition": "high_shear",
         "spearman_r": 0.6063160028016162,
         "p_value": 1.4967474259079418e-06,
         "n_cells": 53
@@ -3295,39 +3883,81 @@
         "n_cells": 52
       }
     ],
-    "test_static": {
-      "n_images": 30,
-      "median_r": 0.4549366195099152,
-      "mean_r": 0.4449093111278734,
-      "std_r": 0.11006741772138416,
-      "min_r": 0.17015336839773298,
-      "max_r": 0.6518175670941065,
-      "wilcoxon_stat": 0.0,
-      "p_value": 1.862645149230957e-09
+    "tests_differ_from_zero": {
+      "static": {
+        "n_images": 30,
+        "median_r": 0.4549366195099152,
+        "mean_r": 0.4449093111278734,
+        "std_r": 0.11006741772138416,
+        "min_r": 0.17015336839773298,
+        "max_r": 0.6518175670941065,
+        "wilcoxon_stat": 0.0,
+        "p_value": 1.862645149230957e-09
+      },
+      "6dyne": {
+        "n_images": 30,
+        "median_r": 0.6421398227571615,
+        "mean_r": 0.6235680838955852,
+        "std_r": 0.0981338359440871,
+        "min_r": 0.3074529367739831,
+        "max_r": 0.7610248515230293,
+        "wilcoxon_stat": 0.0,
+        "p_value": 1.862645149230957e-09
+      },
+      "high_shear": {
+        "n_images": 30,
+        "median_r": 0.5041014476595971,
+        "mean_r": 0.5107205869499386,
+        "std_r": 0.10245931630888017,
+        "min_r": 0.3205788920207689,
+        "max_r": 0.6780920546296669,
+        "wilcoxon_stat": 0.0,
+        "p_value": 1.862645149230957e-09
+      }
     },
-    "test_flow": {
-      "n_images": 30,
-      "median_r": 0.6421398227571615,
-      "mean_r": 0.6235680838955852,
-      "std_r": 0.0981338359440871,
-      "min_r": 0.3074529367739831,
-      "max_r": 0.7610248515230293,
-      "wilcoxon_stat": 0.0,
-      "p_value": 1.862645149230957e-09
-    },
-    "test_compare": {
-      "condition_a": "static",
-      "condition_b": "6dyne",
-      "n_a": 30,
-      "n_b": 30,
-      "median_a": 0.4549366195099152,
-      "median_b": 0.6421398227571615,
-      "median_diff": 0.18720320324724632,
-      "ci_95_low": 0.14430347628310072,
-      "ci_95_high": 0.24574252401970187,
-      "mann_whitney_U": 101.0,
-      "p_value": 2.572118175546942e-07,
-      "effect_size_r": 0.7755555555555556
+    "tests_pairwise": {
+      "static_vs_6dyne": {
+        "condition_a": "static",
+        "condition_b": "6dyne",
+        "n_a": 30,
+        "n_b": 30,
+        "median_a": 0.4549366195099152,
+        "median_b": 0.6421398227571615,
+        "median_diff": 0.18720320324724632,
+        "ci_95_low": 0.14430347628310072,
+        "ci_95_high": 0.24574252401970187,
+        "mann_whitney_U": 101.0,
+        "p_value": 2.572118175546942e-07,
+        "effect_size_r": 0.7755555555555556
+      },
+      "static_vs_high_shear": {
+        "condition_a": "static",
+        "condition_b": "high_shear",
+        "n_a": 30,
+        "n_b": 30,
+        "median_a": 0.4549366195099152,
+        "median_b": 0.5041014476595971,
+        "median_diff": 0.04916482814968187,
+        "ci_95_low": -0.025255683707686702,
+        "ci_95_high": 0.14462973948576668,
+        "mann_whitney_U": 316.0,
+        "p_value": 0.04841349946481363,
+        "effect_size_r": 0.2977777777777778
+      },
+      "6dyne_vs_high_shear": {
+        "condition_a": "6dyne",
+        "condition_b": "high_shear",
+        "n_a": 30,
+        "n_b": 30,
+        "median_a": 0.6421398227571615,
+        "median_b": 0.5041014476595971,
+        "median_diff": -0.13803837509756445,
+        "ci_95_low": -0.21540616409890928,
+        "ci_95_high": -0.05305684980523318,
+        "mann_whitney_U": 716.0,
+        "p_value": 8.663432943179647e-05,
+        "effect_size_r": -0.5911111111111111
+      }
     }
   }
 }
