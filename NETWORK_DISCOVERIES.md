@@ -2,106 +2,128 @@
 
 ## Summary
 
-Using graph/network analysis on the EndoPiGraph-AJmorph pipeline results, we identified five seminal discoveries about how fluid shear stress reorganizes endothelial cell contact networks.
+Using graph/network analysis on the EndoPiGraph-AJmorph pipeline results, we identified **four robust discoveries** about how fluid shear stress reorganizes endothelial cell contact networks.
+
+**Statistical validation:** All statistics use **per-image replicate testing** (n = number of images, not cells/edges) to avoid pseudo-replication. Effect sizes reported as rank-biserial correlation r.
 
 ---
 
-## Discovery 1: Clustering Coefficient Increases 24% Under Flow
+## Discovery 1: Clustering Coefficient Increases Under Flow
 
 **Finding:** The local clustering coefficient (probability that a cell's neighbors are also neighbors of each other) increases significantly under flow conditions.
 
-| Condition | Clustering Coefficient |
-|-----------|----------------------|
-| Static    | 0.357                |
-| 6 dyne    | 0.442                |
+| Condition | Median Clustering | Mean | Std | n |
+|-----------|------------------|------|-----|---|
+| Static    | 0.376            | 0.381| 0.073| 30 |
+| 6 dyne    | 0.469            | 0.442| 0.055| 30 |
 
-**Statistical significance:** p < 0.001 (Mann-Whitney U test)
+**Per-image replicate statistics:**
+- Median difference: +0.093 [95% CI: 0.036, 0.127]
+- Mann-Whitney U = 222.0, **p = 7.70e-04**
+- Effect size r = 0.507 (large)
 
-**Biological interpretation:** Flow reorganizes cells into tighter triangular neighborhoods, creating a more interconnected tissue architecture. This isn't just cell elongation - it's a fundamental restructuring of the contact topology.
-
----
-
-## Discovery 2: Reticular Junctions Increase 26% Under Flow
-
-**Finding:** The proportion of mature, reticular-type adherens junctions increases dramatically under flow.
-
-| Condition | % Reticular Junctions |
-|-----------|----------------------|
-| Static    | 50.2%                |
-| 6 dyne    | 63.5%                |
-
-**Statistical significance:** p < 1e-63 (Chi-squared test)
-
-**Biological interpretation:** Flow promotes junction maturation. Reticular junctions (characterized by dense VE-cadherin networks) indicate stronger cell-cell adhesion and barrier function. This 26% increase represents a massive shift toward mature, stable junctions.
+**Biological interpretation:** Flow reorganizes cells into tighter triangular neighborhoods, creating a more interconnected tissue architecture.
 
 ---
 
-## Discovery 3: High-Degree Cells Have Stronger Junctions
+## Discovery 2: Reticular Junctions Increase Under Flow
 
-**Finding:** Cells with more neighbors (higher degree in the contact graph) also have higher adherens junction occupancy along their edges.
+**Finding:** The proportion of mature, reticular-type adherens junctions increases under flow.
 
-**Statistical significance:** Spearman correlation p < 1e-17
+| Condition | Median % Reticular | Mean | Std | n |
+|-----------|-------------------|------|-----|---|
+| Static    | 51.5%             | 51.0%| 5.2%| 30 |
+| 6 dyne    | 61.1%             | 62.1%| 8.6%| 30 |
 
-**Biological interpretation:** "Hub" cells in the tissue network are not just geometrically central - they are also better anchored with stronger junctions. This suggests a coordinated program where network position and junction strength co-evolve.
+**Per-image replicate statistics:**
+- Median difference: +9.5% [95% CI: 6.7%, 16.6%]
+- Mann-Whitney U = 133.5, **p = 2.98e-06**
+- Effect size r = 0.703 (large)
 
----
-
-## Discovery 4: Tricellular Vertices Are Junction Hotspots
-
-**Finding:** Triangular motifs (3 mutually-connected cells) are enriched for VE-cadherin. "All-reticular" triangles (where all 3 edges are reticular) increase dramatically under flow.
-
-| Condition | % All-Reticular Triangles |
-|-----------|--------------------------|
-| Static    | 14.6%                    |
-| 6 dyne    | 27.9%                    |
-
-**Statistical significance:** p < 1e-45
-
-**Biological interpretation:** Tricellular junctions (where 3 cells meet) are known hotspots for permeability in vivo. Our data shows flow drives junction maturation specifically at these multi-cell vertices, potentially explaining how flow reduces vascular permeability.
+**Biological interpretation:** Flow promotes junction maturation. Reticular junctions indicate stronger cell-cell adhesion and barrier function.
 
 ---
 
-## Discovery 5: Small Cells Are Network Hubs
+## ~~Discovery 3: High-Degree Cells Have Stronger Junctions~~ (NOT CONFIRMED)
 
-**Finding:** Cell area positively correlates with degree (number of neighbors), but smaller cells show the highest clustering coefficients.
+**Original claim:** Cells with more neighbors have higher AJ occupancy.
 
-| Condition | Area-Degree Correlation (r) |
-|-----------|----------------------------|
-| Static    | 0.416                      |
-| 6 dyne    | 0.537                      |
+**Per-image replicate testing:**
+- Median within-image Spearman r = 0.001
+- Wilcoxon test: **p = 0.808** (not significant)
 
-Under flow, the smallest cells (bottom quartile by area) have clustering coefficient = 0.565, highest of any size class.
+**Conclusion:** The original pooled analysis suffered from pseudo-replication. When properly tested at the image level, the degree-occupancy correlation does NOT hold. This finding is **withdrawn**.
 
-**Biological interpretation:** Small cells are embedded in tight, highly-clustered neighborhoods. These may represent recently divided cells that are being "integrated" into the tissue network through dense local connections.
+---
+
+## Discovery 3 (renumbered): Tricellular Vertices Are Junction Hotspots
+
+**Finding:** "All-reticular" triangles (where all 3 edges are reticular-type) increase dramatically under flow.
+
+| Condition | Median % All-Reticular | Mean | Std | n |
+|-----------|----------------------|------|-----|---|
+| Static    | 15.9%                | 15.9%| 4.4%| 30 |
+| 6 dyne    | 25.4%                | 25.3%| 10.2%| 30 |
+
+**Per-image replicate statistics:**
+- Median difference: +9.6% [95% CI: 4.2%, 13.8%]
+- Mann-Whitney U = 193.5, **p = 1.54e-04**
+- Effect size r = 0.570 (large)
+
+**Biological interpretation:** Tricellular junctions (where 3 cells meet) are known hotspots for permeability. Flow drives junction maturation specifically at these multi-cell vertices.
+
+---
+
+## Discovery 4 (renumbered): Area-Degree Correlation Strengthens Under Flow
+
+**Finding:** Cell area positively correlates with degree (number of neighbors), and this correlation strengthens under flow.
+
+| Condition | Median r | Mean r | Range | n |
+|-----------|----------|--------|-------|---|
+| Static    | 0.455    | 0.445  | [0.17, 0.65] | 30 |
+| 6 dyne    | 0.642    | 0.624  | [0.31, 0.76] | 30 |
+
+**Per-image replicate statistics:**
+- Both conditions: correlations differ from 0, **p = 1.86e-09**
+- Condition comparison: Median diff = +0.187 [95% CI: 0.144, 0.246]
+- Mann-Whitney U = 101.0, **p = 2.57e-07**
+- Effect size r = 0.78 (large)
+
+**Biological interpretation:** Larger cells have more neighbors, and this relationship tightens under flow. The tissue becomes more geometrically ordered.
 
 ---
 
 ## Overall Conclusion
 
-**Flow doesn't just align cells - it RESTRUCTURES the contact network to create a more robust, interconnected tissue with mature junctions concentrated at multi-cell vertices.**
+**Flow restructures the contact network to create a more robust, interconnected tissue with mature junctions concentrated at multi-cell vertices.**
 
-This network-level perspective reveals emergent properties that wouldn't be visible from single-cell morphometrics alone. The combination of:
-- Increased clustering (tighter neighborhoods)
-- More reticular junctions (stronger adhesion)
-- Junction maturation at tricellular vertices (reduced permeability hotspots)
+Four discoveries survive rigorous per-image statistical testing:
+1. Clustering coefficient increases (tighter neighborhoods)
+2. Reticular junction percentage increases (stronger adhesion)
+3. All-reticular triangles increase (junction maturation at tricellular vertices)
+4. Area-degree correlation strengthens (geometric ordering)
 
-...explains at the mechanistic level why laminar flow is atheroprotective.
+One original claim (degree-occupancy correlation) was **withdrawn** after proper statistical validation revealed pseudo-replication in the pooled analysis.
 
 ---
 
-## Methods
+## Statistical Methods
 
-- **Network construction:** Cell-cell contact graph where nodes = cells, edges = shared boundaries
-- **Clustering coefficient:** NetworkX `clustering()` function
-- **Junction typing:** Based on VE-cadherin intensity profiles along cell edges
-- **Statistical tests:** Mann-Whitney U (continuous), Chi-squared (categorical)
-- **Dataset:** 62 EGM2-treated HUVEC images, static vs 6 dyne/cm² flow
+- **Sampling unit:** Image (not individual cells/edges)
+- **Between-condition test:** Mann-Whitney U (non-parametric)
+- **Within-condition test:** Wilcoxon signed-rank (for correlations differing from 0)
+- **Effect size:** Rank-biserial correlation r
+  - |r| < 0.1: negligible
+  - |r| 0.1-0.3: small
+  - |r| 0.3-0.5: medium
+  - |r| > 0.5: large
+- **Confidence intervals:** Bootstrap (1000 resamples)
+- **Dataset:** 95 EGM2-treated HUVEC images (30 static, 30 6dyne, 30 20dyne, 5 unknown)
 
 ---
 
 ## Key Files
 
-- Network analysis script: `scripts/network_discovery_analysis.py`
-- Raw results: `runs/egm2_full/network_discoveries.json`
-- Cell/edge data: `runs/egm2_full/results/*/cells.csv`, `edges.csv`
-- QC images: `runs/egm2_full/results/*/qc_*.png`
+- Hardened statistics script: `scripts/harden_network_stats.py`
+- Per-image results: `runs/egm2_full/hardened_network_stats.json`
+- Cell/edge data: `runs/egm2_full/*/cells.csv`, `edges.csv`
