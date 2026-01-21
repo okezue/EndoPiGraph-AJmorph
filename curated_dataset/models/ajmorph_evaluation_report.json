@@ -1,0 +1,228 @@
+{
+  "created": "2026-01-19T17:13:19.730841",
+  "data": {
+    "source": "runs/sbiad1540_full/all_edges.csv",
+    "n_samples": 3520,
+    "n_images": 15,
+    "class_distribution": {
+      "reticular": 2064,
+      "straight": 900,
+      "other": 302,
+      "fingers": 254
+    }
+  },
+  "evaluation": {
+    "method": "5-fold GroupKFold by image_id",
+    "metrics": {
+      "fingers": {
+        "precision": 1.0,
+        "recall": 0.9645669291338582,
+        "f1-score": 0.9819639278557114,
+        "support": 254.0
+      },
+      "other": {
+        "precision": 0.9867109634551495,
+        "recall": 0.9834437086092715,
+        "f1-score": 0.9850746268656716,
+        "support": 302.0
+      },
+      "reticular": {
+        "precision": 0.9975833736104398,
+        "recall": 1.0,
+        "f1-score": 0.9987902250181466,
+        "support": 2064.0
+      },
+      "straight": {
+        "precision": 0.994475138121547,
+        "recall": 1.0,
+        "f1-score": 0.997229916897507,
+        "support": 900.0
+      },
+      "macro avg": {
+        "precision": 0.994692368796784,
+        "recall": 0.9870026594357825,
+        "f1-score": 0.9907646741592593,
+        "support": 3520.0
+      },
+      "weighted avg": {
+        "precision": 0.9960302325013622,
+        "recall": 0.9960227272727272,
+        "f1-score": 0.9960003763164759,
+        "support": 3520.0
+      }
+    },
+    "accuracy": 0.9960227272727272,
+    "confusion_matrix": [
+      [
+        245,
+        4,
+        5,
+        0
+      ],
+      [
+        0,
+        297,
+        0,
+        5
+      ],
+      [
+        0,
+        0,
+        2064,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        900
+      ]
+    ],
+    "confusion_labels": [
+      "fingers",
+      "other",
+      "reticular",
+      "straight"
+    ],
+    "fold_results": [
+      {
+        "fold": 1,
+        "train_images": [
+          "BSA_6dyn-146",
+          "BSA_BMP9_20dyn-2",
+          "BSA_BMP9_6dyn-29",
+          "BSA_BMP9_static-23",
+          "BSA_static-111",
+          "EGM2_regular_18-20dyn-06",
+          "EGM2_regular_18-20dyn-53",
+          "EGM2_regular_18-20dyn-60",
+          "EGM2_regular_6dyn-27",
+          "EGM2_regular_6dyn-86",
+          "EGM2_regular_6dyn-88",
+          "EGM2_regular_static-49"
+        ],
+        "test_images": [
+          "BSA_BMP9_20dyn-8",
+          "BSA_static-115",
+          "EGM2_regular_static-50"
+        ],
+        "n_train": 2843,
+        "n_test": 677,
+        "accuracy": 0.9970457902511078
+      },
+      {
+        "fold": 2,
+        "train_images": [
+          "BSA_6dyn-146",
+          "BSA_BMP9_20dyn-2",
+          "BSA_BMP9_20dyn-8",
+          "BSA_BMP9_static-23",
+          "BSA_static-111",
+          "BSA_static-115",
+          "EGM2_regular_18-20dyn-06",
+          "EGM2_regular_18-20dyn-60",
+          "EGM2_regular_6dyn-86",
+          "EGM2_regular_6dyn-88",
+          "EGM2_regular_static-49",
+          "EGM2_regular_static-50"
+        ],
+        "test_images": [
+          "BSA_BMP9_6dyn-29",
+          "EGM2_regular_18-20dyn-53",
+          "EGM2_regular_6dyn-27"
+        ],
+        "n_train": 2825,
+        "n_test": 695,
+        "accuracy": 0.9985611510791367
+      },
+      {
+        "fold": 3,
+        "train_images": [
+          "BSA_6dyn-146",
+          "BSA_BMP9_20dyn-2",
+          "BSA_BMP9_20dyn-8",
+          "BSA_BMP9_6dyn-29",
+          "BSA_static-115",
+          "EGM2_regular_18-20dyn-06",
+          "EGM2_regular_18-20dyn-53",
+          "EGM2_regular_18-20dyn-60",
+          "EGM2_regular_6dyn-27",
+          "EGM2_regular_6dyn-86",
+          "EGM2_regular_static-49",
+          "EGM2_regular_static-50"
+        ],
+        "test_images": [
+          "BSA_BMP9_static-23",
+          "BSA_static-111",
+          "EGM2_regular_6dyn-88"
+        ],
+        "n_train": 2799,
+        "n_test": 721,
+        "accuracy": 0.9944521497919556
+      },
+      {
+        "fold": 4,
+        "train_images": [
+          "BSA_BMP9_20dyn-2",
+          "BSA_BMP9_20dyn-8",
+          "BSA_BMP9_6dyn-29",
+          "BSA_BMP9_static-23",
+          "BSA_static-111",
+          "BSA_static-115",
+          "EGM2_regular_18-20dyn-53",
+          "EGM2_regular_6dyn-27",
+          "EGM2_regular_6dyn-86",
+          "EGM2_regular_6dyn-88",
+          "EGM2_regular_static-49",
+          "EGM2_regular_static-50"
+        ],
+        "test_images": [
+          "BSA_6dyn-146",
+          "EGM2_regular_18-20dyn-06",
+          "EGM2_regular_18-20dyn-60"
+        ],
+        "n_train": 2805,
+        "n_test": 715,
+        "accuracy": 0.993006993006993
+      },
+      {
+        "fold": 5,
+        "train_images": [
+          "BSA_6dyn-146",
+          "BSA_BMP9_20dyn-8",
+          "BSA_BMP9_6dyn-29",
+          "BSA_BMP9_static-23",
+          "BSA_static-111",
+          "BSA_static-115",
+          "EGM2_regular_18-20dyn-06",
+          "EGM2_regular_18-20dyn-53",
+          "EGM2_regular_18-20dyn-60",
+          "EGM2_regular_6dyn-27",
+          "EGM2_regular_6dyn-88",
+          "EGM2_regular_static-50"
+        ],
+        "test_images": [
+          "BSA_BMP9_20dyn-2",
+          "EGM2_regular_6dyn-86",
+          "EGM2_regular_static-49"
+        ],
+        "n_train": 2808,
+        "n_test": 712,
+        "accuracy": 0.9971910112359551
+      }
+    ]
+  },
+  "feature_importance": {
+    "aj_cluster_count": 0.3302260498357537,
+    "aj_linearity_index": 0.27091028682292695,
+    "aj_occupancy": 0.08324959508672132,
+    "aj_skeleton_len": 0.08023582630272674,
+    "aj_cluster_area_mean": 0.07647101621260455,
+    "aj_intensity_per_interface": 0.05929599119081399,
+    "aj_mean_intensity": 0.041871897856836454,
+    "aj_std_intensity": 0.02658387766093139,
+    "aj_thickness_proxy": 0.019561505780215895,
+    "aj_max_intensity": 0.011593953250468945
+  },
+  "warning": "Labels are HEURISTIC-DERIVED from threshold rules on the same features used for training. High accuracy indicates the RF learned the rules, NOT validated biological classification. Manual annotation required for true validation."
+}

@@ -1,0 +1,2649 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d28" for="edge" attr.name="aj_morph" attr.type="string" />
+  <key id="d27" for="edge" attr.name="aj_thickness_proxy" attr.type="double" />
+  <key id="d26" for="edge" attr.name="aj_linearity_index" attr.type="double" />
+  <key id="d25" for="edge" attr.name="aj_skeleton_len" attr.type="double" />
+  <key id="d24" for="edge" attr.name="aj_cluster_area_mean" attr.type="double" />
+  <key id="d23" for="edge" attr.name="aj_cluster_count" attr.type="long" />
+  <key id="d22" for="edge" attr.name="aj_intensity_per_interface" attr.type="double" />
+  <key id="d21" for="edge" attr.name="aj_occupancy" attr.type="double" />
+  <key id="d20" for="edge" attr.name="aj_std_intensity" attr.type="double" />
+  <key id="d19" for="edge" attr.name="aj_max_intensity" attr.type="double" />
+  <key id="d18" for="edge" attr.name="aj_mean_intensity" attr.type="double" />
+  <key id="d17" for="edge" attr.name="golgi_channel_idx" attr.type="long" />
+  <key id="d16" for="edge" attr.name="nuc_channel_idx" attr.type="long" />
+  <key id="d15" for="edge" attr.name="cell_channel_idx" attr.type="long" />
+  <key id="d14" for="edge" attr.name="aj_channel_idx" attr.type="long" />
+  <key id="d13" for="edge" attr.name="aj_threshold" attr.type="double" />
+  <key id="d12" for="edge" attr.name="iface_cx" attr.type="double" />
+  <key id="d11" for="edge" attr.name="iface_cy" attr.type="double" />
+  <key id="d10" for="edge" attr.name="contact_px" attr.type="long" />
+  <key id="d9" for="edge" attr.name="image_path" attr.type="string" />
+  <key id="d8" for="edge" attr.name="image_id" attr.type="string" />
+  <key id="d7" for="node" attr.name="minor_axis_length" attr.type="double" />
+  <key id="d6" for="node" attr.name="major_axis_length" attr.type="double" />
+  <key id="d5" for="node" attr.name="orientation_rad" attr.type="double" />
+  <key id="d4" for="node" attr.name="eccentricity" attr.type="double" />
+  <key id="d3" for="node" attr.name="perimeter" attr.type="double" />
+  <key id="d2" for="node" attr.name="area" attr.type="double" />
+  <key id="d1" for="node" attr.name="centroid_y" attr.type="double" />
+  <key id="d0" for="node" attr.name="centroid_x" attr.type="double" />
+  <graph edgedefault="undirected">
+    <node id="1">
+      <data key="d0">176.25848400556328</data>
+      <data key="d1">29.887830319888735</data>
+      <data key="d2">14380.0</data>
+      <data key="d3">677.2031021678297</data>
+      <data key="d4">0.9710486560034051</data>
+      <data key="d5">1.559498954920586</data>
+      <data key="d6">290.0124232205584</data>
+      <data key="d7">69.27868561591319</data>
+    </node>
+    <node id="2">
+      <data key="d0">397.637304733038</data>
+      <data key="d1">130.65012823501982</data>
+      <data key="d2">21445.0</data>
+      <data key="d3">875.7432534317572</data>
+      <data key="d4">0.9587036956755313</data>
+      <data key="d5">-0.5825298932185602</data>
+      <data key="d6">337.7594713089645</data>
+      <data key="d7">96.06108803651834</data>
+    </node>
+    <node id="3">
+      <data key="d0">747.7034691629956</data>
+      <data key="d1">38.69006975036711</data>
+      <data key="d2">10896.0</data>
+      <data key="d3">480.61731573020285</data>
+      <data key="d4">0.8885984874904433</data>
+      <data key="d5">-1.2492267280072087</data>
+      <data key="d6">180.07445374958448</data>
+      <data key="d7">82.59760761874604</data>
+    </node>
+    <node id="4">
+      <data key="d0">890.765436131983</data>
+      <data key="d1">52.78569095066972</data>
+      <data key="d2">6122.0</data>
+      <data key="d3">319.4152595828997</data>
+      <data key="d4">0.7260232066933203</data>
+      <data key="d5">-0.02738471578744747</data>
+      <data key="d6">107.64850281186816</data>
+      <data key="d7">74.02666740939608</data>
+    </node>
+    <node id="5">
+      <data key="d0">762.4889613647767</data>
+      <data key="d1">125.06710988459609</data>
+      <data key="d2">15944.0</data>
+      <data key="d3">756.3645737753169</data>
+      <data key="d4">0.9386395741466079</data>
+      <data key="d5">-0.7540129020954839</data>
+      <data key="d6">266.6416965042409</data>
+      <data key="d7">91.96462056186662</data>
+    </node>
+    <node id="6">
+      <data key="d0">128.68632859466723</data>
+      <data key="d1">98.81978923544806</data>
+      <data key="d2">14139.0</data>
+      <data key="d3">652.6589462905455</data>
+      <data key="d4">0.974431753941229</data>
+      <data key="d5">1.3353094973951065</data>
+      <data key="d6">297.01243325860884</data>
+      <data key="d7">66.73384707388172</data>
+    </node>
+    <node id="7">
+      <data key="d0">581.491604561372</data>
+      <data key="d1">81.31417796534076</data>
+      <data key="d2">11137.0</data>
+      <data key="d3">575.9249275747777</data>
+      <data key="d4">0.9606762988649347</data>
+      <data key="d5">-1.3806547904858315</data>
+      <data key="d6">236.2606975998646</data>
+      <data key="d7">65.6026865418311</data>
+    </node>
+    <node id="8">
+      <data key="d0">953.6184020446716</data>
+      <data key="d1">134.14590510056672</data>
+      <data key="d2">8999.0</data>
+      <data key="d3">519.1686142824235</data>
+      <data key="d4">0.9725082872290206</data>
+      <data key="d5">-0.7000162460202694</data>
+      <data key="d6">225.38834996783496</data>
+      <data key="d7">52.48579518263091</data>
+    </node>
+    <node id="9">
+      <data key="d0">878.0134123518403</data>
+      <data key="d1">166.93252235391972</data>
+      <data key="d2">9618.0</data>
+      <data key="d3">596.2640687119285</data>
+      <data key="d4">0.9846970098025019</data>
+      <data key="d5">-0.6284272165769066</data>
+      <data key="d6">275.63936668096073</data>
+      <data key="d7">48.0370690235311</data>
+    </node>
+    <node id="10">
+      <data key="d0">294.46293461622565</data>
+      <data key="d1">129.65274436912313</data>
+      <data key="d2">9146.0</data>
+      <data key="d3">470.6883835420683</data>
+      <data key="d4">0.9221241556944011</data>
+      <data key="d5">-1.0628569409372202</data>
+      <data key="d6">179.59777995998567</data>
+      <data key="d7">69.48532071315555</data>
+    </node>
+    <node id="11">
+      <data key="d0">561.0742697721605</data>
+      <data key="d1">288.72037874624846</data>
+      <data key="d2">23657.0</data>
+      <data key="d3">1032.383909759073</data>
+      <data key="d4">0.9883502673584844</data>
+      <data key="d5">-0.48191749014056445</data>
+      <data key="d6">461.6729330046375</data>
+      <data key="d7">70.26496572075017</data>
+    </node>
+    <node id="12">
+      <data key="d0">128.82094064298587</data>
+      <data key="d1">223.31620254636357</data>
+      <data key="d2">17201.0</data>
+      <data key="d3">762.714862200761</data>
+      <data key="d4">0.9803430702536258</data>
+      <data key="d5">0.7378250435460556</data>
+      <data key="d6">336.606501206031</data>
+      <data key="d7">66.41261163206055</data>
+    </node>
+    <node id="13">
+      <data key="d0">58.37659525979945</data>
+      <data key="d1">219.26731996353692</data>
+      <data key="d2">8776.0</data>
+      <data key="d3">523.8549057834388</data>
+      <data key="d4">0.9724089730613178</data>
+      <data key="d5">0.6431356622103753</data>
+      <data key="d6">231.40890593820293</data>
+      <data key="d7">53.9836799930859</data>
+    </node>
+    <node id="14">
+      <data key="d0">200.7523109937273</data>
+      <data key="d1">195.6141465830307</data>
+      <data key="d2">12116.0</data>
+      <data key="d3">622.6183617507294</data>
+      <data key="d4">0.9699320308568673</data>
+      <data key="d5">1.032338023906275</data>
+      <data key="d6">258.09854774849003</data>
+      <data key="d7">62.81498056663995</data>
+    </node>
+    <node id="15">
+      <data key="d0">986.7125165855816</data>
+      <data key="d1">257.937343358396</data>
+      <data key="d2">6783.0</data>
+      <data key="d3">463.88939366884495</data>
+      <data key="d4">0.9658144261587515</data>
+      <data key="d5">-0.3425156083455237</data>
+      <data key="d6">186.8547404948266</data>
+      <data key="d7">48.43918377621019</data>
+    </node>
+    <node id="16">
+      <data key="d0">930.207846314084</data>
+      <data key="d1">314.4690429348455</data>
+      <data key="d2">8641.0</data>
+      <data key="d3">534.8954903232549</data>
+      <data key="d4">0.9591992304341217</data>
+      <data key="d5">-0.17614582600965972</data>
+      <data key="d6">212.6354852997938</data>
+      <data key="d7">60.11865015305704</data>
+    </node>
+    <node id="17">
+      <data key="d0">350.35298696244405</data>
+      <data key="d1">348.40922358435495</data>
+      <data key="d2">10278.0</data>
+      <data key="d3">721.4640328181787</data>
+      <data key="d4">0.9885907335802856</data>
+      <data key="d5">-0.35131552342838157</data>
+      <data key="d6">316.103013283792</data>
+      <data key="d7">47.613510442782065</data>
+    </node>
+    <node id="18">
+      <data key="d0">682.8715001473622</data>
+      <data key="d1">283.0542292956086</data>
+      <data key="d2">6786.0</data>
+      <data key="d3">432.9604614807105</data>
+      <data key="d4">0.831311186739651</data>
+      <data key="d5">0.35496626536925197</data>
+      <data key="d6">136.57251611181604</data>
+      <data key="d7">75.90799603687462</data>
+    </node>
+    <node id="19">
+      <data key="d0">474.60141553361893</data>
+      <data key="d1">276.62991246042094</data>
+      <data key="d2">10738.0</data>
+      <data key="d3">494.700576850888</data>
+      <data key="d4">0.9220031631673304</data>
+      <data key="d5">-0.5414332506610904</data>
+      <data key="d6">199.2477915707653</data>
+      <data key="d7">77.14522687532602</data>
+    </node>
+    <node id="20">
+      <data key="d0">40.02163344676713</data>
+      <data key="d1">296.3719008264463</data>
+      <data key="d2">4114.0</data>
+      <data key="d3">368.1614716074871</data>
+      <data key="d4">0.9415837307522866</data>
+      <data key="d5">0.8865236992707635</data>
+      <data key="d6">147.0209528728081</data>
+      <data key="d7">49.51356580778321</data>
+    </node>
+    <node id="21">
+      <data key="d0">378.74448586517553</data>
+      <data key="d1">430.94516930723825</data>
+      <data key="d2">12876.0</data>
+      <data key="d3">882.8254685319159</data>
+      <data key="d4">0.993889677094115</data>
+      <data key="d5">-0.27035944592005456</data>
+      <data key="d6">411.63177801673675</data>
+      <data key="d7">45.435105225967504</data>
+    </node>
+    <node id="22">
+      <data key="d0">760.7622068965517</data>
+      <data key="d1">366.63714942528736</data>
+      <data key="d2">10875.0</data>
+      <data key="d3">722.5655839020935</data>
+      <data key="d4">0.9874129882638246</data>
+      <data key="d5">-0.4844522413760073</data>
+      <data key="d6">332.12166184731194</data>
+      <data key="d7">52.529417239916505</data>
+    </node>
+    <node id="23">
+      <data key="d0">991.4577087058176</data>
+      <data key="d1">410.47352496217854</data>
+      <data key="d2">7271.0</data>
+      <data key="d3">525.1198410471445</data>
+      <data key="d4">0.9866416572432603</data>
+      <data key="d5">-0.22633567345511732</data>
+      <data key="d6">242.25686717047213</data>
+      <data key="d7">39.465004524567725</data>
+    </node>
+    <node id="24">
+      <data key="d0">246.3542471042471</data>
+      <data key="d1">415.2902187902188</data>
+      <data key="d2">6216.0</data>
+      <data key="d3">413.9188309203678</data>
+      <data key="d4">0.931230965526402</data>
+      <data key="d5">0.30834796250325797</data>
+      <data key="d6">160.63816350710627</data>
+      <data key="d7">58.54129186146388</data>
+    </node>
+    <node id="25">
+      <data key="d0">49.29956926497152</data>
+      <data key="d1">405.1463109629012</data>
+      <data key="d2">7197.0</data>
+      <data key="d3">383.82442251138934</data>
+      <data key="d4">0.8199873264558953</data>
+      <data key="d5">-0.03312486384419975</data>
+      <data key="d6">133.94817539174977</data>
+      <data key="d7">76.66948129532912</data>
+    </node>
+    <node id="26">
+      <data key="d0">644.2300059367315</data>
+      <data key="d1">457.7574421168688</data>
+      <data key="d2">11791.0</data>
+      <data key="d3">609.9137802864846</data>
+      <data key="d4">0.9797281471194323</data>
+      <data key="d5">-0.362826363975104</data>
+      <data key="d6">279.28958289754894</data>
+      <data key="d7">55.950534430733896</data>
+    </node>
+    <node id="27">
+      <data key="d0">582.9967465246968</data>
+      <data key="d1">478.68776496105687</data>
+      <data key="d2">10143.0</data>
+      <data key="d3">583.2985565973347</data>
+      <data key="d4">0.9753682578189379</data>
+      <data key="d5">-0.4496360833667536</data>
+      <data key="d6">258.08464304922524</data>
+      <data key="d7">56.92902734103038</data>
+    </node>
+    <node id="28">
+      <data key="d0">90.40379008746356</data>
+      <data key="d1">436.13775510204084</data>
+      <data key="d2">2744.0</data>
+      <data key="d3">230.55129855222071</data>
+      <data key="d4">0.9049791360003161</data>
+      <data key="d5">0.022700711659366535</data>
+      <data key="d6">91.43134247378671</data>
+      <data key="d7">38.90000845853237</data>
+    </node>
+    <node id="29">
+      <data key="d0">15.946689352048773</data>
+      <data key="d1">538.4512973202892</data>
+      <data key="d2">7053.0</data>
+      <data key="d3">537.1309883354378</data>
+      <data key="d4">0.9887921419104782</data>
+      <data key="d5">0.06920362439475627</data>
+      <data key="d6">258.32225133383866</data>
+      <data key="d7">38.56717481236522</data>
+    </node>
+    <node id="30">
+      <data key="d0">153.57070791995963</data>
+      <data key="d1">479.55624684714985</data>
+      <data key="d2">5947.0</data>
+      <data key="d3">405.3624817342638</data>
+      <data key="d4">0.9587679369134497</data>
+      <data key="d5">0.26311186443105716</data>
+      <data key="d6">169.2106854562161</data>
+      <data key="d7">48.088010614212145</data>
+    </node>
+    <node id="31">
+      <data key="d0">203.08566721581548</data>
+      <data key="d1">483.51939493784636</data>
+      <data key="d2">6677.0</data>
+      <data key="d3">361.4985207035849</data>
+      <data key="d4">0.8733141631144732</data>
+      <data key="d5">0.35717818121779116</data>
+      <data key="d6">135.8592367584883</data>
+      <data key="d7">66.18483814085634</data>
+    </node>
+    <node id="32">
+      <data key="d0">749.2125523012552</data>
+      <data key="d1">499.4133891213389</data>
+      <data key="d2">4780.0</data>
+      <data key="d3">331.1198410471445</data>
+      <data key="d4">0.9372152493642644</data>
+      <data key="d5">-0.5201914142445754</data>
+      <data key="d6">135.4456117262138</data>
+      <data key="d7">47.23685396762041</data>
+    </node>
+    <node id="33">
+      <data key="d0">471.4269957578095</data>
+      <data key="d1">517.7281912842268</data>
+      <data key="d2">12965.0</data>
+      <data key="d3">483.38686835190333</data>
+      <data key="d4">0.8734726783996966</data>
+      <data key="d5">-0.7392436430444265</data>
+      <data key="d6">184.85746893459364</data>
+      <data key="d7">90.00214121937718</data>
+    </node>
+    <node id="34">
+      <data key="d0">115.82137161084529</data>
+      <data key="d1">491.17543859649123</data>
+      <data key="d2">1881.0</data>
+      <data key="d3">180.1959594928933</data>
+      <data key="d4">0.7143931496909078</data>
+      <data key="d5">0.2894800687604897</data>
+      <data key="d6">59.41144820449632</data>
+      <data key="d7">41.57283676691567</data>
+    </node>
+    <node id="35">
+      <data key="d0">71.58145612943373</data>
+      <data key="d1">567.0907280647168</data>
+      <data key="d2">8035.0</data>
+      <data key="d3">472.309703885628</data>
+      <data key="d4">0.9600071625518338</data>
+      <data key="d5">0.4020880202832423</data>
+      <data key="d6">192.92868127900476</data>
+      <data key="d7">54.01529272118904</data>
+    </node>
+    <node id="36">
+      <data key="d0">137.12233347845014</data>
+      <data key="d1">566.7585256131185</data>
+      <data key="d2">6891.0</data>
+      <data key="d3">346.6761902332485</data>
+      <data key="d4">0.8291649918201167</data>
+      <data key="d5">0.7444441746205733</data>
+      <data key="d6">126.08903009754252</data>
+      <data key="d7">70.48426590149661</data>
+    </node>
+    <node id="37">
+      <data key="d0">946.0757952286282</data>
+      <data key="d1">555.5700795228628</data>
+      <data key="d2">4024.0</data>
+      <data key="d3">246.93607486307093</data>
+      <data key="d4">0.5716603651029823</data>
+      <data key="d5">1.3785460881710423</data>
+      <data key="d6">80.11342476407728</data>
+      <data key="d7">65.73229253596016</data>
+    </node>
+    <node id="38">
+      <data key="d0">504.13412930268004</data>
+      <data key="d1">612.4089927600661</data>
+      <data key="d2">7873.0</data>
+      <data key="d3">390.9604614807104</data>
+      <data key="d4">0.7420487106346385</data>
+      <data key="d5">-0.6892043286609215</data>
+      <data key="d6">128.3227219368018</data>
+      <data key="d7">86.02061870100604</data>
+    </node>
+    <node id="39">
+      <data key="d0">287.22844141069396</data>
+      <data key="d1">612.2307167235494</data>
+      <data key="d2">4395.0</data>
+      <data key="d3">299.4629867976521</data>
+      <data key="d4">0.8632786664013533</data>
+      <data key="d5">0.6419982080507133</data>
+      <data key="d6">107.30182072767447</data>
+      <data key="d7">54.15818980677073</data>
+    </node>
+    <node id="40">
+      <data key="d0">231.50161750713607</data>
+      <data key="d1">634.3828734538534</data>
+      <data key="d2">5255.0</data>
+      <data key="d3">348.9959953866432</data>
+      <data key="d4">0.9319257790226882</data>
+      <data key="d5">0.8370571097908949</data>
+      <data key="d6">138.71095256315496</data>
+      <data key="d7">50.30339687889367</data>
+    </node>
+    <node id="41">
+      <data key="d0">357.3079801395985</data>
+      <data key="d1">657.3338850111535</data>
+      <data key="d2">13897.0</data>
+      <data key="d3">667.0264786586926</data>
+      <data key="d4">0.9582299178934317</data>
+      <data key="d5">-1.1738212082661355</data>
+      <data key="d6">273.7067054535683</data>
+      <data key="d7">78.27984235571515</data>
+    </node>
+    <node id="42">
+      <data key="d0">159.27610674070647</data>
+      <data key="d1">664.6364337498072</data>
+      <data key="d2">6483.0</data>
+      <data key="d3">356.01933598375615</data>
+      <data key="d4">0.8892004704167147</data>
+      <data key="d5">0.6527111111724211</data>
+      <data key="d6">136.0565306591776</data>
+      <data key="d7">62.24828251511622</data>
+    </node>
+    <node id="43">
+      <data key="d0">968.7727817745804</data>
+      <data key="d1">727.1961181055156</data>
+      <data key="d2">13344.0</data>
+      <data key="d3">616.6417023478424</data>
+      <data key="d4">0.9505910139691283</data>
+      <data key="d5">-0.44090367545810877</data>
+      <data key="d6">244.11420712277865</data>
+      <data key="d7">75.78428120665558</data>
+    </node>
+    <node id="44">
+      <data key="d0">107.30907326540515</data>
+      <data key="d1">699.400129387029</data>
+      <data key="d2">6183.0</data>
+      <data key="d3">414.9310242291876</data>
+      <data key="d4">0.9524063012736302</data>
+      <data key="d5">0.895786659256501</data>
+      <data key="d6">165.1769597881049</data>
+      <data key="d7">50.351138765515856</data>
+    </node>
+    <node id="45">
+      <data key="d0">495.40971862592784</data>
+      <data key="d1">723.9445019851545</data>
+      <data key="d2">11586.0</data>
+      <data key="d3">635.5239533417508</data>
+      <data key="d4">0.9371647605002259</data>
+      <data key="d5">-0.7067385776863061</data>
+      <data key="d6">232.61773997599343</data>
+      <data key="d7">81.15732975227799</data>
+    </node>
+    <node id="46">
+      <data key="d0">754.8203136036163</data>
+      <data key="d1">747.633752413241</data>
+      <data key="d2">21237.0</data>
+      <data key="d3">680.9259735953042</data>
+      <data key="d4">0.9205142899147399</data>
+      <data key="d5">-0.9940170989890446</data>
+      <data key="d6">265.68860054798506</data>
+      <data key="d7">103.8069000206296</data>
+    </node>
+    <node id="47">
+      <data key="d0">116.76481726945654</data>
+      <data key="d1">775.8398030676009</data>
+      <data key="d2">5281.0</data>
+      <data key="d3">413.13813101037414</data>
+      <data key="d4">0.9585450344011456</data>
+      <data key="d5">0.4882451661327655</data>
+      <data key="d6">162.1468166940825</data>
+      <data key="d7">46.20228848504409</data>
+    </node>
+    <node id="48">
+      <data key="d0">207.2181061673713</data>
+      <data key="d1">806.7682034762768</data>
+      <data key="d2">14901.0</data>
+      <data key="d3">562.0498192558056</data>
+      <data key="d4">0.8668461817130698</data>
+      <data key="d5">-0.07850409302799338</data>
+      <data key="d6">200.7499978023181</data>
+      <data key="d7">100.08906436155291</data>
+    </node>
+    <node id="49">
+      <data key="d0">287.6959515859766</data>
+      <data key="d1">760.5951585976628</data>
+      <data key="d2">4792.0</data>
+      <data key="d3">344.3919189857866</data>
+      <data key="d4">0.9295510607479989</data>
+      <data key="d5">1.0821716500073415</data>
+      <data key="d6">134.58181538482688</data>
+      <data key="d7">49.61942750464545</data>
+    </node>
+    <node id="50">
+      <data key="d0">902.3146299483649</data>
+      <data key="d1">764.5253012048192</data>
+      <data key="d2">2905.0</data>
+      <data key="d3">252.28531726798843</data>
+      <data key="d4">0.9352963695583699</data>
+      <data key="d5">-0.4696355531179815</data>
+      <data key="d6">104.59885320110338</data>
+      <data key="d7">37.01391203822071</data>
+    </node>
+    <node id="51">
+      <data key="d0">504.7359572029041</data>
+      <data key="d1">816.1091325945739</data>
+      <data key="d2">13085.0</data>
+      <data key="d3">643.7665940288701</data>
+      <data key="d4">0.9747966539263548</data>
+      <data key="d5">-1.0585883003688747</data>
+      <data key="d6">278.2465386060687</data>
+      <data key="d7">62.075476677718775</data>
+    </node>
+    <node id="52">
+      <data key="d0">319.2698917886696</data>
+      <data key="d1">804.890833863781</data>
+      <data key="d2">3142.0</data>
+      <data key="d3">282.03048327204937</data>
+      <data key="d4">0.9430036420814145</data>
+      <data key="d5">1.5347030301438278</data>
+      <data key="d6">114.95115842644456</data>
+      <data key="d7">38.25372329437226</data>
+    </node>
+    <node id="53">
+      <data key="d0">757.1511233080608</data>
+      <data key="d1">852.2861993581097</data>
+      <data key="d2">21499.0</data>
+      <data key="d3">692.2924599429248</data>
+      <data key="d4">0.9242714426353376</data>
+      <data key="d5">-1.4075302915925738</data>
+      <data key="d6">273.53691189440474</data>
+      <data key="d7">104.41886031290014</data>
+    </node>
+    <node id="54">
+      <data key="d0">311.22837532907107</data>
+      <data key="d1">917.7785351635954</data>
+      <data key="d2">21272.0</data>
+      <data key="d3">751.0142853498728</data>
+      <data key="d4">0.8506719639668017</data>
+      <data key="d5">-0.17176277939082635</data>
+      <data key="d6">239.76109287779641</data>
+      <data key="d7">126.04165848929271</data>
+    </node>
+    <node id="55">
+      <data key="d0">995.2736602052452</data>
+      <data key="d1">838.2086659064994</data>
+      <data key="d2">3508.0</data>
+      <data key="d3">229.53910524340094</data>
+      <data key="d4">0.3586467327385952</data>
+      <data key="d5">0.5458335178700623</data>
+      <data key="d6">70.22626828332746</data>
+      <data key="d7">65.55435088802292</data>
+    </node>
+    <node id="56">
+      <data key="d0">906.2159176880012</data>
+      <data key="d1">859.4029353911333</data>
+      <data key="d2">6609.0</data>
+      <data key="d3">354.73506473629425</data>
+      <data key="d4">0.8540806053718214</data>
+      <data key="d5">-1.0288868642178164</data>
+      <data key="d6">128.45310250461247</data>
+      <data key="d7">66.81368316331395</data>
+    </node>
+    <node id="57">
+      <data key="d0">467.61531819359294</data>
+      <data key="d1">938.8475951990329</data>
+      <data key="d2">11581.0</data>
+      <data key="d3">563.239682094289</data>
+      <data key="d4">0.9666012094985773</data>
+      <data key="d5">-0.6529502962993882</data>
+      <data key="d6">245.76685244826123</data>
+      <data key="d7">62.98640600137183</data>
+    </node>
+    <node id="58">
+      <data key="d0">225.58677237185057</data>
+      <data key="d1">945.4958731537794</data>
+      <data key="d2">9208.0</data>
+      <data key="d3">457.7056274847714</data>
+      <data key="d4">0.9366319143580082</data>
+      <data key="d5">-0.27886784063156744</data>
+      <data key="d6">186.76248031586084</data>
+      <data key="d7">65.42571369417651</data>
+    </node>
+    <node id="59">
+      <data key="d0">73.7868252516011</data>
+      <data key="d1">965.6869167429094</data>
+      <data key="d2">5465.0</data>
+      <data key="d3">350.5929291125633</data>
+      <data key="d4">0.8948437677321878</data>
+      <data key="d5">0.05356640139109209</data>
+      <data key="d6">132.91082221864175</data>
+      <data key="d7">59.32866239610137</data>
+    </node>
+    <node id="60">
+      <data key="d0">167.99838969404186</data>
+      <data key="d1">964.2312801932367</data>
+      <data key="d2">4968.0</data>
+      <data key="d3">336.6518036156091</data>
+      <data key="d4">0.9439854280210924</data>
+      <data key="d5">-0.22327185719643047</data>
+      <data key="d6">142.2750742235425</data>
+      <data key="d7">46.94894464627405</data>
+    </node>
+    <node id="61">
+      <data key="d0">722.053250461952</data>
+      <data key="d1">923.1059969763145</data>
+      <data key="d2">5953.0</data>
+      <data key="d3">412.9421715174808</data>
+      <data key="d4">0.9673415099176924</data>
+      <data key="d5">-1.374641264567587</data>
+      <data key="d6">174.2454436490751</data>
+      <data key="d7">44.16714827316265</data>
+    </node>
+    <node id="62">
+      <data key="d0">779.3895191788223</data>
+      <data key="d1">951.959886547812</data>
+      <data key="d2">7404.0</data>
+      <data key="d3">407.770598642227</data>
+      <data key="d4">0.9264350046668886</data>
+      <data key="d5">-1.2808386258809432</data>
+      <data key="d6">164.95125746230363</data>
+      <data key="d7">62.09668511977619</data>
+    </node>
+    <node id="63">
+      <data key="d0">925.0825987199613</data>
+      <data key="d1">938.9186088636638</data>
+      <data key="d2">8281.0</data>
+      <data key="d3">452.0071426749364</data>
+      <data key="d4">0.9524909169314244</data>
+      <data key="d5">-1.4433937844535982</data>
+      <data key="d6">190.61140173584448</data>
+      <data key="d7">58.053941438822584</data>
+    </node>
+    <node id="64">
+      <data key="d0">956.4413008989952</data>
+      <data key="d1">971.7884717080909</data>
+      <data key="d2">3782.0</data>
+      <data key="d3">349.26702730475876</data>
+      <data key="d4">0.9753511963500702</data>
+      <data key="d5">-1.4579042405800673</data>
+      <data key="d6">152.68028489614224</data>
+      <data key="d7">33.69015772331356</data>
+    </node>
+    <node id="65">
+      <data key="d0">787.148582175926</data>
+      <data key="d1">1002.1689814814815</data>
+      <data key="d2">6912.0</data>
+      <data key="d3">448.2436867076458</data>
+      <data key="d4">0.9654099211842094</data>
+      <data key="d5">-1.5190931607638385</data>
+      <data key="d6">187.99570430000693</data>
+      <data key="d7">49.01740022932618</data>
+    </node>
+    <node id="66">
+      <data key="d0">570.1428571428571</data>
+      <data key="d1">1009.796365914787</data>
+      <data key="d2">1596.0</data>
+      <data key="d3">174.61017305526642</data>
+      <data key="d4">0.8610705156605061</data>
+      <data key="d5">-1.4619229689181108</data>
+      <data key="d6">65.8518162533542</data>
+      <data key="d7">33.484697815584106</data>
+    </node>
+    <edge source="2" target="10" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">59</data>
+      <data key="d11">98.7457627118644</data>
+      <data key="d12">379.9830508474576</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.1189370607281055</data>
+      <data key="d19">0.7179104477611941</data>
+      <data key="d20">0.10257932871169036</data>
+      <data key="d21">0.021164021164021163</data>
+      <data key="d22">0.012129827055200187</data>
+      <data key="d23">2</data>
+      <data key="d24">2.0</data>
+      <data key="d25">4.0</data>
+      <data key="d26">0.49613893835683387</data>
+      <data key="d27">1.0</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="2" target="7" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">44</data>
+      <data key="d11">106.5</data>
+      <data key="d12">451.40909090909093</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.10318200663349918</data>
+      <data key="d19">0.508955223880597</data>
+      <data key="d20">0.07624738179184379</data>
+      <data key="d21">0.006944444444444444</data>
+      <data key="d22">0.0035344112769485903</data>
+      <data key="d23">1</data>
+      <data key="d24">1.0</data>
+      <data key="d25">1.0</data>
+      <data key="d26">0.0</data>
+      <data key="d27">1.0</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="2" target="17" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">58</data>
+      <data key="d11">204.94827586206895</data>
+      <data key="d12">390.2241379310345</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.1428075837031061</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.20165081807886603</data>
+      <data key="d21">0.08108108108108109</data>
+      <data key="d22">0.060734167002823726</data>
+      <data key="d23">2</data>
+      <data key="d24">7.5</data>
+      <data key="d25">6.0</data>
+      <data key="d26">0.5144957554275265</data>
+      <data key="d27">2.5</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="2" target="14" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">90</data>
+      <data key="d11">233.0</data>
+      <data key="d12">295.14444444444445</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.20229173282523555</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.19581758888496423</data>
+      <data key="d21">0.12056737588652482</data>
+      <data key="d22">0.0781465015348788</data>
+      <data key="d23">7</data>
+      <data key="d24">4.857142857142857</data>
+      <data key="d25">20.0</data>
+      <data key="d26">0.6063390625908325</data>
+      <data key="d27">1.7</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="3" target="5" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">274</data>
+      <data key="d11">54.22992700729927</data>
+      <data key="d12">789.3832116788321</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.09732490010929745</data>
+      <data key="d19">0.9432835820895522</data>
+      <data key="d20">0.11404853361568412</data>
+      <data key="d21">0.030012004801920768</data>
+      <data key="d22">0.01920589131174858</data>
+      <data key="d23">6</data>
+      <data key="d24">4.166666666666667</data>
+      <data key="d25">15.0</data>
+      <data key="d26">0.15148424267119157</data>
+      <data key="d27">1.6666666666666667</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="3" target="7" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">90</data>
+      <data key="d11">69.0</data>
+      <data key="d12">679.6555555555556</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.2469884619455912</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.2375783920673939</data>
+      <data key="d21">0.1595744680851064</data>
+      <data key="d22">0.11569810521858791</data>
+      <data key="d23">6</data>
+      <data key="d24">7.5</data>
+      <data key="d25">15.0</data>
+      <data key="d26">1.9205531989934397</data>
+      <data key="d27">3.0</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="4" target="5" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">114</data>
+      <data key="d11">32.0</data>
+      <data key="d12">860.7280701754386</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.13354835989543806</data>
+      <data key="d19">0.9343283582089552</data>
+      <data key="d20">0.1308818600873796</data>
+      <data key="d21">0.03954802259887006</data>
+      <data key="d22">0.025284593979256264</data>
+      <data key="d23">3</data>
+      <data key="d24">4.666666666666667</data>
+      <data key="d25">8.0</data>
+      <data key="d26">0.5743665268941905</data>
+      <data key="d27">1.75</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="4" target="9" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">75</data>
+      <data key="d11">83.85333333333334</data>
+      <data key="d12">920.6533333333333</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.06484665281188991</data>
+      <data key="d19">0.3567164179104478</data>
+      <data key="d20">0.045856827206848014</data>
+      <data key="d21">0.0</data>
+      <data key="d22">0.0</data>
+      <data key="d23">0</data>
+      <data key="d24">0.0</data>
+      <data key="d25">0.0</data>
+      <data key="d26">0.0</data>
+      <data key="d27">0.0</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="5" target="11" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">47</data>
+      <data key="d11">206.25531914893617</data>
+      <data key="d12">635.8723404255319</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.07217832406594478</data>
+      <data key="d19">0.6149253731343284</data>
+      <data key="d20">0.08611144454504698</data>
+      <data key="d21">0.026143790849673203</data>
+      <data key="d22">0.013306018924982928</data>
+      <data key="d23">1</data>
+      <data key="d24">4.0</data>
+      <data key="d25">2.0</data>
+      <data key="d26">2.0</data>
+      <data key="d27">2.0</data>
+      <data key="d28">fingers</data>
+    </edge>
+    <edge source="5" target="18" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">59</data>
+      <data key="d11">203.47457627118644</data>
+      <data key="d12">655.0847457627119</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.08004128294696727</data>
+      <data key="d19">0.5746268656716418</data>
+      <data key="d20">0.06304524856595435</data>
+      <data key="d21">0.005319148936170213</data>
+      <data key="d22">0.003056525881232137</data>
+      <data key="d23">1</data>
+      <data key="d24">1.0</data>
+      <data key="d25">1.0</data>
+      <data key="d26">0.0</data>
+      <data key="d27">1.0</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="6" target="12" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">70</data>
+      <data key="d11">110.75714285714285</data>
+      <data key="d12">50.02857142857143</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.09464133079097901</data>
+      <data key="d19">0.7910447761194029</data>
+      <data key="d20">0.07869039972623532</data>
+      <data key="d21">0.00881057268722467</data>
+      <data key="d22">0.005654546650009863</data>
+      <data key="d23">1</data>
+      <data key="d24">2.0</data>
+      <data key="d25">2.0</data>
+      <data key="d26">2.0</data>
+      <data key="d27">1.0</data>
+      <data key="d28">fingers</data>
+    </edge>
+    <edge source="6" target="10" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">153</data>
+      <data key="d11">131.07843137254903</data>
+      <data key="d12">243.01307189542484</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.24128402573121652</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.2873853275166038</data>
+      <data key="d21">0.1740976645435244</data>
+      <data key="d22">0.1426593148905156</data>
+      <data key="d23">4</data>
+      <data key="d24">20.5</data>
+      <data key="d25">29.0</data>
+      <data key="d26">0.7886960251696107</data>
+      <data key="d27">2.8275862068965516</data>
+      <data key="d28">fingers</data>
+    </edge>
+    <edge source="6" target="14" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">181</data>
+      <data key="d11">127.64088397790056</data>
+      <data key="d12">112.24309392265194</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.12318926016238375</data>
+      <data key="d19">0.9208955223880597</data>
+      <data key="d20">0.0974099084767996</data>
+      <data key="d21">0.019748653500897665</data>
+      <data key="d22">0.010715721214394812</data>
+      <data key="d23">6</data>
+      <data key="d24">1.8333333333333333</data>
+      <data key="d25">11.0</data>
+      <data key="d26">0.2530910025760805</data>
+      <data key="d27">1.0</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="7" target="11" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">109</data>
+      <data key="d11">94.70642201834862</data>
+      <data key="d12">658.7522935779816</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.12872804120987982</data>
+      <data key="d19">0.7029850746268657</data>
+      <data key="d20">0.09846446583475922</data>
+      <data key="d21">0.029498525073746312</data>
+      <data key="d22">0.01520715009025668</data>
+      <data key="d23">3</data>
+      <data key="d24">3.3333333333333335</data>
+      <data key="d25">6.0</data>
+      <data key="d26">0.14217370811460434</data>
+      <data key="d27">1.6666666666666667</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="8" target="9" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">271</data>
+      <data key="d11">150.80073800738006</data>
+      <data key="d12">911.9077490774907</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.08319674355495252</data>
+      <data key="d19">0.34626865671641793</data>
+      <data key="d20">0.05054152987114709</data>
+      <data key="d21">0.0</data>
+      <data key="d22">0.0</data>
+      <data key="d23">0</data>
+      <data key="d24">0.0</data>
+      <data key="d25">0.0</data>
+      <data key="d26">0.0</data>
+      <data key="d27">0.0</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="9" target="22" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">60</data>
+      <data key="d11">258.1333333333333</data>
+      <data key="d12">816.5</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.3082011815920398</data>
+      <data key="d19">0.7910447761194029</data>
+      <data key="d20">0.16172500113508612</data>
+      <data key="d21">0.2760416666666667</data>
+      <data key="d22">0.1435712064676617</data>
+      <data key="d23">4</data>
+      <data key="d24">13.25</data>
+      <data key="d25">30.0</data>
+      <data key="d26">1.188643277625491</data>
+      <data key="d27">1.7666666666666666</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="10" target="14" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">68</data>
+      <data key="d11">179.94117647058823</data>
+      <data key="d12">233.5735294117647</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.07602266445550027</data>
+      <data key="d19">0.6343283582089553</data>
+      <data key="d20">0.06253198092633212</data>
+      <data key="d21">0.004629629629629629</data>
+      <data key="d22">0.0029367053620784965</data>
+      <data key="d23">1</data>
+      <data key="d24">1.0</data>
+      <data key="d25">1.0</data>
+      <data key="d26">0.0</data>
+      <data key="d27">1.0</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="11" target="19" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">27</data>
+      <data key="d11">232.25925925925927</data>
+      <data key="d12">553.2592592592592</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.15385973359011396</data>
+      <data key="d19">0.6298507462686567</data>
+      <data key="d20">0.11587006881140342</data>
+      <data key="d21">0.03225806451612903</data>
+      <data key="d22">0.01653025196597657</data>
+      <data key="d23">2</data>
+      <data key="d24">1.5</data>
+      <data key="d25">3.0</data>
+      <data key="d26">2.1213203435596424</data>
+      <data key="d27">1.0</data>
+      <data key="d28">fingers</data>
+    </edge>
+    <edge source="11" target="33" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">150</data>
+      <data key="d11">454.1</data>
+      <data key="d12">483.0</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.08850229372617432</data>
+      <data key="d19">0.7343283582089553</data>
+      <data key="d20">0.10028317763284876</data>
+      <data key="d21">0.025974025974025976</data>
+      <data key="d22">0.01399496026361698</data>
+      <data key="d23">4</data>
+      <data key="d24">3.0</data>
+      <data key="d25">6.0</data>
+      <data key="d26">1.2</data>
+      <data key="d27">2.0</data>
+      <data key="d28">fingers</data>
+    </edge>
+    <edge source="12" target="13" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">322</data>
+      <data key="d11">189.00931677018633</data>
+      <data key="d12">62.46583850931677</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.15559089796917053</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.1993573431890672</data>
+      <data key="d21">0.08709016393442623</data>
+      <data key="d22">0.06321262539760215</data>
+      <data key="d23">13</data>
+      <data key="d24">6.538461538461538</data>
+      <data key="d25">42.0</data>
+      <data key="d26">0.37558431086797534</data>
+      <data key="d27">2.0238095238095237</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="12" target="14" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">227</data>
+      <data key="d11">165.65638766519822</data>
+      <data key="d12">117.95594713656388</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.10306668098357134</data>
+      <data key="d19">0.8955223880597015</data>
+      <data key="d20">0.07913686478125732</data>
+      <data key="d21">0.011510791366906475</data>
+      <data key="d22">0.007000966391066252</data>
+      <data key="d23">2</data>
+      <data key="d24">4.0</data>
+      <data key="d25">5.0</data>
+      <data key="d26">0.43852900965351466</data>
+      <data key="d27">1.6</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="12" target="24" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">39</data>
+      <data key="d11">337.8205128205128</data>
+      <data key="d12">232.74358974358975</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.054830498669443485</data>
+      <data key="d19">0.21343283582089553</data>
+      <data key="d20">0.037944459121073464</data>
+      <data key="d21">0.0</data>
+      <data key="d22">0.0</data>
+      <data key="d23">0</data>
+      <data key="d24">0.0</data>
+      <data key="d25">0.0</data>
+      <data key="d26">0.0</data>
+      <data key="d27">0.0</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="15" target="16" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">280</data>
+      <data key="d11">296.5</data>
+      <data key="d12">955.9</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.40895172027188</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.35792543025225215</data>
+      <data key="d21">0.3591549295774648</data>
+      <data key="d22">0.3037173288487142</data>
+      <data key="d23">7</data>
+      <data key="d24">43.714285714285715</data>
+      <data key="d25">90.0</data>
+      <data key="d26">0.9952805350877308</data>
+      <data key="d27">3.4</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="17" target="21" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">114</data>
+      <data key="d11">325.0</data>
+      <data key="d12">388.4824561403509</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.07341681423391518</data>
+      <data key="d19">0.5388059701492537</data>
+      <data key="d20">0.06087132395085965</data>
+      <data key="d21">0.00847457627118644</data>
+      <data key="d22">0.0041909098574922</data>
+      <data key="d23">2</data>
+      <data key="d24">1.5</data>
+      <data key="d25">3.0</data>
+      <data key="d26">3.0</data>
+      <data key="d27">1.0</data>
+      <data key="d28">fingers</data>
+    </edge>
+    <edge source="18" target="26" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">34</data>
+      <data key="d11">345.2647058823529</data>
+      <data key="d12">703.0</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.1426420528934276</data>
+      <data key="d19">0.6432835820895523</data>
+      <data key="d20">0.11903697655904506</data>
+      <data key="d21">0.05263157894736842</data>
+      <data key="d22">0.026315789473684216</data>
+      <data key="d23">2</data>
+      <data key="d24">3.0</data>
+      <data key="d25">4.0</data>
+      <data key="d26">0.5962847939999439</data>
+      <data key="d27">1.5</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="19" target="21" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">184</data>
+      <data key="d11">310.5</data>
+      <data key="d12">427.05434782608694</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.16425849476024135</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.1542082863454078</data>
+      <data key="d21">0.051418439716312055</data>
+      <data key="d22">0.03648248121096644</data>
+      <data key="d23">10</data>
+      <data key="d24">2.9</data>
+      <data key="d25">18.0</data>
+      <data key="d26">0.25761646558962853</data>
+      <data key="d27">1.6111111111111112</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="21" target="41" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">53</data>
+      <data key="d11">625.6415094339623</data>
+      <data key="d12">340.188679245283</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.15139332240531445</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.1737613736748636</data>
+      <data key="d21">0.08092485549132948</data>
+      <data key="d22">0.052868604952118016</data>
+      <data key="d23">4</data>
+      <data key="d24">3.5</data>
+      <data key="d25">10.0</data>
+      <data key="d26">1.0846522890932808</data>
+      <data key="d27">1.4</data>
+      <data key="d28">fingers</data>
+    </edge>
+    <edge source="21" target="39" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">37</data>
+      <data key="d11">627.7297297297297</data>
+      <data key="d12">325.72972972972974</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.09974741676234215</data>
+      <data key="d19">0.41492537313432837</data>
+      <data key="d20">0.0659861320809462</data>
+      <data key="d21">0.007692307692307693</data>
+      <data key="d22">0.003191733639494834</data>
+      <data key="d23">1</data>
+      <data key="d24">1.0</data>
+      <data key="d25">1.0</data>
+      <data key="d26">0.0</data>
+      <data key="d27">1.0</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="25" target="28" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">165</data>
+      <data key="d11">425.24848484848485</data>
+      <data key="d12">75.42424242424242</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.09606405840619386</data>
+      <data key="d19">0.3641791044776119</data>
+      <data key="d20">0.05527892018483995</data>
+      <data key="d21">0.0</data>
+      <data key="d22">0.0</data>
+      <data key="d23">0</data>
+      <data key="d24">0.0</data>
+      <data key="d25">0.0</data>
+      <data key="d26">0.0</data>
+      <data key="d27">0.0</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="25" target="29" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">95</data>
+      <data key="d11">417.0</data>
+      <data key="d12">14.473684210526315</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.3362414730471354</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.2737460381772598</data>
+      <data key="d21">0.27835051546391754</data>
+      <data key="d22">0.2022618864440683</data>
+      <data key="d23">4</data>
+      <data key="d24">20.25</data>
+      <data key="d25">24.0</data>
+      <data key="d26">0.5312387417027661</data>
+      <data key="d27">3.375</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="25" target="35" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">36</data>
+      <data key="d11">475.3333333333333</data>
+      <data key="d12">48.5</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.09130597014925375</data>
+      <data key="d19">0.3373134328358209</data>
+      <data key="d20">0.05850405567423004</data>
+      <data key="d21">0.0</data>
+      <data key="d22">0.0</data>
+      <data key="d23">0</data>
+      <data key="d24">0.0</data>
+      <data key="d25">0.0</data>
+      <data key="d26">0.0</data>
+      <data key="d27">0.0</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="26" target="27" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">364</data>
+      <data key="d11">458.5</data>
+      <data key="d12">617.1373626373627</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.32547047371836474</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.30415121386217603</data>
+      <data key="d21">0.3007246376811594</data>
+      <data key="d22">0.22212848799480858</data>
+      <data key="d23">10</data>
+      <data key="d24">33.2</data>
+      <data key="d25">130.0</data>
+      <data key="d26">0.8251681634585132</data>
+      <data key="d27">2.5538461538461537</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="27" target="33" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">53</data>
+      <data key="d11">544.3207547169811</data>
+      <data key="d12">512.566037735849</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.22673474731605128</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.20174158199217873</data>
+      <data key="d21">0.18128654970760233</data>
+      <data key="d22">0.1059439643885834</data>
+      <data key="d23">4</data>
+      <data key="d24">7.75</data>
+      <data key="d25">14.0</data>
+      <data key="d26">0.6541770389223969</data>
+      <data key="d27">2.2142857142857144</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="27" target="38" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">96</data>
+      <data key="d11">566.25</data>
+      <data key="d12">526.5</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.4064228855721393</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.3219473839645737</data>
+      <data key="d21">0.38333333333333336</data>
+      <data key="d22">0.2928855721393035</data>
+      <data key="d23">4</data>
+      <data key="d24">28.75</data>
+      <data key="d25">44.0</data>
+      <data key="d26">0.9515877136663485</data>
+      <data key="d27">2.6136363636363638</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="28" target="34" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">50</data>
+      <data key="d11">472.26</data>
+      <data key="d12">100.42</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.14270315091210614</data>
+      <data key="d19">0.3761194029850746</data>
+      <data key="d20">0.0755220402881658</data>
+      <data key="d21">0.0</data>
+      <data key="d22">0.0</data>
+      <data key="d23">0</data>
+      <data key="d24">0.0</data>
+      <data key="d25">0.0</data>
+      <data key="d26">0.0</data>
+      <data key="d27">0.0</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="29" target="35" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">103</data>
+      <data key="d11">528.252427184466</data>
+      <data key="d12">31.24271844660194</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.15473566745710698</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.18496083774007516</data>
+      <data key="d21">0.09657320872274143</data>
+      <data key="d22">0.06212860928999861</data>
+      <data key="d23">5</data>
+      <data key="d24">6.2</data>
+      <data key="d25">22.0</data>
+      <data key="d26">0.9135002783911397</data>
+      <data key="d27">1.4090909090909092</data>
+      <data key="d28">fingers</data>
+    </edge>
+    <edge source="29" target="44" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">15</data>
+      <data key="d11">628.2666666666667</data>
+      <data key="d12">41.4</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.17083006022518984</data>
+      <data key="d19">0.6805970149253732</data>
+      <data key="d20">0.15859435934861454</data>
+      <data key="d21">0.10526315789473684</data>
+      <data key="d22">0.05907305577376277</data>
+      <data key="d23">1</data>
+      <data key="d24">6.0</data>
+      <data key="d25">4.0</data>
+      <data key="d26">0.9428090415820635</data>
+      <data key="d27">1.5</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="30" target="31" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">230</data>
+      <data key="d11">476.2391304347826</data>
+      <data key="d12">173.0695652173913</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.11224960039856349</data>
+      <data key="d19">0.6955223880597015</data>
+      <data key="d20">0.10052546934824512</data>
+      <data key="d21">0.02920723226703755</data>
+      <data key="d22">0.01467419508853507</data>
+      <data key="d23">7</data>
+      <data key="d24">3.0</data>
+      <data key="d25">15.0</data>
+      <data key="d26">0.31008683647302115</data>
+      <data key="d27">1.4</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="30" target="34" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">112</data>
+      <data key="d11">489.5</data>
+      <data key="d12">133.05357142857142</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.13145050609023845</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.12612453443630425</data>
+      <data key="d21">0.034482758620689655</data>
+      <data key="d22">0.023636129696345855</data>
+      <data key="d23">2</data>
+      <data key="d24">6.0</data>
+      <data key="d25">5.0</data>
+      <data key="d26">1.6666666666666667</data>
+      <data key="d27">2.4</data>
+      <data key="d28">fingers</data>
+    </edge>
+    <edge source="30" target="36" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">108</data>
+      <data key="d11">544.0</data>
+      <data key="d12">161.16666666666666</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.15775586353944562</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.1263453793351772</data>
+      <data key="d21">0.03869047619047619</data>
+      <data key="d22">0.023698471926083868</data>
+      <data key="d23">3</data>
+      <data key="d24">4.333333333333333</data>
+      <data key="d25">9.0</data>
+      <data key="d26">0.2702568660921919</data>
+      <data key="d27">1.4444444444444444</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="33" target="38" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">70</data>
+      <data key="d11">565.2142857142857</data>
+      <data key="d12">485.0</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.1916700282371924</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.24407743320982403</data>
+      <data key="d21">0.11711711711711711</data>
+      <data key="d22">0.0937205862578997</data>
+      <data key="d23">2</data>
+      <data key="d24">13.0</data>
+      <data key="d25">10.0</data>
+      <data key="d26">0.2976137753128688</data>
+      <data key="d27">2.6</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="33" target="41" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">65</data>
+      <data key="d11">590.3076923076923</data>
+      <data key="d12">413.81538461538463</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.10385396958867635</data>
+      <data key="d19">0.4417910447761194</data>
+      <data key="d20">0.0862820452944519</data>
+      <data key="d21">0.009389671361502348</data>
+      <data key="d22">0.003973092285053605</data>
+      <data key="d23">2</data>
+      <data key="d24">1.0</data>
+      <data key="d25">2.0</data>
+      <data key="d26">0.0</data>
+      <data key="d27">1.0</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="34" target="36" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">64</data>
+      <data key="d11">517.375</data>
+      <data key="d12">120.5</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.4078870354111794</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.2514407423550001</data>
+      <data key="d21">0.4215686274509804</data>
+      <data key="d22">0.27693883523558677</data>
+      <data key="d23">3</data>
+      <data key="d24">28.666666666666668</data>
+      <data key="d25">32.0</data>
+      <data key="d26">1.1843731363161685</data>
+      <data key="d27">2.6875</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="35" target="36" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">146</data>
+      <data key="d11">558.0</data>
+      <data key="d12">94.47260273972603</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.34614593698175783</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.2586800403434448</data>
+      <data key="d21">0.31555555555555553</data>
+      <data key="d22">0.21453399668325043</data>
+      <data key="d23">9</data>
+      <data key="d24">15.777777777777779</data>
+      <data key="d25">61.0</data>
+      <data key="d26">0.7574864085998968</data>
+      <data key="d27">2.3278688524590163</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="35" target="42" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">110</data>
+      <data key="d11">629.0</data>
+      <data key="d12">116.62727272727273</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.1919045125250938</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.1796973023915573</data>
+      <data key="d21">0.11695906432748537</data>
+      <data key="d22">0.07084315265776381</data>
+      <data key="d23">8</data>
+      <data key="d24">5.0</data>
+      <data key="d25">22.0</data>
+      <data key="d26">0.6431758808251546</data>
+      <data key="d27">1.8181818181818181</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="36" target="40" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">83</data>
+      <data key="d11">599.7469879518072</data>
+      <data key="d12">181.9277108433735</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.26267513009664323</data>
+      <data key="d19">0.982089552238806</data>
+      <data key="d20">0.17570232812217434</data>
+      <data key="d21">0.1839080459770115</data>
+      <data key="d22">0.1039171956310402</data>
+      <data key="d23">7</data>
+      <data key="d24">6.857142857142857</data>
+      <data key="d25">20.0</data>
+      <data key="d26">0.6608186004550898</data>
+      <data key="d27">2.4</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="36" target="42" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">102</data>
+      <data key="d11">609.9313725490196</data>
+      <data key="d12">138.0</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.2252229418943021</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.2011894348184498</data>
+      <data key="d21">0.11949685534591195</data>
+      <data key="d22">0.0810100441190275</data>
+      <data key="d23">7</data>
+      <data key="d24">5.428571428571429</data>
+      <data key="d25">18.0</data>
+      <data key="d26">0.45212432337299546</data>
+      <data key="d27">2.111111111111111</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="38" target="41" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">69</data>
+      <data key="d11">630.7536231884058</data>
+      <data key="d12">461.6376811594203</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.1114632317862741</data>
+      <data key="d19">0.9656716417910448</data>
+      <data key="d20">0.129203039382021</data>
+      <data key="d21">0.0319634703196347</data>
+      <data key="d22">0.02315136645539426</data>
+      <data key="d23">3</data>
+      <data key="d24">2.3333333333333335</data>
+      <data key="d25">7.0</data>
+      <data key="d26">0.323575114464717</data>
+      <data key="d27">1.0</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="38" target="45" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">29</data>
+      <data key="d11">669.4827586206897</data>
+      <data key="d12">487.1034482758621</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.1571787082287677</data>
+      <data key="d19">0.6955223880597015</data>
+      <data key="d20">0.1264110479747398</data>
+      <data key="d21">0.07079646017699115</data>
+      <data key="d22">0.038158763703605866</data>
+      <data key="d23">1</data>
+      <data key="d24">8.0</data>
+      <data key="d25">5.0</data>
+      <data key="d26">1.212678125181665</data>
+      <data key="d27">1.6</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="39" target="41" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">38</data>
+      <data key="d11">653.3421052631579</data>
+      <data key="d12">319.05263157894734</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.07171485231186724</data>
+      <data key="d19">0.3238805970149254</data>
+      <data key="d20">0.05143243579400944</data>
+      <data key="d21">0.0</data>
+      <data key="d22">0.0</data>
+      <data key="d23">0</data>
+      <data key="d24">0.0</data>
+      <data key="d25">0.0</data>
+      <data key="d26">0.0</data>
+      <data key="d27">0.0</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="40" target="41" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">91</data>
+      <data key="d11">682.989010989011</data>
+      <data key="d12">267.74725274725273</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.17762765121759624</data>
+      <data key="d19">0.8059701492537313</data>
+      <data key="d20">0.1277192598079269</data>
+      <data key="d21">0.05263157894736842</data>
+      <data key="d22">0.02867242733699922</data>
+      <data key="d23">7</data>
+      <data key="d24">2.142857142857143</data>
+      <data key="d25">13.0</data>
+      <data key="d26">0.4996305873156571</data>
+      <data key="d27">1.1538461538461537</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="41" target="42" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">34</data>
+      <data key="d11">694.0</data>
+      <data key="d12">210.5</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.09061272584446188</data>
+      <data key="d19">0.3582089552238806</data>
+      <data key="d20">0.060381931408614545</data>
+      <data key="d21">0.0</data>
+      <data key="d22">0.0</data>
+      <data key="d23">0</data>
+      <data key="d24">0.0</data>
+      <data key="d25">0.0</data>
+      <data key="d26">0.0</data>
+      <data key="d27">0.0</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="41" target="48" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">36</data>
+      <data key="d11">710.5555555555555</data>
+      <data key="d12">218.75</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.12663880597014926</data>
+      <data key="d19">0.7074626865671642</data>
+      <data key="d20">0.1310209145650572</data>
+      <data key="d21">0.056</data>
+      <data key="d22">0.031188059701492542</data>
+      <data key="d23">1</data>
+      <data key="d24">7.0</data>
+      <data key="d25">1.0</data>
+      <data key="d26">0.0</data>
+      <data key="d27">7.0</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="41" target="49" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">71</data>
+      <data key="d11">719.0704225352113</data>
+      <data key="d12">244.69014084507043</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.17133942357179618</data>
+      <data key="d19">0.7074626865671642</data>
+      <data key="d20">0.14839794149733365</data>
+      <data key="d21">0.09913793103448276</data>
+      <data key="d22">0.051563304168811115</data>
+      <data key="d23">5</data>
+      <data key="d24">4.6</data>
+      <data key="d25">16.0</data>
+      <data key="d26">0.45695638238203184</data>
+      <data key="d27">1.4375</data>
+      <data key="d28">fingers</data>
+    </edge>
+    <edge source="42" target="44" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">72</data>
+      <data key="d11">701.5416666666666</data>
+      <data key="d12">149.0</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.3097014925373134</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.23970085911056677</data>
+      <data key="d21">0.2543859649122807</data>
+      <data key="d22">0.16940953129091385</data>
+      <data key="d23">4</data>
+      <data key="d24">14.5</data>
+      <data key="d25">22.0</data>
+      <data key="d26">0.500776598966584</data>
+      <data key="d27">2.6363636363636362</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="42" target="48" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">95</data>
+      <data key="d11">713.6631578947369</data>
+      <data key="d12">190.06315789473683</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.12636313382582037</data>
+      <data key="d19">0.9164179104477612</data>
+      <data key="d20">0.14324657613102262</data>
+      <data key="d21">0.050505050505050504</data>
+      <data key="d22">0.030599527614452983</data>
+      <data key="d23">2</data>
+      <data key="d24">7.5</data>
+      <data key="d25">10.0</data>
+      <data key="d26">0.292103118918493</data>
+      <data key="d27">1.5</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="43" target="50" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">176</data>
+      <data key="d11">775.3579545454545</data>
+      <data key="d12">913.2840909090909</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.08274184632393587</data>
+      <data key="d19">0.3850746268656716</data>
+      <data key="d20">0.05559994980990958</data>
+      <data key="d21">0.0</data>
+      <data key="d22">0.0</data>
+      <data key="d23">0</data>
+      <data key="d24">0.0</data>
+      <data key="d25">0.0</data>
+      <data key="d26">0.0</data>
+      <data key="d27">0.0</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="43" target="56" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">150</data>
+      <data key="d11">820.58</data>
+      <data key="d12">925.0</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.1440815403501971</data>
+      <data key="d19">0.917910447761194</data>
+      <data key="d20">0.12743981734892287</data>
+      <data key="d21">0.06060606060606061</data>
+      <data key="d22">0.03155650319829424</data>
+      <data key="d23">9</data>
+      <data key="d24">3.111111111111111</data>
+      <data key="d25">18.0</data>
+      <data key="d26">0.3189464603722503</data>
+      <data key="d27">1.5555555555555556</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="43" target="55" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">8</data>
+      <data key="d11">819.5</data>
+      <data key="d12">964.5</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.09937810945273633</data>
+      <data key="d19">0.2716417910447761</data>
+      <data key="d20">0.04830788769511683</data>
+      <data key="d21">0.0</data>
+      <data key="d22">0.0</data>
+      <data key="d23">0</data>
+      <data key="d24">0.0</data>
+      <data key="d25">0.0</data>
+      <data key="d26">0.0</data>
+      <data key="d27">0.0</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="43" target="53" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">10</data>
+      <data key="d11">821.0</data>
+      <data key="d12">885.9</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.07046908315565033</data>
+      <data key="d19">0.20149253731343283</data>
+      <data key="d20">0.04257879710667066</data>
+      <data key="d21">0.0</data>
+      <data key="d22">0.0</data>
+      <data key="d23">0</data>
+      <data key="d24">0.0</data>
+      <data key="d25">0.0</data>
+      <data key="d26">0.0</data>
+      <data key="d27">0.0</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="44" target="47" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">145</data>
+      <data key="d11">725.8482758620689</data>
+      <data key="d12">102.75172413793103</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.3347056662993756</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.24745651751894576</data>
+      <data key="d21">0.2975391498881432</data>
+      <data key="d22">0.19266753480917556</data>
+      <data key="d23">12</data>
+      <data key="d24">11.083333333333334</data>
+      <data key="d25">74.0</data>
+      <data key="d26">1.1499503889848022</data>
+      <data key="d27">1.7972972972972974</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="44" target="48" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">76</data>
+      <data key="d11">734.5</data>
+      <data key="d12">167.6315789473684</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.30348880597014927</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.19012936738730798</data>
+      <data key="d21">0.26666666666666666</data>
+      <data key="d22">0.15082711442786068</data>
+      <data key="d23">4</data>
+      <data key="d24">16.0</data>
+      <data key="d25">36.0</data>
+      <data key="d26">1.5</data>
+      <data key="d27">1.7777777777777777</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="45" target="51" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">92</data>
+      <data key="d11">814.7391304347826</data>
+      <data key="d12">452.5</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.09266687396351576</data>
+      <data key="d19">0.8194029850746268</data>
+      <data key="d20">0.09546693746215072</data>
+      <data key="d21">0.017361111111111112</data>
+      <data key="d22">0.01087790215588723</data>
+      <data key="d23">1</data>
+      <data key="d24">5.0</data>
+      <data key="d25">4.0</data>
+      <data key="d26">1.1094003924504583</data>
+      <data key="d27">1.25</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="46" target="53" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">348</data>
+      <data key="d11">814.6264367816092</data>
+      <data key="d12">720.5</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.23661521935775667</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.209532899193828</data>
+      <data key="d21">0.17329545454545456</data>
+      <data key="d22">0.10818634102216192</data>
+      <data key="d23">22</data>
+      <data key="d24">8.318181818181818</data>
+      <data key="d25">90.0</data>
+      <data key="d26">0.7730806271127987</data>
+      <data key="d27">2.033333333333333</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="47" target="48" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">60</data>
+      <data key="d11">846.5</data>
+      <data key="d12">155.53333333333333</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.25791355721393033</data>
+      <data key="d19">0.9850746268656716</data>
+      <data key="d20">0.18809722338894824</data>
+      <data key="d21">0.16666666666666666</data>
+      <data key="d22">0.10211442786069651</data>
+      <data key="d23">5</data>
+      <data key="d24">6.4</data>
+      <data key="d25">17.0</data>
+      <data key="d26">0.8013876853447538</data>
+      <data key="d27">1.8823529411764706</data>
+      <data key="d28">fingers</data>
+    </edge>
+    <edge source="48" target="49" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">135</data>
+      <data key="d11">750.7407407407408</data>
+      <data key="d12">244.3925925925926</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.13388730108323632</data>
+      <data key="d19">0.9343283582089552</data>
+      <data key="d20">0.14164119301774897</data>
+      <data key="d21">0.061465721040189124</data>
+      <data key="d22">0.036971172506263014</data>
+      <data key="d23">3</data>
+      <data key="d24">8.666666666666666</data>
+      <data key="d25">14.0</data>
+      <data key="d26">0.37618645043032134</data>
+      <data key="d27">1.8571428571428572</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="48" target="52" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">44</data>
+      <data key="d11">795.5</data>
+      <data key="d12">266.0</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.09852819237147596</data>
+      <data key="d19">0.3492537313432836</data>
+      <data key="d20">0.05598451615252805</data>
+      <data key="d21">0.0</data>
+      <data key="d22">0.0</data>
+      <data key="d23">0</data>
+      <data key="d24">0.0</data>
+      <data key="d25">0.0</data>
+      <data key="d26">0.0</data>
+      <data key="d27">0.0</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="48" target="54" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">45</data>
+      <data key="d11">829.5111111111111</data>
+      <data key="d12">254.46666666666667</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.27289064879683217</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.2718178014763802</data>
+      <data key="d21">0.2857142857142857</data>
+      <data key="d22">0.18943039902528175</data>
+      <data key="d23">2</data>
+      <data key="d24">21.0</data>
+      <data key="d25">15.0</data>
+      <data key="d26">0.0</data>
+      <data key="d27">2.8</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="48" target="58" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">145</data>
+      <data key="d11">876.751724137931</data>
+      <data key="d12">228.06896551724137</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.18207953520985676</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.1619522266396044</data>
+      <data key="d21">0.10738255033557047</data>
+      <data key="d22">0.058566229256402556</data>
+      <data key="d23">8</data>
+      <data key="d24">6.0</data>
+      <data key="d25">25.0</data>
+      <data key="d26">0.4978144143334544</data>
+      <data key="d27">1.92</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="48" target="60" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">58</data>
+      <data key="d11">901.3620689655172</data>
+      <data key="d12">184.55172413793105</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.19731505515898765</data>
+      <data key="d19">0.9895522388059701</data>
+      <data key="d20">0.14616174129976148</data>
+      <data key="d21">0.09782608695652174</data>
+      <data key="d22">0.05151687216093445</data>
+      <data key="d23">5</data>
+      <data key="d24">3.6</data>
+      <data key="d25">14.0</data>
+      <data key="d26">0.8682431421244593</data>
+      <data key="d27">1.2857142857142858</data>
+      <data key="d28">fingers</data>
+    </edge>
+    <edge source="49" target="52" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">199</data>
+      <data key="d11">789.6582914572864</data>
+      <data key="d12">311.25125628140705</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.23218635884616332</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.19059208330283542</data>
+      <data key="d21">0.11658456486042693</data>
+      <data key="d22">0.07835698355513074</data>
+      <data key="d23">14</data>
+      <data key="d24">5.071428571428571</data>
+      <data key="d25">49.0</data>
+      <data key="d26">0.5550648702064496</data>
+      <data key="d27">1.4489795918367347</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="50" target="53" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">41</data>
+      <data key="d11">809.0731707317074</data>
+      <data key="d12">876.6829268292682</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.06286478057473825</data>
+      <data key="d19">0.18358208955223881</data>
+      <data key="d20">0.03540311278780247</data>
+      <data key="d21">0.0</data>
+      <data key="d22">0.0</data>
+      <data key="d23">0</data>
+      <data key="d24">0.0</data>
+      <data key="d25">0.0</data>
+      <data key="d26">0.0</data>
+      <data key="d27">0.0</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="51" target="57" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">101</data>
+      <data key="d11">846.049504950495</data>
+      <data key="d12">514.2475247524752</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.11552238805970148</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.12242802751972723</data>
+      <data key="d21">0.0380952380952381</data>
+      <data key="d22">0.022018479033404405</data>
+      <data key="d23">5</data>
+      <data key="d24">2.4</data>
+      <data key="d25">9.0</data>
+      <data key="d26">0.41781451089836674</data>
+      <data key="d27">1.3333333333333333</data>
+      <data key="d28">fingers</data>
+    </edge>
+    <edge source="52" target="54" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">173</data>
+      <data key="d11">818.693641618497</data>
+      <data key="d12">339.71676300578036</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.1672372600275459</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.1563910403725689</data>
+      <data key="d21">0.08097928436911488</data>
+      <data key="d22">0.046476656266689155</data>
+      <data key="d23">15</data>
+      <data key="d24">2.8666666666666667</data>
+      <data key="d25">33.0</data>
+      <data key="d26">0.41893152914047593</data>
+      <data key="d27">1.303030303030303</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="53" target="56" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">144</data>
+      <data key="d11">859.5</data>
+      <data key="d12">862.8611111111111</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.24802339653085925</data>
+      <data key="d19">0.8328358208955224</data>
+      <data key="d20">0.1526283535340526</data>
+      <data key="d21">0.15765765765765766</data>
+      <data key="d22">0.08175675675675677</data>
+      <data key="d23">17</data>
+      <data key="d24">4.117647058823529</data>
+      <data key="d25">42.0</data>
+      <data key="d26">0.7495221407606621</data>
+      <data key="d27">1.6666666666666667</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="53" target="61" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">319</data>
+      <data key="d11">902.3448275862069</data>
+      <data key="d12">741.282131661442</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.16016905269570517</data>
+      <data key="d19">0.9149253731343283</data>
+      <data key="d20">0.15535924259382047</data>
+      <data key="d21">0.07857142857142857</data>
+      <data key="d22">0.045612244897959196</data>
+      <data key="d23">15</data>
+      <data key="d24">5.133333333333334</data>
+      <data key="d25">49.0</data>
+      <data key="d26">0.4298245614035088</data>
+      <data key="d27">1.5714285714285714</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="53" target="62" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">8</data>
+      <data key="d11">903.5</data>
+      <data key="d12">821.5</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.10567993366500829</data>
+      <data key="d19">0.31343283582089554</data>
+      <data key="d20">0.07177107896364046</data>
+      <data key="d21">0.0</data>
+      <data key="d22">0.0</data>
+      <data key="d23">0</data>
+      <data key="d24">0.0</data>
+      <data key="d25">0.0</data>
+      <data key="d26">0.0</data>
+      <data key="d27">0.0</data>
+      <data key="d28">straight</data>
+    </edge>
+    <edge source="54" target="58" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">327</data>
+      <data key="d11">921.7492354740061</data>
+      <data key="d12">256.62996941896023</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.2374802723542409</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.19177661219157197</data>
+      <data key="d21">0.17421953675730112</data>
+      <data key="d22">0.10045843291097384</data>
+      <data key="d23">22</data>
+      <data key="d24">7.863636363636363</data>
+      <data key="d25">97.0</data>
+      <data key="d26">0.6498223573650006</data>
+      <data key="d27">1.7835051546391754</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="55" target="56" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">76</data>
+      <data key="d11">839.5</data>
+      <data key="d12">962.2894736842105</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.2581902985074627</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.20686478687047408</data>
+      <data key="d21">0.18333333333333332</data>
+      <data key="d22">0.11409825870646764</data>
+      <data key="d23">6</data>
+      <data key="d24">7.333333333333333</data>
+      <data key="d25">29.0</data>
+      <data key="d26">1.3278187848373273</data>
+      <data key="d27">1.5172413793103448</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="58" target="60" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">214</data>
+      <data key="d11">966.0</data>
+      <data key="d12">188.79906542056074</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.23556072846775297</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.20160206955590942</data>
+      <data key="d21">0.18807339449541285</data>
+      <data key="d22">0.11027659865808571</data>
+      <data key="d23">14</data>
+      <data key="d24">8.785714285714286</data>
+      <data key="d25">71.0</data>
+      <data key="d26">0.6920656539365827</data>
+      <data key="d27">1.732394366197183</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="61" target="62" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">252</data>
+      <data key="d11">932.7142857142857</data>
+      <data key="d12">758.5436507936508</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.4106834249803613</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.3165177670216394</data>
+      <data key="d21">0.4146341463414634</data>
+      <data key="d22">0.3073170731707317</data>
+      <data key="d23">6</data>
+      <data key="d24">53.833333333333336</data>
+      <data key="d25">96.0</data>
+      <data key="d26">0.7643883887299752</data>
+      <data key="d27">3.3645833333333335</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="62" target="63" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">78</data>
+      <data key="d11">951.0</data>
+      <data key="d12">840.4230769230769</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.5399526756461595</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.3493083553359146</data>
+      <data key="d21">0.5609756097560976</data>
+      <data key="d22">0.45543623346681233</data>
+      <data key="d23">4</data>
+      <data key="d24">34.5</data>
+      <data key="d25">32.0</data>
+      <data key="d26">0.9701425001453319</data>
+      <data key="d27">4.3125</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="62" target="65" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">252</data>
+      <data key="d11">980.4444444444445</data>
+      <data key="d12">777.5</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.31234647077114425</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.3166636200525594</data>
+      <data key="d21">0.2786458333333333</data>
+      <data key="d22">0.2155025652985075</data>
+      <data key="d23">8</data>
+      <data key="d24">26.75</data>
+      <data key="d25">78.0</data>
+      <data key="d26">0.6612544431239004</data>
+      <data key="d27">2.7435897435897436</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="63" target="64" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">308</data>
+      <data key="d11">960.3441558441558</data>
+      <data key="d12">944.5</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.24638346727898966</data>
+      <data key="d19">1.0</data>
+      <data key="d20">0.1954688247452887</data>
+      <data key="d21">0.1655982905982906</data>
+      <data key="d22">0.1029228855721393</data>
+      <data key="d23">19</data>
+      <data key="d24">8.157894736842104</data>
+      <data key="d25">89.0</data>
+      <data key="d26">0.6605835661462481</data>
+      <data key="d27">1.7415730337078652</data>
+      <data key="d28">reticular</data>
+    </edge>
+    <edge source="63" target="65" id="0">
+      <data key="d8">BSA_BMP9_static-23</data>
+      <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/Files/figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif</data>
+      <data key="d10">2</data>
+      <data key="d11">970.5</data>
+      <data key="d12">841.0</data>
+      <data key="d13">0.404296875</data>
+      <data key="d14">2</data>
+      <data key="d15">2</data>
+      <data key="d16">0</data>
+      <data key="d17">0</data>
+      <data key="d18">0.21525704809286897</data>
+      <data key="d19">0.7014925373134329</data>
+      <data key="d20">0.1899126615792951</data>
+      <data key="d21">0.2222222222222222</data>
+      <data key="d22">0.1169983416252073</data>
+      <data key="d23">1</data>
+      <data key="d24">4.0</data>
+      <data key="d25">2.0</data>
+      <data key="d26">1.414213562373095</data>
+      <data key="d27">2.0</data>
+      <data key="d28">other</data>
+    </edge>
+  </graph>
+</graphml>

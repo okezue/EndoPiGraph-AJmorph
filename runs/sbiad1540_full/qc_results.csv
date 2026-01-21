@@ -1,0 +1,16 @@
+image_id,seg_passed,graph_passed,feature_passed,issues,overall_passed
+BSA_6dyn-146,True,True,True,[],True
+BSA_BMP9_20dyn-2,True,True,True,[],True
+BSA_BMP9_20dyn-8,False,True,True,['Too many giant cells: 10.8%'],False
+BSA_BMP9_6dyn-29,True,True,True,[],True
+BSA_BMP9_static-23,False,False,True,"['Too many giant cells: 7.6%', 'Too many isolated cells: 10.6%']",False
+BSA_static-111,True,True,True,[],True
+BSA_static-115,True,True,True,[],True
+EGM2_regular_18-20dyn-06,True,True,True,[],True
+EGM2_regular_18-20dyn-53,True,True,True,[],True
+EGM2_regular_18-20dyn-60,True,True,True,[],True
+EGM2_regular_6dyn-27,True,True,True,[],True
+EGM2_regular_6dyn-86,True,True,True,[],True
+EGM2_regular_6dyn-88,True,True,True,[],True
+EGM2_regular_static-49,False,True,True,['Too many giant cells: 26.0%'],False
+EGM2_regular_static-50,False,True,True,['Too many giant cells: 27.1%'],False

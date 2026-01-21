@@ -1,0 +1,16 @@
+image_id,path,dataset,shear_stress,supplementation,replicate,section,channel_1,channel_2,channel_3,channel_4
+BSA_static-115,figure2_6/BSA_01/static/BSA_static-115.tif,S-BIAD1540,static,BSA 0.1,rep 1,,GM130,DAPI,VE-cadherin,-
+BSA_BMP9_static-23,figure2_6/BSA_BMP9/static/BSA_BMP9_static-23.tif,S-BIAD1540,static,BSA 0.1 BMP9 1ng/ml,rep 3,,GM130,DAPI,VE-cadherin,-
+EGM2_regular_static-49,figure2_6/EGM2_regular/static/EGM2_regular_static-49.tif,S-BIAD1540,static,EGM2,rep 3,,GM130,DAPI,VE-cadherin,-
+EGM2_regular_static-50,figure2_6/EGM2_regular/static/EGM2_regular_static-50.tif,S-BIAD1540,static,EGM2,rep 3,,GM130,DAPI,VE-cadherin,-
+BSA_static-111,figure2_6/BSA_01/static/BSA_static-111.tif,S-BIAD1540,static,BSA 0.1,rep 1,,GM130,DAPI,VE-cadherin,-
+EGM2_regular_6dyn-86,figure2_6/EGM2_regular/6dyn/EGM2_regular_6dyn-86.tif,S-BIAD1540,6dyne/cm² - 4h,EGM2,rep 3,,GM130,DAPI,VE-cadherin,-
+BSA_BMP9_6dyn-29,figure2_6/BSA_BMP9/6dyn/BSA_BMP9_6dyn-29.tif,S-BIAD1540,6dyne/cm² - 4h,BSA 0.1 BMP9 1ng/ml,rep 3,,GM130,DAPI,VE-cadherin,-
+BSA_6dyn-146,figure2_6/BSA_01/6dyn/BSA_6dyn-146.tif,S-BIAD1540,6dyne/cm² - 4h,BSA 0.1,rep 3,,GM130,DAPI,VE-cadherin,-
+EGM2_regular_6dyn-88,figure2_6/EGM2_regular/6dyn/EGM2_regular_6dyn-88.tif,S-BIAD1540,6dyne/cm² - 4h,EGM2,rep 3,,GM130,DAPI,VE-cadherin,-
+EGM2_regular_6dyn-27,figure2_6/EGM2_regular/6dyn/EGM2_regular_6dyn-27.tif,S-BIAD1540,6dyne/cm² - 4h,EGM2,rep 1,,GM130,DAPI,VE-cadherin,-
+EGM2_regular_18-20dyn-60,figure2_6/EGM2_regular/20dyn/EGM2_regular_18-20dyn-60.tif,S-BIAD1540,20dyne/cm² - 4h,EGM2,rep 2,,GM130,DAPI,VE-cadherin,-
+BSA_BMP9_20dyn-8,figure2_6/BSA_BMP9/20dyn/BSA_BMP9_20dyn-8.tif,S-BIAD1540,20dyne/cm² - 4h,BSA 0.1 BMP9 1ng/ml,rep 1,,GM130,DAPI,VE-cadherin,-
+EGM2_regular_18-20dyn-06,figure2_6/EGM2_regular/20dyn/EGM2_regular_18-20dyn-06.tif,S-BIAD1540,20dyne/cm² - 4h,EGM2,rep 1,,GM130,DAPI,VE-cadherin,-
+BSA_BMP9_20dyn-2,figure2_6/BSA_BMP9/20dyn/BSA_BMP9_20dyn-2.tif,S-BIAD1540,20dyne/cm² - 4h,BSA 0.1 BMP9 1ng/ml,rep 1,,GM130,DAPI,VE-cadherin,-
+EGM2_regular_18-20dyn-53,figure2_6/EGM2_regular/20dyn/EGM2_regular_18-20dyn-53.tif,S-BIAD1540,20dyne/cm² - 4h,EGM2,rep 2,,GM130,DAPI,VE-cadherin,-

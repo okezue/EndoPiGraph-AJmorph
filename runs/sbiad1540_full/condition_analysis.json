@@ -1,0 +1,57 @@
+{
+  "run_dir": "runs/sbiad1540_full",
+  "n_cells": 1602,
+  "n_edges": 3520,
+  "ajmorph_by_condition": {
+    "fingers": {
+      "6dyne": 5.678670360110803,
+      "high_shear": 10.076045627376425,
+      "static": 6.4453125
+    },
+    "other": {
+      "6dyne": 6.4404432132963985,
+      "high_shear": 8.840304182509506,
+      "static": 10.83984375
+    },
+    "reticular": {
+      "6dyne": 65.51246537396122,
+      "high_shear": 54.08745247148289,
+      "static": 53.61328125
+    },
+    "straight": {
+      "6dyne": 22.299168975069254,
+      "high_shear": 26.996197718631176,
+      "static": 28.7109375
+    },
+    "thick": {
+      "6dyne": 0.06925207756232687,
+      "high_shear": 0.0,
+      "static": 0.29296875
+    },
+    "thick_to_reticular": {
+      "6dyne": 0.0,
+      "high_shear": 0.0,
+      "static": 0.09765625
+    }
+  },
+  "polarity_by_condition": {
+    "6dyne": {
+      "n": 496,
+      "mean_angle": -12.58605772316981,
+      "R": 0.16661258767934306,
+      "circular_var": 0.8333874123206569
+    },
+    "high_shear": {
+      "n": 435,
+      "mean_angle": 105.1849855870249,
+      "R": 0.08692183062240495,
+      "circular_var": 0.913078169377595
+    },
+    "static": {
+      "n": 401,
+      "mean_angle": 34.84180795722964,
+      "R": 0.12098741503407529,
+      "circular_var": 0.8790125849659247
+    }
+  }
+}

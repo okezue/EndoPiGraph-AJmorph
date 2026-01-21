@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/src/EndoPiGraph_AJmorph_v1_allinone.py", line 122, in <module>
+    import tifffile
+ModuleNotFoundError: No module named 'tifffile'

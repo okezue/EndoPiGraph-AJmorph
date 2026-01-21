@@ -1,0 +1,34 @@
+{
+  "untyped": {
+    "features": [
+      "n_cells",
+      "n_edges",
+      "mean_degree",
+      "edge_density",
+      "mean_cell_area"
+    ],
+    "n_features": 5,
+    "rf_accuracy": 0.5333333333333333,
+    "rf_f1": 0.5164983164983165,
+    "lr_accuracy": 0.5333333333333333,
+    "lr_f1": 0.5222222222222223
+  },
+  "typed_selected": {
+    "features": [
+      "mean_skeleton_len",
+      "std_aj_intensity",
+      "std_linearity",
+      "prop_reticular",
+      "std_aj_clusters"
+    ],
+    "n_features": 5,
+    "rf_accuracy": 0.5333333333333333,
+    "rf_f1": 0.5333333333333333,
+    "lr_accuracy": 0.6,
+    "lr_f1": 0.5905723905723905
+  },
+  "best_single_typed": {
+    "feature": "mean_skeleton_len",
+    "rf_f1": 0.7407407407407406
+  }
+}

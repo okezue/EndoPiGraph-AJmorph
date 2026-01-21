@@ -1,0 +1,197 @@
+{
+  "flow_inference": {
+    "inferred_angle": -2.133026506837279,
+    "method": "high_R_flow_images",
+    "n_reference_images": 4,
+    "reference_images": [
+      "BSA_BMP9_6dyn-29",
+      "EGM2_regular_18-20dyn-06",
+      "EGM2_regular_18-20dyn-53",
+      "EGM2_regular_6dyn-86"
+    ]
+  },
+  "per_image": [
+    {
+      "image_id": "BSA_6dyn-146",
+      "condition": "6dyne",
+      "n_cells": 95,
+      "mean_angle_deg": 66.7428313098135,
+      "R": 0.1545444653480032,
+      "prefix": "BSA",
+      "V_cue0": 0.06102324366716656,
+      "V_inferred": 0.05569626224880895,
+      "V_abs": 0.1545444653480032
+    },
+    {
+      "image_id": "BSA_BMP9_20dyn-2",
+      "condition": "high_shear",
+      "n_cells": 92,
+      "mean_angle_deg": 3.198152709069872,
+      "R": 0.08000322837318947,
+      "prefix": "BSA",
+      "V_cue0": 0.07987862841891737,
+      "V_inferred": 0.07965715717057616,
+      "V_abs": 0.08000322837318947
+    },
+    {
+      "image_id": "BSA_BMP9_20dyn-8",
+      "condition": "high_shear",
+      "n_cells": 63,
+      "mean_angle_deg": 61.77798188311688,
+      "R": 0.12125815711514258,
+      "prefix": "BSA",
+      "V_cue0": 0.05734169775362486,
+      "V_inferred": 0.053325290061878486,
+      "V_abs": 0.12125815711514258
+    },
+    {
+      "image_id": "BSA_BMP9_6dyn-29",
+      "condition": "6dyne",
+      "n_cells": 88,
+      "mean_angle_deg": -37.968477897931905,
+      "R": 0.277445081367924,
+      "prefix": "BSA",
+      "V_cue0": 0.21872364939060698,
+      "V_inferred": 0.22492520605734376,
+      "V_abs": 0.277445081367924
+    },
+    {
+      "image_id": "BSA_BMP9_static-23",
+      "condition": "static",
+      "n_cells": 51,
+      "mean_angle_deg": 56.40974284994021,
+      "R": 0.15359326188422023,
+      "prefix": "BSA",
+      "V_cue0": 0.08497545790076164,
+      "V_inferred": 0.08015447949630844,
+      "V_abs": 0.15359326188422023
+    },
+    {
+      "image_id": "BSA_static-111",
+      "condition": "static",
+      "n_cells": 126,
+      "mean_angle_deg": 25.835255710285313,
+      "R": 0.17755459994306094,
+      "prefix": "BSA",
+      "V_cue0": 0.1598081581237497,
+      "V_inferred": 0.15681752725261078,
+      "V_abs": 0.17755459994306094
+    },
+    {
+      "image_id": "BSA_static-115",
+      "condition": "static",
+      "n_cells": 131,
+      "mean_angle_deg": 54.56621623610118,
+      "R": 0.15340440149989915,
+      "prefix": "BSA",
+      "V_cue0": 0.08893799688755777,
+      "V_inferred": 0.08422421138771924,
+      "V_abs": 0.15340440149989915
+    },
+    {
+      "image_id": "EGM2_regular_18-20dyn-06",
+      "condition": "high_shear",
+      "n_cells": 121,
+      "mean_angle_deg": 33.70265366545468,
+      "R": 0.3044917277175626,
+      "prefix": "EGM2",
+      "V_cue0": 0.2533153230112595,
+      "V_inferred": 0.2468512570867913,
+      "V_abs": 0.3044917277175626
+    },
+    {
+      "image_id": "EGM2_regular_18-20dyn-53",
+      "condition": "high_shear",
+      "n_cells": 83,
+      "mean_angle_deg": 172.04818770545873,
+      "R": 0.4084800261159156,
+      "prefix": "EGM2",
+      "V_cue0": -0.40455239582672436,
+      "V_inferred": -0.40637534161959227,
+      "V_abs": 0.4084800261159156
+    },
+    {
+      "image_id": "EGM2_regular_18-20dyn-60",
+      "condition": "high_shear",
+      "n_cells": 76,
+      "mean_angle_deg": 166.777306229655,
+      "R": 0.24246414269408387,
+      "prefix": "EGM2",
+      "V_cue0": -0.23603602573736887,
+      "V_inferred": -0.23793669886285504,
+      "V_abs": 0.24246414269408387
+    },
+    {
+      "image_id": "EGM2_regular_6dyn-27",
+      "condition": "6dyne",
+      "n_cells": 120,
+      "mean_angle_deg": -19.025521058297038,
+      "R": 0.07833701619729012,
+      "prefix": "EGM2",
+      "V_cue0": 0.07405773644992356,
+      "V_inferred": 0.07495690369959747,
+      "V_abs": 0.07833701619729012
+    },
+    {
+      "image_id": "EGM2_regular_6dyn-86",
+      "condition": "6dyne",
+      "n_cells": 96,
+      "mean_angle_deg": -7.951998728211397,
+      "R": 0.34314392418014966,
+      "prefix": "EGM2",
+      "V_cue0": 0.33984436121485767,
+      "V_inferred": 0.34137576933499486,
+      "V_abs": 0.34314392418014966
+    },
+    {
+      "image_id": "EGM2_regular_6dyn-88",
+      "condition": "6dyne",
+      "n_cells": 97,
+      "mean_angle_deg": -32.13116621734348,
+      "R": 0.17161724009661158,
+      "prefix": "EGM2",
+      "V_cue0": 0.14533109769007613,
+      "V_inferred": 0.14862767562213836,
+      "V_abs": 0.17161724009661158
+    },
+    {
+      "image_id": "EGM2_regular_static-49",
+      "condition": "static",
+      "n_cells": 46,
+      "mean_angle_deg": -98.36060251058923,
+      "R": 0.03871972746975342,
+      "prefix": "EGM2",
+      "V_cue0": -0.005629955034875115,
+      "V_inferred": -0.004200231632502915,
+      "V_abs": 0.03871972746975342
+    },
+    {
+      "image_id": "EGM2_regular_static-50",
+      "condition": "static",
+      "n_cells": 47,
+      "mean_angle_deg": -38.68455006701712,
+      "R": 0.10785896698797635,
+      "prefix": "EGM2",
+      "V_cue0": 0.0841945992933028,
+      "V_inferred": 0.08664544201693138,
+      "V_abs": 0.10785896698797635
+    }
+  ],
+  "summary_by_condition": {
+    "6dyne": {
+      "n_images": 5,
+      "R_mean": 0.20501754543799572,
+      "R_std": 0.10492344014170019
+    },
+    "high_shear": {
+      "n_images": 5,
+      "R_mean": 0.23133945640317882,
+      "R_std": 0.13404695189462942
+    },
+    "static": {
+      "n_images": 5,
+      "R_mean": 0.12622619155698203,
+      "R_std": 0.05503851682427292
+    }
+  }
+}

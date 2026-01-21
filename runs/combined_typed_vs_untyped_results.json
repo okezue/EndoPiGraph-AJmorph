@@ -1,0 +1,31 @@
+{
+  "n_images": 18,
+  "conditions": {
+    "6dyne": 8,
+    "high_shear": 5,
+    "static": 5
+  },
+  "results": {
+    "untyped": {
+      "n_features": 7,
+      "rf_accuracy": 0.6666666666666666,
+      "rf_f1_macro": 0.6437621832358674,
+      "lr_accuracy": 0.6666666666666666,
+      "lr_f1_macro": 0.6296296296296297
+    },
+    "typed": {
+      "n_features": 18,
+      "rf_accuracy": 0.5555555555555556,
+      "rf_f1_macro": 0.5057644110275689,
+      "lr_accuracy": 0.5555555555555556,
+      "lr_f1_macro": 0.5167755991285402
+    },
+    "combined": {
+      "n_features": 25,
+      "rf_accuracy": 0.5,
+      "rf_f1_macro": 0.4433862433862433,
+      "lr_accuracy": 0.5,
+      "lr_f1_macro": 0.4444444444444444
+    }
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "cue_angle_deg": 0.0,
+  "per_image": [
+    {
+      "image_id": "BSA_6dyn-146",
+      "condition": "6dyne",
+      "n_cells": 95,
+      "mean_angle_deg": 66.7428313098135,
+      "R": 0.1545444653480032,
+      "V": 0.06102324366716656,
+      "circular_var": 0.8454555346519967
+    },
+    {
+      "image_id": "BSA_BMP9_20dyn-2",
+      "condition": "high_shear",
+      "n_cells": 92,
+      "mean_angle_deg": 3.198152709069872,
+      "R": 0.08000322837318947,
+      "V": 0.07987862841891737,
+      "circular_var": 0.9199967716268105
+    },
+    {
+      "image_id": "BSA_BMP9_20dyn-8",
+      "condition": "high_shear",
+      "n_cells": 63,
+      "mean_angle_deg": 61.77798188311688,
+      "R": 0.12125815711514258,
+      "V": 0.05734169775362486,
+      "circular_var": 0.8787418428848575
+    },
+    {
+      "image_id": "BSA_BMP9_6dyn-29",
+      "condition": "6dyne",
+      "n_cells": 88,
+      "mean_angle_deg": -37.968477897931905,
+      "R": 0.277445081367924,
+      "V": 0.21872364939060698,
+      "circular_var": 0.722554918632076
+    },
+    {
+      "image_id": "BSA_BMP9_static-23",
+      "condition": "static",
+      "n_cells": 51,
+      "mean_angle_deg": 56.40974284994021,
+      "R": 0.15359326188422023,
+      "V": 0.08497545790076164,
+      "circular_var": 0.8464067381157798
+    },
+    {
+      "image_id": "BSA_static-111",
+      "condition": "static",
+      "n_cells": 126,
+      "mean_angle_deg": 25.835255710285313,
+      "R": 0.17755459994306094,
+      "V": 0.1598081581237497,
+      "circular_var": 0.822445400056939
+    },
+    {
+      "image_id": "BSA_static-115",
+      "condition": "static",
+      "n_cells": 131,
+      "mean_angle_deg": 54.56621623610118,
+      "R": 0.15340440149989915,
+      "V": 0.08893799688755777,
+      "circular_var": 0.8465955985001008
+    },
+    {
+      "image_id": "EGM2_regular_18-20dyn-06",
+      "condition": "high_shear",
+      "n_cells": 121,
+      "mean_angle_deg": 33.70265366545468,
+      "R": 0.3044917277175626,
+      "V": 0.2533153230112595,
+      "circular_var": 0.6955082722824374
+    },
+    {
+      "image_id": "EGM2_regular_18-20dyn-53",
+      "condition": "high_shear",
+      "n_cells": 83,
+      "mean_angle_deg": 172.04818770545873,
+      "R": 0.4084800261159156,
+      "V": -0.40455239582672436,
+      "circular_var": 0.5915199738840844
+    },
+    {
+      "image_id": "EGM2_regular_18-20dyn-60",
+      "condition": "high_shear",
+      "n_cells": 76,
+      "mean_angle_deg": 166.777306229655,
+      "R": 0.24246414269408387,
+      "V": -0.23603602573736887,
+      "circular_var": 0.7575358573059161
+    },
+    {
+      "image_id": "EGM2_regular_6dyn-27",
+      "condition": "6dyne",
+      "n_cells": 120,
+      "mean_angle_deg": -19.025521058297038,
+      "R": 0.07833701619729012,
+      "V": 0.07405773644992356,
+      "circular_var": 0.9216629838027098
+    },
+    {
+      "image_id": "EGM2_regular_6dyn-86",
+      "condition": "6dyne",
+      "n_cells": 96,
+      "mean_angle_deg": -7.951998728211397,
+      "R": 0.34314392418014966,
+      "V": 0.33984436121485767,
+      "circular_var": 0.6568560758198503
+    },
+    {
+      "image_id": "EGM2_regular_6dyn-88",
+      "condition": "6dyne",
+      "n_cells": 97,
+      "mean_angle_deg": -32.13116621734348,
+      "R": 0.17161724009661158,
+      "V": 0.14533109769007613,
+      "circular_var": 0.8283827599033884
+    },
+    {
+      "image_id": "EGM2_regular_static-49",
+      "condition": "static",
+      "n_cells": 46,
+      "mean_angle_deg": -98.36060251058923,
+      "R": 0.03871972746975342,
+      "V": -0.005629955034875115,
+      "circular_var": 0.9612802725302466
+    },
+    {
+      "image_id": "EGM2_regular_static-50",
+      "condition": "static",
+      "n_cells": 47,
+      "mean_angle_deg": -38.68455006701712,
+      "R": 0.10785896698797635,
+      "V": 0.0841945992933028,
+      "circular_var": 0.8921410330120236
+    }
+  ],
+  "summary_by_condition": [
+    {
+      "condition": "6dyne",
+      "n_images": 5,
+      "n_cells_total": 496,
+      "R_mean": 0.20501754543799572,
+      "R_std": 0.10492344014170019,
+      "R_min": 0.07833701619729012,
+      "R_max": 0.34314392418014966,
+      "V_mean": 0.16779601768252617,
+      "V_std": 0.11498502016921357
+    },
+    {
+      "condition": "high_shear",
+      "n_images": 5,
+      "n_cells_total": 435,
+      "R_mean": 0.23133945640317882,
+      "R_std": 0.13404695189462942,
+      "R_min": 0.08000322837318947,
+      "R_max": 0.4084800261159156,
+      "V_mean": -0.05001055447605831,
+      "V_std": 0.26490927082289645
+    },
+    {
+      "condition": "static",
+      "n_images": 5,
+      "n_cells_total": 401,
+      "R_mean": 0.12622619155698203,
+      "R_std": 0.05503851682427292,
+      "R_min": 0.03871972746975342,
+      "R_max": 0.17755459994306094,
+      "V_mean": 0.08245725143409936,
+      "V_std": 0.05872367178626493
+    }
+  ],
+  "methodology": {
+    "R": "Mean resultant length computed per image, then averaged across images",
+    "V": "Signed polarity index V = cos(mean_angle - cue_angle) * R",
+    "unit": "Images (not cells) are the unit of analysis",
+    "reference": "Polarity-JaM, Nature Communications 2025"
+  }
+}

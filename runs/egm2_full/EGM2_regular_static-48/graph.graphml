@@ -1,0 +1,2411 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d28" for="edge" attr.name="aj_morph" attr.type="string"/>
+<key id="d27" for="edge" attr.name="aj_thickness_proxy" attr.type="double"/>
+<key id="d26" for="edge" attr.name="aj_linearity_index" attr.type="double"/>
+<key id="d25" for="edge" attr.name="aj_skeleton_len" attr.type="double"/>
+<key id="d24" for="edge" attr.name="aj_cluster_area_mean" attr.type="double"/>
+<key id="d23" for="edge" attr.name="aj_cluster_count" attr.type="long"/>
+<key id="d22" for="edge" attr.name="aj_intensity_per_interface" attr.type="double"/>
+<key id="d21" for="edge" attr.name="aj_occupancy" attr.type="double"/>
+<key id="d20" for="edge" attr.name="aj_std_intensity" attr.type="double"/>
+<key id="d19" for="edge" attr.name="aj_max_intensity" attr.type="double"/>
+<key id="d18" for="edge" attr.name="aj_mean_intensity" attr.type="double"/>
+<key id="d17" for="edge" attr.name="golgi_channel_idx" attr.type="long"/>
+<key id="d16" for="edge" attr.name="nuc_channel_idx" attr.type="long"/>
+<key id="d15" for="edge" attr.name="cell_channel_idx" attr.type="long"/>
+<key id="d14" for="edge" attr.name="aj_channel_idx" attr.type="long"/>
+<key id="d13" for="edge" attr.name="aj_threshold" attr.type="double"/>
+<key id="d12" for="edge" attr.name="iface_cx" attr.type="double"/>
+<key id="d11" for="edge" attr.name="iface_cy" attr.type="double"/>
+<key id="d10" for="edge" attr.name="contact_px" attr.type="long"/>
+<key id="d9" for="edge" attr.name="image_path" attr.type="string"/>
+<key id="d8" for="edge" attr.name="image_id" attr.type="string"/>
+<key id="d7" for="node" attr.name="minor_axis_length" attr.type="double"/>
+<key id="d6" for="node" attr.name="major_axis_length" attr.type="double"/>
+<key id="d5" for="node" attr.name="orientation_rad" attr.type="double"/>
+<key id="d4" for="node" attr.name="eccentricity" attr.type="double"/>
+<key id="d3" for="node" attr.name="perimeter" attr.type="double"/>
+<key id="d2" for="node" attr.name="area" attr.type="double"/>
+<key id="d1" for="node" attr.name="centroid_y" attr.type="double"/>
+<key id="d0" for="node" attr.name="centroid_x" attr.type="double"/>
+<graph edgedefault="undirected"><node id="1">
+  <data key="d0">128.0565297646516</data>
+  <data key="d1">44.04914628518689</data>
+  <data key="d2">8668.0</data>
+  <data key="d3">479.78888860545663</data>
+  <data key="d4">0.9599812984570475</data>
+  <data key="d5">1.2005095677463238</data>
+  <data key="d6">202.25808676473267</data>
+  <data key="d7">56.645231386000134</data>
+</node>
+<node id="2">
+  <data key="d0">265.2014424973235</data>
+  <data key="d1">54.77748351834113</data>
+  <data key="d2">17747.0</data>
+  <data key="d3">672.6000717874998</data>
+  <data key="d4">0.9026579847201862</data>
+  <data key="d5">1.1028527842028206</data>
+  <data key="d6">243.37909737447927</data>
+  <data key="d7">104.7402983679587</data>
+</node>
+<node id="3">
+  <data key="d0">357.0072173215718</data>
+  <data key="d1">17.748997594226143</data>
+  <data key="d2">2494.0</data>
+  <data key="d3">218.61017305526642</data>
+  <data key="d4">0.8656515238899335</data>
+  <data key="d5">1.3801224041573605</data>
+  <data key="d6">82.50754135176457</data>
+  <data key="d7">41.30715475078582</data>
+</node>
+<node id="4">
+  <data key="d0">17.085833914863922</data>
+  <data key="d1">19.578506629448707</data>
+  <data key="d2">1433.0</data>
+  <data key="d3">160.3259018078045</data>
+  <data key="d4">0.705949433447184</data>
+  <data key="d5">-0.6535025377300401</data>
+  <data key="d6">53.19848069242014</data>
+  <data key="d7">37.678474979849355</data>
+</node>
+<node id="5">
+  <data key="d0">515.3413277719847</data>
+  <data key="d1">45.87938825165102</data>
+  <data key="d2">2877.0</data>
+  <data key="d3">322.7350647362943</data>
+  <data key="d4">0.923694485281689</data>
+  <data key="d5">0.35445689369286637</data>
+  <data key="d6">121.4468645117227</data>
+  <data key="d7">46.52992150325558</data>
+</node>
+<node id="6">
+  <data key="d0">953.7542192046557</data>
+  <data key="d1">27.14917555771096</data>
+  <data key="d2">5155.0</data>
+  <data key="d3">360.2142494561229</data>
+  <data key="d4">0.9314094518218049</data>
+  <data key="d5">1.231493127774815</data>
+  <data key="d6">142.74519748518756</data>
+  <data key="d7">51.955415084786786</data>
+</node>
+<node id="7">
+  <data key="d0">61.30263455450022</data>
+  <data key="d1">178.58542514699232</data>
+  <data key="d2">17688.0</data>
+  <data key="d3">648.7005768508881</data>
+  <data key="d4">0.8255327619594277</data>
+  <data key="d5">0.7140902820335866</data>
+  <data key="d6">219.2294697702425</data>
+  <data key="d7">123.72307122721456</data>
+</node>
+<node id="8">
+  <data key="d0">245.8198192842706</data>
+  <data key="d1">141.66870764475092</data>
+  <data key="d2">16822.0</data>
+  <data key="d3">724.7665940288701</data>
+  <data key="d4">0.973086043092758</data>
+  <data key="d5">1.1455275047414515</data>
+  <data key="d6">309.150664809051</data>
+  <data key="d7">71.2413225696181</data>
+</node>
+<node id="9">
+  <data key="d0">664.5359434271531</data>
+  <data key="d1">159.9172013300239</data>
+  <data key="d2">21353.0</data>
+  <data key="d3">793.9919907732864</data>
+  <data key="d4">0.9143571702502316</data>
+  <data key="d5">-1.355080230820126</data>
+  <data key="d6">299.12113671229963</data>
+  <data key="d7">121.1167173198278</data>
+</node>
+<node id="10">
+  <data key="d0">955.3372448979592</data>
+  <data key="d1">106.38265306122449</data>
+  <data key="d2">1960.0</data>
+  <data key="d3">211.7228714274745</data>
+  <data key="d4">0.9410019598837946</data>
+  <data key="d5">1.0824494491304177</data>
+  <data key="d6">87.99089743492058</data>
+  <data key="d7">29.776217393806963</data>
+</node>
+<node id="11">
+  <data key="d0">487.98286162985215</data>
+  <data key="d1">200.62981803284285</data>
+  <data key="d2">29291.0</data>
+  <data key="d3">731.1341263970173</data>
+  <data key="d4">0.8483546810046957</data>
+  <data key="d5">0.8431388409973185</data>
+  <data key="d6">269.751158122337</data>
+  <data key="d7">142.8138997112342</data>
+</node>
+<node id="12">
+  <data key="d0">940.5103272727273</data>
+  <data key="d1">158.02072727272727</data>
+  <data key="d2">13750.0</data>
+  <data key="d3">575.4701294725885</data>
+  <data key="d4">0.9292722674529067</data>
+  <data key="d5">1.0359306069135905</data>
+  <data key="d6">225.28640234379858</data>
+  <data key="d7">83.2197885803431</data>
+</node>
+<node id="13">
+  <data key="d0">812.9998102346765</data>
+  <data key="d1">234.8319628059966</data>
+  <data key="d2">31618.0</data>
+  <data key="d3">1003.6082604829627</data>
+  <data key="d4">0.48143144152736495</data>
+  <data key="d5">1.3597987075234255</data>
+  <data key="d6">241.54608582175317</data>
+  <data key="d7">211.71121952531573</data>
+</node>
+<node id="14">
+  <data key="d0">341.50701057568074</data>
+  <data key="d1">252.6321003014787</data>
+  <data key="d2">20897.0</data>
+  <data key="d3">698.1391770309007</data>
+  <data key="d4">0.9453986850938195</data>
+  <data key="d5">1.2140430357263345</data>
+  <data key="d6">289.63936810100404</data>
+  <data key="d7">94.39814302630907</data>
+</node>
+<node id="15">
+  <data key="d0">250.2321170520231</data>
+  <data key="d1">284.818551300578</data>
+  <data key="d2">11072.0</data>
+  <data key="d3">564.8254685319159</data>
+  <data key="d4">0.9743154159023529</data>
+  <data key="d5">1.035322795682371</data>
+  <data key="d6">254.85210679457035</data>
+  <data key="d7">57.38954285194254</data>
+</node>
+<node id="16">
+  <data key="d0">933.5282097151506</data>
+  <data key="d1">313.2157011146278</data>
+  <data key="d2">14534.0</data>
+  <data key="d3">586.8010819142764</data>
+  <data key="d4">0.9225935998785896</data>
+  <data key="d5">0.672461058510571</data>
+  <data key="d6">232.56095600970121</data>
+  <data key="d7">89.71581060695607</data>
+</node>
+<node id="17">
+  <data key="d0">16.119014084507043</data>
+  <data key="d1">263.3957746478873</data>
+  <data key="d2">1420.0</data>
+  <data key="d3">183.118795026618</data>
+  <data key="d4">0.5995395218747082</data>
+  <data key="d5">0.12035261406388792</data>
+  <data key="d6">51.620382814952336</data>
+  <data key="d7">41.314123110348014</data>
+</node>
+<node id="18">
+  <data key="d0">130.05725979496145</data>
+  <data key="d1">349.293014384487</data>
+  <data key="d2">25166.0</data>
+  <data key="d3">759.1452736853105</data>
+  <data key="d4">0.9033821054969483</data>
+  <data key="d5">0.42484308388388636</data>
+  <data key="d6">290.30609286569353</data>
+  <data key="d7">124.49385818119192</data>
+</node>
+<node id="19">
+  <data key="d0">713.3671917436176</data>
+  <data key="d1">327.61982618142315</data>
+  <data key="d2">18410.0</data>
+  <data key="d3">596.9737008100568</data>
+  <data key="d4">0.8055892225641419</data>
+  <data key="d5">1.0861714255716748</data>
+  <data key="d6">200.44517158592953</data>
+  <data key="d7">118.7586479643857</data>
+</node>
+<node id="20">
+  <data key="d0">53.05723674155586</data>
+  <data key="d1">380.87498089561365</data>
+  <data key="d2">13086.0</data>
+  <data key="d3">534.1086937588512</data>
+  <data key="d4">0.9027804121372879</data>
+  <data key="d5">0.572251855887506</data>
+  <data key="d6">205.8172096798356</data>
+  <data key="d7">88.52234496048328</data>
+</node>
+<node id="21">
+  <data key="d0">243.5149144529491</data>
+  <data key="d1">402.1339486717695</data>
+  <data key="d2">17768.0</data>
+  <data key="d3">615.6417023478424</data>
+  <data key="d4">0.9148639508726643</data>
+  <data key="d5">0.42788635706147926</data>
+  <data key="d6">240.57933399989915</data>
+  <data key="d7">97.13685226638684</data>
+</node>
+<node id="22">
+  <data key="d0">353.2680485386468</data>
+  <data key="d1">494.52915623967135</data>
+  <data key="d2">21179.0</data>
+  <data key="d3">901.3523804664972</data>
+  <data key="d4">0.9807066437115217</data>
+  <data key="d5">0.29849007317367</data>
+  <data key="d6">395.0291023612568</data>
+  <data key="d7">77.22235880349237</data>
+</node>
+<node id="23">
+  <data key="d0">606.4418423106948</data>
+  <data key="d1">417.68624772313296</data>
+  <data key="d2">15372.0</data>
+  <data key="d3">616.7371567773473</data>
+  <data key="d4">0.6245987230873574</data>
+  <data key="d5">0.34168825605403963</data>
+  <data key="d6">178.96846368081387</data>
+  <data key="d7">139.76468065221084</data>
+</node>
+<node id="24">
+  <data key="d0">841.0445693911136</data>
+  <data key="d1">398.7484914975315</data>
+  <data key="d2">7292.0</data>
+  <data key="d3">389.8061325481598</data>
+  <data key="d4">0.9253140379928704</data>
+  <data key="d5">-1.5378650911728422</data>
+  <data key="d6">159.02493838185077</data>
+  <data key="d7">60.30252735641287</data>
+</node>
+<node id="25">
+  <data key="d0">418.1869560545826</data>
+  <data key="d1">424.75717202105943</data>
+  <data key="d2">9307.0</data>
+  <data key="d3">521.3391411371508</data>
+  <data key="d4">0.5566198685393806</data>
+  <data key="d5">-0.6945673251205261</data>
+  <data key="d6">142.5082999276703</data>
+  <data key="d7">118.39123686201187</data>
+</node>
+<node id="26">
+  <data key="d0">701.1428435477732</data>
+  <data key="d1">441.84687856870954</data>
+  <data key="d2">10508.0</data>
+  <data key="d3">422.13813101037414</data>
+  <data key="d4">0.6809149009028895</data>
+  <data key="d5">-1.099650945416817</data>
+  <data key="d6">138.1948775952632</data>
+  <data key="d7">101.20875230026915</data>
+</node>
+<node id="27">
+  <data key="d0">982.7864</data>
+  <data key="d1">429.71312</data>
+  <data key="d2">6250.0</data>
+  <data key="d3">321.0782104868019</data>
+  <data key="d4">0.49617696097161346</data>
+  <data key="d5">0.6101505086307482</data>
+  <data key="d6">98.7903175939552</data>
+  <data key="d7">85.7718692123185</data>
+</node>
+<node id="28">
+  <data key="d0">91.02334934644173</data>
+  <data key="d1">481.1926041783041</data>
+  <data key="d2">8951.0</data>
+  <data key="d3">505.70667350529794</data>
+  <data key="d4">0.9655033983413116</data>
+  <data key="d5">1.0484471851300072</data>
+  <data key="d6">218.40407009782612</data>
+  <data key="d7">56.87033465664491</data>
+</node>
+<node id="29">
+  <data key="d0">904.2162185305704</data>
+  <data key="d1">481.4543586230519</data>
+  <data key="d2">11678.0</data>
+  <data key="d3">487.49956672411133</data>
+  <data key="d4">0.7451906936581646</data>
+  <data key="d5">-1.2447964484039757</data>
+  <data key="d6">155.68814920001725</data>
+  <data key="d7">103.82086497387</data>
+</node>
+<node id="30">
+  <data key="d0">791.6495784475239</data>
+  <data key="d1">471.7664502374261</data>
+  <data key="d2">10319.0</data>
+  <data key="d3">468.9015869776647</data>
+  <data key="d4">0.9252988484071683</data>
+  <data key="d5">-1.0867559314485882</data>
+  <data key="d6">188.16731363939084</data>
+  <data key="d7">71.36033970188772</data>
+</node>
+<node id="31">
+  <data key="d0">472.75121824442857</data>
+  <data key="d1">523.7353648235982</data>
+  <data key="d2">15391.0</data>
+  <data key="d3">638.5533905932738</data>
+  <data key="d4">0.9439344300086756</data>
+  <data key="d5">-0.6696361344201743</data>
+  <data key="d6">251.12566515671057</data>
+  <data key="d7">82.90486699216697</data>
+</node>
+<node id="32">
+  <data key="d0">25.45886828340466</data>
+  <data key="d1">531.6179267712791</data>
+  <data key="d2">4206.0</data>
+  <data key="d3">347.59292911256335</data>
+  <data key="d4">0.9399360786386631</data>
+  <data key="d5">0.3712670149362714</data>
+  <data key="d6">136.7669948394986</data>
+  <data key="d7">46.68548291798777</data>
+</node>
+<node id="33">
+  <data key="d0">546.9787753928708</data>
+  <data key="d1">585.1353967037179</data>
+  <data key="d2">20872.0</data>
+  <data key="d3">853.9625535217635</data>
+  <data key="d4">0.8994404277086947</data>
+  <data key="d5">-0.29591647538733995</data>
+  <data key="d6">282.02620229301397</data>
+  <data key="d7">123.25768502179893</data>
+</node>
+<node id="34">
+  <data key="d0">667.0459571067004</data>
+  <data key="d1">551.6433994938058</data>
+  <data key="d2">7507.0</data>
+  <data key="d3">374.06706319850866</data>
+  <data key="d4">0.8329590017481334</data>
+  <data key="d5">-0.7158331733844825</data>
+  <data key="d6">134.27284736435507</data>
+  <data key="d7">74.29782707130026</data>
+</node>
+<node id="35">
+  <data key="d0">963.8570460048426</data>
+  <data key="d1">634.376803874092</data>
+  <data key="d2">20650.0</data>
+  <data key="d3">701.8132752230962</data>
+  <data key="d4">0.8932993478601324</data>
+  <data key="d5">-0.43140174399306697</data>
+  <data key="d6">251.12538512075173</data>
+  <data key="d7">112.87136971593708</data>
+</node>
+<node id="36">
+  <data key="d0">205.85050331976868</data>
+  <data key="d1">552.1345041764832</data>
+  <data key="d2">4669.0</data>
+  <data key="d3">285.9066376115481</data>
+  <data key="d4">0.742770183455613</data>
+  <data key="d5">-0.7818259704692898</data>
+  <data key="d6">96.30571300867744</data>
+  <data key="d7">64.48114868124507</data>
+</node>
+<node id="37">
+  <data key="d0">315.89861726261205</data>
+  <data key="d1">675.9470130711894</data>
+  <data key="d2">18514.0</data>
+  <data key="d3">780.0731598529186</data>
+  <data key="d4">0.9786509119634936</data>
+  <data key="d5">0.011751840342530512</data>
+  <data key="d6">351.4389228815248</data>
+  <data key="d7">72.23108075675809</data>
+</node>
+<node id="38">
+  <data key="d0">172.21719338177363</data>
+  <data key="d1">686.108859318918</data>
+  <data key="d2">22846.0</data>
+  <data key="d3">786.2518754031087</data>
+  <data key="d4">0.9638388999420038</data>
+  <data key="d5">0.38201775535706445</data>
+  <data key="d6">337.98343021084054</data>
+  <data key="d7">90.06771715886528</data>
+</node>
+<node id="39">
+  <data key="d0">27.13381937911571</data>
+  <data key="d1">624.1867356538099</data>
+  <data key="d2">4252.0</data>
+  <data key="d3">331.1198410471445</data>
+  <data key="d4">0.9347338753851854</data>
+  <data key="d5">0.45481794281904353</data>
+  <data key="d6">130.6981697071111</data>
+  <data key="d7">46.443403294573805</data>
+</node>
+<node id="40">
+  <data key="d0">616.4105263157895</data>
+  <data key="d1">665.8931256713212</data>
+  <data key="d2">9310.0</data>
+  <data key="d3">486.9604614807104</data>
+  <data key="d4">0.9208642775294682</data>
+  <data key="d5">-0.17705739511012575</data>
+  <data key="d6">183.95445658878845</data>
+  <data key="d7">71.72076934631062</data>
+</node>
+<node id="41">
+  <data key="d0">92.9592158235603</data>
+  <data key="d1">665.1307544197444</data>
+  <data key="d2">5713.0</data>
+  <data key="d3">437.17366491630685</data>
+  <data key="d4">0.9765995288784292</data>
+  <data key="d5">0.3723391043846747</data>
+  <data key="d6">192.3268882780341</data>
+  <data key="d7">41.36296375092911</data>
+</node>
+<node id="42">
+  <data key="d0">41.50722361809045</data>
+  <data key="d1">692.9227386934673</data>
+  <data key="d2">3184.0</data>
+  <data key="d3">293.2975105768082</data>
+  <data key="d4">0.9606749386694997</data>
+  <data key="d5">0.7917998121870138</data>
+  <data key="d6">127.50470579298276</data>
+  <data key="d7">35.404928091785344</data>
+</node>
+<node id="43">
+  <data key="d0">44.55122124733223</data>
+  <data key="d1">801.9379890917714</data>
+  <data key="d2">8434.0</data>
+  <data key="d3">533.8244225113893</data>
+  <data key="d4">0.924045284795081</data>
+  <data key="d5">0.6654719284543276</data>
+  <data key="d6">194.05645112372505</data>
+  <data key="d7">74.18448726924495</data>
+</node>
+<node id="44">
+  <data key="d0">946.5362142422398</data>
+  <data key="d1">867.2359504970582</data>
+  <data key="d2">39432.0</data>
+  <data key="d3">880.3158005400379</data>
+  <data key="d4">0.8963103463584668</data>
+  <data key="d5">-0.2615257229049224</data>
+  <data key="d6">341.25703248378085</data>
+  <data key="d7">151.3226816826164</data>
+</node>
+<node id="45">
+  <data key="d0">436.83500730890745</data>
+  <data key="d1">833.0019333239024</data>
+  <data key="d2">21207.0</data>
+  <data key="d3">765.056961930742</data>
+  <data key="d4">0.9026697555168999</data>
+  <data key="d5">-0.6596170625282224</data>
+  <data key="d6">261.2706122187335</data>
+  <data key="d7">112.4336157748427</data>
+</node>
+<node id="46">
+  <data key="d0">792.468253968254</data>
+  <data key="d1">796.5907029478458</data>
+  <data key="d2">10584.0</data>
+  <data key="d3">486.7300141024109</data>
+  <data key="d4">0.9258507443885384</data>
+  <data key="d5">-0.45756562653185984</data>
+  <data key="d6">193.67162584307383</data>
+  <data key="d7">73.18645461059077</data>
+</node>
+<node id="47">
+  <data key="d0">852.7177266576455</data>
+  <data key="d1">856.9868741542625</data>
+  <data key="d2">14780.0</data>
+  <data key="d3">724.0315292925759</data>
+  <data key="d4">0.9788572101075536</data>
+  <data key="d5">-0.11112543874537378</data>
+  <data key="d6">324.8369397355725</data>
+  <data key="d7">66.44369655884832</data>
+</node>
+<node id="48">
+  <data key="d0">141.62298816785477</data>
+  <data key="d1">820.8455206878813</data>
+  <data key="d2">13607.0</data>
+  <data key="d3">580.938166904124</data>
+  <data key="d4">0.9392899678073798</data>
+  <data key="d5">0.699252226885795</data>
+  <data key="d6">226.99297293744814</data>
+  <data key="d7">77.8868284706598</data>
+</node>
+<node id="49">
+  <data key="d0">551.5938562256074</data>
+  <data key="d1">851.4016114818079</data>
+  <data key="d2">7943.0</data>
+  <data key="d3">520.9360748630709</data>
+  <data key="d4">0.980744542733545</data>
+  <data key="d5">-0.08940772119673017</data>
+  <data key="d6">228.7061220692861</data>
+  <data key="d7">44.66516496307467</data>
+</node>
+<node id="50">
+  <data key="d0">510.42318995458186</data>
+  <data key="d1">869.2237510018701</data>
+  <data key="d2">7486.0</data>
+  <data key="d3">511.747258045114</data>
+  <data key="d4">0.9625995920798126</data>
+  <data key="d5">-0.14598754386164597</data>
+  <data key="d6">210.8729762186523</data>
+  <data key="d7">57.13141088030718</data>
+</node>
+<node id="51">
+  <data key="d0">616.3023400488108</data>
+  <data key="d1">937.7615925730967</data>
+  <data key="d2">20897.0</data>
+  <data key="d3">783.3929650063133</data>
+  <data key="d4">0.8524462842927705</data>
+  <data key="d5">0.3205992415206296</data>
+  <data key="d6">255.1502206109217</data>
+  <data key="d7">133.39631577925323</data>
+</node>
+<node id="52">
+  <data key="d0">74.49453322119427</data>
+  <data key="d1">887.524530417718</data>
+  <data key="d2">10701.0</data>
+  <data key="d3">482.3919189857866</data>
+  <data key="d4">0.9161085852281159</data>
+  <data key="d5">1.3033303734698114</data>
+  <data key="d6">190.40423402537942</data>
+  <data key="d7">76.33881589184323</data>
+</node>
+<node id="53">
+  <data key="d0">791.7189258564517</data>
+  <data key="d1">955.7388685951229</data>
+  <data key="d2">10129.0</data>
+  <data key="d3">442.0071426749364</data>
+  <data key="d4">0.8795906472922959</data>
+  <data key="d5">-0.19609616050222503</data>
+  <data key="d6">169.16544698345146</data>
+  <data key="d7">80.47730216825484</data>
+</node>
+<node id="54">
+  <data key="d0">95.24299937772247</data>
+  <data key="d1">971.1735532047293</data>
+  <data key="d2">16070.0</data>
+  <data key="d3">552.3919189857867</data>
+  <data key="d4">0.8593221754013073</data>
+  <data key="d5">1.5386233821273785</data>
+  <data key="d6">205.21798516101313</data>
+  <data key="d7">104.95558794163212</data>
+</node>
+<edge source="1" target="2" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">276</data>
+  <data key="d11">39.405797101449274</data>
+  <data key="d12">171.47826086956522</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.6660928587146026</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.2579521969840394</data>
+  <data key="d21">0.7386634844868735</data>
+  <data key="d22">0.5831547588821747</data>
+  <data key="d23">4</data>
+  <data key="d24">154.75</data>
+  <data key="d25">180.0</data>
+  <data key="d26">1.187297897140446</data>
+  <data key="d27">3.438888888888889</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="1" target="4" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">46</data>
+  <data key="d11">12.5</data>
+  <data key="d12">38.93478260869565</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.3791898710076633</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.3067529425115157</data>
+  <data key="d21">0.30201342281879195</data>
+  <data key="d22">0.24122042933980675</data>
+  <data key="d23">4</data>
+  <data key="d24">11.25</data>
+  <data key="d25">14.0</data>
+  <data key="d26">0.728810888813495</data>
+  <data key="d27">3.2142857142857144</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="1" target="8" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">205</data>
+  <data key="d11">82.24878048780488</data>
+  <data key="d12">174.75121951219512</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.46799914033956586</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.305105370305979</data>
+  <data key="d21">0.4258373205741627</data>
+  <data key="d22">0.33189453323831825</data>
+  <data key="d23">4</data>
+  <data key="d24">66.75</data>
+  <data key="d25">122.0</data>
+  <data key="d26">1.1476794594279887</data>
+  <data key="d27">2.1885245901639343</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="2" target="3" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">49</data>
+  <data key="d11">20.6734693877551</data>
+  <data key="d12">323.55102040816325</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.1511307373210223</data>
+  <data key="d19">0.8241134751773049</data>
+  <data key="d20">0.14157561465998222</data>
+  <data key="d21">0.050314465408805034</data>
+  <data key="d22">0.028466925375797314</data>
+  <data key="d23">5</data>
+  <data key="d24">1.6</data>
+  <data key="d25">7.0</data>
+  <data key="d26">0.7378647873726218</data>
+  <data key="d27">1.1428571428571428</data>
+  <data key="d28">fingers</data>
+</edge>
+<edge source="2" target="8" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">199</data>
+  <data key="d11">112.69849246231156</data>
+  <data key="d12">275.25125628140705</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.33780759063224214</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.30148774247610194</data>
+  <data key="d21">0.2742200328407225</data>
+  <data key="d22">0.21320383374675375</data>
+  <data key="d23">11</data>
+  <data key="d24">15.181818181818182</data>
+  <data key="d25">82.0</data>
+  <data key="d26">0.7514086751302824</data>
+  <data key="d27">2.0365853658536586</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="4" target="7" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">8</data>
+  <data key="d11">44.0</data>
+  <data key="d12">4.5</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.15358550039401103</data>
+  <data key="d19">0.46382978723404256</data>
+  <data key="d20">0.10763103531168176</data>
+  <data key="d21">0.0</data>
+  <data key="d22">0.0</data>
+  <data key="d23">0</data>
+  <data key="d24">0.0</data>
+  <data key="d25">0.0</data>
+  <data key="d26">0.0</data>
+  <data key="d27">0.0</data>
+  <data key="d28">straight</data>
+</edge>
+<edge source="7" target="15" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">70</data>
+  <data key="d11">233.4857142857143</data>
+  <data key="d12">151.04285714285714</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.7526853500796701</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.2476449863237898</data>
+  <data key="d21">0.8193832599118943</data>
+  <data key="d22">0.6924672727840785</data>
+  <data key="d23">1</data>
+  <data key="d24">186.0</data>
+  <data key="d25">48.0</data>
+  <data key="d26">1.1925695879998879</data>
+  <data key="d27">3.875</data>
+  <data key="d28">straight</data>
+</edge>
+<edge source="7" target="17" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">62</data>
+  <data key="d11">241.6290322580645</data>
+  <data key="d12">16.0</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.27009697496019686</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.23230245841701128</data>
+  <data key="d21">0.17346938775510204</data>
+  <data key="d22">0.12369373281227387</data>
+  <data key="d23">5</data>
+  <data key="d24">6.8</data>
+  <data key="d25">11.0</data>
+  <data key="d26">0.37729688731351946</data>
+  <data key="d27">3.090909090909091</data>
+  <data key="d28">fingers</data>
+</edge>
+<edge source="7" target="18" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">226</data>
+  <data key="d11">245.58849557522123</data>
+  <data key="d12">88.0</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.40930208654537975</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.2535313325750366</data>
+  <data key="d21">0.336231884057971</data>
+  <data key="d22">0.2403597492034125</data>
+  <data key="d23">14</data>
+  <data key="d24">16.571428571428573</data>
+  <data key="d25">109.0</data>
+  <data key="d26">0.9460750541771018</data>
+  <data key="d27">2.128440366972477</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="8" target="14" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">318</data>
+  <data key="d11">198.69496855345912</data>
+  <data key="d12">305.0188679245283</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.39633630606744524</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.3125044714822444</data>
+  <data key="d21">0.3305870236869207</data>
+  <data key="d22">0.26328782931977707</data>
+  <data key="d23">6</data>
+  <data key="d24">53.5</data>
+  <data key="d25">145.0</data>
+  <data key="d26">0.8816259554501983</data>
+  <data key="d27">2.213793103448276</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="8" target="11" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">20</data>
+  <data key="d11">197.9</data>
+  <data key="d12">385.5</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.04950700570835495</data>
+  <data key="d19">0.14893617021276595</data>
+  <data key="d20">0.03595272945933377</data>
+  <data key="d21">0.0</data>
+  <data key="d22">0.0</data>
+  <data key="d23">0</data>
+  <data key="d24">0.0</data>
+  <data key="d25">0.0</data>
+  <data key="d26">0.0</data>
+  <data key="d27">0.0</data>
+  <data key="d28">other</data>
+</edge>
+<edge source="9" target="13" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">261</data>
+  <data key="d11">188.8352490421456</data>
+  <data key="d12">723.44061302682</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.18218971631205672</data>
+  <data key="d19">0.8567375886524823</data>
+  <data key="d20">0.16021086236071594</data>
+  <data key="d21">0.065</data>
+  <data key="d22">0.03923758865248227</data>
+  <data key="d23">11</data>
+  <data key="d24">4.7272727272727275</data>
+  <data key="d25">31.0</data>
+  <data key="d26">0.5321937427120916</data>
+  <data key="d27">1.6774193548387097</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="9" target="11" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">120</data>
+  <data key="d11">170.925</data>
+  <data key="d12">544.1666666666666</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.08520933424845574</data>
+  <data key="d19">0.6141843971631206</data>
+  <data key="d20">0.09290343644759655</data>
+  <data key="d21">0.010752688172043012</data>
+  <data key="d22">0.00587966140471288</data>
+  <data key="d23">2</data>
+  <data key="d24">2.0</data>
+  <data key="d25">4.0</data>
+  <data key="d26">0.22360679774997896</data>
+  <data key="d27">1.0</data>
+  <data key="d28">straight</data>
+</edge>
+<edge source="10" target="12" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">159</data>
+  <data key="d11">116.47798742138365</data>
+  <data key="d12">948.7484276729559</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.10600588841027427</data>
+  <data key="d19">0.6680851063829787</data>
+  <data key="d20">0.08110699974363873</data>
+  <data key="d21">0.006134969325153374</data>
+  <data key="d22">0.003759300352434408</data>
+  <data key="d23">2</data>
+  <data key="d24">1.5</data>
+  <data key="d25">3.0</data>
+  <data key="d26">3.0</data>
+  <data key="d27">1.0</data>
+  <data key="d28">fingers</data>
+</edge>
+<edge source="11" target="14" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">148</data>
+  <data key="d11">252.43243243243242</data>
+  <data key="d12">445.43918918918916</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.12057955133473353</data>
+  <data key="d19">0.64822695035461</data>
+  <data key="d20">0.10674822324859312</data>
+  <data key="d21">0.015021459227467811</data>
+  <data key="d22">0.008057102852098742</data>
+  <data key="d23">5</data>
+  <data key="d24">1.4</data>
+  <data key="d25">7.0</data>
+  <data key="d26">3.1304951684997055</data>
+  <data key="d27">1.0</data>
+  <data key="d28">fingers</data>
+</edge>
+<edge source="12" target="13" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">213</data>
+  <data key="d11">186.05164319248826</data>
+  <data key="d12">923.3239436619718</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.241681306526124</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.23148439092131837</data>
+  <data key="d21">0.1559633027522936</data>
+  <data key="d22">0.10962543648469865</data>
+  <data key="d23">11</data>
+  <data key="d24">9.272727272727273</data>
+  <data key="d25">55.0</data>
+  <data key="d26">0.5367961660007559</data>
+  <data key="d27">1.8545454545454545</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="13" target="16" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">366</data>
+  <data key="d11">261.28688524590166</data>
+  <data key="d12">878.6830601092896</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.3425308085362188</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.3048403112894139</data>
+  <data key="d21">0.27412082957619477</data>
+  <data key="d22">0.21598142854402086</data>
+  <data key="d23">12</data>
+  <data key="d24">25.333333333333332</data>
+  <data key="d25">144.0</data>
+  <data key="d26">1.2279021805488937</data>
+  <data key="d27">2.111111111111111</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="13" target="19" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">262</data>
+  <data key="d11">279.5458015267176</data>
+  <data key="d12">735.4694656488549</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.15038475177304966</data>
+  <data key="d19">0.8170212765957446</data>
+  <data key="d20">0.15593632551682224</data>
+  <data key="d21">0.0575</data>
+  <data key="d22">0.035175531914893615</data>
+  <data key="d23">12</data>
+  <data key="d24">3.8333333333333335</data>
+  <data key="d25">24.0</data>
+  <data key="d26">0.3409834029183904</data>
+  <data key="d27">1.9166666666666667</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="13" target="24" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">24</data>
+  <data key="d11">373.1666666666667</data>
+  <data key="d12">871.5</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.19037487335359676</data>
+  <data key="d19">0.6312056737588653</data>
+  <data key="d20">0.12204609449552317</data>
+  <data key="d21">0.047619047619047616</data>
+  <data key="d22">0.026274907125970956</data>
+  <data key="d23">2</data>
+  <data key="d24">2.0</data>
+  <data key="d25">2.0</data>
+  <data key="d26">0.0</data>
+  <data key="d27">2.0</data>
+  <data key="d28">straight</data>
+</edge>
+<edge source="14" target="15" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">271</data>
+  <data key="d11">265.98154981549817</data>
+  <data key="d12">269.59778597785976</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.44238965778420436</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.3524499320479117</data>
+  <data key="d21">0.3919902912621359</data>
+  <data key="d22">0.32966673552296355</data>
+  <data key="d23">7</data>
+  <data key="d24">46.142857142857146</data>
+  <data key="d25">109.0</data>
+  <data key="d26">0.6915235861452668</data>
+  <data key="d27">2.963302752293578</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="15" target="18" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">102</data>
+  <data key="d11">267.8921568627451</data>
+  <data key="d12">170.0</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.26526606895936483</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.2827464634143474</data>
+  <data key="d21">0.18553459119496854</data>
+  <data key="d22">0.14756679602123202</data>
+  <data key="d23">3</data>
+  <data key="d24">19.666666666666668</data>
+  <data key="d25">13.0</data>
+  <data key="d26">1.4100479758212652</data>
+  <data key="d27">4.538461538461538</data>
+  <data key="d28">other</data>
+</edge>
+<edge source="15" target="21" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">112</data>
+  <data key="d11">294.6607142857143</data>
+  <data key="d12">223.01785714285714</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.44254911551316545</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.32485527448707785</data>
+  <data key="d21">0.39080459770114945</data>
+  <data key="d22">0.3147794896877802</data>
+  <data key="d23">3</data>
+  <data key="d24">45.333333333333336</data>
+  <data key="d25">51.0</data>
+  <data key="d26">0.8755445444618281</data>
+  <data key="d27">2.6666666666666665</data>
+  <data key="d28">straight</data>
+</edge>
+<edge source="15" target="22" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">134</data>
+  <data key="d11">346.6940298507463</data>
+  <data key="d12">312.1641791044776</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.548146661314064</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.3301576983157134</data>
+  <data key="d21">0.5117924528301887</data>
+  <data key="d22">0.42799076676033726</data>
+  <data key="d23">2</data>
+  <data key="d24">108.5</data>
+  <data key="d25">66.0</data>
+  <data key="d26">0.9040247717803397</data>
+  <data key="d27">3.287878787878788</data>
+  <data key="d28">straight</data>
+</edge>
+<edge source="16" target="27" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">150</data>
+  <data key="d11">390.99333333333334</data>
+  <data key="d12">984.3333333333334</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.6684389537100587</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.27207299477846125</data>
+  <data key="d21">0.7096774193548387</data>
+  <data key="d22">0.5754137115839243</data>
+  <data key="d23">3</data>
+  <data key="d24">110.0</data>
+  <data key="d25">114.0</data>
+  <data key="d26">1.52</data>
+  <data key="d27">2.8947368421052633</data>
+  <data key="d28">other</data>
+</edge>
+<edge source="17" target="18" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">82</data>
+  <data key="d11">265.0</data>
+  <data key="d12">34.74390243902439</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.23063389960965422</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.19658448685125257</data>
+  <data key="d21">0.1124031007751938</data>
+  <data key="d22">0.07706855791962175</data>
+  <data key="d23">7</data>
+  <data key="d24">4.142857142857143</data>
+  <data key="d25">16.0</data>
+  <data key="d26">0.38467762946747597</data>
+  <data key="d27">1.8125</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="17" target="20" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">80</data>
+  <data key="d11">284.075</data>
+  <data key="d12">17.3875</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.23368510638297874</data>
+  <data key="d19">0.9943262411347518</data>
+  <data key="d20">0.17851896725822192</data>
+  <data key="d21">0.104</data>
+  <data key="d22">0.06763687943262413</data>
+  <data key="d23">7</data>
+  <data key="d24">3.7142857142857144</data>
+  <data key="d25">19.0</data>
+  <data key="d26">0.5715739957163775</data>
+  <data key="d27">1.368421052631579</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="18" target="21" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">355</data>
+  <data key="d11">370.6816901408451</data>
+  <data key="d12">190.83661971830986</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.2603611876339149</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.2875785708543376</data>
+  <data key="d21">0.19100091827364554</data>
+  <data key="d22">0.15125464835329439</data>
+  <data key="d23">13</data>
+  <data key="d24">16.0</data>
+  <data key="d25">80.0</data>
+  <data key="d26">0.4641680128112578</data>
+  <data key="d27">2.6</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="18" target="20" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">362</data>
+  <data key="d11">376.0</data>
+  <data key="d12">89.33977900552486</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.5191812321564676</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.28037068385232594</data>
+  <data key="d21">0.5045537340619308</data>
+  <data key="d22">0.3815099019493857</data>
+  <data key="d23">9</data>
+  <data key="d24">61.55555555555556</data>
+  <data key="d25">206.0</data>
+  <data key="d26">1.0074704814683957</data>
+  <data key="d27">2.6893203883495147</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="18" target="28" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">87</data>
+  <data key="d11">485.67816091954023</data>
+  <data key="d12">152.77011494252875</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.4979488749425992</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.3093387585920311</data>
+  <data key="d21">0.4748201438848921</data>
+  <data key="d22">0.3720393897647839</data>
+  <data key="d23">5</data>
+  <data key="d24">26.4</data>
+  <data key="d25">45.0</data>
+  <data key="d26">1.8219967429025612</data>
+  <data key="d27">2.933333333333333</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="19" target="24" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">132</data>
+  <data key="d11">382.6666666666667</data>
+  <data key="d12">788.060606060606</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.32986719510499235</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.21676111317713018</data>
+  <data key="d21">0.19852941176470587</data>
+  <data key="d22">0.13697677652621332</data>
+  <data key="d23">6</data>
+  <data key="d24">13.5</data>
+  <data key="d25">43.0</data>
+  <data key="d26">0.6821960069476317</data>
+  <data key="d27">1.8837209302325582</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="19" target="26" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">85</data>
+  <data key="d11">391.50588235294117</data>
+  <data key="d12">714.7882352941176</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.22488116118864232</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.2133471015732244</data>
+  <data key="d21">0.11827956989247312</data>
+  <data key="d22">0.08228475558605963</data>
+  <data key="d23">7</data>
+  <data key="d24">4.714285714285714</data>
+  <data key="d25">15.0</data>
+  <data key="d26">0.5714544883195944</data>
+  <data key="d27">2.2</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="20" target="28" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">262</data>
+  <data key="d11">442.6603053435114</data>
+  <data key="d12">66.0</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.41336825973840835</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.2578473321732058</data>
+  <data key="d21">0.3542713567839196</data>
+  <data key="d22">0.25360312199294344</data>
+  <data key="d23">11</data>
+  <data key="d24">25.636363636363637</data>
+  <data key="d25">133.0</data>
+  <data key="d26">1.1349709443714555</data>
+  <data key="d27">2.1203007518796992</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="21" target="22" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">284</data>
+  <data key="d11">417.4788732394366</data>
+  <data key="d12">296.0</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.28886670886281385</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.24323138003105474</data>
+  <data key="d21">0.2208237986270023</data>
+  <data key="d22">0.14702760601781978</data>
+  <data key="d23">14</data>
+  <data key="d24">13.785714285714286</data>
+  <data key="d25">104.0</data>
+  <data key="d26">0.7557293397341744</data>
+  <data key="d27">1.8557692307692308</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="22" target="25" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">304</data>
+  <data key="d11">453.5</data>
+  <data key="d12">381.69736842105266</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.2154754229222314</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.1737493193990889</data>
+  <data key="d21">0.09632034632034632</data>
+  <data key="d22">0.05898345153664303</data>
+  <data key="d23">28</data>
+  <data key="d24">3.1785714285714284</data>
+  <data key="d25">66.0</data>
+  <data key="d26">0.41824960684399404</data>
+  <data key="d27">1.3484848484848484</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="22" target="31" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">235</data>
+  <data key="d11">588.2510638297872</data>
+  <data key="d12">404.5702127659574</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.4597267970365095</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.29814495106236566</data>
+  <data key="d21">0.43654114365411434</data>
+  <data key="d22">0.33091980968772566</data>
+  <data key="d23">9</data>
+  <data key="d24">34.77777777777778</data>
+  <data key="d25">124.0</data>
+  <data key="d26">1.1018414045826848</data>
+  <data key="d27">2.524193548387097</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="22" target="37" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">124</data>
+  <data key="d11">567.241935483871</data>
+  <data key="d12">346.30645161290323</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.20865530503510815</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.25127718903274326</data>
+  <data key="d21">0.15422885572139303</data>
+  <data key="d22">0.11216259129882504</data>
+  <data key="d23">5</data>
+  <data key="d24">12.4</data>
+  <data key="d25">22.0</data>
+  <data key="d26">0.374824584032792</data>
+  <data key="d27">2.8181818181818183</data>
+  <data key="d28">fingers</data>
+</edge>
+<edge source="23" target="26" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">247</data>
+  <data key="d11">440.94331983805665</data>
+  <data key="d12">653.408906882591</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.21793111242971377</data>
+  <data key="d19">0.9574468085106383</data>
+  <data key="d20">0.15940382867479502</data>
+  <data key="d21">0.0849933598937583</data>
+  <data key="d22">0.05195482844037561</data>
+  <data key="d23">19</data>
+  <data key="d24">3.3684210526315788</data>
+  <data key="d25">46.0</data>
+  <data key="d26">0.5405782374684277</data>
+  <data key="d27">1.391304347826087</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="23" target="31" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">67</data>
+  <data key="d11">440.6119402985075</data>
+  <data key="d12">562.4179104477612</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.15031465388073117</data>
+  <data key="d19">0.9063829787234042</data>
+  <data key="d20">0.18737438680554608</data>
+  <data key="d21">0.07042253521126761</data>
+  <data key="d22">0.04985182965404722</data>
+  <data key="d23">1</data>
+  <data key="d24">15.0</data>
+  <data key="d25">5.0</data>
+  <data key="d26">0.8838834764831843</data>
+  <data key="d27">3.0</data>
+  <data key="d28">straight</data>
+</edge>
+<edge source="23" target="33" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">151</data>
+  <data key="d11">492.6887417218543</data>
+  <data key="d12">606.3973509933775</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.20560054907343855</data>
+  <data key="d19">0.9773049645390071</data>
+  <data key="d20">0.2027549472853545</data>
+  <data key="d21">0.1032258064516129</data>
+  <data key="d22">0.07248989552352626</data>
+  <data key="d23">9</data>
+  <data key="d24">5.333333333333333</data>
+  <data key="d25">18.0</data>
+  <data key="d26">0.24880301907401345</data>
+  <data key="d27">2.6666666666666665</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="23" target="34" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">61</data>
+  <data key="d11">515.2622950819672</data>
+  <data key="d12">653.0</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.09090380069103474</data>
+  <data key="d19">0.6638297872340425</data>
+  <data key="d20">0.10566432502422553</data>
+  <data key="d21">0.020512820512820513</data>
+  <data key="d22">0.01133296963084197</data>
+  <data key="d23">2</data>
+  <data key="d24">2.0</data>
+  <data key="d25">2.0</data>
+  <data key="d26">0.0</data>
+  <data key="d27">2.0</data>
+  <data key="d28">straight</data>
+</edge>
+<edge source="24" target="26" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">50</data>
+  <data key="d11">420.46</data>
+  <data key="d12">777.0</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.6414937396024867</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.262073739130523</data>
+  <data key="d21">0.7098765432098766</data>
+  <data key="d22">0.5495315646615883</data>
+  <data key="d23">2</data>
+  <data key="d24">57.5</data>
+  <data key="d25">32.0</data>
+  <data key="d26">0.9456865993048666</data>
+  <data key="d27">3.59375</data>
+  <data key="d28">straight</data>
+</edge>
+<edge source="24" target="29" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">42</data>
+  <data key="d11">420.73809523809524</data>
+  <data key="d12">899.0</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.23221297152842016</data>
+  <data key="d19">0.7957446808510639</data>
+  <data key="d20">0.16204800084754728</data>
+  <data key="d21">0.10869565217391304</data>
+  <data key="d22">0.06372700174735327</data>
+  <data key="d23">5</data>
+  <data key="d24">3.0</data>
+  <data key="d25">12.0</data>
+  <data key="d26">0.6359987280038161</data>
+  <data key="d27">1.25</data>
+  <data key="d28">fingers</data>
+</edge>
+<edge source="24" target="30" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">198</data>
+  <data key="d11">425.2878787878788</data>
+  <data key="d12">839.0</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.3280785525361047</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.2543163142667349</data>
+  <data key="d21">0.2590759075907591</data>
+  <data key="d22">0.1805467780820635</data>
+  <data key="d23">13</data>
+  <data key="d24">12.076923076923077</data>
+  <data key="d25">78.0</data>
+  <data key="d26">0.8658119656040475</data>
+  <data key="d27">2.0128205128205128</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="25" target="31" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">23</data>
+  <data key="d11">525.304347826087</data>
+  <data key="d12">412.17391304347825</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.20115248226950352</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.24180695768727697</data>
+  <data key="d21">0.125</data>
+  <data key="d22">0.0952127659574468</data>
+  <data key="d23">2</data>
+  <data key="d24">5.0</data>
+  <data key="d25">5.0</data>
+  <data key="d26">0.7905694150420948</data>
+  <data key="d27">2.0</data>
+  <data key="d28">straight</data>
+</edge>
+<edge source="26" target="30" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">179</data>
+  <data key="d11">459.9888268156425</data>
+  <data key="d12">746.9664804469273</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.4189021948352259</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.24408231852169138</data>
+  <data key="d21">0.3551912568306011</data>
+  <data key="d22">0.2466379878308724</data>
+  <data key="d23">12</data>
+  <data key="d24">16.25</data>
+  <data key="d25">93.0</data>
+  <data key="d26">0.8756068469422778</data>
+  <data key="d27">2.096774193548387</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="26" target="34" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">84</data>
+  <data key="d11">498.9047619047619</data>
+  <data key="d12">686.5</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.2238233397807866</data>
+  <data key="d19">0.8524822695035461</data>
+  <data key="d20">0.17050580465397813</data>
+  <data key="d21">0.09848484848484848</data>
+  <data key="d22">0.05885450247152375</data>
+  <data key="d23">6</data>
+  <data key="d24">4.333333333333333</data>
+  <data key="d25">17.0</data>
+  <data key="d26">0.5438781849283364</data>
+  <data key="d27">1.5294117647058822</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="27" target="29" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">163</data>
+  <data key="d11">454.8773006134969</data>
+  <data key="d12">959.8527607361963</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.23559689132373549</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.2113864519400522</data>
+  <data key="d21">0.1317365269461078</data>
+  <data key="d22">0.09070369898500868</data>
+  <data key="d23">11</data>
+  <data key="d24">6.0</data>
+  <data key="d25">40.0</data>
+  <data key="d26">0.7731002358028557</data>
+  <data key="d27">1.65</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="28" target="32" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">22</data>
+  <data key="d11">456.59090909090907</data>
+  <data key="d12">5.0</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.2141646966115051</data>
+  <data key="d19">0.6283687943262412</data>
+  <data key="d20">0.15097380808021266</data>
+  <data key="d21">0.09722222222222222</data>
+  <data key="d22">0.053152088258471245</data>
+  <data key="d23">3</data>
+  <data key="d24">2.3333333333333335</data>
+  <data key="d25">5.0</data>
+  <data key="d26">2.23606797749979</data>
+  <data key="d27">1.4</data>
+  <data key="d28">fingers</data>
+</edge>
+<edge source="28" target="38" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">16</data>
+  <data key="d11">542.875</data>
+  <data key="d12">138.375</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.11033278777959628</data>
+  <data key="d19">0.4808510638297872</data>
+  <data key="d20">0.09397095959415945</data>
+  <data key="d21">0.015384615384615385</data>
+  <data key="d22">0.007397708674304419</data>
+  <data key="d23">1</data>
+  <data key="d24">1.0</data>
+  <data key="d25">1.0</data>
+  <data key="d26">0.0</data>
+  <data key="d27">1.0</data>
+  <data key="d28">straight</data>
+</edge>
+<edge source="29" target="30" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">178</data>
+  <data key="d11">464.4438202247191</data>
+  <data key="d12">854.9044943820224</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.20184084272006672</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.15410234332655146</data>
+  <data key="d21">0.0661764705882353</data>
+  <data key="d22">0.041836149353358366</data>
+  <data key="d23">9</data>
+  <data key="d24">4.0</data>
+  <data key="d25">27.0</data>
+  <data key="d26">0.3599680042660347</data>
+  <data key="d27">1.3333333333333333</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="30" target="34" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">66</data>
+  <data key="d11">512.7727272727273</data>
+  <data key="d12">715.0757575757576</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.21021952043228642</data>
+  <data key="d19">0.7163120567375887</data>
+  <data key="d20">0.12022727306595085</data>
+  <data key="d21">0.023809523809523808</data>
+  <data key="d22">0.013576494427558258</data>
+  <data key="d23">4</data>
+  <data key="d24">1.25</data>
+  <data key="d25">5.0</data>
+  <data key="d26">3.5355339059327373</data>
+  <data key="d27">1.0</data>
+  <data key="d28">fingers</data>
+</edge>
+<edge source="31" target="33" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">201</data>
+  <data key="d11">507.4676616915423</data>
+  <data key="d12">528.3830845771145</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.188185597723382</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.2231438577936147</data>
+  <data key="d21">0.10815047021943573</data>
+  <data key="d22">0.08051090508904155</data>
+  <data key="d23">13</data>
+  <data key="d24">5.3076923076923075</data>
+  <data key="d25">30.0</data>
+  <data key="d26">0.19881505889355494</data>
+  <data key="d27">2.3</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="32" target="39" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">61</data>
+  <data key="d11">564.2459016393443</data>
+  <data key="d12">13.19672131147541</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.10043280596472083</data>
+  <data key="d19">0.3829787234042553</data>
+  <data key="d20">0.0734305642071395</data>
+  <data key="d21">0.0</data>
+  <data key="d22">0.0</data>
+  <data key="d23">0</data>
+  <data key="d24">0.0</data>
+  <data key="d25">0.0</data>
+  <data key="d26">0.0</data>
+  <data key="d27">0.0</data>
+  <data key="d28">straight</data>
+</edge>
+<edge source="32" target="41" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">33</data>
+  <data key="d11">577.939393939394</data>
+  <data key="d12">50.36363636363637</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.06952910357165676</data>
+  <data key="d19">0.2127659574468085</data>
+  <data key="d20">0.047300992132529515</data>
+  <data key="d21">0.0</data>
+  <data key="d22">0.0</data>
+  <data key="d23">0</data>
+  <data key="d24">0.0</data>
+  <data key="d25">0.0</data>
+  <data key="d26">0.0</data>
+  <data key="d27">0.0</data>
+  <data key="d28">straight</data>
+</edge>
+<edge source="33" target="34" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">71</data>
+  <data key="d11">544.9154929577464</data>
+  <data key="d12">627.6197183098592</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.2544933018124508</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.26240336884577925</data>
+  <data key="d21">0.17333333333333334</data>
+  <data key="d22">0.13270921985815604</data>
+  <data key="d23">4</data>
+  <data key="d24">9.75</data>
+  <data key="d25">12.0</data>
+  <data key="d26">0.4237347309278692</data>
+  <data key="d27">3.25</data>
+  <data key="d28">fingers</data>
+</edge>
+<edge source="33" target="40" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">39</data>
+  <data key="d11">566.7179487179487</data>
+  <data key="d12">604.0512820512821</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.760459618450712</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.32539514152678917</data>
+  <data key="d21">0.7131782945736435</data>
+  <data key="d22">0.6806531420089066</data>
+  <data key="d23">2</data>
+  <data key="d24">46.0</data>
+  <data key="d25">19.0</data>
+  <data key="d26">1.0349959503354023</data>
+  <data key="d27">4.842105263157895</data>
+  <data key="d28">straight</data>
+</edge>
+<edge source="33" target="45" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">60</data>
+  <data key="d11">729.7333333333333</data>
+  <data key="d12">520.0333333333333</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.1692397300167883</data>
+  <data key="d19">0.9219858156028369</data>
+  <data key="d20">0.1727191972069147</data>
+  <data key="d21">0.06763285024154589</data>
+  <data key="d22">0.04314934731215951</data>
+  <data key="d23">6</data>
+  <data key="d24">2.3333333333333335</data>
+  <data key="d25">11.0</data>
+  <data key="d26">0.42785041287142767</data>
+  <data key="d27">1.2727272727272727</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="33" target="49" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">9</data>
+  <data key="d11">744.5555555555555</data>
+  <data key="d12">551.3333333333334</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.5005701571408705</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.2991479602769742</data>
+  <data key="d21">0.49019607843137253</data>
+  <data key="d22">0.3732443331942706</data>
+  <data key="d23">2</data>
+  <data key="d24">12.5</data>
+  <data key="d25">8.0</data>
+  <data key="d26">0.8677218312746247</data>
+  <data key="d27">3.125</data>
+  <data key="d28">straight</data>
+</edge>
+<edge source="34" target="40" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">154</data>
+  <data key="d11">593.7467532467532</data>
+  <data key="d12">631.3441558441558</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.5656065853987674</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.287365721894049</data>
+  <data key="d21">0.5898520084566596</data>
+  <data key="d22">0.4516635928808121</data>
+  <data key="d23">5</data>
+  <data key="d24">55.8</data>
+  <data key="d25">95.0</data>
+  <data key="d26">1.2654299616868194</data>
+  <data key="d27">2.9368421052631577</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="35" target="44" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">206</data>
+  <data key="d11">724.6553398058253</data>
+  <data key="d12">947.757281553398</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.28635210553018775</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.2551579808924999</data>
+  <data key="d21">0.2039573820395738</data>
+  <data key="d22">0.14546887312844758</data>
+  <data key="d23">13</data>
+  <data key="d24">10.307692307692308</data>
+  <data key="d25">61.0</data>
+  <data key="d26">0.5337750212905732</data>
+  <data key="d27">2.19672131147541</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="35" target="47" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">82</data>
+  <data key="d11">746.5</data>
+  <data key="d12">895.5365853658536</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.27499037880037386</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.2769490085803082</data>
+  <data key="d21">0.22093023255813954</data>
+  <data key="d22">0.16377480895046456</data>
+  <data key="d23">4</data>
+  <data key="d24">14.25</data>
+  <data key="d25">18.0</data>
+  <data key="d26">0.6078168121078569</data>
+  <data key="d27">3.1666666666666665</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="36" target="38" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">47</data>
+  <data key="d11">592.4255319148937</data>
+  <data key="d12">175.0</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.09742733973021833</data>
+  <data key="d19">0.2581560283687943</data>
+  <data key="d20">0.05720418868866672</data>
+  <data key="d21">0.0</data>
+  <data key="d22">0.0</data>
+  <data key="d23">0</data>
+  <data key="d24">0.0</data>
+  <data key="d25">0.0</data>
+  <data key="d26">0.0</data>
+  <data key="d27">0.0</data>
+  <data key="d28">straight</data>
+</edge>
+<edge source="38" target="41" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">70</data>
+  <data key="d11">655.0</data>
+  <data key="d12">114.72857142857143</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.09950162928886332</data>
+  <data key="d19">0.7900709219858156</data>
+  <data key="d20">0.11681014383760506</data>
+  <data key="d21">0.02252252252252252</data>
+  <data key="d22">0.01562200498370711</data>
+  <data key="d23">2</data>
+  <data key="d24">2.5</data>
+  <data key="d25">3.0</data>
+  <data key="d26">3.0</data>
+  <data key="d27">1.6666666666666667</data>
+  <data key="d28">fingers</data>
+</edge>
+<edge source="38" target="48" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">112</data>
+  <data key="d11">803.2678571428571</data>
+  <data key="d12">178.51785714285714</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.20043738631021726</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.24380086156136907</data>
+  <data key="d21">0.12680115273775217</data>
+  <data key="d22">0.097324585607129</data>
+  <data key="d23">4</data>
+  <data key="d24">11.0</data>
+  <data key="d25">19.0</data>
+  <data key="d26">0.8396893026590251</data>
+  <data key="d27">2.3157894736842106</data>
+  <data key="d28">fingers</data>
+</edge>
+<edge source="39" target="42" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">106</data>
+  <data key="d11">660.066037735849</data>
+  <data key="d12">25.41509433962264</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.388228680159142</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.2743613117030113</data>
+  <data key="d21">0.29878048780487804</data>
+  <data key="d22">0.22592976993599725</data>
+  <data key="d23">10</data>
+  <data key="d24">9.8</data>
+  <data key="d25">49.0</data>
+  <data key="d26">0.737196431449805</data>
+  <data key="d27">2.0</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="39" target="41" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">22</data>
+  <data key="d11">645.0</data>
+  <data key="d12">68.77272727272727</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.10398254228041463</data>
+  <data key="d19">0.31347517730496455</data>
+  <data key="d20">0.07336238075887966</data>
+  <data key="d21">0.0</data>
+  <data key="d22">0.0</data>
+  <data key="d23">0</data>
+  <data key="d24">0.0</data>
+  <data key="d25">0.0</data>
+  <data key="d26">0.0</data>
+  <data key="d27">0.0</data>
+  <data key="d28">straight</data>
+</edge>
+<edge source="41" target="42" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">25</data>
+  <data key="d11">711.24</data>
+  <data key="d12">86.92</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.23599902176571283</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.264437612024232</data>
+  <data key="d21">0.13793103448275862</data>
+  <data key="d22">0.11352408901932012</data>
+  <data key="d23">1</data>
+  <data key="d24">12.0</data>
+  <data key="d25">6.0</data>
+  <data key="d26">1.8973665961010275</data>
+  <data key="d27">2.0</data>
+  <data key="d28">fingers</data>
+</edge>
+<edge source="41" target="48" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">42</data>
+  <data key="d11">741.7857142857143</data>
+  <data key="d12">108.0</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.16787953540960016</data>
+  <data key="d19">0.8652482269503546</data>
+  <data key="d20">0.15392415869763898</data>
+  <data key="d21">0.036231884057971016</data>
+  <data key="d22">0.02499743036283277</data>
+  <data key="d23">3</data>
+  <data key="d24">1.6666666666666667</data>
+  <data key="d25">4.0</data>
+  <data key="d26">2.82842712474619</data>
+  <data key="d27">1.25</data>
+  <data key="d28">fingers</data>
+</edge>
+<edge source="42" target="48" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">51</data>
+  <data key="d11">729.3333333333334</data>
+  <data key="d12">74.62745098039215</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.19605340008343763</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.23922987941799048</data>
+  <data key="d21">0.12941176470588237</data>
+  <data key="d22">0.0927075511055486</data>
+  <data key="d23">4</data>
+  <data key="d24">5.5</data>
+  <data key="d25">11.0</data>
+  <data key="d26">0.5145582966974868</data>
+  <data key="d27">2.0</data>
+  <data key="d28">fingers</data>
+</edge>
+<edge source="43" target="48" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">148</data>
+  <data key="d11">836.5743243243244</data>
+  <data key="d12">106.44594594594595</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.2036127780808632</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.22933584793314513</data>
+  <data key="d21">0.11324786324786325</data>
+  <data key="d22">0.08605504031035947</data>
+  <data key="d23">4</data>
+  <data key="d24">13.25</data>
+  <data key="d25">24.0</data>
+  <data key="d26">0.48067341450088774</data>
+  <data key="d27">2.2083333333333335</data>
+  <data key="d28">fingers</data>
+</edge>
+<edge source="43" target="52" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">274</data>
+  <data key="d11">852.485401459854</data>
+  <data key="d12">68.0</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.3539932161578785</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.28893038482663547</data>
+  <data key="d21">0.2886473429951691</data>
+  <data key="d22">0.21978791927913113</data>
+  <data key="d23">14</data>
+  <data key="d24">17.071428571428573</data>
+  <data key="d25">98.0</data>
+  <data key="d26">0.7168770265762998</data>
+  <data key="d27">2.438775510204082</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="44" target="47" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">512</data>
+  <data key="d11">894.5</data>
+  <data key="d12">873.3671875</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.33746479131687357</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.29557694317827304</data>
+  <data key="d21">0.2755498059508409</data>
+  <data key="d22">0.21079977613241216</data>
+  <data key="d23">22</data>
+  <data key="d24">19.363636363636363</data>
+  <data key="d25">185.0</data>
+  <data key="d26">0.8089407848537146</data>
+  <data key="d27">2.3027027027027027</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="45" target="50" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">304</data>
+  <data key="d11">829.5</data>
+  <data key="d12">498.13157894736844</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.38193177980412024</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.32243888325712855</data>
+  <data key="d21">0.3300865800865801</data>
+  <data key="d22">0.2647754137115839</data>
+  <data key="d23">6</data>
+  <data key="d24">50.833333333333336</data>
+  <data key="d25">141.0</data>
+  <data key="d26">0.8798420046343071</data>
+  <data key="d27">2.1631205673758864</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="46" target="47" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">204</data>
+  <data key="d11">788.4901960784314</data>
+  <data key="d12">829.9705882352941</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.22700447631611584</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.21686332054013768</data>
+  <data key="d21">0.14467408585055644</data>
+  <data key="d22">0.09806627653936789</data>
+  <data key="d23">12</data>
+  <data key="d24">7.583333333333333</data>
+  <data key="d25">45.0</data>
+  <data key="d26">0.49040678253011954</data>
+  <data key="d27">2.022222222222222</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="46" target="53" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">42</data>
+  <data key="d11">873.2142857142857</data>
+  <data key="d12">788.4047619047619</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.1627337201805287</data>
+  <data key="d19">0.8780141843971632</data>
+  <data key="d20">0.1366723928990583</data>
+  <data key="d21">0.03496503496503497</data>
+  <data key="d22">0.025462480781629715</data>
+  <data key="d23">1</data>
+  <data key="d24">5.0</data>
+  <data key="d25">3.0</data>
+  <data key="d26">1.3416407864998738</data>
+  <data key="d27">1.6666666666666667</data>
+  <data key="d28">other</data>
+</edge>
+<edge source="47" target="53" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">306</data>
+  <data key="d11">946.0</data>
+  <data key="d12">825.7941176470588</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.7391247860112496</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.27507792962907207</data>
+  <data key="d21">0.7898706896551724</data>
+  <data key="d22">0.6796099290780142</data>
+  <data key="d23">1</data>
+  <data key="d24">733.0</data>
+  <data key="d25">159.0</data>
+  <data key="d26">1.0526108762666364</data>
+  <data key="d27">4.610062893081761</data>
+  <data key="d28">straight</data>
+</edge>
+<edge source="48" target="52" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">93</data>
+  <data key="d11">886.7956989247311</data>
+  <data key="d12">158.01075268817203</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.48498452389656604</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.3428880177350676</data>
+  <data key="d21">0.4948453608247423</data>
+  <data key="d22">0.3921425263824913</data>
+  <data key="d23">1</data>
+  <data key="d24">144.0</data>
+  <data key="d25">52.0</data>
+  <data key="d26">1.2852245239529423</data>
+  <data key="d27">2.769230769230769</data>
+  <data key="d28">other</data>
+</edge>
+<edge source="49" target="50" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">392</data>
+  <data key="d11">854.5</data>
+  <data key="d12">532.3724489795918</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.6536081858776893</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.31170532847892035</data>
+  <data key="d21">0.6683501683501684</data>
+  <data key="d22">0.5638823220383504</data>
+  <data key="d23">3</data>
+  <data key="d24">264.6666666666667</data>
+  <data key="d25">211.0</data>
+  <data key="d26">1.1086698500051437</data>
+  <data key="d27">3.7630331753554502</data>
+  <data key="d28">straight</data>
+</edge>
+<edge source="49" target="51" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">372</data>
+  <data key="d11">881.5215053763441</data>
+  <data key="d12">567.0376344086021</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.6080799734590274</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.28604915068872067</data>
+  <data key="d21">0.6266548984995587</data>
+  <data key="d22">0.496805693789788</data>
+  <data key="d23">6</data>
+  <data key="d24">118.33333333333333</data>
+  <data key="d25">256.0</data>
+  <data key="d26">1.3599141448493317</data>
+  <data key="d27">2.7734375</data>
+  <data key="d28">reticular</data>
+</edge>
+<edge source="52" target="54" id="0">
+  <data key="d8">EGM2_regular_static-48</data>
+  <data key="d9">/Users/okezuebell/Downloads/EndoPiGraph-AJmorph-v1/data/S-BIAD1540/images_egm2/EGM2_regular_static-48.tif</data>
+  <data key="d10">176</data>
+  <data key="d11">925.2386363636364</data>
+  <data key="d12">79.4659090909091</data>
+  <data key="d13">0.474609375</data>
+  <data key="d14">2</data>
+  <data key="d15">2</data>
+  <data key="d16">1</data>
+  <data key="d17">0</data>
+  <data key="d18">0.1526579478170343</data>
+  <data key="d19">1.0</data>
+  <data key="d20">0.18510157291438795</data>
+  <data key="d21">0.07522935779816514</data>
+  <data key="d22">0.053406207300409916</data>
+  <data key="d23">5</data>
+  <data key="d24">8.2</data>
+  <data key="d25">23.0</data>
+  <data key="d26">0.5550635237825454</data>
+  <data key="d27">1.7826086956521738</data>
+  <data key="d28">fingers</data>
+</edge>
+</graph></graphml>

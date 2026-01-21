@@ -1,0 +1,16 @@
+{
+  "run_dir": "runs/sbiad1540_full",
+  "n_images": 15,
+  "n_cells_total": 1602,
+  "n_edges_total": 3520,
+  "seg_passed": "11/15",
+  "graph_passed": "14/15",
+  "feature_passed": "15/15",
+  "overall_passed": "11/15",
+  "excluded_images": [
+    "BSA_BMP9_20dyn-8",
+    "BSA_BMP9_static-23",
+    "EGM2_regular_static-49",
+    "EGM2_regular_static-50"
+  ]
+}

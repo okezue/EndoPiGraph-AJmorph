@@ -1,0 +1,24 @@
+{
+  "created": "20260119_135812",
+  "n_images": 1,
+  "n_cells": 9,
+  "n_edges": 0,
+  "aj_classes": [
+    "straight",
+    "thick",
+    "thick_to_reticular",
+    "reticular",
+    "fingers",
+    "other"
+  ],
+  "config": {
+    "aj_channel": "3",
+    "cell_channel": "3",
+    "nuc_channel": "2",
+    "golgi_channel": "0",
+    "flow_dir_deg": 0.0,
+    "use_cellpose": false,
+    "cellpose_diameter": null,
+    "ajmorph_model": null
+  }
+}

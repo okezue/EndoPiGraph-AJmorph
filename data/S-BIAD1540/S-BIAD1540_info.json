@@ -1,0 +1,97 @@
+{
+  "columns": [
+    {
+      "name": "Name",
+      "title": "Name",
+      "visible": true,
+      "searchable": true,
+      "data": "Name",
+      "defaultContent": ""
+    },
+    {
+      "name": "Size",
+      "title": "Size",
+      "visible": true,
+      "searchable": false,
+      "data": "Size",
+      "defaultContent": ""
+    },
+    {
+      "name": "Section",
+      "title": "Section",
+      "visible": true,
+      "searchable": true,
+      "data": "Section",
+      "defaultContent": ""
+    },
+    {
+      "name": "Channel 1",
+      "title": "Channel 1",
+      "visible": true,
+      "searchable": true,
+      "data": "Channel_1",
+      "defaultContent": ""
+    },
+    {
+      "name": "Channel 2",
+      "title": "Channel 2",
+      "visible": true,
+      "searchable": true,
+      "data": "Channel_2",
+      "defaultContent": ""
+    },
+    {
+      "name": "Channel 3",
+      "title": "Channel 3",
+      "visible": true,
+      "searchable": true,
+      "data": "Channel_3",
+      "defaultContent": ""
+    },
+    {
+      "name": "Channel 4",
+      "title": "Channel 4",
+      "visible": true,
+      "searchable": true,
+      "data": "Channel_4",
+      "defaultContent": ""
+    },
+    {
+      "name": "Supplementation",
+      "title": "Supplementation",
+      "visible": true,
+      "searchable": true,
+      "data": "Supplementation",
+      "defaultContent": ""
+    },
+    {
+      "name": "Sheer Stress",
+      "title": "Sheer Stress",
+      "visible": true,
+      "searchable": true,
+      "data": "Sheer_Stress",
+      "defaultContent": ""
+    },
+    {
+      "name": "replication",
+      "title": "replication",
+      "visible": true,
+      "searchable": true,
+      "data": "replication",
+      "defaultContent": ""
+    }
+  ],
+  "files": 348,
+  "httpLink": "https://ftp.ebi.ac.uk/biostudies/fire/S-BIAD/540/S-BIAD1540",
+  "ftpLink": "ftp://ftp.ebi.ac.uk/biostudies/fire/S-BIAD/540/S-BIAD1540",
+  "globusLink": "https://app.globus.org/file-manager?origin_id=47772002-3e5b-4fd3-b97c-18cee38d6df2&origin_path=/biostudies/fire/S-BIAD/540/S-BIAD1540",
+  "isPublic": true,
+  "relPath": "S-BIAD/540/S-BIAD1540",
+  "hasZippedFolders": true,
+  "views": 52,
+  "released": 1738108800000,
+  "modified": 1737446860669,
+  "sections": [
+    "StudyComponent-4"
+  ]
+}

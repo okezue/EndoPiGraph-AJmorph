@@ -1,0 +1,66 @@
+# Example config for running EndoPiGraph-AJmorph v1 on BioImage Archive accession S-BIAD1540.
+#
+# IMPORTANT:
+# 1) Run `endopigraph make-manifest ...` first and inspect channel names.
+# 2) Edit the channel names below (segmentation + AJ) to match the dataset.
+
+bioimagearchive:
+  accession: S-BIAD1540
+
+manifest_csv: data/manifest.csv
+output_dir: outputs/sbiad1540_run1
+
+# set if you know it; otherwise leave null
+pixel_size_um: null
+
+segmentation:
+  # recommended: cellpose (requires `pip install -e '.[cellpose]'`)
+  # fallback: watershed
+  method: cellpose
+
+  cellpose:
+    model_type: cyto2
+    diameter: 30
+
+    # channel name mapping (must match names found in the manifest)
+    channels:
+      cyto: "VE-cadherin"    # <-- EDIT ME
+      nuclei: "DAPI"         # <-- EDIT ME
+
+    cellprob_threshold: 0.0
+    flow_threshold: 0.4
+
+  watershed:
+    nuclei_channel: "DAPI"
+    membrane_channel: "VE-cadherin"
+
+graph:
+  # minimum number of boundary pixel comparisons to consider two cells "neighbors"
+  min_contact_px: 10
+
+junction_markers:
+  # v1 focuses on adherens junctions (AJ).
+  AJ:
+    channel: "VE-cadherin"  # <-- EDIT ME
+
+    # thresholding options:
+    # - "otsu"
+    # - "percentile:95" (or any percentile)
+    # - a numeric value, e.g. 1200
+    threshold: otsu
+
+    # define "AJ present" on an interface if occupancy >= min_occupancy
+    min_occupancy: 0.05
+
+    # dilate boundary pixels to capture a thicker junction region
+    dilate_px: 2
+
+    # attaches a heuristic AJ morphology label (straight/thick/reticular/fingers/mixed)
+    # set false if you only want raw features.
+    classify: true
+
+qc:
+  make_figures: true
+
+  # set to an integer to test quickly on a small subset
+  max_images: null

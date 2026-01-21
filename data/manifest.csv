@@ -1,0 +1,2 @@
+image_id,path,dataset,shear_stress,supplementation,replicate,section,channel_1,channel_2,channel_3,channel_4
+060721_EGM2_18dyn_02_small,polarityjam/060721_EGM2_18dyn_02_small.tif,polarityjam_test,18dyn,EGM2,02,,GM130,unknown,DAPI,VE-cadherin

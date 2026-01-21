@@ -1,0 +1,49 @@
+# EndoPiGraph-AJmorph configuration for polarityjam test data
+# Based on polarityjam's parameters_golgi_nuclei.yml
+
+# Dataset configuration
+dataset:
+  name: polarityjam_test
+  root: data/raw
+  manifest: data/manifest.csv
+
+# Channel mapping (0-indexed)
+# From polarityjam parameters:
+#   channel_organelle (Golgi): 0
+#   channel_nucleus: 2
+#   channel_junction: 3
+channels:
+  aj: "VE-cadherin"       # Channel 3 - adherens junction marker
+  cell: "VE-cadherin"     # Use same channel for cell segmentation
+  nucleus: "DAPI"         # Channel 2 - nuclear marker
+  golgi: "GM130"          # Channel 0 - Golgi marker
+
+# Or use indices directly:
+channels_by_index:
+  aj: 3
+  cell: 3
+  nucleus: 2
+  golgi: 0
+
+# Segmentation settings
+segmentation:
+  use_cellpose: true
+  cellpose_diameter: 100   # estimated_cell_diameter from polarityjam
+  cellpose_model: cyto2
+
+# Processing parameters
+processing:
+  flow_dir_deg: 0.0       # Direction of flow/shear (degrees, 0 = +x)
+  interface_dilate: 2     # Dilation for interface mask
+  min_cell_size: 50       # Minimum cell area in pixels
+
+# Output settings
+output:
+  dir: runs/polarityjam_test
+  save_masks: true
+  save_graphs: true
+  save_qc_figures: true
+
+# Pixel calibration
+calibration:
+  pixel_to_micron_ratio: 2.4089

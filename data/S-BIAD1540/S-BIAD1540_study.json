@@ -1,0 +1,603 @@
+{
+  "accno": "S-BIAD1540",
+  "attributes": [
+    {
+      "name": "Template",
+      "value": "BioImages.v4"
+    },
+    {
+      "name": "DOI",
+      "value": "10.6019/S-BIAD1540"
+    },
+    {
+      "name": "ReleaseDate",
+      "value": "2025-01-29"
+    },
+    {
+      "name": "AttachTo",
+      "value": "BioImages"
+    }
+  ],
+  "section": {
+    "type": "Study",
+    "attributes": [
+      {
+        "name": "Title",
+        "value": "Polarity-JaM: An image analysis toolbox for cell polarity, junction and morphology quantification - data"
+      },
+      {
+        "name": "Description",
+        "value": "Cell polarity involves the asymmetric distribution of cellular components such as signalling molecules and organelles within a cell, alterations in cell morphology and cell-cell contacts. Advances in fluorescence microscopy and deep learning algorithms open up a wealth of unprecedented opportunities to characterise various aspects of cell polarity, but also create new challenges for comprehensible and interpretable image data analysis workflows to fully exploit these new opportunities. Here we present Polarity-JaM, an open source package for reproducible exploratory image analysis that provides versatile methods for single cell segmentation, feature extraction and statistical analysis. We demonstrate our analysis using fluorescence image data of endothelial cells (ECs) and their collective behaviour, which has been shown to be essential for vascular development and disease. The general architecture of the software allows its application to other cell types and imaging modalities, as well as seamless integration into common image analysis workflows, see https://polarityjam.readthedocs.io. \n\nHere, we present the data used in the evaluation process of Polarity-JaM."
+      },
+      {
+        "name": "Keywords",
+        "value": "endothelial cells"
+      },
+      {
+        "name": "Keywords",
+        "value": "KLF4"
+      },
+      {
+        "name": "Keywords",
+        "value": "VE-Cadherin"
+      },
+      {
+        "name": "Keywords",
+        "value": "Anti-GM"
+      },
+      {
+        "name": "Keywords",
+        "value": "Notch1"
+      },
+      {
+        "name": "Keywords",
+        "value": "shear stress"
+      },
+      {
+        "name": "Keywords",
+        "value": "confocal_microscopy"
+      },
+      {
+        "name": "Keywords",
+        "value": "fluorescence_microscopy"
+      },
+      {
+        "name": "License",
+        "value": "CC BY 4.0",
+        "valqual": [
+          {
+            "name": "URL",
+            "value": "https://creativecommons.org/licenses/by/4.0/legalcode"
+          }
+        ]
+      },
+      {
+        "name": "Funding statement",
+        "value": "Fondation Leducq (17 CVD 03) \nDeutsches Zentrum f\u00fcr Herz-Kreislaufforschung, the Bundesministerium f\u00fcr Bildung und Forschung, the Deutsche Forschungsgemeinschaft by the CRC1366 and grant number 329389797, CRC1444 and CRC1470\nHELMHOLTZ IMAGING, a platform of the Helmholtz Information & Data Science Incubator"
+      }
+    ],
+    "links": [
+      {
+        "url": "https://polarityjam.readthedocs.io/en/latest/",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "Documentation Page for the Software"
+          }
+        ]
+      },
+      {
+        "url": "https://github.com/polarityjam/polarityjam",
+        "attributes": [
+          {
+            "name": "Description",
+            "value": "Code Repository for the Software"
+          }
+        ]
+      }
+    ],
+    "subsections": [
+      {
+        "type": "author",
+        "attributes": [
+          {
+            "name": "Name",
+            "value": "Wolfgang Giese"
+          },
+          {
+            "name": "E-mail",
+            "value": "wolfgang.giese@mdc-berlin.de"
+          },
+          {
+            "name": "Role",
+            "value": "corresponding author"
+          },
+          {
+            "name": "ORCID",
+            "value": "0000-0003-0872-0929"
+          },
+          {
+            "name": "affiliation",
+            "value": "o1",
+            "reference": true
+          },
+          {
+            "name": "affiliation",
+            "value": "o2",
+            "reference": true
+          }
+        ]
+      },
+      {
+        "type": "author",
+        "attributes": [
+          {
+            "name": "Name",
+            "value": "Jan Philipp Albrecht"
+          },
+          {
+            "name": "E-mail",
+            "value": "jan-philipp.albrecht@mdc-berlin.de"
+          },
+          {
+            "name": "Role",
+            "value": "first author"
+          },
+          {
+            "name": "ORCID",
+            "value": "0000-0002-3792-9695"
+          },
+          {
+            "name": "affiliation",
+            "value": "o1",
+            "reference": true
+          },
+          {
+            "name": "affiliation",
+            "value": "o3",
+            "reference": true
+          },
+          {
+            "name": "affiliation",
+            "value": "o4",
+            "reference": true
+          }
+        ]
+      },
+      {
+        "type": "author",
+        "attributes": [
+          {
+            "name": "Name",
+            "value": "Olya Oppenheim"
+          },
+          {
+            "name": "E-mail",
+            "value": "olya.oppenheim@mdc-berlin.de"
+          },
+          {
+            "name": "Role",
+            "value": "data acquisition"
+          },
+          {
+            "name": "ORCID",
+            "value": "0000-0002-5299-3193"
+          },
+          {
+            "name": "affiliation",
+            "value": "o1",
+            "reference": true
+          },
+          {
+            "name": "affiliation",
+            "value": "o2",
+            "reference": true
+          },
+          {
+            "name": "affiliation",
+            "value": "o5",
+            "reference": true
+          }
+        ]
+      },
+      {
+        "type": "author",
+        "attributes": [
+          {
+            "name": "Name",
+            "value": "Emir Bora Akmeri\u00e7"
+          },
+          {
+            "name": "E-mail",
+            "value": "emirbora.akmeric@mdc-berlin.de"
+          },
+          {
+            "name": "Role",
+            "value": "data acquisition"
+          },
+          {
+            "name": "ORCID",
+            "value": "0000-0003-4463-8017"
+          },
+          {
+            "name": "affiliation",
+            "value": "o1",
+            "reference": true
+          },
+          {
+            "name": "affiliation",
+            "value": "o2",
+            "reference": true
+          },
+          {
+            "name": "affiliation",
+            "value": "o5",
+            "reference": true
+          }
+        ]
+      },
+      {
+        "type": "author",
+        "attributes": [
+          {
+            "name": "Name",
+            "value": "Julia Kraxner"
+          },
+          {
+            "name": "E-mail",
+            "value": "julia.kraxner@mdc-berlin.de"
+          },
+          {
+            "name": "Role",
+            "value": "data acquisition"
+          },
+          {
+            "name": "ORCID",
+            "value": "0000-0002-3515-7468"
+          },
+          {
+            "name": "affiliation",
+            "value": "o1",
+            "reference": true
+          },
+          {
+            "name": "affiliation",
+            "value": "o2",
+            "reference": true
+          }
+        ]
+      },
+      {
+        "type": "author",
+        "attributes": [
+          {
+            "name": "Name",
+            "value": "Deborah Schmidt"
+          },
+          {
+            "name": "E-mail",
+            "value": "deborah.schmidt@mdc-berlin.de"
+          },
+          {
+            "name": "Role",
+            "value": "principal investigator"
+          },
+          {
+            "name": "ORCID",
+            "value": "0000-0002-8621-9438"
+          },
+          {
+            "name": "affiliation",
+            "value": "o1",
+            "reference": true
+          },
+          {
+            "name": "affiliation",
+            "value": "o3",
+            "reference": true
+          }
+        ]
+      },
+      {
+        "type": "author",
+        "attributes": [
+          {
+            "name": "Name",
+            "value": "Kyle Harrington"
+          },
+          {
+            "name": "E-mail",
+            "value": "orcid@kyleharrington.com"
+          },
+          {
+            "name": "Role",
+            "value": "principal investigator"
+          },
+          {
+            "name": "ORCID",
+            "value": "0000-0002-7237-1973"
+          },
+          {
+            "name": "affiliation",
+            "value": "o6",
+            "reference": true
+          },
+          {
+            "name": "affiliation",
+            "value": "o1",
+            "reference": true
+          }
+        ]
+      },
+      {
+        "type": "author",
+        "attributes": [
+          {
+            "name": "Name",
+            "value": "Holger Gerhardt"
+          },
+          {
+            "name": "E-mail",
+            "value": "holger.gerhardt@mdc-berlin.de"
+          },
+          {
+            "name": "Role",
+            "value": "principal investigator"
+          },
+          {
+            "name": "ORCID",
+            "value": "0000-0002-3030-0384"
+          },
+          {
+            "name": "affiliation",
+            "value": "o1",
+            "reference": true
+          },
+          {
+            "name": "affiliation",
+            "value": "o2",
+            "reference": true
+          },
+          {
+            "name": "affiliation",
+            "value": "o5",
+            "reference": true
+          },
+          {
+            "name": "affiliation",
+            "value": "o7",
+            "reference": true
+          }
+        ]
+      },
+      {
+        "accno": "o1",
+        "type": "organisation",
+        "attributes": [
+          {
+            "name": "Name",
+            "value": "Max Delbr\u00fcck Center"
+          }
+        ]
+      },
+      {
+        "accno": "o2",
+        "type": "organisation",
+        "attributes": [
+          {
+            "name": "Name",
+            "value": "German Centre for Cardiovascular Research"
+          }
+        ]
+      },
+      {
+        "accno": "o3",
+        "type": "organisation",
+        "attributes": [
+          {
+            "name": "Name",
+            "value": "HELMHOLTZ IMAGING"
+          }
+        ]
+      },
+      {
+        "accno": "o4",
+        "type": "organisation",
+        "attributes": [
+          {
+            "name": "Name",
+            "value": "Humboldt-Universit\u00e4t zu Berlin"
+          }
+        ]
+      },
+      {
+        "accno": "o5",
+        "type": "organisation",
+        "attributes": [
+          {
+            "name": "Name",
+            "value": "Charit\u00e9 - Universit\u00e4tsmedizin Berlin"
+          }
+        ]
+      },
+      {
+        "accno": "o6",
+        "type": "organisation",
+        "attributes": [
+          {
+            "name": "Name",
+            "value": "Chan Zuckerberg Biohub San Francisco"
+          }
+        ]
+      },
+      {
+        "accno": "o7",
+        "type": "organisation",
+        "attributes": [
+          {
+            "name": "Name",
+            "value": "Berlin Institute of Health at Charit\u00e9 - Universit\u00e4tsmedizin Berlin"
+          }
+        ]
+      },
+      {
+        "type": "Funding",
+        "attributes": [
+          {
+            "name": "Agency",
+            "value": "Fondation Leducq"
+          },
+          {
+            "name": "grant_id",
+            "value": "(17 CVD 03) "
+          }
+        ]
+      },
+      {
+        "type": "Funding",
+        "attributes": [
+          {
+            "name": "Agency",
+            "value": "Deutsches Zentrum f\u00fcr Herz-Kreislaufforschung, the Bundesministerium f\u00fcr Bildung und Forschung"
+          }
+        ]
+      },
+      {
+        "type": "Funding",
+        "attributes": [
+          {
+            "name": "Agency",
+            "value": "Deutsche Forschungsgemeinschaft by the CRC1366"
+          },
+          {
+            "name": "grant_id",
+            "value": "329389797"
+          }
+        ]
+      },
+      {
+        "type": "Funding",
+        "attributes": [
+          {
+            "name": "Agency",
+            "value": "HELMHOLTZ IMAGING, a platform of the Helmholtz Information & Data Science Incubator"
+          }
+        ]
+      },
+      {
+        "accno": "Biosample-1",
+        "type": "Biosample",
+        "attributes": [
+          {
+            "name": "Title",
+            "value": "Human Umbilical Vein Endothelial Cells"
+          },
+          {
+            "name": "Organism",
+            "value": "Homo sapiens (human)"
+          },
+          {
+            "name": "Biological entity",
+            "value": "Human Umbilical Vein Endothelial Cells"
+          },
+          {
+            "name": "Experimental variable",
+            "value": "Experimental variables are explained in the file \"bioimage_archive.xlsx\" of this upload."
+          }
+        ]
+      },
+      {
+        "accno": "Specimen-2",
+        "type": "Specimen",
+        "attributes": [
+          {
+            "name": "Title",
+            "value": "HUVECs, mixed donors of both sexes, PromoCell: C-12203"
+          },
+          {
+            "name": "Sample preparation protocol",
+            "value": "Commercially available human umbilical venous endothelial cells (HUVECs, mixed donors of both sexes, PromoCell: C-12203) were cultured and used at passages 2-4 at 37\u00b0C and 5% CO2 humid incubator, in endothelial growth medium containing growth supplement kit (EGM2, Lonza) for optimal cell growth. For passaging and fluid shear stress (FSS) assays, cells were washed once in sterile PBS, followed by a 5 minute incubation in Trypsin at 37 \u00b0C and 5% CO2, then neutralized with FBS and EGM2. Cells were centrifuged for 5 minutes at 480 g and counted. For FSS assays, cells were seeded in 0.4 ibiTreat Luer flow slides (Ibidi) coated with 0.2 percent gelatin at a cell concentration of 2 million cells per ml. 100 \u03bcl of cell suspension were added to each slide and incubated overnight at 37\u00b0C and 5% CO2. The following day, the slides were connected to red perfusion sets assembled onto perfusion units (Ibidi) and connected to a pump (Ibidi). Laminar shear stress was applied at 6 dyne/cm2 or 20 dyne/cm2 for 4, 16, or 24 h inside a 37 \u00b0C and 5 % CO2 humidity incubator. Static controls were kept in the same incubator for the duration of the experiment.\n\nAt the end of flow application, slides were disconnected from perfusion units and immediately fixated in 4 % PFA for 10 minutes, then washed 3 times in PBS. Slides were then blocked and permeabilized in BB for 30 minutes, followed by 1 h of incubation with primary antibodies at room temperature. Cells were washed 3 times with PBS, then incubated 1 h with secondary antibodies at room temperature, followed by another triple washing step, 5 minute incubation with DAPI, and finally mounted with a Mowiol + Dabco mixture in a 9:1 ratio."
+          }
+        ]
+      },
+      {
+        "accno": "Image acquisition-3",
+        "type": "Image acquisition",
+        "attributes": [
+          {
+            "name": "Title",
+            "value": "LSM 980"
+          },
+          {
+            "name": "Imaging instrument",
+            "value": "Carl Zeiss, LSM 980"
+          },
+          {
+            "name": "Image acquisition parameters",
+            "value": "FSS immunostained slides were imaged on a confocal microscope (Carl Zeiss, LSM 980) using a Plan-Apochromat 20x/0.8 NA Ph2 air objective and 63x/1.4 NA oil objective. For each samplerandom positions throughout the flow slide were selected and Z-stacks covering the entire depth of the monolayer were acquired. Slides were imaged with a two-channel setup, with channel one using the 488 and 633 lasers and channel two using the 405 and 561 lasers. Pinhole size was set to 1AU for both channels. ZEN version 3.4.91.00000 was used for image acquisition, Fiji was used for max projection and export to tiff file format."
+          },
+          {
+            "name": "Imaging method",
+            "value": "confocal microscopy"
+          }
+        ]
+      },
+      {
+        "accno": "Image analysis-5",
+        "type": "Image analysis",
+        "attributes": [
+          {
+            "name": "Title",
+            "value": "Polarity-JaM: Segmentation & Feature Extraction"
+          },
+          {
+            "name": "Image analysis overview",
+            "value": "To isolate individual cells in a microscopic image, a process also known as instance segmentation, we used Cellpose, a deep neural network algorithm. Accurate instance segmentation can be created with pretrained models it is provided with. These models can generalise well across both cell type and image modalities. For our analysis we used the model \"cyto\" for cell and \"nuclei\" for nuclei instance segmentation. For Golgi segmentation, Otsu-thresholding was performed. Subsequently, the segmentation mask was used to get the corresponding Golgi instance label.\n\nFeatures where extracted using Polarity-JaM v0.3.0 (see https://doi.org/10.5281/zenodo.8317233)."
+          }
+        ]
+      },
+      {
+        "accno": "Study Component-4",
+        "type": "Study Component",
+        "attributes": [
+          {
+            "name": "Name",
+            "value": "Polarity-JaM-validation-data"
+          },
+          {
+            "name": "Description",
+            "value": "Confocal Microscope image data"
+          },
+          {
+            "name": "File List",
+            "value": "bioimage_archive.json"
+          }
+        ],
+        "subsections": [
+          {
+            "type": "Associations",
+            "attributes": [
+              {
+                "name": "Biosample",
+                "value": "Human Umbilical Vein Endothelial Cells"
+              },
+              {
+                "name": "Specimen",
+                "value": "HUVECs, mixed donors of both sexes, PromoCell: C-12203"
+              },
+              {
+                "name": "Image acquisition",
+                "value": "LSM 980"
+              },
+              {
+                "name": "Image analysis",
+                "value": "Polarity-JaM: Segmentation & Feature Extraction"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "type": "submission"
+}

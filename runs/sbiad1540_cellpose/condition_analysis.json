@@ -1,0 +1,33 @@
+{
+  "run_dir": "runs/sbiad1540_cellpose",
+  "n_cells": 275,
+  "n_edges": 573,
+  "ajmorph_by_condition": {
+    "fingers": {
+      "static": 7.329842931937172
+    },
+    "other": {
+      "static": 10.471204188481675
+    },
+    "reticular": {
+      "static": 51.65794066317626
+    },
+    "straight": {
+      "static": 29.84293193717277
+    },
+    "thick": {
+      "static": 0.5235602094240838
+    },
+    "thick_to_reticular": {
+      "static": 0.17452006980802792
+    }
+  },
+  "polarity_by_condition": {
+    "static": {
+      "n": 228,
+      "mean_angle": 53.35119687060126,
+      "R": 0.11554893735523124,
+      "circular_var": 0.8844510626447688
+    }
+  }
+}
