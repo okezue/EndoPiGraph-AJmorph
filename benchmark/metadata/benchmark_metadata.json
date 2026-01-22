@@ -1,0 +1,10 @@
+{
+  "benchmark_name": "EndoPiGraph-AJmorph Gold Standard Benchmark",
+  "version": "1.0",
+  "date_created": "2026-01-22T04:24:42.604902",
+  "source": "S-BIAD1540",
+  "segmentation": "EndoPiGraph watershed",
+  "n_images": 30,
+  "n_total_cells": 10380,
+  "n_total_edges": 25104
+}

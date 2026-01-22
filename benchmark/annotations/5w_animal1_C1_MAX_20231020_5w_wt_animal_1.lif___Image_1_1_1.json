@@ -1,0 +1,21 @@
+{
+  "benchmark_id": "5w_animal1_C1_MAX_20231020_5w_wt_animal_1.lif___Image_1_1_1",
+  "source": "lymphatic_ec",
+  "timepoint": "5w",
+  "animal": "1",
+  "original_image": "data/lymphatic_ec/5w/animal 1/image 1/C1-MAX_20231020 5w wt animal 1.lif - Image 1-1-1.tif",
+  "image_shape": [
+    1024,
+    1024
+  ],
+  "n_cells": 4,
+  "n_edges": 0,
+  "adjacency": [],
+  "edge_annotations": [],
+  "annotation_categories": {
+    "button": "Classic button junction",
+    "continuous": "Continuous junction (at base or lobe)",
+    "discontinuous": "Discontinuous junction (at base or lobe)",
+    "curvilinear": "Curvilinear junction (LYVE1-related)"
+  }
+}

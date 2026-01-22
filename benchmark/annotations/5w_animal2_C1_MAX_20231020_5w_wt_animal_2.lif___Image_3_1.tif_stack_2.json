@@ -1,0 +1,16 @@
+{
+  "benchmark_id": "5w_animal2_C1_MAX_20231020_5w_wt_animal_2.lif___Image_3_1.tif_stack_2",
+  "source": "lymphatic_ec",
+  "timepoint": "5w",
+  "animal": "2",
+  "original_image": "data/lymphatic_ec/5w/animal 2/image 3/C1-MAX_20231020 5w wt animal 2.lif - Image 3-1.tif stack 2.tif",
+  "image_shape": [
+    1024,
+    1024
+  ],
+  "n_cells": 5,
+  "n_edges": 1,
+  "adjacency": [
+    [
+      1,
+      

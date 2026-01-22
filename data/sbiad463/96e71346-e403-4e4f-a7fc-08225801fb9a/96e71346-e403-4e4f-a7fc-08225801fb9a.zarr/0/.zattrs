@@ -1,0 +1,156 @@
+{
+  "multiscales" : [ {
+    "metadata" : {
+      "method" : "loci.common.image.SimpleImageScaler",
+      "version" : "Bio-Formats 6.10.1"
+    },
+    "axes" : [ {
+      "name" : "t",
+      "type" : "time"
+    }, {
+      "name" : "c",
+      "type" : "channel"
+    }, {
+      "name" : "z",
+      "type" : "space"
+    }, {
+      "unit" : "micrometer",
+      "name" : "y",
+      "type" : "space"
+    }, {
+      "unit" : "micrometer",
+      "name" : "x",
+      "type" : "space"
+    } ],
+    "name" : "resolution #1",
+    "datasets" : [ {
+      "path" : "0",
+      "coordinateTransformations" : [ {
+        "scale" : [ 1.0, 1.0, 1.0, 0.49610156577455383, 0.49610156577455383 ],
+        "type" : "scale"
+      } ]
+    }, {
+      "path" : "1",
+      "coordinateTransformations" : [ {
+        "scale" : [ 1.0, 1.0, 1.0, 0.9922031315491077, 0.9922031315491077 ],
+        "type" : "scale"
+      } ]
+    }, {
+      "path" : "2",
+      "coordinateTransformations" : [ {
+        "scale" : [ 1.0, 1.0, 1.0, 1.9844062630982153, 1.9844062630982153 ],
+        "type" : "scale"
+      } ]
+    }, {
+      "path" : "3",
+      "coordinateTransformations" : [ {
+        "scale" : [ 1.0, 1.0, 1.0, 3.9688125261964307, 3.9688125261964307 ],
+        "type" : "scale"
+      } ]
+    }, {
+      "path" : "4",
+      "coordinateTransformations" : [ {
+        "scale" : [ 1.0, 1.0, 1.0, 7.937625052392861, 7.937625052392861 ],
+        "type" : "scale"
+      } ]
+    }, {
+      "path" : "5",
+      "coordinateTransformations" : [ {
+        "scale" : [ 1.0, 1.0, 1.0, 15.875250104785723, 15.875250104785723 ],
+        "type" : "scale"
+      } ]
+    }, {
+      "path" : "6",
+      "coordinateTransformations" : [ {
+        "scale" : [ 1.0, 1.0, 1.0, 31.750500209571445, 31.750500209571445 ],
+        "type" : "scale"
+      } ]
+    }, {
+      "path" : "7",
+      "coordinateTransformations" : [ {
+        "scale" : [ 1.0, 1.0, 1.0, 63.50100041914289, 63.50100041914289 ],
+        "type" : "scale"
+      } ]
+    }, {
+      "path" : "8",
+      "coordinateTransformations" : [ {
+        "scale" : [ 1.0, 1.0, 1.0, 127.00200083828578, 127.00200083828578 ],
+        "type" : "scale"
+      } ]
+    } ],
+    "version" : "0.4"
+  } ],
+  "omero" : {
+    "channels" : [ {
+      "color" : "0000FF",
+      "coefficient" : 1,
+      "active" : true,
+      "label" : "DAPI",
+      "window" : {
+        "min" : 0.0,
+        "max" : 255.0,
+        "start" : 0.0,
+        "end" : 255.0
+      },
+      "family" : "linear",
+      "inverted" : false
+    }, {
+      "color" : "FFFF00",
+      "coefficient" : 1,
+      "active" : true,
+      "label" : "Opal 570",
+      "window" : {
+        "min" : 0.0,
+        "max" : 255.0,
+        "start" : 0.0,
+        "end" : 255.0
+      },
+      "family" : "linear",
+      "inverted" : false
+    }, {
+      "color" : "FF0000",
+      "coefficient" : 1,
+      "active" : true,
+      "label" : "Opal 690",
+      "window" : {
+        "min" : 0.0,
+        "max" : 255.0,
+        "start" : 0.0,
+        "end" : 255.0
+      },
+      "family" : "linear",
+      "inverted" : false
+    }, {
+      "color" : "FF00FF",
+      "coefficient" : 1,
+      "active" : false,
+      "label" : "Opal 620",
+      "window" : {
+        "min" : 0.0,
+        "max" : 255.0,
+        "start" : 0.0,
+        "end" : 255.0
+      },
+      "family" : "linear",
+      "inverted" : false
+    }, {
+      "color" : "00FF00",
+      "coefficient" : 1,
+      "active" : false,
+      "label" : "Opal 520",
+      "window" : {
+        "min" : 0.0,
+        "max" : 255.0,
+        "start" : 0.0,
+        "end" : 255.0
+      },
+      "family" : "linear",
+      "inverted" : false
+    } ],
+    "rdefs" : {
+      "defaultT" : 0,
+      "model" : "color",
+      "defaultZ" : 0
+    }
+  }
+}

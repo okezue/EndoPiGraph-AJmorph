@@ -1,0 +1,221 @@
+{
+  "summary": {
+    "total_capabilities_compared": 15,
+    "endopigraph_capabilities": 15,
+    "junction_mapper_capabilities": 9,
+    "endopigraph_unique": 6,
+    "junction_mapper_unique": 0,
+    "endopigraph_unique_features": 4
+  },
+  "capabilities": [
+    {
+      "name": "Automated cell segmentation",
+      "description": "Automatic detection of cell boundaries without manual input",
+      "endopigraph": true,
+      "junction_mapper": false,
+      "notes": "EndoPiGraph uses Cellpose (deep learning); JM requires manual outline correction"
+    },
+    {
+      "name": "Junction length measurement",
+      "description": "Measurement of cell-cell contact length",
+      "endopigraph": true,
+      "junction_mapper": true,
+      "notes": "Both tools measure junction length"
+    },
+    {
+      "name": "Junction area measurement",
+      "description": "Area of junction marker staining",
+      "endopigraph": true,
+      "junction_mapper": true,
+      "notes": "Both tools measure junction area"
+    },
+    {
+      "name": "Intensity quantification",
+      "description": "Mean/max/total intensity at junctions",
+      "endopigraph": true,
+      "junction_mapper": true,
+      "notes": "Both tools provide intensity metrics"
+    },
+    {
+      "name": "Fragmented junction analysis",
+      "description": "Ability to measure discontinuous/fragmented junctions",
+      "endopigraph": true,
+      "junction_mapper": true,
+      "notes": "JM paper highlights this as unique capability; EPG measures cluster_count, cluster_density"
+    },
+    {
+      "name": "Junction morphology classification",
+      "description": "Automatic classification of junction types (straight, thick, reticular, etc.)",
+      "endopigraph": true,
+      "junction_mapper": false,
+      "notes": "EndoPiGraph: heuristic + ML classifier; JM: manual phenotype assignment"
+    },
+    {
+      "name": "Multi-junction type support",
+      "description": "Simultaneous analysis of AJ, TJ, GJ markers",
+      "endopigraph": true,
+      "junction_mapper": true,
+      "notes": "EndoPiGraph builds typed pi-graphs with multiple marker types"
+    },
+    {
+      "name": "Corner/vertex detection",
+      "description": "Detection of tricellular junctions",
+      "endopigraph": true,
+      "junction_mapper": true,
+      "notes": "JM auto-detects corners; EPG detects via graph triangles"
+    },
+    {
+      "name": "Network/graph analysis",
+      "description": "Graph-based analysis of cell contact network topology",
+      "endopigraph": true,
+      "junction_mapper": false,
+      "notes": "EndoPiGraph: full NetworkX graph with clustering, degree, etc."
+    },
+    {
+      "name": "Batch processing",
+      "description": "Automated processing of many images without manual intervention",
+      "endopigraph": true,
+      "junction_mapper": false,
+      "notes": "EndoPiGraph: fully automated batches; JM: manual per-image"
+    },
+    {
+      "name": "Per-junction output",
+      "description": "Individual measurements for each junction",
+      "endopigraph": true,
+      "junction_mapper": true,
+      "notes": "Both provide per-junction data"
+    },
+    {
+      "name": "Skeleton-based morphometry",
+      "description": "Skeletonization for junction structure analysis",
+      "endopigraph": true,
+      "junction_mapper": true,
+      "notes": "Both use skeletonization; EPG adds skeleton_len, thickness_proxy"
+    },
+    {
+      "name": "Multiple cell types",
+      "description": "Validated on epithelial, endothelial, cardiomyocytes",
+      "endopigraph": true,
+      "junction_mapper": true,
+      "notes": "JM validated on epithelial, cardiomyocytes, endothelial"
+    },
+    {
+      "name": "Python API",
+      "description": "Programmatic access for custom pipelines",
+      "endopigraph": true,
+      "junction_mapper": false,
+      "notes": "EndoPiGraph: Python package; JM: Java desktop application"
+    },
+    {
+      "name": "Polarity/flow analysis",
+      "description": "Cell polarity and flow direction inference",
+      "endopigraph": true,
+      "junction_mapper": false,
+      "notes": "EndoPiGraph: Golgi-nucleus polarity vectors"
+    }
+  ],
+  "feature_mapping": [
+    {
+      "feature": "Contact length",
+      "endopigraph": "contact_px",
+      "junction_mapper": "Junction length",
+      "description": "Length of cell-cell interface in pixels"
+    },
+    {
+      "feature": "Junction occupancy",
+      "endopigraph": "occupancy",
+      "junction_mapper": "Fraction occupied",
+      "description": "Fraction of interface with marker above threshold"
+    },
+    {
+      "feature": "Mean intensity",
+      "endopigraph": "mean_intensity",
+      "junction_mapper": "Mean junction intensity",
+      "description": "Average intensity of marker at junction"
+    },
+    {
+      "feature": "Max intensity",
+      "endopigraph": "max_intensity",
+      "junction_mapper": "Peak intensity",
+      "description": "Maximum intensity value at junction"
+    },
+    {
+      "feature": "Intensity variation",
+      "endopigraph": "std_intensity",
+      "junction_mapper": "Intensity SD",
+      "description": "Standard deviation of junction intensity"
+    },
+    {
+      "feature": "Fragment count",
+      "endopigraph": "cluster_count",
+      "junction_mapper": "Number of clusters",
+      "description": "Number of separate junction fragments"
+    },
+    {
+      "feature": "Fragment density",
+      "endopigraph": "cluster_density",
+      "junction_mapper": "Not available",
+      "description": "Fragments per unit length (EndoPiGraph unique)"
+    },
+    {
+      "feature": "Skeleton length",
+      "endopigraph": "skeleton_len",
+      "junction_mapper": "Skeleton length",
+      "description": "Length of skeletonized junction"
+    },
+    {
+      "feature": "Thickness proxy",
+      "endopigraph": "thickness_proxy",
+      "junction_mapper": "Area/skeleton ratio",
+      "description": "Junction area divided by skeleton length"
+    },
+    {
+      "feature": "Junction type",
+      "endopigraph": "aj_morph_label",
+      "junction_mapper": "Not available",
+      "description": "Automatic classification (EndoPiGraph unique)"
+    },
+    {
+      "feature": "Cell degree",
+      "endopigraph": "degree",
+      "junction_mapper": "Not available",
+      "description": "Number of neighboring cells (graph analysis, EndoPiGraph unique)"
+    },
+    {
+      "feature": "Clustering coefficient",
+      "endopigraph": "local_clustering",
+      "junction_mapper": "Not available",
+      "description": "Fraction of neighbor triangles (EndoPiGraph unique)"
+    }
+  ],
+  "key_advantages": {
+    "endopigraph": [
+      "Fully automated batch processing (no manual intervention)",
+      "Deep learning segmentation (Cellpose)",
+      "Graph-based network analysis (clustering, degree, triangles)",
+      "Automatic junction morphology classification",
+      "Python API for custom pipelines",
+      "Polarity/flow analysis capability",
+      "Multi-junction type Pi-graphs"
+    ],
+    "junction_mapper": [
+      "Manual refinement capability for difficult cases",
+      "Extensively validated on multiple cell types",
+      "Published in high-impact journal (eLife)",
+      "Java GUI may be preferred by some users"
+    ]
+  },
+  "limitations": {
+    "endopigraph": [
+      "Requires confluent monolayers (gaps produce no edges)",
+      "AJ morphology labels are heuristic-derived",
+      "Less validated on non-endothelial cell types"
+    ],
+    "junction_mapper": [
+      "Requires manual input for each image",
+      "No network/graph analysis",
+      "No automatic morphology classification",
+      "Java-only, no Python integration"
+    ]
+  }
+}

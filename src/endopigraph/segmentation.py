@@ -57,7 +57,7 @@ def segment_cells_cellpose(arr: np.ndarray, channel_names: List[str], cfg: Dict)
     Requires `cellpose` to be installed.
     """
     try:
-        from cellpose import models
+        from cellpose.models import CellposeModel
     except Exception as e:
         raise ImportError(
             "cellpose is not installed. Install with: pip install -e \".[cellpose]\""
@@ -74,16 +74,15 @@ def segment_cells_cellpose(arr: np.ndarray, channel_names: List[str], cfg: Dict)
     if nuclei_spec:
         nuc = _get_channel(arr, channel_names, nuclei_spec)
         img = np.stack([cyto, nuc], axis=-1)  # (H,W,2)
-        channels = [1, 2]
     else:
-        img = cyto[..., None]
-        channels = [0, 0]
+        img = cyto
 
     # Basic normalization for stability
     img = exposure.rescale_intensity(img, in_range="image", out_range=(0, 1))
 
-    model = models.Cellpose(model_type=model_type)
-    masks, *_ = model.eval(img, diameter=diameter, channels=channels)
+    # Use CellposeModel (v4 API)
+    model = CellposeModel(gpu=False, model_type=model_type)
+    masks, flows, styles = model.eval(img, diameter=diameter)
 
     # Ensure integer labels with background=0
     return masks.astype(np.int32)

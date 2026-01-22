@@ -153,10 +153,6 @@ extract_interfaces = compute_interfaces
 
 # Wrapper used by the pipeline: coords-first signature.
 def interface_mask_from_coords(coords: np.ndarray, shape: tuple[int, int], dilate_px: int = 2) -> np.ndarray:
-    (r0, r1, c0, c1), local = build_interface_mask_from_coords(shape=shape, coords=coords, dilate_px=dilate_px)
-    if dilate_px and dilate_px > 0:
-        local = binary_dilation(local, disk(dilate_px))
-    out = np.zeros(shape, dtype=bool)
-    out[r0:r1, c0:c1] = local
-    return out
+    """Create full-size interface mask from coordinates."""
+    return build_interface_mask_from_coords(shape=shape, coords=coords, dilate_px=dilate_px)
 

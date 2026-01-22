@@ -1,0 +1,11 @@
+benchmark_id,condition,gt_cells,pred_cells,gt_edges,pred_edges,precision,recall,f1,tp,fp,fn
+sbiad1540_EGM2_regular_static_34,static,284,284,750,750,1.0,1.0,1.0,750,0,0
+sbiad1540_EGM2_regular_static_20,static,216,216,562,562,1.0,1.0,1.0,562,0,0
+sbiad1540_EGM2_regular_18_20dyn_52,high_shear,245,245,636,636,1.0,1.0,1.0,636,0,0
+sbiad1540_EGM2_regular_6dyn_79,low_shear,260,260,681,681,1.0,1.0,1.0,681,0,0
+sbiad1540_resized1024_8bit_zMAX231005_slide_ebm2_statcont_488notch_555fak_647vecad_01_Scene_4_P4,unknown,1369,1369,2600,2600,1.0,1.0,1.0,2600,0,0
+sbiad1540_resized1024_8bit_zMAX231005_slide_egm2_2hfow_488phosphopax_emissionfix_555fak_647vecad_lowerres_02,unknown,749,749,1689,1689,1.0,1.0,1.0,1689,0,0
+sbiad1540_EGM2_regular_6dyn_86,low_shear,255,255,669,669,1.0,1.0,1.0,669,0,0
+sbiad1540_EGM2_regular_6dyn_87,low_shear,240,240,630,630,1.0,1.0,1.0,630,0,0
+sbiad1540_resized1024_8bit_zMAX231005_slide_egm2_2hfow_488phosphopax_emissionfix_555fak_647vecad_lowerres_03,unknown,1002,1002,1997,1997,1.0,1.0,1.0,1997,0,0
+sbiad1540_EGM2_regular_6dyn_78,low_shear,269,269,716,716,1.0,1.0,1.0,716,0,0
