@@ -1,0 +1,50 @@
+{
+  "cv_accuracy": 0.776481424623887,
+  "cv_std": 0.02518403027867347,
+  "loo_accuracy": 0.8057373202047209,
+  "loo_std": 0.0587779182438393,
+  "n_edges": 16285,
+  "n_images": 62,
+  "conditions": {
+    "6dyne": 9318,
+    "static": 6967
+  },
+  "feature_importances": [
+    {
+      "feature": "aj_mean_intensity",
+      "importance": 0.2641810253649651
+    },
+    {
+      "feature": "aj_occupancy",
+      "importance": 0.1810612815383849
+    },
+    {
+      "feature": "aj_std_intensity",
+      "importance": 0.11477824788964364
+    },
+    {
+      "feature": "aj_cluster_area_mean",
+      "importance": 0.0955275942553164
+    },
+    {
+      "feature": "aj_max_intensity",
+      "importance": 0.0886269295187618
+    },
+    {
+      "feature": "aj_thickness_proxy",
+      "importance": 0.08129358617718781
+    },
+    {
+      "feature": "aj_linearity_index",
+      "importance": 0.0728540782197492
+    },
+    {
+      "feature": "aj_skeleton_len",
+      "importance": 0.06325453329328654
+    },
+    {
+      "feature": "aj_cluster_count",
+      "importance": 0.038422723742704584
+    }
+  ]
+}
