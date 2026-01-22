@@ -1,0 +1,35 @@
+{
+  "overall_stability": {
+    "baseline_simple": 0.9988888888888889,
+    "epg_blur_robust": 0.9333333333333333,
+    "epg_original": 0.8911111111111112,
+    "junction_mapper": 0.46888888888888886
+  },
+  "by_blur_level": {
+    "sigma_1.0": {
+      "baseline_simple": 1.0,
+      "epg_blur_robust": 0.9333333333333333,
+      "epg_original": 0.95,
+      "junction_mapper": 0.6166666666666666
+    },
+    "sigma_1.5": {
+      "baseline_simple": 1.0,
+      "epg_blur_robust": 0.9333333333333333,
+      "epg_original": 0.8800000000000001,
+      "junction_mapper": 0.44000000000000006
+    },
+    "sigma_2.0": {
+      "baseline_simple": 0.9966666666666667,
+      "epg_blur_robust": 0.9333333333333333,
+      "epg_original": 0.8433333333333334,
+      "junction_mapper": 0.35
+    }
+  },
+  "improvement": {
+    "epg_original": 0.8911111111111112,
+    "epg_blur_robust": 0.9333333333333333,
+    "baseline_simple": 0.9988888888888889,
+    "junction_mapper": 0.46888888888888886,
+    "improvement_pp": 0.04222222222222216
+  }
+}

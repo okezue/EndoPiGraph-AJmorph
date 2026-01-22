@@ -10,13 +10,66 @@ This package aims to be:
 - explicit about assumptions
 - easy to run on public microscopy data (e.g. BioImage Archive accessions)
 - easy to extend with better segmentation / classification models
+
+Blur Robustness
+---------------
+Some metrics are sensitive to image blur. The `blur_robust` module provides:
+- `estimate_blur_score()`: Detect blur level using Laplacian variance
+- `detect_blur()`: Check if image is blurry (threshold-based)
+- `correct_blur()`: Apply unsharp masking correction
+- `blur_robust_classifier()`: Classification using only stable metrics
+- `compute_blur_robust_features()`: Compute only blur-stable features
+- `compute_adaptive_features()`: Auto-detect and correct blur
+
+For detailed guidance, see the BLUR_STABILITY.md documentation.
+
+Metric Stability Reference
+--------------------------
+Stable (|Cohen's d| < 0.3 under 1-2px blur):
+  - mean_intensity, median_intensity, occupancy
+
+Marginal (|Cohen's d| 0.3-0.5):
+  - skeleton_len, total_area
+
+Unstable (|Cohen's d| > 0.5):
+  - cluster_count, cluster_density, thickness_proxy
 """
 
 from importlib.metadata import version as _version
 
-__all__ = ["__version__"]
+__all__ = [
+    "__version__",
+    # Core functions
+    "interface_marker_features",
+    "heuristic_ajmorph_class",
+    "compute_threshold",
+    # Blur-robust functions
+    "estimate_blur_score",
+    "detect_blur",
+    "correct_blur",
+    "blur_robust_classifier",
+    "compute_blur_robust_features",
+    "compute_adaptive_features",
+]
 
 try:
     __version__ = _version("endopigraph-ajmorph")
 except Exception:  # pragma: no cover
     __version__ = "0.0.0"
+
+# Core AJ morphology functions
+from .ajmorph import (
+    interface_marker_features,
+    heuristic_ajmorph_class,
+    compute_threshold,
+)
+
+# Blur-robust functions
+from .blur_robust import (
+    estimate_blur_score,
+    detect_blur,
+    correct_blur,
+    blur_robust_classifier,
+    compute_blur_robust_features,
+    compute_adaptive_features,
+)
