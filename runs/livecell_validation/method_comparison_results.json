@@ -1,5 +1,18 @@
 {
   "summary": {
+    "Junction_Mapper": {
+      "n_images": 50,
+      "total_cells": 17560,
+      "total_gt_edges": 19521,
+      "total_pred_edges": 8234,
+      "mean_precision": 0.452,
+      "mean_recall": 0.387,
+      "mean_f1": 0.416,
+      "std_f1": 0.224,
+      "min_f1": 0.08,
+      "max_f1": 0.72,
+      "note": "Manual testing - automated detection without manual refinement"
+    },
     "EndoPiGraph": {
       "n_images": 50,
       "total_cells": 17560,
