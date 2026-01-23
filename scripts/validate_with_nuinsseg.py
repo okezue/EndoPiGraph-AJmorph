@@ -166,7 +166,7 @@ def validate_adjacency_extraction(
 
             results.append({
                 'file': mask_path.name,
-                'organ': mask_path.parent.name,
+                'organ': mask_path.parent.parent.name,  # Go up from "label masks" to organ folder
                 'n_nuclei': n_nuclei,
                 'gt_edges': len(gt_adjacency),
                 'epg_edges': len(epg_adjacency),
@@ -223,18 +223,17 @@ def main():
 
     # Paths
     data_dir = Path(__file__).parent.parent / "data" / "NuInsSeg"
-    mask_dir = data_dir / "labeled masks"
     output_dir = Path(__file__).parent.parent / "runs" / "nuinsseg_validation"
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    if not mask_dir.exists():
-        print(f"\nMasks not found: {mask_dir}")
+    if not data_dir.exists():
+        print(f"\nData not found: {data_dir}")
         print("Run setup_nuinsseg.py first:")
         print("  python scripts/setup_nuinsseg.py")
         return
 
-    # Find all mask files
-    mask_paths = list(mask_dir.glob("*/*.tif")) + list(mask_dir.glob("*/*.png"))
+    # Find all mask files - structure is: <organ>/label masks/<image>.tif
+    mask_paths = list(data_dir.glob("*/label masks/*.tif"))
     print(f"\nFound {len(mask_paths)} mask files")
 
     if len(mask_paths) == 0:
