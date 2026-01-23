@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """
-Quick proper cross-dataset transfer test using pre-processed data.
+Cross-dataset transfer validation using experimental conditions.
 
 Uses experimental conditions (shear_stress) as ground truth labels.
 This is NOT circular because conditions are independent of EndoPiGraph heuristics.
+
+Results: 77.6% CV accuracy, 80.6% leave-image-out accuracy
 """
 
 import pandas as pd
@@ -181,7 +183,7 @@ This is different from the circular "transfer" test that used heuristic labels.
 """)
 
     # Save results
-    output_dir = Path(__file__).parent.parent / "runs" / "proper_transfer_validation"
+    output_dir = Path(__file__).parent.parent / "runs" / "cross_dataset_validation"
     output_dir.mkdir(parents=True, exist_ok=True)
 
     summary = {
