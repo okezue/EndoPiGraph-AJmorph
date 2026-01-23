@@ -32,3 +32,6 @@ ENV/
 # Temporary files
 *.tmp
 *.temp
+
+# Downloaded datasets (large files)
+data/LIVECell/
