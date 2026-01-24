@@ -1,0 +1,33 @@
+{
+  "dataset": "Cornea Cells",
+  "source": "https://github.com/svdeepak99/U-Net_Segmentation-Cornea_Cells",
+  "modality": "Specular microscopy",
+  "timestamp": "2026-01-24T11:49:00",
+  "methods": {
+    "EndoPiGraph": {
+      "precision": 0.434,
+      "recall": 0.784,
+      "f1_score": 0.558
+    },
+    "Simple Dilation": {
+      "precision": 0.403,
+      "recall": 1.0,
+      "f1_score": 0.575
+    },
+    "Centroid Distance": {
+      "precision": 0.304,
+      "recall": 0.761,
+      "f1_score": 0.435
+    },
+    "Voronoi": {
+      "precision": 0.442,
+      "recall": 0.762,
+      "f1_score": 0.559
+    },
+    "Junction Mapper": {
+      "precision": 0.312,
+      "recall": 0.284,
+      "f1_score": 0.297
+    }
+  }
+}
