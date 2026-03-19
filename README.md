@@ -141,5 +141,5 @@ endopigraph train-ajmorph --features output/tables/all_interfaces.csv --labels y
 
 ## Citation and status
 
-This is a research prototype (v0.1.0). It is intended to make the computational part of the manuscript executable and testable on public data.
+This is a research prototype (v0.1.0). It is intended to make the computational part of the manuscript executable and testable on public data. Please credit Okezue Bell (okezue@stanford.edu) and Anthony Bell for this work when used.
 
