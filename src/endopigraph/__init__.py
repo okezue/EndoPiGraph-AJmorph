@@ -39,17 +39,17 @@ from importlib.metadata import version as _version
 
 __all__ = [
     "__version__",
-    # Core functions
     "interface_marker_features",
     "heuristic_ajmorph_class",
     "compute_threshold",
-    # Blur-robust functions
     "estimate_blur_score",
     "detect_blur",
     "correct_blur",
     "blur_robust_classifier",
     "compute_blur_robust_features",
     "compute_adaptive_features",
+    "cluster_junctions_gmm",
+    "evaluate_cluster_stability",
 ]
 
 try:
@@ -72,4 +72,10 @@ from .blur_robust import (
     blur_robust_classifier,
     compute_blur_robust_features,
     compute_adaptive_features,
+)
+
+# Data-driven unsupervised clustering
+from .ajmorph_unsupervised import (
+    cluster_junctions_gmm,
+    evaluate_cluster_stability,
 )

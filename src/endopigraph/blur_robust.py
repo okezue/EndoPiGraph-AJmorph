@@ -16,10 +16,8 @@ Based on stability analysis showing which metrics are sensitive to blur:
 from __future__ import annotations
 
 import numpy as np
-from typing import Dict, Any, Tuple, Optional
-from scipy import ndimage
-from skimage.filters import threshold_otsu, laplace, unsharp_mask
-from skimage.measure import label, regionprops
+from typing import Dict, Any, Tuple
+from skimage.filters import laplace, unsharp_mask
 from skimage.morphology import skeletonize
 
 

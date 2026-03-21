@@ -36,3 +36,6 @@ ENV/
 # Downloaded datasets (large files)
 data/LIVECell/
 data/NuInsSeg/
+paper/
+
+paper/

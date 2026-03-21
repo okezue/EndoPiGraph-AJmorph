@@ -1,15 +1,13 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
-from typing import Any, Dict, Literal, Optional
+from typing import Any, Dict
 
 import numpy as np
 import pandas as pd
 from scipy import ndimage
 from skimage.filters import threshold_otsu
 from skimage.measure import label, regionprops
-from skimage.morphology import skeletonize, h_maxima, local_maxima
-from skimage.segmentation import watershed
+from skimage.morphology import skeletonize, h_maxima
 
 
 def count_clusters_robust(
@@ -352,9 +350,8 @@ def heuristic_ajmorph_class(features: Dict[str, Any], blur_robust: bool = False)
     # Get cluster count (use skeleton-based if blur_robust)
     if blur_robust:
         skel_comp = features.get("skeleton_components", 0)
-        branch_pts = features.get("skeleton_branch_points", 0)
         complexity = features.get("complexity_score", 0)
-        ncl = skel_comp  # Use skeleton components instead of cluster_count
+        ncl = skel_comp
     else:
         ncl = features.get("cluster_count", features.get("cluster_count_cc", 0))
         complexity = features.get("complexity_score", 0)

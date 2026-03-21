@@ -22,7 +22,6 @@ def train_ajmorph_classifier(
     if id_cols is None:
         id_cols = ["image_id", "cell_i", "cell_j"]
 
-    from sklearn.compose import ColumnTransformer
     from sklearn.pipeline import Pipeline
     from sklearn.preprocessing import StandardScaler
     from sklearn.impute import SimpleImputer

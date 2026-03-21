@@ -1,7 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List
 
 import numpy as np
 from skimage import exposure
@@ -10,7 +9,6 @@ from skimage.measure import label
 from skimage.morphology import remove_small_holes, remove_small_objects
 from skimage.segmentation import watershed
 from skimage.feature import peak_local_max
-from scipy.ndimage import distance_transform_edt
 
 
 def _get_channel(arr: np.ndarray, channel_names: List[str], channel_spec: dict) -> np.ndarray:

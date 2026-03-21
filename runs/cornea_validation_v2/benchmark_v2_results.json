@@ -1,0 +1,61 @@
+{
+  "dataset": "Cornea Cells",
+  "timestamp": "2026-03-19T02:05:24.663097",
+  "gt_method": "semantic border adjacency",
+  "methods": {
+    "EndoPiGraph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "cells": 3
+    },
+    "Dilation (2px)": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "cells": 3
+    },
+    "Dilation (3px)": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "cells": 3
+    },
+    "Centroid (40px)": {
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "cells": 3
+    },
+    "Centroid (60px)": {
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "cells": 3
+    },
+    "Delaunay+verify": {
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "cells": 3
+    }
+  }
+}
