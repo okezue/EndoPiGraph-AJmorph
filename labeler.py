@@ -914,10 +914,10 @@ def api_cropped_bg():
     raw=_resolve_run(run,img,"raw_display.png")
     seg=_resolve_run(run,img,"seg_overlay.png")
     qc=_resolve_run(run,img,"qc_cells.png")
-    if mode=="seg" and seg.exists():
-        return send_file(str(seg),mimetype="image/png")
-    if raw.exists() and mode!="seg":
-        return send_file(str(raw),mimetype="image/png")
+    if mode=="seg":
+        if seg.exists(): return send_file(str(seg),mimetype="image/png")
+    else:
+        if raw.exists(): return send_file(str(raw),mimetype="image/png")
     if qc.exists():
         im=PILImage.open(str(qc))
         arr=np.array(im.convert("L")).astype(float)/255
@@ -927,6 +927,13 @@ def api_cropped_bg():
             t,b=int(rd[0]),int(rd[-1])+1
             l,r=int(cd[0]),int(cd[-1])+1
             im=im.crop((l,t,r,b))
+        if mode=="plain":
+            from PIL import Image as PILImg2
+            gray=im.convert("L")
+            buf=io.BytesIO()
+            gray.save(buf,format="PNG")
+            buf.seek(0)
+            return send_file(buf,mimetype="image/png")
         buf=io.BytesIO()
         im.save(buf,format="PNG")
         buf.seek(0)
@@ -969,13 +976,24 @@ def api_map_data():
         edges.append({"i":ci,"j":cj,"cy":ey,"cx":ex,"px":int(r["contact_px"]),"morph":m})
     patch_dir=_resolve_run(run,"patches","patches")
     has_patches=patch_dir.exists()
+    import numpy as np
     from PIL import Image as PILImage
     raw_f=_resolve_run(run,img,"raw_display.png")
+    seg_f=_resolve_run(run,img,"seg_overlay.png")
     qc_f=_resolve_run(run,img,"qc_cells.png")
     if raw_f.exists():
         w,h=PILImage.open(str(raw_f)).size
+    elif seg_f.exists():
+        w,h=PILImage.open(str(seg_f)).size
     elif qc_f.exists():
-        w,h=PILImage.open(str(qc_f)).size
+        qc=PILImage.open(str(qc_f)).convert("L")
+        arr=np.array(qc).astype(float)/255
+        rd=np.where(np.mean(arr,axis=1)<0.5)[0]
+        cd=np.where(np.mean(arr,axis=0)<0.5)[0]
+        if len(rd)>0 and len(cd)>0:
+            w=int(cd[-1]-cd[0]+1);h=int(rd[-1]-rd[0]+1)
+        else:
+            w,h=qc.size
     else:
         w,h=1024,1024
     return jsonify(edges=edges,cells=cells,has_patches=has_patches,
