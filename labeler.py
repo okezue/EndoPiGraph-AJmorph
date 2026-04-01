@@ -15,7 +15,7 @@ from flask import (Flask,render_template_string,request,jsonify,send_file,
 import argparse
 
 app=Flask(__name__)
-app.secret_key=os.environ.get("FLASK_SECRET_KEY",os.urandom(32).hex())
+app.secret_key=os.environ.get("FLASK_SECRET_KEY","pimorph-labeler-default-key-2026")
 PROJ=Path(__file__).parent
 DATA_DIR=Path(os.environ.get("PIMORPH_DATA_DIR",str(PROJ)))
 DATA_DIR.mkdir(parents=True,exist_ok=True)
@@ -650,14 +650,15 @@ var ABBR={"straight":"STR","reticular":"RET","fingers":"FIN","thick":"THK","thic
 var CUR_LABEL='{{patch.label if patch is defined and patch.label else ""}}';
 function assign(cls){
 var c=(cls===CUR_LABEL)?'__clear__':cls;
-fetch('/api/label',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({cls:c})})
-.then(r=>r.json()).then(d=>{if(d.ok)window.location.reload()})
+fetch('/api/label',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({cls:c}),credentials:'same-origin'})
+.then(r=>r.json()).then(d=>{if(d.ok)window.location='/label_view'})
+.catch(e=>console.error('label error',e))
 }
 function clearLabel(){
-fetch('/api/label',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({cls:'__clear__'})})
-.then(r=>r.json()).then(d=>{window.location.reload()})
+fetch('/api/label',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({cls:'__clear__'}),credentials:'same-origin'})
+.then(r=>r.json()).then(d=>{window.location='/label_view'})
 }
-function undo(){fetch('/api/undo',{method:'POST'}).then(()=>window.location.reload())}
+function undo(){fetch('/api/undo',{method:'POST',credentials:'same-origin'}).then(()=>window.location='/label_view')}
 function togglePanel(cls){var el=document.querySelector('.'+cls);if(el)el.style.display=el.style.display==='none'?'':'none'}
 function zoomIn(){zoomLevel=Math.min(4,zoomLevel*1.25);applyZoom()}
 function zoomOut(){zoomLevel=Math.max(0.25,zoomLevel/1.25);applyZoom()}
