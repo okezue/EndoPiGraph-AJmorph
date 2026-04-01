@@ -1,0 +1,16 @@
+__pycache__
+*.pyc
+.git
+.gitignore
+*.egg-info
+dist
+build
+data/lymphatic_ec
+data/LIVECell
+data/NuInsSeg
+paper
+labeler_data.db
+runs/upload_*
+.idea
+.vscode
+.DS_Store
