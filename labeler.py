@@ -771,7 +771,11 @@ fi.click();
 
 
 
-label_state={"patches":[],"idx":0,"csv":"","filter":None,"filter_img":None}
+_label_states={}
+def _get_label_state(sid):
+    if sid not in _label_states:
+        _label_states[sid]={"patches":[],"idx":0,"csv":"","filter":None,"filter_img":None}
+    return _label_states[sid]
 
 @app.route("/")
 def index():
@@ -877,6 +881,7 @@ def api_map_data():
 @app.route("/label_view")
 def label_view():
     sid=get_or_create_session()
+    label_state=_get_label_state(sid)
     csv_path=request.args.get("load","")
     if csv_path and csv_path!=label_state["csv"]:
         label_state["patches"]=load_patches(csv_path)
@@ -939,6 +944,8 @@ def label_view():
 
 @app.route("/patch_img")
 def patch_img():
+    sid=get_or_create_session()
+    label_state=_get_label_state(sid)
     idx=int(request.args.get("idx",0))
     if 0<=idx<len(label_state["patches"]):
         p=label_state["patches"][idx]
@@ -948,6 +955,7 @@ def patch_img():
 @app.route("/api/label",methods=["POST"])
 def api_label():
     sid=get_or_create_session()
+    label_state=_get_label_state(sid)
     data=request.get_json()
     cls=data.get("cls","")
     if data.get("map_i") is not None:
@@ -974,6 +982,7 @@ def api_label():
 @app.route("/api/undo",methods=["POST"])
 def api_undo():
     sid=get_or_create_session()
+    label_state=_get_label_state(sid)
     db=get_db()
     last=db.execute("SELECT id,image_id,cell_i,cell_j FROM labels WHERE session_id=? ORDER BY id DESC LIMIT 1",(sid,)).fetchone()
     if last:

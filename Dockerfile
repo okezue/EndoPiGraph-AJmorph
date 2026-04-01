@@ -14,4 +14,4 @@ ENV PIMORPH_DATA_DIR=/data
 RUN mkdir -p /data
 
 EXPOSE 7860
-CMD ["gunicorn", "labeler:app", "--bind", "0.0.0.0:7860", "--workers", "2", "--timeout", "600", "--preload"]
+CMD ["gunicorn", "labeler:app", "--bind", "0.0.0.0:7860", "--workers", "1", "--threads", "4", "--timeout", "600"]

@@ -4,4 +4,4 @@ services:
     runtime: python
     plan: free
     buildCommand: pip install flask requests gunicorn
-    startCommand: gunicorn proxy:app --bind 0.0.0.0:$PORT --workers 2 --timeout 600
+    startCommand: gunicorn proxy:app --bind 0.0.0.0:$PORT --workers 1 --threads 4 --timeout 600
