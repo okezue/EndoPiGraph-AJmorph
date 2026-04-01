@@ -388,6 +388,12 @@ TMPL=r'''<!DOCTYPE html>
 <input type="range" id="sliderEdge" min="0.5" max="6" value="2" step="0.5" style="width:60px" oninput="tweakWidths()">
 <label style="color:var(--gutter)">Node:</label>
 <input type="range" id="sliderNode" min="1" max="10" value="4" step="1" style="width:60px" oninput="tweakWidths()">
+<span style="color:var(--border)">|</span>
+<span style="color:var(--gutter)">Download:</span>
+<button class="tbtn" onclick="downloadView()" style="font-size:10px;padding:1px 8px">View (SVG+img)</button>
+<a class="tbtn" href="/api/cropped_bg?run={{ run }}&img={{ sel_img }}&mode=seg" download="{{ sel_img }}_segmentation.png" style="font-size:10px;padding:1px 8px;text-decoration:none">Segmentation</a>
+<a class="tbtn" href="/api/cropped_bg?run={{ run }}&img={{ sel_img }}&mode=plain" download="{{ sel_img }}_plain.png" style="font-size:10px;padding:1px 8px;text-decoration:none">Plain</a>
+<a class="tbtn" href="/download_run/{{ run }}" style="font-size:10px;padding:1px 8px;text-decoration:none">All (.zip)</a>
 </div>
 <div style="display:flex;gap:3px;align-items:center;margin-bottom:6px;flex-wrap:wrap;font-size:10px">
 <span style="color:var(--gutter)">Filter:</span>
@@ -452,6 +458,17 @@ function syncFilterUI(){
   });
 }
 
+window.downloadView=function(){
+  var svgEl=document.getElementById('mapSvg');
+  var clone=svgEl.cloneNode(true);
+  clone.querySelectorAll('.edge-hit').forEach(function(e){e.remove();});
+  var s=new XMLSerializer().serializeToString(clone);
+  var blob=new Blob([s],{type:'image/svg+xml'});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement('a');
+  a.href=url;a.download=imgName+'_graph_overlay.svg';
+  a.click();URL.revokeObjectURL(url);
+};
 window.tweakWidths=function(){
   var ew=parseFloat(document.getElementById('sliderEdge').value);
   var nr=parseFloat(document.getElementById('sliderNode').value);
@@ -572,6 +589,58 @@ document.addEventListener('click',function(ev){
   if(p.style.display==='block'&&!p.contains(ev.target)&&ev.target.tagName!=='circle')
     p.style.display='none';
 });
+window.downloadView=function(){
+var fmt=prompt('Format: png or tiff','png');
+if(!fmt)return;
+fmt=fmt.toLowerCase().trim();
+var svgEl=document.getElementById('mapSvg');
+var vb=svgEl.viewBox.baseVal;
+var w=vb.width||cropW,h=vb.height||cropH;
+var clone=svgEl.cloneNode(true);
+clone.setAttribute('width',w);clone.setAttribute('height',h);
+clone.setAttribute('xmlns','http://www.w3.org/2000/svg');
+clone.setAttribute('xmlns:xlink','http://www.w3.org/1999/xlink');
+var imgs=clone.querySelectorAll('image');
+var toLoad=imgs.length;
+if(toLoad===0){renderAndSave(clone,w,h,fmt);return;}
+imgs.forEach(function(img){
+var href=img.getAttribute('href')||img.getAttributeNS('http://www.w3.org/1999/xlink','href');
+if(!href){toLoad--;if(toLoad===0)renderAndSave(clone,w,h,fmt);return;}
+var xhr=new XMLHttpRequest();
+xhr.open('GET',href,true);xhr.responseType='blob';
+xhr.onload=function(){
+var reader=new FileReader();
+reader.onloadend=function(){
+img.removeAttributeNS('http://www.w3.org/1999/xlink','href');
+img.setAttribute('href',reader.result);
+toLoad--;if(toLoad===0)renderAndSave(clone,w,h,fmt);
+};reader.readAsDataURL(xhr.response);
+};xhr.send();
+});
+};
+function renderAndSave(svgNode,w,h,fmt){
+var xml=new XMLSerializer().serializeToString(svgNode);
+var blob=new Blob([xml],{type:'image/svg+xml;charset=utf-8'});
+var url=URL.createObjectURL(blob);
+var img=new Image();
+img.onload=function(){
+var c=document.createElement('canvas');c.width=w;c.height=h;
+var ctx=c.getContext('2d');ctx.drawImage(img,0,0,w,h);
+URL.revokeObjectURL(url);
+if(fmt==='tiff'){
+c.toBlob(function(b){
+var a=document.createElement('a');a.href=URL.createObjectURL(b);
+a.download=imgName+'_annotated.png';a.click();
+alert('TIFF export requires server-side conversion. Saved as PNG at full resolution.');
+},'image/png',1.0);
+}else{
+c.toBlob(function(b){
+var a=document.createElement('a');a.href=URL.createObjectURL(b);
+a.download=imgName+'_annotated.png';a.click();
+},'image/png',1.0);
+}
+};img.src=url;
+}
 init();
 window.addEventListener('resize',function(){if(edges.length>0)updateLayers();});
 })();
@@ -836,6 +905,8 @@ def demo_asset():
 
 @app.route("/api/cropped_bg")
 def api_cropped_bg():
+    import numpy as np
+    from PIL import Image as PILImage
     run=request.args.get("run","")
     img=request.args.get("img","")
     mode=request.args.get("mode","seg")
@@ -845,12 +916,21 @@ def api_cropped_bg():
     qc=_resolve_run(run,img,"qc_cells.png")
     if mode=="seg" and seg.exists():
         return send_file(str(seg),mimetype="image/png")
-    if mode=="seg" and qc.exists():
-        return send_file(str(qc),mimetype="image/png")
-    if raw.exists():
+    if raw.exists() and mode!="seg":
         return send_file(str(raw),mimetype="image/png")
     if qc.exists():
-        return send_file(str(qc),mimetype="image/png")
+        im=PILImage.open(str(qc))
+        arr=np.array(im.convert("L")).astype(float)/255
+        rd=np.where(np.mean(arr,axis=1)<0.5)[0]
+        cd=np.where(np.mean(arr,axis=0)<0.5)[0]
+        if len(rd)>0 and len(cd)>0:
+            t,b=int(rd[0]),int(rd[-1])+1
+            l,r=int(cd[0]),int(cd[-1])+1
+            im=im.crop((l,t,r,b))
+        buf=io.BytesIO()
+        im.save(buf,format="PNG")
+        buf.seek(0)
+        return send_file(buf,mimetype="image/png")
     abort(404)
 
 @app.route("/api/map_data")
