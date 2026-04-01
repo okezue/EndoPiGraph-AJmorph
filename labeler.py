@@ -394,7 +394,7 @@ TMPL=r'''<!DOCTYPE html>
 </div>
 <div id="mapWrap" style="position:relative;display:inline-block;max-width:95%;max-height:80vh">
 <img id="mapBg" src="/api/cropped_bg?run={{ run }}&img={{ sel_img }}" alt="image" style="display:block;width:100%;height:auto">
-<svg id="mapSvg" style="position:absolute;top:0;left:0;width:100%;height:100%"></svg>
+<svg id="mapSvg" style="position:absolute;top:0;left:0;width:100%;height:100%" preserveAspectRatio="none"></svg>
 <div id="edgePopup" style="display:none;position:absolute;background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:10px;z-index:50;min-width:200px;font-size:11px;box-shadow:0 4px 12px rgba(0,0,0,0.5)">
 <div id="popupTitle" style="color:var(--accent2);margin-bottom:6px"></div>
 <div id="popupMorph" style="margin-bottom:8px"></div>
@@ -460,8 +460,7 @@ function init(){
     edges=d.edges;cells=d.cells;
     origW=d.img_w||1024;origH=d.img_h||1024;
     cropW=d.crop_w||1024;cropH=d.crop_h||1024;
-    svg.setAttribute('viewBox','0 0 '+origW+' '+origH);
-    svg.setAttribute('preserveAspectRatio','xMidYMid meet');
+    svg.setAttribute('viewBox','0 0 '+cropW+' '+cropH);
     updateLayers();
   });
 }
@@ -471,7 +470,7 @@ function updateLayers(){
   var showGraph=document.getElementById('chkGraph').checked;
   var edgeW=parseFloat(document.getElementById('sliderEdge').value);
   var nodeR=parseFloat(document.getElementById('sliderNode').value);
-  var sx=1,sy=1;
+  var sx=cropW/origW,sy=cropH/origH;
   svg.innerHTML='';
   if(!showGraph){svg.style.pointerEvents='none';return;}
   svg.style.pointerEvents='all';
@@ -809,27 +808,22 @@ def demo_asset():
 
 @app.route("/api/cropped_bg")
 def api_cropped_bg():
-    import numpy as np
-    from PIL import Image as PILImage
     run=request.args.get("run","")
     img=request.args.get("img","")
     mode=request.args.get("mode","seg")
     if ".." in run or ".." in img: abort(400)
-    fname="qc_cells.png" if mode=="seg" else "qc_cells.png"
-    p=_resolve_run(run,img,fname)
-    if not p.exists(): abort(404)
-    im=PILImage.open(str(p)).convert("RGBA")
-    arr=np.array(im.convert("L")).astype(float)/255
-    row_dark=np.where(np.mean(arr,axis=1)<0.5)[0]
-    col_dark=np.where(np.mean(arr,axis=0)<0.5)[0]
-    if len(row_dark)>0 and len(col_dark)>0:
-        t,b=int(row_dark[0]),int(row_dark[-1])+1
-        l,r=int(col_dark[0]),int(col_dark[-1])+1
-        im=im.crop((l,t,r,b))
-    buf=io.BytesIO()
-    im.save(buf,format="PNG",optimize=True)
-    buf.seek(0)
-    return send_file(buf,mimetype="image/png")
+    raw=_resolve_run(run,img,"raw_display.png")
+    seg=_resolve_run(run,img,"seg_overlay.png")
+    qc=_resolve_run(run,img,"qc_cells.png")
+    if mode=="seg" and seg.exists():
+        return send_file(str(seg),mimetype="image/png")
+    if mode=="seg" and qc.exists():
+        return send_file(str(qc),mimetype="image/png")
+    if raw.exists():
+        return send_file(str(raw),mimetype="image/png")
+    if qc.exists():
+        return send_file(str(qc),mimetype="image/png")
+    abort(404)
 
 @app.route("/api/map_data")
 def api_map_data():
@@ -867,27 +861,18 @@ def api_map_data():
         edges.append({"i":ci,"j":cj,"cy":ey,"cx":ex,"px":int(r["contact_px"]),"morph":m})
     patch_dir=_resolve_run(run,"patches","patches")
     has_patches=patch_dir.exists()
-    all_x=[e["cx"] for e in edges]+[c["x"] for c in cells]
-    all_y=[e["cy"] for e in edges]+[c["y"] for c in cells]
-    max_x=max(all_x,default=1024)*1.02
-    max_y=max(all_y,default=1024)*1.02
-    # Get cropped bg dimensions for viewBox mapping
-    import numpy as np
+    from PIL import Image as PILImage
+    raw_f=_resolve_run(run,img,"raw_display.png")
     qc_f=_resolve_run(run,img,"qc_cells.png")
-    crop_w,crop_h=1024,1024
-    if qc_f.exists():
-        from PIL import Image as PILImage
-        qc=PILImage.open(str(qc_f)).convert("L")
-        arr=np.array(qc).astype(float)/255
-        rd=np.where(np.mean(arr,axis=1)<0.5)[0]
-        cd=np.where(np.mean(arr,axis=0)<0.5)[0]
-        if len(rd)>0 and len(cd)>0:
-            crop_w=int(cd[-1]-cd[0]+1);crop_h=int(rd[-1]-rd[0]+1)
-        else:
-            crop_w,crop_h=qc.size
+    if raw_f.exists():
+        w,h=PILImage.open(str(raw_f)).size
+    elif qc_f.exists():
+        w,h=PILImage.open(str(qc_f)).size
+    else:
+        w,h=1024,1024
     return jsonify(edges=edges,cells=cells,has_patches=has_patches,
-                   cmap=CMAP,classes=CLASSES,img_w=max_x,img_h=max_y,
-                   crop_w=crop_w,crop_h=crop_h)
+                   cmap=CMAP,classes=CLASSES,img_w=w,img_h=h,
+                   crop_w=w,crop_h=h)
 
 @app.route("/label_view")
 def label_view():

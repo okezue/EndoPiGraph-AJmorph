@@ -20,25 +20,22 @@ def save_segmentation_qc(
     vmin: Optional[float] = None,
     vmax: Optional[float] = None,
 ) -> Path:
+    from PIL import Image as PILImage
     out_path = Path(out_path)
     out_path.parent.mkdir(parents=True, exist_ok=True)
-
     base = img.astype(float)
     if vmin is None:
         vmin = np.percentile(base, 1)
     if vmax is None:
         vmax = np.percentile(base, 99)
-
+    norm = np.clip((base - vmin) / (vmax - vmin + 1e-8), 0, 1)
+    gray = (norm * 255).astype(np.uint8)
+    rgb = np.stack([gray, gray, gray], axis=-1)
     b = find_boundaries(labels, mode="inner")
-
-    fig, ax = plt.subplots(figsize=(8, 8))
-    ax.imshow(base, cmap="gray", vmin=vmin, vmax=vmax)
-    ax.imshow(np.ma.array(b, mask=~b), cmap="autumn", alpha=0.8)
-    ax.set_axis_off()
-    ax.set_title(title)
-    fig.tight_layout()
-    fig.savefig(out_path, dpi=200)
-    plt.close(fig)
+    rgb[b] = [255, 50, 50]
+    PILImage.fromarray(rgb).save(str(out_path))
+    raw_path = out_path.parent / out_path.name.replace("qc_seg", "raw_display").replace("qc_cells", "raw_display")
+    PILImage.fromarray(gray).save(str(raw_path))
     return out_path
 
 
