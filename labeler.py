@@ -327,7 +327,12 @@ TMPL=r'''<!DOCTYPE html>
 {% for ds in datasets %}<a class="run-link" href="/label_view?load={{ ds.path }}">{{ ds.name }} ({{ ds.count }} patches)</a>{% endfor %}
 {% if not datasets %}<p style="color:var(--red);margin-top:4px">No datasets found.</p>{% endif %}
 </div>
-<div class="card"><h3>Upload &amp; Process</h3><p>Upload a TIFF and run the PiMorph pipeline.</p><p style="margin-top:6px"><button class="tbtn" onclick="document.getElementById('uploadModal').style.display='flex'">Upload Image...</button></p></div>
+<div class="card"><h3>Upload &amp; Process</h3><p>Upload a TIFF and run the PiMorph pipeline.</p><p style="margin-top:6px"><button class="tbtn" onclick="document.getElementById('uploadModal').style.display='flex'">Upload Image...</button></p>
+{% if active_uploads %}<div style="margin-top:8px;border-top:1px solid var(--border);padding-top:8px"><p style="font-size:10px;color:var(--accent);margin-bottom:4px">Processing:</p>
+{% for u in active_uploads %}<a class="run-link" href="/upload_status?uid={{ u.id }}&run=upload_{{ u.id }}&filename={{ u.filename.rsplit('.',1)[0] }}" style="color:var(--accent)">{{ u.filename }} &mdash; processing...</a>{% endfor %}</div>{% endif %}
+{% if recent_uploads %}<div style="margin-top:8px;border-top:1px solid var(--border);padding-top:8px"><p style="font-size:10px;color:var(--green);margin-bottom:4px">Recent:</p>
+{% for u in recent_uploads %}<a class="run-link" href="/demo?run=upload_{{ u.id }}&img={{ u.filename.rsplit('.',1)[0] }}">{{ u.filename }} &mdash; done</a>{% endfor %}</div>{% endif %}
+</div>
 </div></div>
 {% elif page=='demo' %}
 <div class="toolbar"><a href="/" class="tbtn">Home</a><div class="sep-v"></div>
@@ -762,9 +767,13 @@ label_state={"patches":[],"idx":0,"csv":"","filter":None,"filter_img":None}
 
 @app.route("/")
 def index():
-    get_or_create_session()
+    sid=get_or_create_session()
     ds=discover_datasets()
-    return render_page("home",datasets=ds)
+    db=get_db()
+    active=db.execute("SELECT id,filename,status,created FROM uploads WHERE session_id=? AND status='processing' ORDER BY created DESC",(sid,)).fetchall()
+    recent=db.execute("SELECT id,filename,status,created FROM uploads WHERE session_id=? AND status='done' ORDER BY created DESC LIMIT 5",(sid,)).fetchall()
+    db.close()
+    return render_page("home",datasets=ds,active_uploads=[dict(r) for r in active],recent_uploads=[dict(r) for r in recent])
 
 @app.route("/demo")
 def demo():
@@ -1221,15 +1230,14 @@ body{background:var(--bg);color:var(--text);font-family:'JetBrains Mono',Consola
 <ul class="steps" id="stepList"></ul>
 <div class="pct" id="pctText"></div>
 <div class="err" id="errBox" style="display:none"></div>
-<div style="text-align:center;margin-top:12px"><button class="tbtn" id="cancelBtn" onclick="cancelUpload()" style="color:#bc3f3c;border-color:#bc3f3c">Cancel</button></div>
+<div style="display:flex;gap:8px;justify-content:center;margin-top:12px"><a href="/" class="tbtn" style="text-decoration:none">Home</a><button class="tbtn" id="cancelBtn" onclick="cancelUpload()" style="color:#bc3f3c;border-color:#bc3f3c">Cancel Upload</button></div>
 <div class="done-msg" id="doneBox" style="display:none"><p style="color:var(--green);margin-bottom:8px">&#10003; Processing complete</p><a id="doneLink" href="#">View Results &rarr;</a><br><a id="dlLink" href="#" style="font-size:11px;margin-top:4px;display:inline-block">Download Results (.zip)</a></div>
 </div>
 <script>
 var STEPS={{ steps_json|safe }};
 function cancelUpload(){
 fetch('/api/cancel_upload',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({uid:uid})})
-.then(function(){document.getElementById('cancelBtn').textContent='Cancelled';document.getElementById('cancelBtn').disabled=true;
-document.getElementById('spin').style.display='none';document.getElementById('pctText').textContent='Cancelled';});
+.then(function(){window.location='/';});
 }
 var uid='{{ uid }}',run='{{ run_name }}',fname='{{ filename }}';
 var list=document.getElementById('stepList');
