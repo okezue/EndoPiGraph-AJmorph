@@ -661,7 +661,7 @@ var CUR_LABEL='{{patch.label if patch is defined and patch.label else ""}}';
 function assign(cls){
 var c=(cls===CUR_LABEL)?'__clear__':cls;
 fetch('/api/label',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({cls:c}),credentials:'same-origin'})
-.then(r=>r.json()).then(d=>{console.log('label response',d);if(d.ok)window.location='/label_view';else alert('Label failed: '+(d.error||'unknown'))})
+.then(r=>r.json()).then(d=>{if(d.ok)window.location='/label_view?d=1';else alert('Label failed: '+(d.error||'unknown'))})
 .catch(e=>{console.error('label error',e);alert('Label error: '+e)})
 }
 function clearLabel(){
@@ -999,8 +999,6 @@ def api_label():
         return jsonify(ok=True)
     if cls not in CLASSES: return jsonify(ok=False)
     save_label(sid,p["image_id"],p["cell_i"],p["cell_j"],cls,p.get("aj_morph",""))
-    if label_state["idx"]<len(label_state["patches"])-1:
-        label_state["idx"]+=1
     return jsonify(ok=True)
 
 @app.route("/api/undo",methods=["POST"])
