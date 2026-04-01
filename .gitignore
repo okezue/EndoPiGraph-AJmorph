@@ -38,4 +38,6 @@ data/LIVECell/
 data/NuInsSeg/
 paper/
 
-paper/
+# Labeler runtime data
+labeler_data.db
+runs/upload_*/

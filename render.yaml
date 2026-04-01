@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: pimorph-labeler
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt && pip install -e .
+    startCommand: gunicorn labeler:app --bind 0.0.0.0:$PORT --workers 2 --timeout 600
+    envVars:
+      - key: PIMORPH_ADMIN_KEY
+        generateValue: true
+      - key: PIMORPH_DATA_DIR
+        value: /opt/render/project/data
+    disk:
+      name: pimorph-data
+      mountPath: /opt/render/project/data
+      sizeGB: 1

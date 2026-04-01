@@ -1,0 +1,13 @@
+flask>=3.0
+gunicorn>=20.1
+numpy>=1.23
+pandas>=1.5
+scikit-image>=0.21
+scipy>=1.10
+tifffile>=2023.7
+networkx>=3.1
+matplotlib>=3.7
+PyYAML>=6.0
+Pillow>=10.0
+cellpose>=3.0
+requests>=2.31

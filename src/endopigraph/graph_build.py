@@ -89,11 +89,15 @@ def write_graph_outputs(G: nx.Graph, out_prefix: str | Path) -> Dict[str, Path]:
     G2 = G.copy()
     for n, data in G2.nodes(data=True):
         for k, v in list(data.items()):
-            if isinstance(v, (list, dict)):
+            if v is None:
+                data[k] = ""
+            elif isinstance(v, (list, dict)):
                 data[k] = json.dumps(v)
     for u, v, data in G2.edges(data=True):
         for k, val in list(data.items()):
-            if isinstance(val, (list, dict)):
+            if val is None:
+                data[k] = ""
+            elif isinstance(val, (list, dict)):
                 data[k] = json.dumps(val)
 
     nx.write_graphml(G2, graphml_path)

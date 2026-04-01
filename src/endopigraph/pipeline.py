@@ -148,7 +148,8 @@ def process_one_image(
     cells_df.to_csv(cells_path, index=False)
     edges_df.to_csv(edges_path, index=False)
 
-    graph_json_path, _graphml_path = write_graph_outputs(G, graphs_dir / image_id)
+    graph_paths = write_graph_outputs(G, graphs_dir / image_id)
+    graph_json_path = graph_paths["json"]
 
     # QC figures
     qc_seg_path = qc_dir / f"{image_id}__qc_seg.png"
@@ -157,12 +158,7 @@ def process_one_image(
 
     save_segmentation_qc(arr[display_idx], labels, qc_seg_path, title=image_id)
 
-    # position nodes by centroids if available
-    pos = {}
-    for _, row in cells_df.iterrows():
-        pos[int(row["cell_id"])] = (float(row["cx"]), float(row["cy"]))
-
-    save_graph_plot(G, pos, qc_graph_path, title=f"Graph: {image_id}")
+    save_graph_plot(G, cells_df, qc_graph_path, title=f"Graph: {image_id}", node_x="cx", node_y="cy")
 
     # pick some feature columns for the histogram figure
     feature_cols = []
@@ -173,7 +169,7 @@ def process_one_image(
     if not feature_cols:
         # fallback: histogram contact lengths
         feature_cols = ["contact_px"]
-    save_feature_distributions(edges_df, feature_cols, qc_feat_path, title=f"Features: {image_id}")
+    save_feature_distributions(edges_df, qc_feat_path, title=f"Features: {image_id}")
 
     # For HTML report, use paths relative to out_root
     def rel(p: Path) -> str:

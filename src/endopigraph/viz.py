@@ -3,6 +3,8 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Optional
 
+import matplotlib
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -40,6 +42,19 @@ def save_segmentation_qc(
     return out_path
 
 
+MORPH_COLORS = {
+    "straight": "#4CAF50",
+    "thick": "#2196F3",
+    "thick_to_reticular": "#00BCD4",
+    "reticular": "#FF9800",
+    "fingers": "#E91E63",
+    "discontinuous": "#9C27B0",
+    "punctate": "#FFC107",
+    "minimal": "#607D8B",
+    "other": "#795548",
+    "unknown": "#9E9E9E",
+}
+
 def save_graph_plot(
     G: nx.Graph,
     cells: pd.DataFrame,
@@ -47,6 +62,9 @@ def save_graph_plot(
     title: str = "",
     node_x: str = "centroid_x",
     node_y: str = "centroid_y",
+    bg_img: np.ndarray = None,
+    vmin: float = None,
+    vmax: float = None,
 ) -> Path:
     out_path = Path(out_path)
     out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -56,12 +74,25 @@ def save_graph_plot(
         for _, r in cells.iterrows():
             pos[int(r["cell_id"])] = (float(r[node_x]), float(r[node_y]))
 
+    edge_colors = []
+    for u, v, d in G.edges(data=True):
+        m = d.get("aj_morph", d.get("AJ_morph_label", "unknown"))
+        edge_colors.append(MORPH_COLORS.get(str(m), "#9E9E9E"))
+
     fig, ax = plt.subplots(figsize=(8, 8))
 
+    if bg_img is not None:
+        if vmin is None:
+            vmin = np.percentile(bg_img, 1)
+        if vmax is None:
+            vmax = np.percentile(bg_img, 99)
+        ax.imshow(bg_img, cmap="gray", vmin=vmin, vmax=vmax)
+
     if pos:
-        nx.draw(G, pos=pos, node_size=20, with_labels=False, ax=ax)
+        nx.draw_networkx_nodes(G, pos=pos, node_size=15, node_color="#6897bb", ax=ax)
+        nx.draw_networkx_edges(G, pos=pos, edge_color=edge_colors, width=1.5, alpha=0.85, ax=ax)
     else:
-        nx.draw(G, node_size=20, with_labels=False, ax=ax)
+        nx.draw(G, node_size=15, edge_color=edge_colors, width=1.5, alpha=0.85, ax=ax)
 
     ax.set_title(title)
     ax.set_axis_off()

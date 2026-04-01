@@ -9,6 +9,7 @@ from skimage.measure import label
 from skimage.morphology import remove_small_holes, remove_small_objects
 from skimage.segmentation import watershed
 from skimage.feature import peak_local_max
+from scipy.ndimage import binary_fill_holes
 
 
 def _get_channel(arr: np.ndarray, channel_names: List[str], channel_spec: dict) -> np.ndarray:
@@ -86,6 +87,25 @@ def segment_cells_cellpose(arr: np.ndarray, channel_names: List[str], cfg: Dict)
     return masks.astype(np.int32)
 
 
+def _tissue_mask(arr: np.ndarray, cfg: Dict) -> np.ndarray:
+    if arr.ndim==3:
+        combo=np.std(arr.astype(float),axis=0)
+    else:
+        combo=arr.astype(float)
+    combo=exposure.rescale_intensity(combo,in_range="image",out_range=(0,1))
+    blurred=gaussian(combo,sigma=max(combo.shape)//50)
+    thr=threshold_otsu(blurred)
+    m_hi=(blurred>thr)
+    m_lo=(blurred<thr)
+    mask=m_lo if m_hi.mean()>0.7 else m_hi
+    mask=binary_fill_holes(mask)
+    npx=max(int(mask.size*0.002),500)
+    mask=remove_small_objects(mask,min_size=npx)
+    mask=remove_small_holes(mask,area_threshold=npx)
+    if mask.mean()<0.02 or mask.mean()>0.98:
+        return np.ones(arr.shape[-2:],dtype=bool)
+    return mask
+
 def segment_cells_watershed(arr: np.ndarray, channel_names: List[str], cfg: Dict) -> np.ndarray:
     """Watershed fallback segmentation using nuclei markers.
 
@@ -109,11 +129,14 @@ def segment_cells_watershed(arr: np.ndarray, channel_names: List[str], cfg: Dict
         # Fallback: label connected components of nuclei mask
         seeds = label(nuclei_mask)
 
-    # Elevation map from membrane (high gradient at borders)
     mem = exposure.rescale_intensity(membrane, in_range="image", out_range=(0, 1))
     elevation = gaussian(1.0 - mem, sigma=cfg.get("membrane_sigma", 1.0))
 
-    labels = watershed(elevation, markers=seeds, mask=None)
+    fg=_tissue_mask(arr,cfg)
+    seeds[~fg]=0
+    nuclei_mask[~fg]=False
+
+    labels = watershed(elevation, markers=seeds, mask=fg)
 
     # Optional: remove tiny segments
     labels = _relabel_and_filter(labels, min_cell_area_px=int(cfg.get("min_cell_area_px", 200)))
