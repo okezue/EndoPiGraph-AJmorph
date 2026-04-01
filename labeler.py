@@ -392,9 +392,10 @@ TMPL=r'''<!DOCTYPE html>
 {% for c in classes %}<button class="fbtn active" id="filt_{{c}}" onclick="toggleFilter('{{c}}')" style="background:{{ cmap[c] }}25;border-color:{{ cmap[c] }};color:{{ cmap[c] }}">
 <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:{{ cmap[c] }};margin-right:3px"></span>{{c}}</button>{% endfor %}
 </div>
-<div id="mapWrap" style="position:relative;display:inline-block;max-width:95%;max-height:80vh">
-<img id="mapBg" src="/api/cropped_bg?run={{ run }}&img={{ sel_img }}" alt="image" style="display:block;width:100%;height:auto">
-<svg id="mapSvg" style="position:absolute;top:0;left:0;width:100%;height:100%" preserveAspectRatio="none"></svg>
+<div id="mapWrap" style="position:relative;max-width:95%;max-height:80vh;overflow:auto">
+<svg id="mapSvg" style="width:100%;height:auto" preserveAspectRatio="xMidYMid meet">
+<image id="mapBg" href="/api/cropped_bg?run={{ run }}&img={{ sel_img }}" x="0" y="0" width="1024" height="1024" preserveAspectRatio="none"/>
+</svg>
 <div id="edgePopup" style="display:none;position:absolute;background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:10px;z-index:50;min-width:200px;font-size:11px;box-shadow:0 4px 12px rgba(0,0,0,0.5)">
 <div id="popupTitle" style="color:var(--accent2);margin-bottom:6px"></div>
 <div id="popupMorph" style="margin-bottom:8px"></div>
@@ -417,7 +418,8 @@ var plainUrl='/api/cropped_bg?run='+run+'&img='+imgName+'&mode=plain';
 
 window.updateView=function(){
   var showSeg=document.getElementById('chkSeg').checked;
-  mapImg.src=showSeg?segUrl:plainUrl;
+  mapImg.setAttributeNS('http://www.w3.org/1999/xlink','href',showSeg?segUrl:plainUrl);
+  mapImg.setAttribute('href',showSeg?segUrl:plainUrl);
 };
 
 window.toggleFilter=function(f){
@@ -461,6 +463,9 @@ function init(){
     origW=d.img_w||1024;origH=d.img_h||1024;
     cropW=d.crop_w||1024;cropH=d.crop_h||1024;
     svg.setAttribute('viewBox','0 0 '+cropW+' '+cropH);
+    var bgImg=document.getElementById('mapBg');
+    bgImg.setAttribute('width',cropW);
+    bgImg.setAttribute('height',cropH);
     updateLayers();
   });
 }
@@ -471,7 +476,9 @@ function updateLayers(){
   var edgeW=parseFloat(document.getElementById('sliderEdge').value);
   var nodeR=parseFloat(document.getElementById('sliderNode').value);
   var sx=cropW/origW,sy=cropH/origH;
-  svg.innerHTML='';
+  var bgEl=document.getElementById('mapBg');
+  while(svg.lastChild&&svg.lastChild!==bgEl)svg.removeChild(svg.lastChild);
+  if(svg.firstChild!==bgEl)svg.insertBefore(bgEl,svg.firstChild);
   if(!showGraph){svg.style.pointerEvents='none';return;}
   svg.style.pointerEvents='all';
   var cellMap={};
@@ -562,7 +569,7 @@ document.addEventListener('click',function(ev){
   if(p.style.display==='block'&&!p.contains(ev.target)&&ev.target.tagName!=='circle')
     p.style.display='none';
 });
-if(mapImg.complete&&mapImg.naturalWidth>0)init();else mapImg.onload=init;
+init();
 window.addEventListener('resize',function(){if(edges.length>0)updateLayers();});
 })();
 </script>
