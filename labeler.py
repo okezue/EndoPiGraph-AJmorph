@@ -389,11 +389,17 @@ TMPL=r'''<!DOCTYPE html>
 <label style="color:var(--gutter)">Node:</label>
 <input type="range" id="sliderNode" min="1" max="10" value="4" step="1" style="width:60px" oninput="tweakWidths()">
 <span style="color:var(--border)">|</span>
-<span style="color:var(--gutter)">Download:</span>
-<button class="tbtn" onclick="downloadView()" style="font-size:10px;padding:1px 8px">View (SVG+img)</button>
-<a class="tbtn" href="/api/cropped_bg?run={{ run }}&img={{ sel_img }}&mode=seg" download="{{ sel_img }}_segmentation.png" style="font-size:10px;padding:1px 8px;text-decoration:none">Segmentation</a>
-<a class="tbtn" href="/api/cropped_bg?run={{ run }}&img={{ sel_img }}&mode=plain" download="{{ sel_img }}_plain.png" style="font-size:10px;padding:1px 8px;text-decoration:none">Plain</a>
-<a class="tbtn" href="/download_run/{{ run }}" style="font-size:10px;padding:1px 8px;text-decoration:none">All (.zip)</a>
+<span style="color:var(--border)">|</span>
+<div class="menu-item" style="display:inline-block;position:relative"><span class="tbtn" style="font-size:10px;padding:1px 8px;cursor:pointer">&#11015; Download</span>
+<div class="menu-drop" style="right:0;left:auto;min-width:160px">
+<span onclick="downloadView()">Graph Overlay (SVG)</span>
+<a href="/api/cropped_bg?run={{ run }}&img={{ sel_img }}&mode=seg" download="{{ sel_img }}_segmentation.png">Segmentation (PNG)</a>
+<a href="/demo_asset?run={{ run }}&img={{ sel_img }}&file=edges.csv" download="{{ sel_img }}_edges.csv">Edges (CSV)</a>
+<a href="/demo_asset?run={{ run }}&img={{ sel_img }}&file=cells.csv" download="{{ sel_img }}_cells.csv">Cells (CSV)</a>
+<a href="/demo_asset?run={{ run }}&img={{ sel_img }}&file=graph.json" download="{{ sel_img }}_graph.json">Graph (JSON)</a>
+<div class="sep"></div>
+<a href="/download_run/{{ run }}">Full Run (.zip)</a>
+</div></div>
 </div>
 <div style="display:flex;gap:3px;align-items:center;margin-bottom:6px;flex-wrap:wrap;font-size:10px">
 <span style="color:var(--gutter)">Filter:</span>
@@ -978,14 +984,13 @@ def api_map_data():
     has_patches=patch_dir.exists()
     import numpy as np
     from PIL import Image as PILImage
+    from PIL import Image as PILImage
     raw_f=_resolve_run(run,img,"raw_display.png")
-    seg_f=_resolve_run(run,img,"seg_overlay.png")
     qc_f=_resolve_run(run,img,"qc_cells.png")
     if raw_f.exists():
         w,h=PILImage.open(str(raw_f)).size
-    elif seg_f.exists():
-        w,h=PILImage.open(str(seg_f)).size
     elif qc_f.exists():
+        import numpy as np
         qc=PILImage.open(str(qc_f)).convert("L")
         arr=np.array(qc).astype(float)/255
         rd=np.where(np.mean(arr,axis=1)<0.5)[0]
