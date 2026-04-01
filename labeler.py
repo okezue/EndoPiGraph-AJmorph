@@ -67,6 +67,12 @@ def init_db():
 
 init_db()
 
+def _resolve_run(run,*sub):
+    p=DATA_DIR/"runs"/run/Path(*sub) if sub else DATA_DIR/"runs"/run
+    if p.exists(): return p
+    p=PROJ/"runs"/run/Path(*sub) if sub else PROJ/"runs"/run
+    return p
+
 def discover_datasets():
     runs=PROJ/"runs"
     found=[]
@@ -82,11 +88,14 @@ def discover_datasets():
     return found
 
 def load_demo_datasets():
-    runs=PROJ/"runs"
     datasets=[]
-    if not runs.exists(): return datasets
     skip={"blur_robust_improvement","junction_mapper_comparison","cross_dataset_validation"}
-    for run_dir in sorted(runs.iterdir()):
+    dirs=set()
+    for runs in [PROJ/"runs",DATA_DIR/"runs"]:
+        if not runs.exists(): continue
+        for run_dir in sorted(runs.iterdir()):
+            dirs.add(run_dir)
+    for run_dir in sorted(dirs):
         if not run_dir.is_dir() or run_dir.name in skip: continue
         images=[]
         total_edges=0
@@ -216,7 +225,7 @@ a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
 .cbtn.selected{border-color:var(--cc);color:var(--cc);background:var(--bg)}
 .cbtn .key{color:var(--cc);font-weight:bold;margin-right:3px}
 .nav-hint{position:absolute;bottom:8px;right:8px;font-size:10px;color:var(--gutter);background:rgba(0,0,0,0.5);padding:3px 8px;border-radius:3px}
-.splash{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:12px;padding:40px}
+.splash{display:flex;flex-direction:column;align-items:center;gap:12px;padding:40px;overflow-y:auto}
 .splash h1{color:var(--accent);font-size:24px;font-weight:normal}
 .card{background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:16px;margin:8px 0;width:100%;max-width:500px}
 .card h3{color:var(--accent2);font-size:13px;margin-bottom:8px;font-weight:normal}
@@ -794,7 +803,7 @@ def demo_asset():
     img=request.args.get("img","")
     fname=request.args.get("file","")
     if ".." in run or ".." in img or ".." in fname: abort(400)
-    p=PROJ/"runs"/run/img/fname
+    p=_resolve_run(run,img,fname)
     if p.exists(): return send_file(str(p))
     abort(404)
 
@@ -807,7 +816,7 @@ def api_cropped_bg():
     mode=request.args.get("mode","seg")
     if ".." in run or ".." in img: abort(400)
     fname="qc_cells.png" if mode=="seg" else "qc_cells.png"
-    p=PROJ/"runs"/run/img/fname
+    p=_resolve_run(run,img,fname)
     if not p.exists(): abort(404)
     im=PILImage.open(str(p)).convert("RGBA")
     arr=np.array(im.convert("L")).astype(float)/255
@@ -828,7 +837,7 @@ def api_map_data():
     run=request.args.get("run","")
     img=request.args.get("img","")
     if ".." in run or ".." in img: abort(400)
-    base=PROJ/"runs"/run/img
+    base=_resolve_run(run,img)
     edges_f=base/"edges.csv"
     cells_f=base/"cells.csv"
     if not edges_f.exists(): return jsonify(edges=[],cells=[])
@@ -856,7 +865,7 @@ def api_map_data():
             ey=(p1[0]+p2[0])/2;ex=(p1[1]+p2[1])/2
         m=str(r[morph_col]) if morph_col else "unknown"
         edges.append({"i":ci,"j":cj,"cy":ey,"cx":ex,"px":int(r["contact_px"]),"morph":m})
-    patch_dir=PROJ/"runs"/run/"patches"/"patches"
+    patch_dir=_resolve_run(run,"patches","patches")
     has_patches=patch_dir.exists()
     all_x=[e["cx"] for e in edges]+[c["x"] for c in cells]
     all_y=[e["cy"] for e in edges]+[c["y"] for c in cells]
@@ -864,7 +873,7 @@ def api_map_data():
     max_y=max(all_y,default=1024)*1.02
     # Get cropped bg dimensions for viewBox mapping
     import numpy as np
-    qc_f=PROJ/"runs"/run/img/"qc_cells.png"
+    qc_f=_resolve_run(run,img,"qc_cells.png")
     crop_w,crop_h=1024,1024
     if qc_f.exists():
         from PIL import Image as PILImage
@@ -1016,7 +1025,7 @@ def export_all():
 def download_run(run_name):
     import zipfile
     if ".." in run_name: abort(400)
-    rd=PROJ/"runs"/run_name
+    rd=_resolve_run(run_name)
     if not rd.exists(): abort(404)
     buf=io.BytesIO()
     with zipfile.ZipFile(buf,"w",zipfile.ZIP_DEFLATED) as zf:
@@ -1029,7 +1038,7 @@ def download_run(run_name):
 @app.route("/download_image/<run_name>/<img_name>/<fname>")
 def download_image(run_name,img_name,fname):
     if ".." in run_name or ".." in img_name or ".." in fname: abort(400)
-    p=PROJ/"runs"/run_name/img_name/fname
+    p=_resolve_run(run_name,img_name,fname)
     if not p.exists(): abort(404)
     return send_file(str(p),as_attachment=True)
 
@@ -1128,7 +1137,7 @@ def upload():
     for f in files:
         uid=str(uuid.uuid4())[:8]
         run_name=f"upload_{uid}"
-        run_dir=PROJ/"runs"/run_name
+        run_dir=DATA_DIR/"runs"/run_name
         run_dir.mkdir(parents=True,exist_ok=True)
         fpath=run_dir/f.filename
         f.save(str(fpath))
@@ -1230,7 +1239,7 @@ body{background:var(--bg);color:var(--text);font-family:'JetBrains Mono',Consola
 <ul class="steps" id="stepList"></ul>
 <div class="pct" id="pctText"></div>
 <div class="err" id="errBox" style="display:none"></div>
-<div style="display:flex;gap:8px;justify-content:center;margin-top:12px"><a href="/" class="tbtn" style="text-decoration:none">Home</a><button class="tbtn" id="cancelBtn" onclick="cancelUpload()" style="color:#bc3f3c;border-color:#bc3f3c">Cancel Upload</button></div>
+<div style="display:flex;gap:8px;justify-content:center;margin-top:12px"><a href="/" style="background:#3c3d3f;border:1px solid #515151;color:#a9b7c6;padding:4px 14px;font-size:11px;cursor:pointer;font-family:inherit;border-radius:2px;text-decoration:none">Home</a><button id="cancelBtn" onclick="cancelUpload()" style="background:#3c3d3f;border:1px solid #bc3f3c;color:#bc3f3c;padding:4px 14px;font-size:11px;cursor:pointer;font-family:inherit;border-radius:2px">Cancel Upload</button></div>
 <div class="done-msg" id="doneBox" style="display:none"><p style="color:var(--green);margin-bottom:8px">&#10003; Processing complete</p><a id="doneLink" href="#">View Results &rarr;</a><br><a id="dlLink" href="#" style="font-size:11px;margin-top:4px;display:inline-block">Download Results (.zip)</a></div>
 </div>
 <script>
