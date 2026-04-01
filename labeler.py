@@ -394,7 +394,7 @@ TMPL=r'''<!DOCTYPE html>
 </div>
 <div id="mapWrap" style="position:relative;display:inline-block;max-width:95%;max-height:80vh">
 <img id="mapBg" src="/api/cropped_bg?run={{ run }}&img={{ sel_img }}" alt="image" style="display:block;width:100%;height:auto">
-<svg id="mapSvg" style="position:absolute;top:0;left:0;width:100%;height:100%" preserveAspectRatio="none"></svg>
+<svg id="mapSvg" style="position:absolute;top:0;left:0;width:100%;height:100%"></svg>
 <div id="edgePopup" style="display:none;position:absolute;background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:10px;z-index:50;min-width:200px;font-size:11px;box-shadow:0 4px 12px rgba(0,0,0,0.5)">
 <div id="popupTitle" style="color:var(--accent2);margin-bottom:6px"></div>
 <div id="popupMorph" style="margin-bottom:8px"></div>
@@ -460,7 +460,8 @@ function init(){
     edges=d.edges;cells=d.cells;
     origW=d.img_w||1024;origH=d.img_h||1024;
     cropW=d.crop_w||1024;cropH=d.crop_h||1024;
-    svg.setAttribute('viewBox','0 0 '+cropW+' '+cropH);
+    svg.setAttribute('viewBox','0 0 '+origW+' '+origH);
+    svg.setAttribute('preserveAspectRatio','xMidYMid meet');
     updateLayers();
   });
 }
@@ -470,8 +471,7 @@ function updateLayers(){
   var showGraph=document.getElementById('chkGraph').checked;
   var edgeW=parseFloat(document.getElementById('sliderEdge').value);
   var nodeR=parseFloat(document.getElementById('sliderNode').value);
-  // Map original image coords -> cropped QC image coords
-  var sx=cropW/origW,sy=cropH/origH;
+  var sx=1,sy=1;
   svg.innerHTML='';
   if(!showGraph){svg.style.pointerEvents='none';return;}
   svg.style.pointerEvents='all';
@@ -779,8 +779,8 @@ def index():
     sid=get_or_create_session()
     ds=discover_datasets()
     db=get_db()
-    active=db.execute("SELECT id,filename,status,created FROM uploads WHERE session_id=? AND status='processing' ORDER BY created DESC",(sid,)).fetchall()
-    recent=db.execute("SELECT id,filename,status,created FROM uploads WHERE session_id=? AND status='done' ORDER BY created DESC LIMIT 5",(sid,)).fetchall()
+    active=db.execute("SELECT id,filename,status,created FROM uploads WHERE status='processing' ORDER BY created DESC").fetchall()
+    recent=db.execute("SELECT id,filename,status,created FROM uploads WHERE status='done' ORDER BY created DESC LIMIT 10").fetchall()
     db.close()
     return render_page("home",datasets=ds,active_uploads=[dict(r) for r in active],recent_uploads=[dict(r) for r in recent])
 
