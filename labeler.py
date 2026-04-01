@@ -407,10 +407,9 @@ TMPL=r'''<!DOCTYPE html>
 {% for c in classes %}<button class="fbtn active" id="filt_{{c}}" onclick="toggleFilter('{{c}}')" style="background:{{ cmap[c] }}25;border-color:{{ cmap[c] }};color:{{ cmap[c] }}">
 <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:{{ cmap[c] }};margin-right:3px"></span>{{c}}</button>{% endfor %}
 </div>
-<div id="mapWrap" style="position:relative;width:100%;flex:1;display:flex;align-items:center;justify-content:center;overflow:hidden;min-height:0">
-<svg id="mapSvg" style="max-width:100%;max-height:100%" preserveAspectRatio="xMidYMid meet">
-<image id="mapBg" href="/api/cropped_bg?run={{ run }}&img={{ sel_img }}" x="0" y="0" width="1024" height="1024"/>
-</svg>
+<div id="mapWrap" style="position:relative;display:inline-block;max-width:100%;flex:1;overflow:hidden;min-height:0">
+<img id="mapBg" src="/api/cropped_bg?run={{ run }}&img={{ sel_img }}" alt="image" style="display:block;width:100%;height:auto">
+<svg id="mapSvg" style="position:absolute;top:0;left:0;width:100%;height:100%" preserveAspectRatio="none"></svg>
 <div id="edgePopup" style="display:none;position:absolute;background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:10px;z-index:50;min-width:200px;font-size:11px;box-shadow:0 4px 12px rgba(0,0,0,0.5)">
 <div id="popupTitle" style="color:var(--accent2);margin-bottom:6px"></div>
 <div id="popupMorph" style="margin-bottom:8px"></div>
@@ -433,8 +432,7 @@ var plainUrl='/api/cropped_bg?run='+run+'&img='+imgName+'&mode=plain';
 
 window.updateView=function(){
   var showSeg=document.getElementById('chkSeg').checked;
-  mapImg.setAttributeNS('http://www.w3.org/1999/xlink','href',showSeg?segUrl:plainUrl);
-  mapImg.setAttribute('href',showSeg?segUrl:plainUrl);
+  mapImg.src=showSeg?segUrl:plainUrl;
 };
 
 window.toggleFilter=function(f){
@@ -489,9 +487,6 @@ function init(){
     origW=d.img_w||1024;origH=d.img_h||1024;
     cropW=d.crop_w||1024;cropH=d.crop_h||1024;
     svg.setAttribute('viewBox','0 0 '+cropW+' '+cropH);
-    var bgImg=document.getElementById('mapBg');
-    bgImg.setAttribute('width',cropW);
-    bgImg.setAttribute('height',cropH);
     updateLayers();
   });
 }
@@ -502,9 +497,7 @@ function updateLayers(){
   var edgeW=parseFloat(document.getElementById('sliderEdge').value);
   var nodeR=parseFloat(document.getElementById('sliderNode').value);
   var sx=cropW/origW,sy=cropH/origH;
-  var bgEl=document.getElementById('mapBg');
-  while(svg.lastChild&&svg.lastChild!==bgEl)svg.removeChild(svg.lastChild);
-  if(svg.firstChild!==bgEl)svg.insertBefore(bgEl,svg.firstChild);
+  svg.innerHTML='';
   if(!showGraph){svg.style.pointerEvents='none';return;}
   svg.style.pointerEvents='all';
   var cellMap={};
@@ -647,7 +640,7 @@ a.download=imgName+'_annotated.png';a.click();
 }
 };img.src=url;
 }
-init();
+if(mapImg.complete&&mapImg.naturalWidth>0)init();else mapImg.onload=init;
 window.addEventListener('resize',function(){if(edges.length>0)updateLayers();});
 })();
 </script>
@@ -911,8 +904,6 @@ def demo_asset():
 
 @app.route("/api/cropped_bg")
 def api_cropped_bg():
-    import numpy as np
-    from PIL import Image as PILImage
     run=request.args.get("run","")
     img=request.args.get("img","")
     mode=request.args.get("mode","seg")
@@ -920,30 +911,14 @@ def api_cropped_bg():
     raw=_resolve_run(run,img,"raw_display.png")
     seg=_resolve_run(run,img,"seg_overlay.png")
     qc=_resolve_run(run,img,"qc_cells.png")
-    if mode=="seg":
-        if seg.exists(): return send_file(str(seg),mimetype="image/png")
-    else:
-        if raw.exists(): return send_file(str(raw),mimetype="image/png")
+    if mode=="seg" and seg.exists():
+        return send_file(str(seg),mimetype="image/png")
+    if mode!="seg" and raw.exists():
+        return send_file(str(raw),mimetype="image/png")
     if qc.exists():
-        im=PILImage.open(str(qc))
-        arr=np.array(im.convert("L")).astype(float)/255
-        rd=np.where(np.mean(arr,axis=1)<0.5)[0]
-        cd=np.where(np.mean(arr,axis=0)<0.5)[0]
-        if len(rd)>0 and len(cd)>0:
-            t,b=int(rd[0]),int(rd[-1])+1
-            l,r=int(cd[0]),int(cd[-1])+1
-            im=im.crop((l,t,r,b))
-        if mode=="plain":
-            from PIL import Image as PILImg2
-            gray=im.convert("L")
-            buf=io.BytesIO()
-            gray.save(buf,format="PNG")
-            buf.seek(0)
-            return send_file(buf,mimetype="image/png")
-        buf=io.BytesIO()
-        im.save(buf,format="PNG")
-        buf.seek(0)
-        return send_file(buf,mimetype="image/png")
+        return send_file(str(qc),mimetype="image/png")
+    if raw.exists():
+        return send_file(str(raw),mimetype="image/png")
     abort(404)
 
 @app.route("/api/map_data")
