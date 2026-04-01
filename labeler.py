@@ -16,6 +16,9 @@ import argparse
 
 app=Flask(__name__)
 app.secret_key=os.environ.get("FLASK_SECRET_KEY","pimorph-labeler-default-key-2026")
+app.config["SESSION_COOKIE_SAMESITE"]="Lax"
+app.config["SESSION_COOKIE_SECURE"]=False
+app.config["SESSION_COOKIE_HTTPONLY"]=True
 PROJ=Path(__file__).parent
 DATA_DIR=Path(os.environ.get("PIMORPH_DATA_DIR",str(PROJ)))
 DATA_DIR.mkdir(parents=True,exist_ok=True)
@@ -392,9 +395,9 @@ TMPL=r'''<!DOCTYPE html>
 {% for c in classes %}<button class="fbtn active" id="filt_{{c}}" onclick="toggleFilter('{{c}}')" style="background:{{ cmap[c] }}25;border-color:{{ cmap[c] }};color:{{ cmap[c] }}">
 <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:{{ cmap[c] }};margin-right:3px"></span>{{c}}</button>{% endfor %}
 </div>
-<div id="mapWrap" style="position:relative;max-width:95%;max-height:80vh;overflow:auto">
-<svg id="mapSvg" style="width:100%;height:auto" preserveAspectRatio="xMidYMid meet">
-<image id="mapBg" href="/api/cropped_bg?run={{ run }}&img={{ sel_img }}" x="0" y="0" width="1024" height="1024" preserveAspectRatio="none"/>
+<div id="mapWrap" style="position:relative;width:100%;flex:1;display:flex;align-items:center;justify-content:center;overflow:hidden;min-height:0">
+<svg id="mapSvg" style="max-width:100%;max-height:100%" preserveAspectRatio="xMidYMid meet">
+<image id="mapBg" href="/api/cropped_bg?run={{ run }}&img={{ sel_img }}" x="0" y="0" width="1024" height="1024"/>
 </svg>
 <div id="edgePopup" style="display:none;position:absolute;background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:10px;z-index:50;min-width:200px;font-size:11px;box-shadow:0 4px 12px rgba(0,0,0,0.5)">
 <div id="popupTitle" style="color:var(--accent2);margin-bottom:6px"></div>
@@ -658,8 +661,8 @@ var CUR_LABEL='{{patch.label if patch is defined and patch.label else ""}}';
 function assign(cls){
 var c=(cls===CUR_LABEL)?'__clear__':cls;
 fetch('/api/label',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({cls:c}),credentials:'same-origin'})
-.then(r=>r.json()).then(d=>{if(d.ok)window.location='/label_view'})
-.catch(e=>console.error('label error',e))
+.then(r=>r.json()).then(d=>{console.log('label response',d);if(d.ok)window.location='/label_view';else alert('Label failed: '+(d.error||'unknown'))})
+.catch(e=>{console.error('label error',e);alert('Label error: '+e)})
 }
 function clearLabel(){
 fetch('/api/label',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({cls:'__clear__'}),credentials:'same-origin'})
@@ -784,6 +787,19 @@ def _get_label_state(sid):
     if sid not in _label_states:
         _label_states[sid]={"patches":[],"idx":0,"csv":"","filter":None,"filter_img":None}
     return _label_states[sid]
+
+@app.route("/api/debug_session")
+def debug_session():
+    sid=session.get("sid","none")
+    db=get_db()
+    n_labels=db.execute("SELECT COUNT(*) as c FROM labels WHERE session_id=?",(sid,)).fetchone()["c"]
+    n_all=db.execute("SELECT COUNT(*) as c FROM labels").fetchone()["c"]
+    db.close()
+    ls=_label_states.get(sid,{})
+    return jsonify(sid=sid,n_labels=n_labels,n_all_labels=n_all,
+                   patches_loaded=len(ls.get("patches",[])),
+                   idx=ls.get("idx",0),db_path=str(DB_PATH),
+                   db_exists=DB_PATH.exists(),data_dir=str(DATA_DIR))
 
 @app.route("/")
 def index():
@@ -972,7 +988,7 @@ def api_label():
         if cls in CLASSES:
             save_label(sid,mimg,mi,mj,cls,"map")
         return jsonify(ok=True)
-    if not label_state["patches"]: return jsonify(ok=False)
+    if not label_state["patches"]: return jsonify(ok=False,error="no_patches",sid=sid,n_states=len(_label_states))
     p=label_state["patches"][label_state["idx"]]
     if cls=="__clear__":
         db=get_db()
