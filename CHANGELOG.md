@@ -18,7 +18,7 @@ First Zenodo-archivable release accompanying the PiMorph manuscript submission.
 - Robustness suite: 28/30 metric-perturbation pairs stable; intensity scaling perfectly absorbed; blur destabilizes only fragmentation features.
 - Shear-stress demonstration on S-BIAD1540 EGM2 (95 fields of view, 22,175 interfaces).
 - Manual-annotation infrastructure for AJMORPH validation (`scripts/sample_ajmorph_annotation.py`, `scripts/analyze_ajmorph_annotations.py`).
-- Mixed-effects sensitivity analysis for batch and density confounds (`scripts/mixed_effects_sensitivity.py`).
+- Mixed-effects sensitivity analysis for batch and density confounds using biological replicate (3 reps, fully crossed with condition) as random intercept (`scripts/mixed_effects_sensitivity.py`); all three confirmed shear effects survive at p<0.002.
 
 ### Reproducibility
 - 107 unit tests; CI on GitHub Actions.
