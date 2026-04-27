@@ -32,4 +32,4 @@ First Zenodo-archivable release accompanying the PiMorph manuscript submission.
 - High-shear (18-20 dyn cm⁻²) regime appears distinct from 6 dyn cm⁻² rather than a monotonic continuation.
 
 ### Citation
-See `CITATION.cff`. Software DOI to be minted via Zenodo on publication.
+See `CITATION.cff`. Software DOI: [10.5281/zenodo.19831621](https://doi.org/10.5281/zenodo.19831621).

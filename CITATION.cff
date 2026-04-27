@@ -20,8 +20,13 @@ authors:
 version: 1.0.0
 date-released: "2026-04-27"
 license: MIT
+doi: 10.5281/zenodo.19831621
 repository-code: "https://github.com/okezue/PiMorph"
 url: "https://okezue-pimorph-labeler.hf.space/"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.19831621
+    description: "Zenodo software DOI for v1.0.0"
 keywords:
   - endothelial cells
   - VE-cadherin
