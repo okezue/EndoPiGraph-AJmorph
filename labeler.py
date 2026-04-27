@@ -104,18 +104,20 @@ def load_demo_datasets():
         total_edges=0
         morph_agg={}
         for d in sorted(run_dir.iterdir()):
-            if not d.is_dir() or d.name=="patches": continue
+            if not d.is_dir() or d.name in ("patches","tables","graphs","qc","masks"): continue
+            has_qc=(d/"qc_cells.png").exists() or (d/"qc_graph.png").exists()
             edges_f=d/"edges.csv"
-            if not edges_f.exists(): continue
-            import pandas as pd
-            try:
-                edf=pd.read_csv(edges_f)
-            except Exception:
-                continue
-            n=len(edf)
-            if n==0: continue
-            mc=next((c for c in ("aj_morph","AJ_morph_label") if c in edf.columns),None)
-            md=edf[mc].value_counts().to_dict() if mc else {}
+            n=0;md={}
+            if edges_f.exists() and edges_f.stat().st_size>10:
+                import pandas as pd
+                try:
+                    edf=pd.read_csv(edges_f)
+                    n=len(edf)
+                    mc=next((c for c in ("aj_morph","AJ_morph_label") if c in edf.columns),None)
+                    md=edf[mc].value_counts().to_dict() if mc else {}
+                except Exception:
+                    pass
+            if n==0 and not has_qc: continue
             total_edges+=n
             for k,v in md.items(): morph_agg[k]=morph_agg.get(k,0)+v
             images.append({"id":d.name,"run":run_dir.name,"n_edges":n,"morph_dist":md,
@@ -180,6 +182,7 @@ body{background:var(--bg);color:var(--text);font-family:'JetBrains Mono',Consola
 a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
 .titlebar{background:#3c3d3f;border-bottom:1px solid var(--border);padding:2px 12px;display:flex;align-items:center;gap:12px;height:28px;font-size:11px;color:#999}
 .titlebar .proj{color:var(--text);font-weight:bold}
+#ghLink:hover{background:var(--sel);color:var(--accent2)}
 .menubar{background:var(--bg3);border-bottom:1px solid var(--border);padding:0 8px;display:flex;align-items:center;height:26px;gap:0;font-size:12px;position:relative;z-index:100}
 .menu-item{position:relative;display:inline-block}
 .menu-item>span{padding:3px 10px;cursor:pointer;color:var(--text);display:block}
@@ -281,7 +284,8 @@ TMPL=r'''<!DOCTYPE html>
 <style>''' + CSS + r'''</style></head><body>
 <div class="titlebar">
 <span class="proj">PiMorph Labeler</span>
-<a href="https://github.com/okezue/EndoPiGraph-AJmorph" target="_blank" style="color:var(--text);text-decoration:none">EndoPiGraph-AJmorph</a>
+<a id="ghLink" href="https://github.com/okezue/PiMorph" target="_blank" style="color:var(--text);text-decoration:none;display:flex;align-items:center;gap:5px;padding:1px 6px;border-radius:4px;transition:background 0.2s,color 0.2s"><svg height="14" width="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg><span style="border-bottom:1px dashed var(--gutter)">PiMorph</span><span id="ghStars" style="font-size:9px;color:var(--gutter);display:none">&#9733; <span id="ghCount"></span></span></a>
+<script>fetch('https://api.github.com/repos/okezue/PiMorph').then(r=>r.json()).then(d=>{if(d.stargazers_count!==undefined){document.getElementById('ghCount').textContent=d.stargazers_count;document.getElementById('ghStars').style.display='inline'}}).catch(()=>{})</script>
 <span style="margin-left:auto;color:var(--green)">session: {{ sid[:8] }}</span>
 </div>
 <div class="menubar">
@@ -392,7 +396,7 @@ TMPL=r'''<!DOCTYPE html>
 <span style="color:var(--border)">|</span>
 <div class="menu-item" style="display:inline-block;position:relative"><span class="tbtn" style="font-size:10px;padding:1px 8px;cursor:pointer">&#11015; Download</span>
 <div class="menu-drop" style="right:0;left:auto;min-width:160px">
-<span onclick="downloadView()">Graph Overlay (SVG)</span>
+<span onclick="downloadView()">Graph Overlay (.png)</span>
 <a href="/api/cropped_bg?run={{ run }}&img={{ sel_img }}&mode=seg" download="{{ sel_img }}_segmentation.png">Segmentation (PNG)</a>
 <a href="/demo_asset?run={{ run }}&img={{ sel_img }}&file=edges.csv" download="{{ sel_img }}_edges.csv">Edges (CSV)</a>
 <a href="/demo_asset?run={{ run }}&img={{ sel_img }}&file=cells.csv" download="{{ sel_img }}_cells.csv">Cells (CSV)</a>
@@ -411,10 +415,10 @@ TMPL=r'''<!DOCTYPE html>
 <svg id="mapSvg" style="max-width:100%;max-height:100%" preserveAspectRatio="xMidYMid meet">
 <image id="mapBg" href="/api/cropped_bg?run={{ run }}&img={{ sel_img }}" x="0" y="0" width="1024" height="1024"/>
 </svg>
-<div id="edgePopup" style="display:none;position:absolute;background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:10px;z-index:50;min-width:200px;font-size:11px;box-shadow:0 4px 12px rgba(0,0,0,0.5)">
+<div id="edgePopup" style="position:absolute;background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:10px;z-index:50;width:240px;font-size:11px;box-shadow:0 4px 12px rgba(0,0,0,0.5);opacity:0;pointer-events:none;transform:translateY(8px);left:-9999px;overflow:hidden">
 <div id="popupTitle" style="color:var(--accent2);margin-bottom:6px"></div>
 <div id="popupMorph" style="margin-bottom:8px"></div>
-<div id="popupPatch" style="text-align:center;margin-bottom:8px"></div>
+<div id="popupPatch" style="text-align:center;margin-bottom:0"></div>
 <div id="popupBtns" style="display:flex;flex-wrap:wrap;gap:3px"></div>
 </div>
 </div>
@@ -464,17 +468,6 @@ function syncFilterUI(){
   });
 }
 
-window.downloadView=function(){
-  var svgEl=document.getElementById('mapSvg');
-  var clone=svgEl.cloneNode(true);
-  clone.querySelectorAll('.edge-hit').forEach(function(e){e.remove();});
-  var s=new XMLSerializer().serializeToString(clone);
-  var blob=new Blob([s],{type:'image/svg+xml'});
-  var url=URL.createObjectURL(blob);
-  var a=document.createElement('a');
-  a.href=url;a.download=imgName+'_graph_overlay.svg';
-  a.click();URL.revokeObjectURL(url);
-};
 window.tweakWidths=function(){
   var ew=parseFloat(document.getElementById('sliderEdge').value);
   var nr=parseFloat(document.getElementById('sliderNode').value);
@@ -566,25 +559,39 @@ function updateLayers(){
 
 function showPopup(e,ev){
   var popup=document.getElementById('edgePopup');
-  popup.style.display='block';
-  var rect=document.getElementById('mapWrap').getBoundingClientRect();
-  var px=ev.clientX-rect.left+12,py=ev.clientY-rect.top+12;
-  var mw=document.getElementById('mapWrap').clientWidth;
-  var mh=document.getElementById('mapWrap').clientHeight;
-  if(px+220>mw)px=px-240;if(py+200>mh)py=py-220;
-  popup.style.left=Math.max(0,px)+'px';popup.style.top=Math.max(0,py)+'px';
+  popup.style.transition='none';
+  popup.style.opacity='0';popup.style.pointerEvents='none';
+  popup.style.transform='translateY(8px)';
+  popup.style.left='-9999px';popup.style.top='-9999px';
   document.getElementById('popupTitle').textContent='Cells '+e.i+' \u2194 '+e.j+' ('+e.px+'px contact)';
   var col=CMAP[e.morph]||'#888';
   document.getElementById('popupMorph').innerHTML='PiMorph: <b style="color:'+col+'">'+e.morph+'</b>';
   var patchUrl='/demo_asset?run='+run+'&img='+imgName+'&file=../patches/patches/'+imgName+'__i_'+e.i+'__j_'+e.j+'.png';
-  document.getElementById('popupPatch').innerHTML='<img src="'+patchUrl+'" style="width:96px;height:96px;image-rendering:pixelated;border:1px solid var(--border)" onerror="this.style.display=\'none\'">';
+  var pp=document.getElementById('popupPatch');
+  pp.style.marginBottom='0';pp.innerHTML='';
+  var pi=new Image();pi.style.cssText='width:96px;height:96px;image-rendering:pixelated;border:1px solid var(--border)';
+  pi.onload=function(){pp.style.marginBottom='8px';pp.appendChild(pi);};
+  pi.onerror=function(){pp.innerHTML='';pp.style.marginBottom='0';};
+  pi.src=patchUrl;
   var btns='';
   CLASSES.forEach(function(c){
-    var col=CMAP[c]||'#888';
-    var sel=c===e.morph?'border-color:'+col+';color:'+col:'';
+    var cc=CMAP[c]||'#888';
+    var sel=c===e.morph?'border-color:'+cc+';color:'+cc:'';
     btns+='<button class="tbtn" style="font-size:9px;padding:2px 6px;'+sel+'" onclick="relabelEdge('+e.i+','+e.j+',\''+c+'\')">'+c+'</button>';
   });
   document.getElementById('popupBtns').innerHTML=btns;
+  void popup.offsetWidth;
+  var pw=popup.offsetWidth,ph=popup.offsetHeight;
+  var rect=document.getElementById('mapWrap').getBoundingClientRect();
+  var px=ev.clientX-rect.left+12,py=ev.clientY-rect.top+12;
+  var mw=document.getElementById('mapWrap').clientWidth;
+  var mh=document.getElementById('mapWrap').clientHeight;
+  if(px+pw>mw)px=px-pw-24;if(py+ph>mh)py=py-ph-24;
+  popup.style.left=Math.max(0,px)+'px';popup.style.top=Math.max(0,py)+'px';
+  void popup.offsetWidth;
+  popup.style.transition='opacity 0.15s ease,transform 0.15s ease';
+  popup.style.opacity='1';popup.style.pointerEvents='auto';
+  popup.style.transform='translateY(0)';
 }
 window.relabelEdge=function(i,j,cls){
   fetch('/api/label',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({cls:cls,map_i:i,map_j:j,map_run:run,map_img:imgName})})
@@ -592,13 +599,11 @@ window.relabelEdge=function(i,j,cls){
 };
 document.addEventListener('click',function(ev){
   var p=document.getElementById('edgePopup');
-  if(p.style.display==='block'&&!p.contains(ev.target)&&ev.target.tagName!=='circle')
-    p.style.display='none';
+  if(p.style.opacity==='1'&&!p.contains(ev.target)&&ev.target.tagName!=='circle'){
+    p.style.opacity='0';p.style.pointerEvents='none';p.style.transform='translateY(8px)';
+  }
 });
 window.downloadView=function(){
-var fmt=prompt('Format: png or tiff','png');
-if(!fmt)return;
-fmt=fmt.toLowerCase().trim();
 var svgEl=document.getElementById('mapSvg');
 var vb=svgEl.viewBox.baseVal;
 var w=vb.width||cropW,h=vb.height||cropH;
@@ -606,12 +611,13 @@ var clone=svgEl.cloneNode(true);
 clone.setAttribute('width',w);clone.setAttribute('height',h);
 clone.setAttribute('xmlns','http://www.w3.org/2000/svg');
 clone.setAttribute('xmlns:xlink','http://www.w3.org/1999/xlink');
+clone.querySelectorAll('.edge-hit').forEach(function(e){e.remove();});
 var imgs=clone.querySelectorAll('image');
 var toLoad=imgs.length;
-if(toLoad===0){renderAndSave(clone,w,h,fmt);return;}
+if(toLoad===0){renderPng(clone,w,h);return;}
 imgs.forEach(function(img){
 var href=img.getAttribute('href')||img.getAttributeNS('http://www.w3.org/1999/xlink','href');
-if(!href){toLoad--;if(toLoad===0)renderAndSave(clone,w,h,fmt);return;}
+if(!href){toLoad--;if(toLoad===0)renderPng(clone,w,h);return;}
 var xhr=new XMLHttpRequest();
 xhr.open('GET',href,true);xhr.responseType='blob';
 xhr.onload=function(){
@@ -619,12 +625,12 @@ var reader=new FileReader();
 reader.onloadend=function(){
 img.removeAttributeNS('http://www.w3.org/1999/xlink','href');
 img.setAttribute('href',reader.result);
-toLoad--;if(toLoad===0)renderAndSave(clone,w,h,fmt);
+toLoad--;if(toLoad===0)renderPng(clone,w,h);
 };reader.readAsDataURL(xhr.response);
 };xhr.send();
 });
 };
-function renderAndSave(svgNode,w,h,fmt){
+function renderPng(svgNode,w,h){
 var xml=new XMLSerializer().serializeToString(svgNode);
 var blob=new Blob([xml],{type:'image/svg+xml;charset=utf-8'});
 var url=URL.createObjectURL(blob);
@@ -633,18 +639,10 @@ img.onload=function(){
 var c=document.createElement('canvas');c.width=w;c.height=h;
 var ctx=c.getContext('2d');ctx.drawImage(img,0,0,w,h);
 URL.revokeObjectURL(url);
-if(fmt==='tiff'){
 c.toBlob(function(b){
 var a=document.createElement('a');a.href=URL.createObjectURL(b);
-a.download=imgName+'_annotated.png';a.click();
-alert('TIFF export requires server-side conversion. Saved as PNG at full resolution.');
+a.download=imgName+'_graph_overlay.png';a.click();
 },'image/png',1.0);
-}else{
-c.toBlob(function(b){
-var a=document.createElement('a');a.href=URL.createObjectURL(b);
-a.download=imgName+'_annotated.png';a.click();
-},'image/png',1.0);
-}
 };img.src=url;
 }
 init();
@@ -909,6 +907,66 @@ def demo_asset():
     if p.exists(): return send_file(str(p))
     abort(404)
 
+def _crop_matplotlib(path):
+    import numpy as np
+    from PIL import Image as PILImage
+    im=PILImage.open(str(path))
+    arr=np.array(im.convert("L")).astype(float)/255
+    rm=np.mean(arr,axis=1)
+    cm=np.mean(arr,axis=0)
+    nwr=np.where(rm<0.999)[0]
+    nwc=np.where(cm<0.999)[0]
+    if len(nwr)>0 and len(nwc)>0:
+        t0=int(nwr[0])
+        in_title=False
+        axes_top=t0
+        for r in range(t0,min(t0+200,len(rm))):
+            if rm[r]<0.999:
+                in_title=True
+            elif in_title:
+                gap_end=r
+                for r2 in range(r,min(r+30,len(rm))):
+                    if rm[r2]<0.999:
+                        axes_top=r2
+                        break
+                break
+        b=int(nwr[-1])+1
+        l=int(nwc[0])
+        r=int(nwc[-1])+1
+        im=im.crop((l,axes_top,r,b))
+    buf=io.BytesIO()
+    im.save(buf,format="PNG")
+    buf.seek(0)
+    return buf
+
+def _crop_matplotlib_bounds(path):
+    import numpy as np
+    from PIL import Image as PILImage
+    im=PILImage.open(str(path))
+    arr=np.array(im.convert("L")).astype(float)/255
+    rm=np.mean(arr,axis=1)
+    cm=np.mean(arr,axis=0)
+    nwr=np.where(rm<0.999)[0]
+    nwc=np.where(cm<0.999)[0]
+    if len(nwr)>0 and len(nwc)>0:
+        t0=int(nwr[0])
+        axes_top=t0
+        in_title=False
+        for r in range(t0,min(t0+200,len(rm))):
+            if rm[r]<0.999:
+                in_title=True
+            elif in_title:
+                for r2 in range(r,min(r+30,len(rm))):
+                    if rm[r2]<0.999:
+                        axes_top=r2
+                        break
+                break
+        b=int(nwr[-1])+1
+        l=int(nwc[0])
+        r=int(nwc[-1])+1
+        return l,axes_top,r,b
+    return 0,0,im.size[0],im.size[1]
+
 @app.route("/api/cropped_bg")
 def api_cropped_bg():
     run=request.args.get("run","")
@@ -923,7 +981,7 @@ def api_cropped_bg():
     if mode!="seg" and raw.exists():
         return send_file(str(raw),mimetype="image/png")
     if qc.exists():
-        return send_file(str(qc),mimetype="image/png")
+        return send_file(_crop_matplotlib(qc),mimetype="image/png")
     if raw.exists():
         return send_file(str(raw),mimetype="image/png")
     abort(404)
@@ -937,8 +995,10 @@ def api_map_data():
     base=_resolve_run(run,img)
     edges_f=base/"edges.csv"
     cells_f=base/"cells.csv"
-    if not edges_f.exists(): return jsonify(edges=[],cells=[])
+    if not edges_f.exists() or edges_f.stat().st_size<10:
+        return jsonify(edges=[],cells=[])
     edf=pd.read_csv(edges_f)
+    if edf.empty: return jsonify(edges=[],cells=[])
     cells=[]
     cmap_pos={}
     if cells_f.exists():
@@ -964,28 +1024,41 @@ def api_map_data():
         edges.append({"i":ci,"j":cj,"cy":ey,"cx":ex,"px":int(r["contact_px"]),"morph":m})
     patch_dir=_resolve_run(run,"patches","patches")
     has_patches=patch_dir.exists()
-    import numpy as np
-    from PIL import Image as PILImage
     from PIL import Image as PILImage
     raw_f=_resolve_run(run,img,"raw_display.png")
+    seg_f=_resolve_run(run,img,"seg_overlay.png")
     qc_f=_resolve_run(run,img,"qc_cells.png")
-    if raw_f.exists():
-        w,h=PILImage.open(str(raw_f)).size
+    if raw_f.exists() or seg_f.exists():
+        f=seg_f if seg_f.exists() else raw_f
+        cw,ch=PILImage.open(str(f)).size
+        w,h=cw,ch
+        if cells:
+            mx=max(c["x"] for c in cells)
+            my=max(c["y"] for c in cells)
+            w=int(mx*1.02)+1
+            h=int(my*1.02)+1
     elif qc_f.exists():
-        import numpy as np
-        qc=PILImage.open(str(qc_f)).convert("L")
-        arr=np.array(qc).astype(float)/255
-        rd=np.where(np.mean(arr,axis=1)<0.5)[0]
-        cd=np.where(np.mean(arr,axis=0)<0.5)[0]
-        if len(rd)>0 and len(cd)>0:
-            w=int(cd[-1]-cd[0]+1);h=int(rd[-1]-rd[0]+1)
-        else:
-            w,h=qc.size
+        cl,ct,cr,cb=_crop_matplotlib_bounds(qc_f)
+        cw=cr-cl;ch=cb-ct
+        run_dir=_resolve_run(run)
+        tif_r=run_dir/f"{img}_resized.tif"
+        tif_o=run_dir/f"{img}.tif"
+        w,h=cw,ch
+        try:
+            import tifffile
+            tf=tif_r if tif_r.exists() else (tif_o if tif_o.exists() else None)
+            if tf:
+                with tifffile.TiffFile(str(tf)) as t:
+                    s=t.pages[0].shape
+                    h,w=s[-2],s[-1]
+        except Exception:
+            pass
     else:
         w,h=1024,1024
+        cw,ch=w,h
     return jsonify(edges=edges,cells=cells,has_patches=has_patches,
                    cmap=CMAP,classes=CLASSES,img_w=w,img_h=h,
-                   crop_w=w,crop_h=h)
+                   crop_w=cw,crop_h=ch)
 
 @app.route("/label_view")
 def label_view():
@@ -1213,6 +1286,7 @@ def _run_pipeline_bg(uid,run_name,fpath,run_dir,filename):
             (g/f"{img_id}.json",img_dir/"graph.json"),
             (g/f"{img_id}.graphml",img_dir/"graph.graphml"),
             (q/f"{img_id}__qc_seg.png",img_dir/"qc_cells.png"),
+            (q/f"{img_id}__raw_display.png",img_dir/"raw_display.png"),
             (q/f"{img_id}__qc_graph.png",img_dir/"qc_graph.png"),
         ]:
             if src.exists(): shutil.copy2(str(src),str(dst))
