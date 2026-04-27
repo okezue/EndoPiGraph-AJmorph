@@ -1,10 +1,12 @@
-# Network-Level Discoveries in Endothelial Biology
+# Network-Level Findings in Endothelial Biology
 
 ## Summary
 
-Using graph/network analysis on the EndoPiGraph-AJmorph pipeline results, we identified **four robust discoveries** about how fluid shear stress reorganizes endothelial cell contact networks.
+Using graph/network analysis on the EndoPiGraph-AJmorph pipeline results, we identified **three robust findings** about how 6 dyn cm⁻² shear stress reorganizes endothelial cell contact networks relative to static. Two originally claimed effects (raw clustering coefficient, degree-occupancy correlation) were **withdrawn** after hardened per-image statistical testing.
 
 **Statistical validation:** All statistics use **per-image replicate testing** (n = number of images, not cells/edges) to avoid pseudo-replication. Effect sizes reported as rank-biserial correlation r.
+
+**Regime caveat:** These findings compare static vs 6 dyn cm⁻². The 18-20 dyn cm⁻² regime is *not* a monotonic continuation of the 6 dyn cm⁻² phenotype — see "High-shear regime" below.
 
 ---
 
@@ -105,15 +107,27 @@ Normalized clustering (C/C_random): static vs 6dyne **p = 0.68** (NOT significan
 
 ## Overall Conclusion
 
-**Flow restructures the contact network to create a more robust, interconnected tissue with mature junctions concentrated at multi-cell vertices.**
+**At 6 dyn cm⁻² relative to static, the contact network shifts toward more reticular junctions concentrated at multi-cell vertices, with tighter geometric ordering of cell area and degree.**
 
-Four discoveries survive rigorous per-image statistical testing:
-1. Clustering coefficient increases (tighter neighborhoods)
-2. Reticular junction percentage increases (stronger adhesion)
-3. All-reticular triangles increase (junction maturation at tricellular vertices)
-4. Area-degree correlation strengthens (geometric ordering)
+Three findings survive hardened per-image statistical testing:
+1. Reticular junction percentage increases
+2. All-reticular triangles increase (concentration at tricellular vertices)
+3. Area-degree correlation strengthens
 
-One original claim (degree-occupancy correlation) was **withdrawn** after proper statistical validation revealed pseudo-replication in the pooled analysis.
+Two original claims were **withdrawn** after proper statistical validation:
+- Raw clustering coefficient: 94% of variance is explained by mean degree; coefficient flips sign after density control.
+- Degree-occupancy correlation: pooled analysis suffered from pseudo-replication; per-image Wilcoxon p = 0.81.
+
+## High-shear regime is distinct, not a continuation
+
+Per-image medians on the 18-20 dyn cm⁻² subset (n = 30) are closer to static than to 6 dyn cm⁻²:
+
+| Metric | Static | 6 dyn cm⁻² | 18-20 dyn cm⁻² |
+|---|---:|---:|---:|
+| Reticular fraction (median) | 50.7% | 61.1% | 52.7% |
+| All-reticular triangles (median) | 15.9% | 25.4% | 15.5% |
+
+Subject to batch and density caveats, this is consistent with **intermediate shear producing the strongest reticular-network organization** while higher shear shifts toward a distinct regime. This is reported as exploratory in the manuscript pending balanced-batch validation.
 
 ---
 
@@ -128,7 +142,7 @@ One original claim (degree-occupancy correlation) was **withdrawn** after proper
   - |r| 0.3-0.5: medium
   - |r| > 0.5: large
 - **Confidence intervals:** Bootstrap (1000 resamples)
-- **Dataset:** 95 EGM2-treated HUVEC images (30 static, 30 6dyne, 30 20dyne, 5 unknown)
+- **Dataset:** 95 EGM2-treated HUVEC images (32 static, 30 at 6 dyn cm⁻², 33 at 18-20 dyn cm⁻²; replicate testing on the balanced 30+30 static-vs-6 dyn cm⁻² subset)
 
 ---
 

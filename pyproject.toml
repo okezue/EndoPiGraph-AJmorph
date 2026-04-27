@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "endopigraph-ajmorph"
-version = "0.1.0"
+version = "1.0.0"
 description = "EndoPiGraph-AJmorph v1: build endothelial pi-graphs and adherens-junction morphology features from microscopy images."
 readme = "README.md"
 requires-python = ">=3.10"

@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+message: "If you use PiMorph (EndoPiGraph-AJmorph) in your research, please cite this software."
+title: "PiMorph: typed endothelial junction graphs from microscopy"
+abstract: >
+  PiMorph (EndoPiGraph-AJmorph) is an open-source Python pipeline that reconstructs typed
+  endothelial cell-cell junction graphs (pi-graphs) from fluorescence microscopy. It segments
+  cell instances, infers conservative cell-cell contact graphs, extracts per-interface
+  VE-cadherin features and morphology-state labels, and optionally quantifies Golgi-nucleus
+  polarity. Validated on phase-contrast (LIVECell), H&E histology (NuInsSeg), specular
+  microscopy (cornea), and HUVEC shear-stress imaging (S-BIAD1540).
+type: software
+authors:
+  - family-names: "Bell"
+    given-names: "Okezue"
+    affiliation: "Stanford University"
+    email: okezue@stanford.edu
+  - family-names: "Bell"
+    given-names: "Anthony"
+    affiliation: "University of Pennsylvania School of Engineering and Applied Science"
+version: 1.0.0
+date-released: "2026-04-27"
+license: MIT
+repository-code: "https://github.com/okezue/EndoPiGraph-AJmorph"
+url: "https://okezue-pimorph-labeler.hf.space/"
+keywords:
+  - endothelial cells
+  - VE-cadherin
+  - adherens junctions
+  - pi-graph
+  - typed graphs
+  - junction morphology
+  - bioimage analysis
+  - cell-cell contacts
+  - shear stress
+  - reproducible pipelines
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Bell"
+      given-names: "Okezue"
+      affiliation: "Stanford University"
+      email: okezue@stanford.edu
+    - family-names: "Bell"
+      given-names: "Anthony"
+      affiliation: "University of Pennsylvania School of Engineering and Applied Science"
+  title: "PiMorph reconstructs typed endothelial junction graphs from microscopy"
+  year: 2026
+  status: in-preparation
