@@ -1,0 +1,161 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: PiMorph spatial transcriptomics pilot stack - EC2 with IAM role (no static keys), S3 project bucket, EBS scratch.
+
+Parameters:
+  ProjectName:
+    Type: String
+    Default: pimorph-spatial
+  InstanceType:
+    Type: String
+    Default: r6i.4xlarge
+    AllowedValues: [r6i.2xlarge, r6i.4xlarge, r6i.8xlarge, g5.xlarge, g5.2xlarge]
+  ScratchSizeGB:
+    Type: Number
+    Default: 4000
+    MinValue: 100
+    MaxValue: 16000
+  KeyName:
+    Type: AWS::EC2::KeyPair::KeyName
+    Description: Existing EC2 key pair for SSH (you create this in EC2 console once, never via paste).
+  AllowSshFromCidr:
+    Type: String
+    Default: 0.0.0.0/0
+    Description: Restrict to your /32 in production.
+  PublicDataBuckets:
+    Type: CommaDelimitedList
+    Default: "10x-genomics-public,visium-prod-public,sra-pub-src-1,hubmap-prod-portal"
+    Description: Public S3 buckets to grant read access.
+
+Resources:
+  ProjectBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "${ProjectName}-${AWS::AccountId}"
+      VersioningConfiguration: { Status: Enabled }
+      LifecycleConfiguration:
+        Rules:
+          - Id: ExpireScratch
+            Status: Enabled
+            Prefix: scratch/
+            ExpirationInDays: 30
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+
+  InstanceRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal: { Service: ec2.amazonaws.com }
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: ProjectBucketRW
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: [s3:ListBucket, s3:GetBucketLocation]
+                Resource: !GetAtt ProjectBucket.Arn
+              - Effect: Allow
+                Action: [s3:GetObject, s3:PutObject, s3:DeleteObject, s3:AbortMultipartUpload]
+                Resource: !Sub "${ProjectBucket.Arn}/*"
+        - PolicyName: PublicBucketRO
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: [s3:GetObject, s3:ListBucket]
+                Resource: "*"
+                Condition:
+                  StringEquals:
+                    s3:ResourceAccount:
+                      - "171759781969"
+                      - "276031509999"
+        - PolicyName: CloudWatchLogs
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: [logs:CreateLogStream, logs:PutLogEvents, logs:CreateLogGroup, logs:DescribeLogStreams]
+                Resource: "*"
+
+  InstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Roles: [!Ref InstanceRole]
+
+  SecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: PiMorph spatial pilot SG
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: !Ref AllowSshFromCidr
+      SecurityGroupEgress:
+        - IpProtocol: -1
+          CidrIp: 0.0.0.0/0
+
+  ScratchVolume:
+    Type: AWS::EC2::Volume
+    Properties:
+      AvailabilityZone: !GetAtt Instance.AvailabilityZone
+      Size: !Ref ScratchSizeGB
+      VolumeType: gp3
+      Iops: 6000
+      Throughput: 500
+      Encrypted: true
+
+  VolumeAttachment:
+    Type: AWS::EC2::VolumeAttachment
+    Properties:
+      InstanceId: !Ref Instance
+      VolumeId: !Ref ScratchVolume
+      Device: /dev/sdh
+
+  Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: !Ref InstanceType
+      KeyName: !Ref KeyName
+      IamInstanceProfile: !Ref InstanceProfile
+      SecurityGroupIds: [!Ref SecurityGroup]
+      ImageId: "{{resolve:ssm:/aws/service/canonical/ubuntu/server/22.04/stable/current/amd64/hvm/ebs-gp2/ami-id}}"
+      BlockDeviceMappings:
+        - DeviceName: /dev/sda1
+          Ebs: { VolumeSize: 80, VolumeType: gp3, Encrypted: true }
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-worker"
+        - Key: Project
+          Value: !Ref ProjectName
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          set -eux
+          apt-get update
+          apt-get install -y python3-pip python3-venv git build-essential awscli unzip
+          mkfs.ext4 -F /dev/nvme1n1 || mkfs.ext4 -F /dev/sdh || true
+          mkdir -p /scratch
+          mount /dev/nvme1n1 /scratch 2>/dev/null || mount /dev/sdh /scratch
+          chown -R ubuntu:ubuntu /scratch
+          su - ubuntu -c "git clone https://github.com/okezue/PiMorph.git /home/ubuntu/PiMorph"
+          su - ubuntu -c "cd /home/ubuntu/PiMorph && python3 -m venv .venv && .venv/bin/pip install -e .[dev]"
+          aws s3 cp s3://${ProjectBucket}/bootstrap.sh /tmp/bootstrap.sh 2>/dev/null || true
+          [ -f /tmp/bootstrap.sh ] && bash /tmp/bootstrap.sh || echo "no bootstrap.sh"
+
+Outputs:
+  BucketName:
+    Value: !Ref ProjectBucket
+  InstanceId:
+    Value: !Ref Instance
+  PublicDnsName:
+    Value: !GetAtt Instance.PublicDnsName
+  SshCommand:
+    Value: !Sub "ssh -i ~/.ssh/${KeyName}.pem ubuntu@${Instance.PublicDnsName}"
