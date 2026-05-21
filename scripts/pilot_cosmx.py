@@ -26,7 +26,7 @@ def main():
     log={}; t0=time.time()
 
     print("[1/6] loading expression matrix + metadata...",flush=True)
-    expr=load_cosmx_expr(args.expr)
+    expr=load_cosmx_expr(args.expr,max_rows=args.max_cells,max_fovs=args.limit_fovs)
     meta=load_cosmx_metadata(args.metadata)
     log["n_expr_rows"]=int(len(expr))
     log["n_meta_rows"]=int(len(meta))
