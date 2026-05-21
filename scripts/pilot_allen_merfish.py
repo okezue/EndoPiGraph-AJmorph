@@ -3,7 +3,8 @@ import argparse, json, time, sys, re
 from pathlib import Path
 import numpy as np
 import pandas as pd
-from endopigraph.centroid_graph import build_centroid_graph,edges_with_types,edge_type_counts
+from endopigraph.centroid_graph import (build_centroid_graph,edges_with_types,edge_type_counts,
+    approx_junctional_expression)
 
 ALLEN_CLASS_TO_LINEAGE={
     "IT-ET Glut":"neural","NP-CT-L6b Glut":"neural","OB-CR Glut":"neural",
@@ -46,8 +47,11 @@ def main():
     ap.add_argument("--y-col",default="y")
     ap.add_argument("--section-col",default="brain_section_label")
     ap.add_argument("--max-edge-um",type=float,default=30.0)
-    ap.add_argument("--method",choices=["delaunay","knn"],default="delaunay")
+    ap.add_argument("--method",choices=["delaunay","knn","voronoi"],default="voronoi")
     ap.add_argument("--limit-sections",type=int,default=None)
+    ap.add_argument("--h5ad",default=None,help="path to expression h5ad for approx junctional expression")
+    ap.add_argument("--junct-mode",choices=["min","geometric","product","sum"],default="min")
+    ap.add_argument("--cell-label-col",default="cell_label",help="column in h5ad obs matching metadata cell_label")
     args=ap.parse_args()
     outd=Path(args.out); outd.mkdir(parents=True,exist_ok=True)
     log={}; t0=time.time()
@@ -65,7 +69,10 @@ def main():
         cand_cls=[c for c in df.columns if "class" in c.lower() or "subclass" in c.lower()][:5]
         sys.exit(f"missing {missing}. candidates: x={cand_x}, y={cand_y}, class={cand_cls}")
 
-    df=df[[args.x_col,args.y_col,args.class_col]+([args.section_col] if args.section_col in df.columns else [])].copy()
+    keep=[args.x_col,args.y_col,args.class_col]
+    if args.section_col in df.columns: keep.append(args.section_col)
+    if "cell_label" in df.columns: keep.append("cell_label")
+    df=df[keep].copy()
     df=df.dropna(subset=[args.x_col,args.y_col]).reset_index(drop=True)
     df["lineage"]=df[args.class_col].map(_map_class)
     log["lineage_counts"]=df["lineage"].value_counts().to_dict()
@@ -98,6 +105,53 @@ def main():
     cells_out=df[[args.x_col,args.y_col,args.class_col,"lineage"]+([args.section_col] if args.section_col in df.columns else [])].copy()
     cells_out.insert(0,"cell_id",np.arange(1,len(cells_out)+1))
     cells_out.to_parquet(outd/"cell_types.parquet",index=False)
+
+    if args.h5ad:
+        print("[5/5] approx junctional expression from h5ad...",flush=True)
+        t2=time.time()
+        try: import anndata as ad
+        except ImportError:
+            print("  anndata not installed; skipping",flush=True)
+            log["junct_skipped"]="anndata missing"
+        else:
+            adata=ad.read_h5ad(args.h5ad,backed="r")
+            obs=adata.obs
+            cell_label_col=args.cell_label_col if args.cell_label_col in df.columns else "cell_label"
+            df_cells=df.copy()
+            df_cells["cell_label"]=df.get(cell_label_col,pd.RangeIndex(len(df)).astype(str))
+            adata_ix={str(c):i for i,c in enumerate(obs.index)}
+            df_cells["adata_idx"]=df_cells["cell_label"].astype(str).map(adata_ix)
+            ok=df_cells["adata_idx"].notna()
+            log["n_cells_with_expr"]=int(ok.sum())
+            if ok.sum()<100:
+                print(f"  only {ok.sum()} cells matched h5ad; skipping",flush=True)
+                log["junct_skipped"]="too few matches"
+            else:
+                rng_idx=df_cells.loc[ok,"adata_idx"].astype(int).values
+                X=adata.X[rng_idx,:]
+                try: X=X.toarray()
+                except Exception: X=np.asarray(X)
+                gene_names=[str(g) for g in adata.var.index]
+                pos_to_local={int(p):k for k,p in enumerate(np.where(ok)[0])}
+                edges_ok=edges[edges["cell_i"].isin(pos_to_local)&edges["cell_j"].isin(pos_to_local)].reset_index(drop=True)
+                if len(edges_ok)==0:
+                    log["junct_skipped"]="no edges within matched cells"
+                else:
+                    er=edges_ok.copy()
+                    er["cell_i"]=edges_ok["cell_i"].map(pos_to_local).astype(np.int64)
+                    er["cell_j"]=edges_ok["cell_j"].map(pos_to_local).astype(np.int64)
+                    cxg=pd.DataFrame(X,columns=gene_names)
+                    cxg.insert(0,"cell_id",np.arange(len(cxg)))
+                    je=approx_junctional_expression(er,cxg,mode=args.junct_mode,
+                        weight_by_contact=("contact_len_um" in edges.columns),
+                        gene_cols=gene_names)
+                    je["cell_i"]=edges_ok["cell_i"].values
+                    je["cell_j"]=edges_ok["cell_j"].values
+                    je.to_parquet(outd/"edge_junctional_expression.parquet",index=False)
+                    log["n_junct_edges"]=int(len(je))
+                    log["junct_mode"]=args.junct_mode
+                    log["junct_n_genes"]=int(len(gene_names))
+                    log["t_junct_s"]=round(time.time()-t2,2)
 
     log["total_s"]=round(time.time()-t0,2)
     (outd/"pilot_summary.json").write_text(json.dumps(log,indent=2,default=str))
