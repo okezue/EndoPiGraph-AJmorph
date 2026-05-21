@@ -14,6 +14,25 @@ def _find_one(root:Path,*names):
         if ms: return ms[0]
     return None
 
+EXCLUDE_CHANNELS={"seg","seg_wholecell","seg_nuclear","Nuclear","Au","Noodle","Fe","chan_39","chan_48","chan_70","FoxP3_nuc_include","TMEM119_nuc_exclude"}
+
+def _load_per_marker_stack(fov_dir:Path):
+    tifs=sorted([p for p in fov_dir.glob("*.tiff") if "seg" not in p.stem.lower() and "mask" not in p.stem.lower()])
+    if not tifs: return None,None,None
+    arrs=[]; names=[]
+    for p in tifs:
+        if p.stem in EXCLUDE_CHANNELS: continue
+        try:
+            a=tifffile.imread(p)
+        except Exception: continue
+        if a.ndim==3 and a.shape[0]==1: a=a[0]
+        if a.ndim!=2: continue
+        arrs.append(a.astype(np.float32))
+        names.append(p.stem)
+    if not arrs: return None,None,None
+    arr=np.stack(arrs,axis=0)
+    return arr,names,tifs[0]
+
 def _per_cell_means(arr:np.ndarray,labels:np.ndarray,channel_names:list)->pd.DataFrame:
     cids=np.unique(labels)
     cids=cids[cids>0]
@@ -40,15 +59,19 @@ def main():
     log={}; t0=time.time()
 
     print("[1/6] locating files...",flush=True)
-    img_p=_find_one(fov,"*expressions*.ome.tif","*expressions*.ome.tiff","*.ome.tif","*.ome.tiff","*expressions*.tiff","*stack*.tif*")
-    mask_p=_find_one(fov,"*_wholecell.tiff","*whole_cell*.tiff","*_mask.tiff","*labels*.tif*","*_wholecell.tif")
-    if img_p is None or mask_p is None:
+    mask_p=_find_one(fov,"*whole_cell*.tiff","*wholecell*.tiff","*_mask.tiff","*labels*.tif*","seg_wholecell.tiff")
+    if mask_p is None:
         cand=[p.name for p in fov.rglob("*.tif*")][:20]
-        sys.exit(f"missing img={img_p} mask={mask_p}\ncandidates: {cand}")
-    print(f"  img: {img_p}\n  mask: {mask_p}",flush=True)
+        sys.exit(f"missing mask\ncandidates: {cand}")
+    print(f"  mask: {mask_p}",flush=True)
+    arr,ch_names,_first=_load_per_marker_stack(fov)
+    if arr is None:
+        img_p=_find_one(fov,"*expressions*.ome.tif","*expressions*.ome.tiff","*.ome.tif","*.ome.tiff","*stack*.tif*")
+        if img_p is None: sys.exit("no markers and no stack found")
+        arr,ch_names=load_codex_image(img_p)
+    print(f"  channels: {len(ch_names)} ({ch_names[:8]}...)",flush=True)
 
-    print("[2/6] loading image + mask...",flush=True)
-    arr,ch_names=load_codex_image(img_p)
+    print("[2/6] loading mask...",flush=True)
     labels=tifffile.imread(mask_p).astype(np.int32)
     if labels.ndim==3: labels=labels[0]
     if arr.shape[-2:]!=labels.shape:
