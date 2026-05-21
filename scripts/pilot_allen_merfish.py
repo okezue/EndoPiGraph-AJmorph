@@ -28,12 +28,12 @@ def _map_class(c:str)->str:
     s=str(c)
     if s in ALLEN_CLASS_TO_LINEAGE: return ALLEN_CLASS_TO_LINEAGE[s]
     sl=s.lower()
-    if "glut" in sl or "gaba" in sl or "neur" in sl: return "neural"
-    if "astro" in sl or "oligo" in sl or "opc" in sl or "glia" in sl or "ependym" in sl: return "glia"
-    if "endo" in sl: return "endothelial"
+    if "glut" in sl or "gaba" in sl or "dopa" in sl or "sero" in sl or "imn" in sl or "neur" in sl: return "neural"
+    if "astro" in sl or "oligo" in sl or "opc" in sl or "glia" in sl or "ependym" in sl or "oec" in sl: return "glia"
+    if "vascular" in sl or "endo" in sl: return "endothelial"
     if "peri" in sl or "smc" in sl or "mural" in sl: return "mural_smc"
-    if "vlmc" in sl or "abc" in sl or "fibro" in sl: return "fibroblast"
-    if "micro" in sl or "pvm" in sl or "macro" in sl: return "myeloid"
+    if "vlmc" in sl or "fibro" in sl: return "fibroblast"
+    if "immune" in sl or "micro" in sl or "pvm" in sl or "macro" in sl: return "myeloid"
     if "lymph" in sl or "tcell" in sl: return "tcell"
     return "unassigned"
 

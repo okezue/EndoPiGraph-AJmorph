@@ -73,10 +73,10 @@ def main():
         lab,pth=spec.split("=",1)
         s,et,ct=_load(pth)
         labels.append(lab); vecs.append(_comp_vector(et,top=args.top)); cts.append(ct)
-        summs[lab]={"cells":s["n_cells_used"],"transcripts":s["n_transcripts"],
-                    "edges":s["n_edges"],"edge_types":s["n_edge_types"],
-                    "ec_cells":s.get("n_ec_cells"),"ec_edges":s.get("n_ec_edges"),
-                    "species":ct["species"].iloc[0] if len(ct) else "?"}
+        summs[lab]={"cells":s.get("n_cells_used"),"transcripts":s.get("n_transcripts","-"),
+                    "edges":s.get("n_edges"),"edge_types":s.get("n_edge_types"),
+                    "ec_cells":s.get("n_ec_cells","-"),"ec_edges":s.get("n_ec_edges","-"),
+                    "species":(ct["species"].iloc[0] if "species" in ct.columns and len(ct) else "?")}
     js=js_matrix(vecs,labels)
     lin=lineage_table(cts,labels)
     uniq=top_unique_edges(vecs,labels,k=15)
