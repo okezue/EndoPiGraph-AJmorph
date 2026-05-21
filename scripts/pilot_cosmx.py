@@ -19,6 +19,8 @@ def main():
     ap.add_argument("--junct-mode",choices=["min","geometric","product","sum"],default="min")
     ap.add_argument("--max-cells",type=int,default=None)
     ap.add_argument("--limit-fovs",type=int,default=None)
+    ap.add_argument("--max-genes",type=int,default=1000,
+        help="cap genes used in junctional matrix to top-N by variance (memory)")
     args=ap.parse_args()
     outd=Path(args.out); outd.mkdir(parents=True,exist_ok=True)
     log={}; t0=time.time()
@@ -63,9 +65,25 @@ def main():
     if len(edges)==0: sys.exit("no edges")
 
     print("[5/6] approx junctional expression...",flush=True)
+    from endopigraph.cell_typing import LINEAGES_HUMAN
+    from endopigraph.ec_call import EC_HUMAN
+    from endopigraph.vascbed import BED_MARKERS
+    keep_marker=set()
+    for v in LINEAGES_HUMAN.values(): keep_marker.update(v)
+    keep_marker.update(EC_HUMAN)
+    for v in BED_MARKERS.values(): keep_marker.update(v)
+    marker_present=[g for g in gene_cols if g in keep_marker]
+    others=[g for g in gene_cols if g not in keep_marker]
+    if len(others)>args.max_genes-len(marker_present):
+        var=cxg[others].var(numeric_only=True).sort_values(ascending=False)
+        top_var=var.index[:max(0,args.max_genes-len(marker_present))].tolist()
+    else: top_var=others
+    junct_genes=list(dict.fromkeys(marker_present+top_var))
+    log["n_junct_genes"]=len(junct_genes)
+    print(f"  junctional matrix on {len(junct_genes)} genes ({len(marker_present)} markers + {len(top_var)} top-variable)",flush=True)
     t2=time.time()
-    je=approx_junctional_expression(edges,cxg[["cell_id"]+gene_cols].copy(),
-                                    mode=args.junct_mode,weight_by_contact=True,gene_cols=gene_cols)
+    je=approx_junctional_expression(edges,cxg[["cell_id"]+junct_genes].copy(),
+                                    mode=args.junct_mode,weight_by_contact=True,gene_cols=junct_genes)
     log["t_junct_s"]=round(time.time()-t2,2)
     je.to_parquet(outd/"edge_junctional_expression.parquet",index=False)
 

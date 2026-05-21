@@ -16,7 +16,19 @@ def load_cosmx_metadata(p)->pd.DataFrame:
     return df
 
 def load_cosmx_expr(p,*,index_cols=("cell_ID","fov","cell"))->pd.DataFrame:
-    df=pd.read_csv(p,compression="infer",low_memory=False)
+    import pyarrow as pa
+    import pyarrow.csv as pcsv
+    import gzip
+    op=gzip.open(str(p),"rt") if str(p).endswith(".gz") else open(str(p),"rt")
+    with op as f: header=[h.strip() for h in f.readline().rstrip("\n").split(",")]
+    id_cols=set(index_cols)|{"CellId","CellID"}
+    types={}
+    for h in header:
+        types[h]=pa.int32() if h not in id_cols else pa.int64()
+    tbl=pcsv.read_csv(str(p),
+        read_options=pcsv.ReadOptions(use_threads=True,block_size=1<<27),
+        convert_options=pcsv.ConvertOptions(column_types=types))
+    df=tbl.to_pandas()
     df.columns=[c.strip() for c in df.columns]
     return df
 
