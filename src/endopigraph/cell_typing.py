@@ -17,7 +17,7 @@ LINEAGES_HUMAN={
     "neural":["MAP2","RBFOX3","SYN1","NEFL","SLC17A7","GAD1","GAD2","TH","CHAT"],
     "glia":["GFAP","AQP4","S100B","MBP","PLP1","MOG","OLIG1","OLIG2"],
     "hepatocyte":["ALB","TTR","APOA1","APOA2","HNF4A","CYP3A4"],
-    "tumor_breast":["ESR1","ERBB2","MKI67","FOXA1","GATA3","TFF1","TFF3"],
+    "tumor_breast":["ESR1","ERBB2","FOXA1","GATA3"],
     "proliferating":["MKI67","TOP2A","PCNA","CCNB1","CDK1","BIRC5","UBE2C"],
 }
 

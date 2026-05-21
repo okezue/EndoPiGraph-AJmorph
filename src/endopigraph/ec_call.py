@@ -18,7 +18,7 @@ def _resolve_markers(cols,species="auto"):
     ly=LYMPH_HUMAN if sp=="human" else LYMPH_MOUSE
     return [g for g in ec if g in cs],[g for g in ly if g in cs],sp
 
-def call_ec(cell_x_gene:pd.DataFrame,*,species="auto",min_markers=3,
+def call_ec(cell_x_gene:pd.DataFrame,*,species="auto",min_markers=2,
             post_threshold=0.85,min_total_counts=5,random_state=0):
     df=cell_x_gene
     gcols=[c for c in df.columns if c!="cell_id"]
