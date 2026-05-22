@@ -13,9 +13,24 @@ js_mat<-as.matrix(js[,-1]); rownames(js_mat)<-js$dataset
 edge_cons<-fread(file.path(in_dir,"tables","edge_type_conservation.csv"))
 lin<-fread(file.path(in_dir,"tables","lineage_fractions.csv"))
 pair<-fread(file.path(in_dir,"tables","pair_classification.csv"))
-bnd_col<-fread("runs/cross_dataset_v10/boundary_vs_body/xenium_colon/boundary_vs_body.csv")
-bnd_brain<-fread("runs/cross_dataset_v10/boundary_vs_body/xenium_mouse_brain/boundary_vs_body.csv")
-bnd_mibi<-tryCatch(fread("runs/cross_dataset_v10/boundary_vs_body/mibi_glioma/boundary_vs_body_mibi.csv"),error=function(e) NULL)
+find_bnd<-function(fname){
+  for(p in c(file.path(in_dir,"..","boundary_vs_body","xenium_colon",fname),
+             file.path(in_dir,"..","boundary_vs_body","xenium_mouse_brain",fname),
+             file.path(in_dir,"..","boundary_vs_body","mibi_glioma",fname),
+             file.path(in_dir,"..","..","02_tables","boundary_vs_body",fname),
+             file.path("runs/cross_dataset_v10/boundary_vs_body",fname),
+             file.path("02_tables/boundary_vs_body",fname))){
+    if(file.exists(p)) return(p)
+  }
+  NULL
+}
+read_bnd<-function(p) if(!is.null(p)&&file.exists(p)) fread(p) else NULL
+bnd_col<-read_bnd(find_bnd("xenium_colon/boundary_vs_body.csv"))
+if(is.null(bnd_col)) bnd_col<-read_bnd(find_bnd("xenium_colon_boundary_vs_body.csv"))
+bnd_brain<-read_bnd(find_bnd("xenium_mouse_brain/boundary_vs_body.csv"))
+if(is.null(bnd_brain)) bnd_brain<-read_bnd(find_bnd("xenium_mouse_brain_boundary_vs_body.csv"))
+bnd_mibi<-read_bnd(find_bnd("mibi_glioma/boundary_vs_body_mibi.csv"))
+if(is.null(bnd_mibi)) bnd_mibi<-read_bnd(find_bnd("boundary_vs_body_mibi.csv"))
 
 plat_colors<-setNames(brewer.pal(8,"Set1")[seq_len(uniqueN(ds_meta$platform))],sort(unique(ds_meta$platform)))
 tiss_colors<-setNames(brewer.pal(8,"Set2")[seq_len(uniqueN(ds_meta$tissue))],sort(unique(ds_meta$tissue)))
@@ -43,8 +58,8 @@ panB<-ggplot(pair,aes(group,js,fill=group))+
   theme_bw()+
   theme(axis.text.x=element_text(angle=18,hjust=1,size=8),legend.position="none")+
   labs(x=NULL,y="JS distance",
-       title="B. Same-tissue cross-platform pulls tightest (n=5, median 0.62)",
-       subtitle="Wilcoxon same-tissue vs different-tissue: p = 0.018 (allen_merfish now correctly labeled brain)")
+       title="B. Same-tissue cross-platform is the tightest class",
+       subtitle="n=5 pairs, median 0.62 (vs 0.83/0.84 elsewhere); Wilcoxon p = 0.018")
 
 bnd_col<-bnd_col[!grepl("^BLANK_|^NegControl|^antisense_|^UnassignedCodeword",gene)][n_cells_used>=100]
 bnd_col<-bnd_col[order(-mean_boundary_frac)]
@@ -58,10 +73,10 @@ panC<-ggplot(bnd_col,aes(rank,mean_boundary_frac))+
   geom_hline(yintercept=mean(bnd_col$mean_boundary_frac),linetype="dashed",color="grey30")+
   geom_text_repel(aes(label=gene_lab),size=3.0,max.overlaps=40,segment.alpha=0.5)+
   theme_bw()+theme(legend.position="none")+
-  labs(x=sprintf("Gene rank in Xenium colon (n=%d, full panel)",nrow(bnd_col)),
+  labs(x=sprintf("Gene rank (n=%d expressed non-control)",nrow(bnd_col)),
        y="Mean boundary fraction",
-       title="C. Xenium colon — epithelial perimeter/membrane dominates boundary ranking",
-       subtitle="EPCAM 1, CD24 2, KRT8 3, PIGR 4, MUC12 11, CDH1 14, REG4 24, CTNNB1 34; ACTA2 69, CD3D 203")
+       title="C. Xenium colon: epithelial surface/AJ genes rank high at boundaries",
+       subtitle=sprintf("EPCAM 1/%d, CD24 2, KRT8 3, PIGR 4, MUC12 11, CDH1 14, REG4 24, CTNNB1 34; ACTA2 69, CD3D 203",nrow(bnd_col)))
 
 bnd_brain<-bnd_brain[!grepl("^BLANK_|^NegControl|^antisense_|^UnassignedCodeword",gene)][n_cells_used>=100]
 bnd_brain<-bnd_brain[order(-mean_boundary_frac)]
@@ -75,10 +90,10 @@ panD<-ggplot(bnd_brain,aes(rank,mean_boundary_frac))+
   geom_hline(yintercept=mean(bnd_brain$mean_boundary_frac),linetype="dashed",color="grey30")+
   geom_text_repel(aes(label=gene_lab),size=3.0,max.overlaps=40,segment.alpha=0.5)+
   theme_bw()+theme(legend.position="none")+
-  labs(x=sprintf("Gene rank in Xenium mouse brain (n=%d, full panel)",nrow(bnd_brain)),
+  labs(x=sprintf("Gene rank (n=%d expressed non-control)",nrow(bnd_brain)),
        y="Mean boundary fraction",
-       title="D. Xenium MB — Aqp4 modest at RNA boundary, Cldn5 low",
-       subtitle="Dcn 2, Igf2 4, Acta2 5, Slc17a7 12, Gad1 13, Gfap 19, Aqp4 30 (upper-quartile by mean but median 0); Pecam1 136, Cldn5 138")
+       title="D. Xenium MB: Aqp4 modest, Cldn5 low — RNA-level boundary inconclusive",
+       subtitle=sprintf("Dcn 2/%d, Igf2 4, Acta2 5, Slc17a7 12, Gad1 13, Gfap 19, Aqp4 30 (median 0); Pecam1 136, Cldn5 138",nrow(bnd_brain)))
 
 null_summary<-data.table(
   panel=c("Brain 3-platform","Brain Xe x Allen","Brain Xe x Stereo","Brain Allen x Stereo",
@@ -93,8 +108,8 @@ panE<-ggplot(null_summary,aes(x=reorder(panel,neglogp),y=neglogp))+
   geom_text(aes(label="(panel bg: 0 enriched)",y=0.5),hjust=0,size=2.7,color="grey30")+
   theme_bw()+
   labs(x=NULL,y="-log10(p), whole-genome background",
-       title="E. GO enrichment evaporates with proper panel background",
-       subtitle="All 6 whole-genome enrichments collapse to ZERO terms with shared-panel background.")
+       title="E. GO enrichment evaporates under proper background",
+       subtitle="6 whole-genome enrichments (730 sig. terms total) → 0 terms with shared-panel bg")
 
 if(!is.null(bnd_mibi)){
   bnd_mibi<-bnd_mibi[order(-median_ratio_bnd_over_body)][n_cells_used>=100]
@@ -148,8 +163,8 @@ GGGHHH
 
 big<-panA+panB+panC+panD+panE+panF+panG+panH+
   plot_layout(design=design_str)+
-  plot_annotation(title="PiMorph cross-platform typed-edge spatial transcriptomics — v3",
-                  subtitle="10 datasets · 6 platforms · 7 tissues · 2 species. (E) shows the GO enrichment evaporates under proper panel background; (C) is the direct boundary-vs-body validation in full Xenium colon panel. Replaces v1 GO 'cell junction' headline.",
+  plot_annotation(title="PiMorph typed-edge spatial transcriptomics — cross-platform validation (v3)",
+                  subtitle="10 datasets · 6 platforms · 7 tissues · 2 species. (C) full-panel boundary-vs-body in Xenium colon; (E) GO claim withdrawn under panel-bg null.",
                   theme=theme(plot.title=element_text(face="bold",size=14)))
 
 ggsave(out_pdf,big,width=17,height=22,limitsize=FALSE)

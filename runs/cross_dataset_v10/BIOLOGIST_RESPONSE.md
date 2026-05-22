@@ -28,7 +28,7 @@ I re-ran g:Profiler with the **shared-panel gene universe** as the explicit cust
 | Brain Xenium ↔ Stereo-seq (246 shared) | GO:CC neuron projection (p = 2.7 × 10⁻⁷) | **0 enriched terms** |
 | Brain Allen ↔ Stereo-seq (491 shared) | GO:BP synaptic signaling (p = 6.4 × 10⁻⁸) | **0 enriched terms** |
 | Colon Xenium ↔ CosMx (98 shared) | GO:CC extracellular space (p = 8.2 × 10⁻¹⁵) | **0 enriched terms** |
-| Breast Xenium ↔ Visium (307 shared) | GO:BP regulation of cell adhesion (p = 6.3 × 10⁻⁹) | **0 enriched terms** |
+| Breast Xenium ↔ Visium (307 shared) | GO:CC extracellular exosome (p = 6.0 × 10⁻⁹) | **0 enriched terms** |
 
 **The "cell junction at p = 5.3 × 10⁻¹⁴" headline was circular.** The shared brain panels are themselves enriched for neural/junctional markers by panel design. PiMorph's top-50 is not statistically distinguishable from the rest of the shared panel under the correct background.
 
@@ -51,9 +51,9 @@ You flagged in round 2 that v2's `boundary_vs_body.py` was capped at `--max-gene
 | 24 | REG4 | 0.361 | deep-crypt secretory |
 | **34** | CTNNB1 | 0.341 | **β-catenin — adherens junction** |
 | 69 | ACTA2 | 0.270 | cytoplasmic α-SMA |
-| 203 | CD3D | 0.179 | cytoplasmic T-cell marker |
+| 203 | CD3D | 0.179 | T-cell lineage / TCR-complex marker |
 
-**Reframed (per your suggestion):** epithelial membrane / surface / secretory / AJ genes dominate the boundary ranking — EPCAM, CD24, KRT8, PIGR all in the top 4 of 362; MUC12, CDH1 in top 14; REG4 + CTNNB1 in top 34; ACTA2 + CD3D well below. The previous statement that "KRT8/PIGR/REG4/MUC12 are not in the Xenium colon panel" was **wrong** — they are, and they confirm the broader colon-epithelial-perimeter biology.
+**Reframed (per your suggestion):** epithelial membrane / surface / secretory / AJ genes are *concentrated at the top* of the boundary ranking — EPCAM, CD24, KRT8, PIGR all in the top 4 of 362; MUC12 at 11, CDH1 at 14; REG4 at 24, CTNNB1 at 34; ACTA2 (69) and CD3D (203) well below. The top-10 also includes proliferation / housekeeping genes (`HMGB2`, `RRM2`, `TUBA1A`, `C1QBP`) so "concentrated at the top" is more accurate than "fully dominates." The previous statement that "KRT8/PIGR/REG4/MUC12 are not in the Xenium colon panel" was **wrong** — they are, and they confirm the broader colon-epithelial-perimeter biology.
 
 This is the most defensible single result in the package: a direct, pre-specified test that puts the right gene categories at the right end of the ranking.
 
@@ -118,7 +118,7 @@ The same-tissue-cross-platform class now has the 3 brain pairs (Xenium MB ↔ Al
 
 ## 8. The revised headline
 
-> **A direct boundary-vs-body test in Xenium colon places epithelial membrane / surface and adherens-junction genes at the top of the full expressed panel (EPCAM 1/362, CD24 2/362, KRT8 3/362, PIGR 4/362, MUC12 11/362, CDH1 14/362, REG4 24/362, CTNNB1 34/362), while the original GO enrichment claim disappears under the correct panel-background null (0 of 1,213 enriched terms remain). Mouse brain is ambiguous at the RNA boundary level (Aqp4 rank 30/247, Cldn5 rank 138/247) and should be validated at the protein level.**
+> **A direct boundary-vs-body test in Xenium colon places epithelial membrane / surface and adherens-junction genes at the top of the full expressed panel (EPCAM 1/362, CD24 2/362, KRT8 3/362, PIGR 4/362, MUC12 11/362, CDH1 14/362, REG4 24/362, CTNNB1 34/362), while the original GO enrichment claim disappears under the correct panel-background null: across the six cross-platform panels tested with the shared-panel background, zero of 730 whole-genome enriched terms remain significant. Mouse brain is ambiguous at the RNA boundary level (Aqp4 rank 30/247, Cldn5 rank 138/247) and should be validated at the protein level.**
 
 That replaces the v1 "cell junction at p = 5.3 × 10⁻¹⁴" line as the paper's headline.
 

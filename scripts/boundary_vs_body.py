@@ -31,7 +31,8 @@ def main():
     ap.add_argument("--edges",required=True,help="edges_typed.parquet")
     ap.add_argument("--cell-types",required=True)
     ap.add_argument("--out",required=True)
-    ap.add_argument("--max-genes",type=int,default=200)
+    ap.add_argument("--max-genes",type=int,default=None,
+        help="optional cap on the gene set; default is to rank against every numeric gene column")
     args=ap.parse_args()
     out=Path(args.out); out.mkdir(parents=True,exist_ok=True)
 
@@ -42,7 +43,7 @@ def main():
     cxg_gene_cols=[c for c in cxg.columns if c not in("cell_id","barcode","fov","x","y","x_px","y_px","in_tissue","array_row","array_col","pxl_row_in_fullres","pxl_col_in_fullres") and pd.api.types.is_numeric_dtype(cxg[c])]
     shared=[g for g in cxg_gene_cols if g in ed_gene_cols]
     print(f"shared genes (cells_x_gene ∩ edges_typed): {len(shared)}")
-    if len(shared)>args.max_genes:
+    if args.max_genes is not None and len(shared)>args.max_genes:
         var=cxg[shared].var(numeric_only=True).sort_values(ascending=False)
         markers={"Aqp4","Gfap","Cdh5","Vwf","Pecam1","Slc17a7","Gad1","Gad2","Epha4","Nrn1","Calb1",
                  "Pvalb","Cldn5","Nr2f2","Cd31","Olig2","Mbp","Plp1","Aif1","P2ry12","Rbfox3","Map2",
@@ -52,6 +53,7 @@ def main():
         keep_n=max(0,args.max_genes-len(shared_m))
         topvar=var.reindex(rest).dropna().head(keep_n).index.tolist()
         shared=sorted(set(shared_m+topvar),key=lambda g:-cxg[g].sum())
+        print(f"capped to {len(shared)} genes via --max-genes {args.max_genes}")
     print(f"analyzing {len(shared)} genes")
 
     cb=per_cell_boundary_sum(Path(args.edges),shared)
@@ -76,7 +78,14 @@ def main():
                      float(body_sub[mask,k].mean()),int(mask.sum())))
     out_df=pd.DataFrame(rows,columns=["gene","median_boundary_frac","mean_boundary_frac",
                                       "p25","p75","mean_cell_total","n_cells_used"])
-    out_df=out_df.sort_values("median_boundary_frac",ascending=False)
+    scored=out_df[out_df["n_cells_used"]>=100].copy()
+    scored=scored[~scored["gene"].astype(str).str.match(r"^(BLANK_|NegControl|UnassignedCodeword|antisense_)")]
+    scored=scored.sort_values("mean_boundary_frac",ascending=False)
+    scored["rank_mean_boundary_frac"]=np.arange(1,len(scored)+1)
+    scored=scored.sort_values("median_boundary_frac",ascending=False)
+    scored["rank_median_boundary_frac"]=np.arange(1,len(scored)+1)
+    out_df=out_df.merge(scored[["gene","rank_mean_boundary_frac","rank_median_boundary_frac"]],on="gene",how="left")
+    out_df=out_df.sort_values("mean_boundary_frac",ascending=False,na_position="last")
     out_df.to_csv(out/"boundary_vs_body.csv",index=False)
     print(out_df.head(30).to_string(index=False))
     print()
