@@ -1,0 +1,36 @@
+=== Summary statistics ===
+
+Datasets: 10
+Edge types observed: 122
+Platforms: CosMx, MERFISH, MIBI, Stereo-seq, Visium, Xenium
+Tissues: brain, brain_tumor, breast, colon, embryo, pancreas
+Species: human, mouse
+
+JS distance summary by class:
+                                  group     n    median      mean       min
+                                 <char> <int>     <num>     <num>     <num>
+1:      different tissue, same platform     5 0.8330483 0.7317917 0.4192372
+2: different tissue, different platform    35 0.8430180 0.8362700 0.5423033
+3:      same tissue, different platform     5 0.6211859 0.6424133 0.4842355
+         max
+       <num>
+1: 0.8911978
+2: 1.0000000
+3: 0.8082598
+
+Wilcoxon: same vs different tissue: p= 0.0183 
+Wilcoxon: same vs different platform: p= 0.428 
+
+Most conserved edge types (top 10):
+                  edge_type n_datasets  mean_frac   max_frac   cv_frac
+                     <char>      <num>      <num>      <num>     <num>
+ 1:  unassigned__unassigned          9 0.28822129 0.81138278 0.8374669
+ 2: endothelial__unassigned          8 0.02345206 0.11673152 1.4910772
+ 3:  fibroblast__unassigned          7 0.04084482 0.14852554 1.1813666
+ 4:  fibroblast__fibroblast          5 0.04954057 0.41757204 2.6215276
+ 5:     myeloid__unassigned          5 0.01195463 0.06128819 1.5668983
+ 6:          neural__neural          4 0.09741328 0.46209872 1.7224445
+ 7:  epithelial__unassigned          4 0.04811940 0.23623131 1.6561904
+ 8:      neural__unassigned          3 0.04788527 0.28389498 2.0666305
+ 9:  epithelial__epithelial          3 0.04653931 0.38057162 2.5721210
+10:            glia__neural          3 0.03366467 0.24446687 2.2989743

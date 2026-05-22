@@ -1,25 +1,27 @@
-# Response to biologist review — 2026-05-22
+# Response to biologist review — 2026-05-22 (v3)
 
 ## TL;DR for the biologist
 
-You were right on **all three** numerical corrections — confirmed below. The panel-background null result is **negative** (your suspicion held). The boundary-vs-body test is **positive for colon** and **mixed for brain** — full numbers below. Updating the framing now.
+You were right on **every** correction across both review rounds. The framework now stands on:
+(a) the **panel-background null**, which correctly invalidates the original GO claim, and
+(b) the **full-panel boundary-vs-body rank** in Xenium colon, where epithelial membrane / surface / AJ genes dominate the top of the ranking. Brain is honestly framed as ambiguous at the RNA level, not as a clean negative.
 
-## 1. Edge-count corrections (you were right)
+This file replaces both the v1 cover-letter claims and the v2 first-pass response. Major changes vs v2 listed in §6.
 
-| Edge type | I quoted | Actual (verified from `edge_type_summary.parquet`) |
+## 1. Edge-count corrections (v1 → verified)
+
+| Edge type | v1 cover letter | Actual (verified from `edge_type_summary.parquet`) |
 |---|---|---|
 | `endothelial__glia`, Allen MERFISH | 826,004 (whole-brain run) | **60,828** (3-section subset run used in this package) |
 | `endothelial__glia`, Xenium MB | 12 (was from a 1 mm² pilot tile) | **1,644** (full-tissue run) |
 | `endothelial__glia`, Stereo-seq MB | 299 ✓ | 299 ✓ |
 | "B-cell ↔ endothelial in CosMx colon, 6,828" | wrong | **`bcell__epithelial = 6,828`**; `bcell__endothelial = 231` |
 
-The cover letter mixed up cohorts (subset vs full-brain Allen) and pulled the breast-tile B-cell figure. Apologies — those are corrected in the next package.
-
 ## 2. Panel-background null: enrichment evaporates
 
-I re-ran g:Profiler exactly as you proposed, **using the shared panel universe as the background** (g:Profiler's `custom` domain_scope with the explicit gene list), and:
+I re-ran g:Profiler with the **shared-panel gene universe** as the explicit custom background (g:Profiler `domain_scope = custom`):
 
-| Panel | Whole-genome background top hit | Shared-panel background top hit |
+| Panel | Whole-genome bg top hit | Shared-panel bg top hit |
 |---|---|---|
 | Brain 3-platform (90 shared) | GO:CC cell junction (p = 5.3 × 10⁻¹⁴) | **0 enriched terms** |
 | Brain Xenium ↔ Allen (90 shared) | GO:CC cell junction (p = 1.2 × 10⁻¹⁵) | **0 enriched terms** |
@@ -28,94 +30,96 @@ I re-ran g:Profiler exactly as you proposed, **using the shared panel universe a
 | Colon Xenium ↔ CosMx (98 shared) | GO:CC extracellular space (p = 8.2 × 10⁻¹⁵) | **0 enriched terms** |
 | Breast Xenium ↔ Visium (307 shared) | GO:BP regulation of cell adhesion (p = 6.3 × 10⁻⁹) | **0 enriched terms** |
 
-**The "cell junction at p = 5.3 × 10⁻¹⁴" headline was driven entirely by the fact that the shared brain panels are themselves enriched for neural/junctional markers.** Once the proper background is used, PiMorph's top-50 is not statistically distinguishable from the rest of the shared panel.
+**The "cell junction at p = 5.3 × 10⁻¹⁴" headline was circular.** The shared brain panels are themselves enriched for neural/junctional markers by panel design. PiMorph's top-50 is not statistically distinguishable from the rest of the shared panel under the correct background.
 
 Raw outputs in `02_tables/null_panel_bg/`.
 
-The conclusion to update: **PiMorph's typed-edge framework still produces a biologically coherent gene list (your bucketing of brain top-20 confirms this), but the GO test as I framed it was not evidence for that — it was a circular consequence of panel design.**
+## 3. Boundary-vs-cell-body rank — full panel (v3 correction over v2)
 
-## 3. Boundary-vs-cell-body fraction — direct test for Xenium
+You flagged in round 2 that v2's `boundary_vs_body.py` was capped at `--max-genes 200`, so the reported ranks (e.g., "rank 5 of 124") were from a variance-selected subset, not the full panel. I removed the cap and re-ran.
 
-You explicitly asked for this. Run on the two Xenium datasets where we have real transcript-band integration in `edges_typed.parquet` (not just centroid-Voronoi).
+### Xenium **human colon** — full panel, 362 expressed non-control genes:
 
-**Metric:** for each cell, sum boundary-band transcript counts (from edges_typed) across all its edges → boundary count; compare to cell-body total in `cells_x_gene`. Per gene, take the mean across cells of `boundary / max(boundary, body)`. Higher = transcripts more concentrated in the dilated boundary band relative to cell interior.
+| Rank | Gene | mean boundary fraction | Note |
+|---|---|---:|---|
+| **1** | EPCAM | 0.486 | epithelial membrane |
+| **2** | CD24 | 0.475 | GPI-anchored apical |
+| **3** | KRT8 | 0.461 | cytokeratin — also strong here (note: previously suspected as cytoplasm artifact, but **it is in the panel and the ranking puts it 3rd**) |
+| **4** | PIGR | 0.455 | polarized epithelial transcytosis receptor |
+| 11 | MUC12 | 0.389 | cell-surface mucin |
+| **14** | CDH1 | 0.379 | **E-cadherin — adherens junction** |
+| 24 | REG4 | 0.361 | deep-crypt secretory |
+| **34** | CTNNB1 | 0.341 | **β-catenin — adherens junction** |
+| 69 | ACTA2 | 0.270 | cytoplasmic α-SMA |
+| 203 | CD3D | 0.179 | cytoplasmic T-cell marker |
 
-### Xenium **human colon** (124 genes passing n_cells ≥ 100 filter):
+**Reframed (per your suggestion):** epithelial membrane / surface / secretory / AJ genes dominate the boundary ranking — EPCAM, CD24, KRT8, PIGR all in the top 4 of 362; MUC12, CDH1 in top 14; REG4 + CTNNB1 in top 34; ACTA2 + CD3D well below. The previous statement that "KRT8/PIGR/REG4/MUC12 are not in the Xenium colon panel" was **wrong** — they are, and they confirm the broader colon-epithelial-perimeter biology.
 
-| Rank | Gene | mean boundary fraction |
-|---|---|---:|
-| **1** | **EPCAM** | **0.486** |
-| **2** | **CD24** | **0.475** |
-| 3 | CR2 | 0.436 |
-| 4 | C1QBP | 0.414 |
-| **5** | **CDH1** | **0.379** |
-| 6 | CA2 | 0.371 |
-| 7 | CTSB | 0.369 |
-| 8 | AQP1 | 0.369 |
-| **13** | **CTNNB1** | **0.341** |
-| 24 | ACTA2 (cytoplasmic α-SMA) | 0.270 |
-| 74 | CD3D (cytoplasmic T-cell marker) | 0.179 |
+This is the most defensible single result in the package: a direct, pre-specified test that puts the right gene categories at the right end of the ranking.
 
-`EPCAM, CD24, CDH1, CTNNB1` — the canonical membrane / adherens-junction set — rank **1st, 2nd, 5th, and 13th out of 124**. ACTA2 (cytoplasmic intermediate filament–adjacent) sits at rank 24, CD3D (cytoplasmic T-cell marker) at rank 74. This is the cleanest result in the response: **the AJ-complex genes you specifically called out (CDH1 + CTNNB1) sit in the top 11 % of all panel genes by boundary fraction, while cytoplasmic markers don't.**
+### Xenium **mouse brain** — full panel, 247 expressed non-control genes:
 
-KRT8 / PIGR / REG4 — your "abundance vs junction" suspects — are not in the Xenium colon panel, so the direct boundary test can't adjudicate them. The cross-platform conservation we reported was driven by the CosMx panel having them, not the Xenium panel.
+| Rank | Gene | mean boundary fraction | Note |
+|---|---|---:|---|
+| 2 | Dcn | 0.242 | perivascular ECM |
+| 4 | Igf2 | 0.227 | growth factor |
+| 5 | Acta2 | 0.219 | mural |
+| 12 | Slc17a7 | 0.176 | vesicular glutamate transporter |
+| 13 | Gad1 | 0.169 | GABAergic |
+| 19 | Gfap | 0.156 | astrocyte intermediate filament |
+| **30** | **Aqp4** | **0.148** | **astrocyte endfoot water channel** |
+| 136 | Pecam1 | 0.101 | EC |
+| 138 | Cldn5 | 0.099 | tight junction |
 
-### Xenium **mouse brain** (only 34 genes passing the filter, because the 248-gene panel doesn't include `Cdh5`, `Vwf`, `Actb`, `Gapdh` etc.):
+**Reframed (per your v3 review):** Aqp4 is upper-quartile (rank 30 / 247 = top 12%) but with **median boundary fraction of zero** — call it **modest / ambiguous** at the RNA boundary level, not a clean negative as v2 said. Cldn5 (rank 138) is the actual negative. The proper read:
 
-| Rank | Gene | mean boundary fraction |
-|---|---|---:|
-| 1 | Dcn (perivascular ECM) | 0.242 |
-| 2 | Aldh1a2 | 0.236 |
-| 3 | Igf2 | 0.227 |
-| 4 | Acta2 (mural) | 0.219 |
-| 5 | **Slc17a7** | **0.176** |
-| 6 | **Gad1** | **0.169** |
-| 7 | Nrn1 | 0.168 |
-| 9 | **Gfap** | **0.156** |
-| **15** | **Aqp4** | **0.148** |
-| 16 | Epha4 | 0.147 |
-| 23 | Pecam1 | 0.101 |
-| 24 | Cldn5 | 0.099 |
+> Xenium mouse brain does not cleanly validate perivascular Aqp4/Cldn5 RNA boundary localization. Aqp4 shows only modest boundary signal and Cldn5 is low; the known biology still points to protein-level AQP4 validation rather than an RNA-boundary claim.
 
-**Aqp4 is rank 15/34 — mid-pack, not boundary-enriched.** You called this the strongest interface-compatible hit, and the direct boundary-vs-body test does **not** support that on this Xenium dataset. Possible explanations:
+## 4. Cross-platform pair statistics — corrected with `allen_merfish` properly tagged as brain
 
-- Xenium cell segmentation likely collapses thin astrocyte endfeet into "background" or into the adjacent vascular cell, so Aqp4-on-endfoot transcripts get attributed to the wrong cell or lost
-- 2-px boundary-band dilation may not capture the very thin perivascular endfoot
-- Aqp4 mRNA, unlike AQP4 protein, may not be specifically polarized to the endfoot (mRNA traffics differently from protein)
-- The Xenium MB panel design + 1 µm/transcript localization precision puts a ceiling on the spatial signal
+A separate metadata bug: `allen_merfish` was tagged `tissue = other` in v1/v2 because the R script's regex didn't include `^allen`. After fixing (regex now matches `allen` → brain):
 
-This is concrete evidence for your point that **PiMorph's RNA-based boundary signal is not a substitute for direct AQP4 protein IF**, and that the AQP4 hit reported earlier is more "Aqp4 cells participate in this contact" than "Aqp4 mRNA is concentrated at the contact band."
+| Comparison class | v2 quoted | v3 corrected |
+|---|---|---|
+| Same tissue, different platform | n = 3, median JS = 0.51 | **n = 5, median JS = 0.62, p_wilcoxon = 0.018** |
+| Different tissue, same platform | n = 5, median 0.83 | n = 5, median 0.83 (unchanged) |
+| Different tissue, different platform | n = 37, median 0.84 | n = 35, median 0.84 |
+| PERMANOVA, tissue alone, R² | 0.808, p = 0.0097 | **0.710, p = 0.0088** |
 
-`Cldn5` (tight-junction marker, expected to be boundary-enriched) is rank 24 — same conclusion: RNA boundary signal for Cldn5 doesn't track the known protein junction localization.
+The same-tissue-cross-platform class now has the 3 brain pairs (Xenium MB ↔ Allen ↔ Stereo-seq) plus colon (Xenium ↔ CosMx) plus breast (Xenium ↔ Visium). The qualitative story — same-tissue cross-platform is the tightest class — survives; the numbers tighten because the brain trio adds two pairs.
 
-**Brain boundary signal is weaker overall — all mean boundary fractions are 0.07–0.25 — versus colon at 0.18–0.49.** This is partly because brain cells are smaller / segmentation is harder / Xenium panel is leaner, and partly because mRNA localization probably IS less polarized than protein.
+## 5. Updated framing — what's in vs out (v3)
 
-## 4. Updated framing — what's in vs out
-
-| Claim from cover letter | Updated framing |
+| Claim | Updated framing |
 |---|---|
-| "GO 'cell junction' at p = 5.3 × 10⁻¹⁴ validates PiMorph" | **Withdrawn.** The result was a panel-design artifact; the proper-background test gives zero enriched terms across all panels. |
-| "PiMorph rediscovers the molecular signature of the neurovascular unit" | **Softened to** "PiMorph's top conserved brain edge-band genes recover a neurovascular + synaptic contact *ecology* — the cell types and genes that participate in the contacts — rather than necessarily junction-localized molecules." |
-| "Junctional gene expression" (centroid datasets) | Renamed to **"contact-weighted co-expression"**: `min(e_i, e_j) × contact_len_um` is the smaller-of-two-cells expression weighted by shared boundary length. It is a contact-aware *co-expression* proxy, not a measured boundary-band density. |
-| "CDH1 + CTNNB1 are the textbook AJ proteins" | **Strengthened.** The new boundary-vs-body test (Xenium colon, n=124 genes) puts them at ranks 5 and 13 of 124 — well above ACTA2 (rank 24) and CD3D (rank 74). Real signal. EPCAM and CD24 rank 1 and 2. |
-| "Aqp4 + Gfap perivascular validation candidate" | **Aqp4 demoted — rank 15/34 in Xenium MB boundary-vs-body, not boundary-enriched at the mRNA level.** Strong candidate for protein-level validation (your suggested experiment) but not yet supported by the spatial-RNA data we have. |
-| "HER2 enrichment at the junction in breast" | **Softened to** "PiMorph recovers a membrane-receptor-dominated HER2-amplified tumor contact signature." Cannot distinguish junction-localized HER2 from overall HER2 abundance with Visium 55 µm spots. |
+| "GO cell junction at p = 5.3 × 10⁻¹⁴ validates PiMorph" | **Withdrawn (v2).** Panel-bg null gives 0 enriched terms across all 6 panels. |
+| "PiMorph rediscovers the molecular signature of the neurovascular unit" | **Softened (v2):** "PiMorph's top conserved brain edge-band genes recover a neurovascular + synaptic contact *ecology* — cell types and genes that participate in the contacts, not necessarily junction-localized molecules." |
+| "Junctional gene expression" for centroid datasets | **Renamed (v2):** "contact-weighted co-expression" — `min(e_i, e_j) × contact_len_um` is a co-expression proxy weighted by shared boundary length, not a measured RNA boundary density. |
+| "CDH1 + CTNNB1 are top 5 / 13 of 124" | **Reframed (v3):** *"In a full-panel Xenium colon boundary-vs-body test, epithelial membrane / surface genes dominate the boundary ranking: EPCAM 1/362, CD24 2/362, KRT8 3/362, PIGR 4/362, MUC12 11/362, CDH1 14/362, REG4 24/362, CTNNB1 34/362; ACTA2 (69) and CD3D (203) rank substantially lower."* |
+| "Aqp4 rank 15/34 — mid-pack negative" | **Reframed (v3):** *"Aqp4 rank 30/247 — upper-quartile by mean boundary fraction but with median 0; modest / ambiguous at the RNA level. Cldn5 (rank 138/247) is the cleaner negative."* |
+| "HER2 enrichment at the junction in breast" | **Softened (v2):** "PiMorph recovers a membrane-receptor-dominated HER2-amplified tumor contact signature." Cannot distinguish junction-localized HER2 from overall HER2 abundance with Visium 55 µm spots. |
+| "Colon panel passes both bars" | **Removed (v3, per your correction):** colon does NOT pass the GO/panel-background null bar — no panel does. What colon passes is *"the direct, gene-level, pre-specified boundary-rank test for epithelial membrane / surface / AJ genes."* It does not rely on GO enrichment. |
 
-## 5. What we'll do next (in this order)
+## 6. Changes vs v2 of this response
 
-1. **Re-package** for the biologist with the corrected edge counts and softened claims (this `BIOLOGIST_RESPONSE.md` file appended to the package).
-2. **Run the expression-matched null** you specified (sample genes matched for mean expression / detection fraction / variance, redo enrichment).
-3. **Run the cell-type residual null**: regress each gene's edge-band signal on edge type + contact length + cell-body expression, do GO enrichment on residuals. Asks whether `Aqp4` etc. are enriched at contacts *beyond* "astrocytes/neurons are abundant and express them."
-4. **Spatial permutation null** for Xenium: rotate transcript coordinates within tissue mask, recompute edge band integrals on permuted transcripts → null distribution of mean boundary fractions per gene.
-5. **Run the boundary-vs-body test on more Xenium datasets** (breast, MB-rep2 if we re-pull) and on MIBI glioma where the protein signal is direct.
-6. **Drop the GO "cell junction" headline** from the figure and replace it with the **boundary-vs-body ranking** (the EPCAM/CD24/CDH1 result in colon is the strongest panel for the figure now).
+- Full-panel boundary ranks (no `--max-genes 200` cap). Colon now 362 genes, brain now 247.
+- KRT8 / PIGR / MUC12 / REG4 acknowledged as in the Xenium colon panel and ranking at top — v2 incorrectly said they weren't.
+- Aqp4 softened from "mid-pack negative" to "modest / ambiguous"; Cldn5 named as the cleaner negative.
+- `allen_merfish` tissue label fixed from "other" to "brain" in the metadata + R regex (`scripts/deep_cross_analysis.R`). Same-tissue cross-platform now n=5 (median JS 0.62, Wilcoxon p=0.018) instead of n=3 (median 0.51).
+- "Colon panel passes both bars" sentence removed; replaced with explicit acknowledgment that colon passes the direct boundary-rank test only.
+- New master figure `master_figure_v3.pdf` with the corrected panels.
+- v1 `NARRATIVE.md` no longer in the read-first path (the withdrawn GO claim was prominent in it).
 
-## 6. Honest acknowledgment
+## 7. Deferred items from your review
 
-The most important thing your review caught is that I framed a circular result as evidence. That was a serious overstatement. The framework still has biological signal — the colon boundary-vs-body test demonstrates this — but the brain claim needs to be substantially softened until either (a) the cell-type residual null clears, or (b) the AQP4 wet-bench experiment you outlined gives a positive readout.
+- **Spatial permutation null** for Xenium (rotate transcript coordinates within tissue mask, recompute boundary integrals on permuted transcripts). Skipped because the raw `transcripts.parquet` for Xenium MB and colon are not local (~50 GB each on EC2 only). Script design captured here for next round.
+- **Cell-type residual null** (regress edge-band signal on edge type + contact length + cell-body expression). Attempted in `scripts/boundary_by_edge_type.py`; current Xenium panels too sparse for per-gene-per-edge-type reliability (n < 20 edges with detectable signal per gene per type). Script committed for future denser panels (CosMx WTX, Stereo-seq).
+- **Boundary-vs-body on more datasets**: done for MIBI (`02_tables/boundary_vs_body/boundary_vs_body_mibi.csv`) — direction is right (CD45 / CD40 / CD133 atop; Chym_Tryp at bottom) but absolute values need unit calibration between `cells_x_marker` (whole-cell mean) and `edges_typed _mean` columns.
 
-Specifically: **I will not claim "PiMorph identifies junction-localized genes" without (a) a properly-backgrounded enrichment test and (b) a boundary-vs-body rank that puts the candidate gene at the top, not the middle.** The colon panel passes both bars; the brain panel currently passes neither at the mRNA level.
+## 8. The revised headline
 
-Thank you for the careful read.
+> **A direct boundary-vs-body test in Xenium colon places epithelial membrane / surface and adherens-junction genes at the top of the full expressed panel (EPCAM 1/362, CD24 2/362, KRT8 3/362, PIGR 4/362, MUC12 11/362, CDH1 14/362, REG4 24/362, CTNNB1 34/362), while the original GO enrichment claim disappears under the correct panel-background null (0 of 1,213 enriched terms remain). Mouse brain is ambiguous at the RNA boundary level (Aqp4 rank 30/247, Cldn5 rank 138/247) and should be validated at the protein level.**
+
+That replaces the v1 "cell junction at p = 5.3 × 10⁻¹⁴" line as the paper's headline.
 
 — Okezue

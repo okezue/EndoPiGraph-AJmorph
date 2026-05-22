@@ -24,6 +24,7 @@ meta[,tissue:=fcase(
   grepl("breast",label),"breast",
   grepl("colon",label),"colon",
   grepl("brain",label) & !grepl("embryo",label),"brain",
+  grepl("^allen",label),"brain",
   grepl("glioma",label),"brain_tumor",
   grepl("pancreas",label),"pancreas",
   grepl("embryo",label),"embryo",

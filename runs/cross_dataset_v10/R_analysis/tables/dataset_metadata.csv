@@ -1,0 +1,11 @@
+label,path,platform,tissue,species
+xenium_breast,runs/xenium_full_ec2,Xenium,breast,human
+xenium_mouse_brain,runs/xenium_mouse_brain_ec2,Xenium,brain,mouse
+xenium_colon,runs/xenium_colon_cancer_ec2,Xenium,colon,human
+allen_merfish,runs/allen_merfish_subset_ec2,MERFISH,brain,mouse
+mibi_glioma,runs/mibi_glioma_local,MIBI,brain_tumor,human
+visium_breast,runs/visium_breast_local,Visium,breast,human
+stereoseq_brain,runs/stereoseq_brain_local,Stereo-seq,brain,mouse
+stereoseq_embryo_e95,runs/stereoseq_embryo_e95_local,Stereo-seq,embryo,mouse
+cosmx_colon,runs/cosmx_colon_ec2,CosMx,colon,human
+cosmx_pancreas,runs/cosmx_pancreas_ec2,CosMx,pancreas,human
