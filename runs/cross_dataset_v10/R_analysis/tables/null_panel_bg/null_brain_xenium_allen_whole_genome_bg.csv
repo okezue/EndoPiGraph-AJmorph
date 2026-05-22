@@ -1,0 +1,110 @@
+source,native,name,p_value,intersection_size,term_size,query_size,precision,recall,panel,background
+GO:CC,GO:0030054,cell junction,1.1468385199121514e-15,28,2153,49,0.5714285714285714,0.013005109150023224,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0045202,synapse,1.541332705576811e-15,25,1570,49,0.5102040816326531,0.01592356687898089,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0098793,presynapse,2.5953274240677128e-11,15,631,45,0.3333333333333333,0.02377179080824089,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0042995,cell projection,5.321435973729102e-09,22,2292,48,0.4583333333333333,0.009598603839441536,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0120025,plasma membrane bounded cell projection,7.952794984675547e-09,19,2186,38,0.5,0.00869167429094236,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0043005,neuron projection,1.9824359009497143e-07,15,1130,47,0.3191489361702128,0.01327433628318584,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0022008,neurogenesis,3.113879076609598e-07,19,1685,50,0.38,0.011275964391691394,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0030424,axon,3.954047777987809e-07,9,566,25,0.36,0.015901060070671377,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0007399,nervous system development,1.2860392578432919e-06,21,2310,50,0.42,0.00909090909090909,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0048699,generation of neurons,1.826936916180648e-06,17,1437,50,0.34,0.011830201809324982,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0048731,system development,2.2560684013923994e-06,26,3806,50,0.52,0.006831318970047294,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0050793,regulation of developmental process,3.589983448102034e-06,21,2444,50,0.42,0.008592471358428805,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0008021,synaptic vesicle,5.1773761420816114e-06,7,176,45,0.15555555555555556,0.03977272727272727,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0070382,exocytic vesicle,7.5729523726312e-06,7,186,45,0.15555555555555556,0.03763440860215054,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0060076,excitatory synapse,8.133441518186964e-06,5,67,36,0.1388888888888889,0.07462686567164178,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0030133,transport vesicle,1.405052419451324e-05,8,311,45,0.17777777777777778,0.02572347266881029,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0007275,multicellular organism development,1.892934813120854e-05,27,4535,50,0.54,0.005953693495038589,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0098590,plasma membrane region,2.1514537221301262e-05,12,1202,38,0.3157894736842105,0.009983361064891847,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0099536,synaptic signaling,3.0730262045752304e-05,11,808,38,0.2894736842105263,0.013613861386138614,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0097450,astrocyte end-foot,8.781543718403101e-05,2,10,3,0.6666666666666666,0.2,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0030658,transport vesicle membrane,0.00015802693826041014,6,180,45,0.13333333333333333,0.03333333333333333,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0051094,positive regulation of developmental process,0.00019523376442834496,14,1278,50,0.28,0.010954616588419406,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0043679,axon terminus,0.00020555075886257617,4,104,19,0.21052631578947367,0.038461538461538464,brain_xenium_allen,whole_genome_bg
+GO:MF,GO:0140788,L-glutamate uniporter activity,0.0002141754608520476,2,3,10,0.2,0.6666666666666666,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0150034,distal axon,0.00023881408542916071,5,261,19,0.2631578947368421,0.019157088122605363,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0098916,anterograde trans-synaptic signaling,0.00023901242932202008,10,771,38,0.2631578947368421,0.01297016861219196,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0007268,chemical synaptic transmission,0.00023901242932202008,10,771,38,0.2631578947368421,0.01297016861219196,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0030659,cytoplasmic vesicle membrane,0.0002604768034071179,7,871,18,0.3888888888888889,0.008036739380022962,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0099537,trans-synaptic signaling,0.0002660958918333654,10,780,38,0.2631578947368421,0.01282051282051282,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0012506,vesicle membrane,0.00028326760379569733,7,882,18,0.3888888888888889,0.007936507936507936,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0098552,side of membrane,0.00032824444717882505,9,599,48,0.1875,0.015025041736227046,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0097449,astrocyte projection,0.0003336198524259262,2,19,3,0.6666666666666666,0.10526315789473684,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0045595,regulation of cell differentiation,0.0003418088622703835,15,1561,50,0.3,0.009609224855861628,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0097060,synaptic membrane,0.00034863171989562875,7,416,36,0.19444444444444445,0.016826923076923076,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0099501,exocytic vesicle membrane,0.00035411807295579337,5,113,45,0.1111111111111111,0.04424778761061947,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0030672,synaptic vesicle membrane,0.00035411807295579337,5,113,45,0.1111111111111111,0.04424778761061947,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0044306,neuron projection terminus,0.0003644483733630766,4,120,19,0.21052631578947367,0.03333333333333333,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0051093,negative regulation of developmental process,0.0003922401265857417,12,990,48,0.25,0.012121212121212121,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0030182,neuron differentiation,0.0003955075111414407,14,1354,50,0.28,0.0103397341211226,brain_xenium_allen,whole_genome_bg
+GO:MF,GO:0099534,calcium ion binding involved in regulation of presynaptic cytosolic calcium ion concentration,0.0006442590200718038,2,2,29,0.06896551724137931,1.0,brain_xenium_allen,whole_genome_bg
+GO:MF,GO:0022810,membrane potential driven uniporter activity,0.0007135943277187753,2,5,10,0.2,0.4,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0099503,secretory vesicle,0.0007479855922679121,8,527,45,0.17777777777777778,0.015180265654648957,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0098588,bounding membrane of organelle,0.0007908144811331805,12,1687,38,0.3157894736842105,0.007113218731475993,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0030425,dendrite,0.0010969028458632482,8,530,47,0.1702127659574468,0.01509433962264151,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0097447,dendritic tree,0.0011121482627332762,8,531,47,0.1702127659574468,0.015065913370998116,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0007267,cell-cell signaling,0.0013716472880054426,11,1179,38,0.2894736842105263,0.009329940627650551,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0098688,parallel fiber to Purkinje cell synapse,0.0015671064255230068,3,27,36,0.08333333333333333,0.1111111111111111,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0035295,tube development,0.001883153849637591,12,1148,48,0.25,0.010452961672473868,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0036477,somatodendritic compartment,0.0018867257314355232,9,743,48,0.1875,0.012113055181695828,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0097386,glial cell projection,0.002017847050929514,2,46,3,0.6666666666666666,0.043478260869565216,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0065008,regulation of biological quality,0.002604179576610692,6,2745,6,1.0,0.002185792349726776,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0098978,glutamatergic synapse,0.002836108243646023,8,618,46,0.17391304347826086,0.012944983818770227,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0098984,neuron to neuron synapse,0.0028575420658878887,6,388,35,0.17142857142857143,0.015463917525773196,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0048856,anatomical structure development,0.002943150087629223,27,5738,50,0.54,0.004705472289996514,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0007417,central nervous system development,0.003032126685514047,11,943,50,0.22,0.01166489925768823,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0031410,cytoplasmic vesicle,0.003098476958312036,8,1807,18,0.4444444444444444,0.004427227448810182,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0098839,postsynaptic density membrane,0.0031790772369030378,4,109,35,0.11428571428571428,0.03669724770642202,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0097708,intracellular vesicle,0.0031877294916984747,8,1814,18,0.4444444444444444,0.004410143329658214,brain_xenium_allen,whole_genome_bg
+GO:MF,GO:0005509,calcium ion binding,0.003433808499574492,9,676,48,0.1875,0.013313609467455622,brain_xenium_allen,whole_genome_bg
+GO:MF,GO:0015292,uniporter activity,0.003919429634907873,2,11,10,0.2,0.18181818181818182,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0048009,insulin-like growth factor receptor signaling pathway,0.004214045569819181,3,94,8,0.375,0.031914893617021274,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0015800,acidic amino acid transport,0.00436147894630861,3,74,10,0.3,0.04054054054054054,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0031982,vesicle,0.00475850738283575,8,1916,18,0.4444444444444444,0.0041753653444676405,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0071944,cell periphery,0.005199641764999496,26,6371,49,0.5306122448979592,0.00408099199497724,brain_xenium_allen,whole_genome_bg
+GO:MF,GO:0005313,L-glutamate transmembrane transporter activity,0.005555942130056232,2,13,10,0.2,0.15384615384615385,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0032502,developmental process,0.005716131057875662,28,6327,50,0.56,0.004425478109688636,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0050804,modulation of chemical synaptic transmission,0.005782011821399462,6,600,19,0.3157894736842105,0.01,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0099177,regulation of trans-synaptic signaling,0.0058376674670462285,6,601,19,0.3157894736842105,0.009983361064891847,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0023051,regulation of signaling,0.006211383180927831,19,3194,49,0.3877551020408163,0.005948653725735754,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0010646,regulation of cell communication,0.006328683950766771,19,3198,49,0.3877551020408163,0.0059412132582864294,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0006836,neurotransmitter transport,0.007165162829481648,4,184,16,0.25,0.021739130434782608,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0044297,cell body,0.008317372163651434,7,499,48,0.14583333333333334,0.014028056112224449,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0006835,dicarboxylic acid transport,0.008695983228866822,3,93,10,0.3,0.03225806451612903,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0099634,postsynaptic specialization membrane,0.008983202896585775,4,142,35,0.11428571428571428,0.028169014084507043,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0003333,amino acid transmembrane transport,0.00956873214928023,3,96,10,0.3,0.03125,brain_xenium_allen,whole_genome_bg
+GO:MF,GO:0015172,acidic amino acid transmembrane transporter activity,0.00967849592933246,2,17,10,0.2,0.11764705882352941,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0048589,developmental growth,0.012208916257642697,9,722,48,0.1875,0.012465373961218837,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0048666,neuron development,0.012430118657130621,11,1093,50,0.22,0.010064043915827997,brain_xenium_allen,whole_genome_bg
+KEGG,KEGG:04721,Synaptic vesicle cycle,0.012587595701541728,3,77,16,0.1875,0.03896103896103896,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0040007,growth,0.013782213007158954,10,935,48,0.20833333333333334,0.0106951871657754,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0021953,central nervous system neuron differentiation,0.014093420432022717,6,246,50,0.12,0.024390243902439025,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0045596,negative regulation of cell differentiation,0.014238406707888932,9,736,48,0.1875,0.012228260869565218,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0072073,kidney epithelium development,0.017108582667577085,5,154,48,0.10416666666666667,0.032467532467532464,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0008283,cell population proliferation,0.01759370102682075,14,1868,50,0.28,0.007494646680942184,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0030154,cell differentiation,0.017887143145930963,22,4372,50,0.44,0.005032021957913998,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0048869,cellular developmental process,0.017954738268609924,22,4373,50,0.44,0.005030871255431054,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0042063,gliogenesis,0.01887615639129254,6,336,39,0.15384615384615385,0.017857142857142856,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0031175,neuron projection development,0.01948785441809233,10,931,50,0.2,0.010741138560687433,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0042734,presynaptic membrane,0.020702204613905418,4,171,36,0.1111111111111111,0.023391812865497075,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0009653,anatomical structure morphogenesis,0.022139211717732105,16,2586,48,0.3333333333333333,0.006187161639597835,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0005886,plasma membrane,0.023050045645258806,24,6051,49,0.4897959183673469,0.0039662865642042635,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:1905039,carboxylic acid transmembrane transport,0.02490125865754759,3,132,10,0.3,0.022727272727272728,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0051960,regulation of nervous system development,0.027360164971654517,7,435,48,0.14583333333333334,0.016091954022988506,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0043204,perikaryon,0.029066153055456723,4,139,48,0.08333333333333333,0.02877697841726619,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0023052,signaling,0.03127504893574509,21,6987,33,0.6363636363636364,0.0030055817947617003,brain_xenium_allen,whole_genome_bg
+REAC,REAC:R-MMU-381426,Regulation of Insulin-like Growth Factor (IGF) transport and uptake by Insulin-like Growth Factor Binding Proteins (IGFBPs),0.03127992527384365,4,115,20,0.2,0.034782608695652174,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0007154,cell communication,0.035645412879520784,21,7042,33,0.6363636363636364,0.002982107355864811,brain_xenium_allen,whole_genome_bg
+GO:MF,GO:0005520,insulin-like growth factor binding,0.035922433681452176,2,16,20,0.1,0.125,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0055062,phosphate ion homeostasis,0.036267208077482994,2,19,10,0.2,0.10526315789473684,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0006865,amino acid transport,0.03723447253534163,3,151,10,0.3,0.019867549668874173,brain_xenium_allen,whole_genome_bg
+GO:MF,GO:0008068,extracellularly glutamate-gated chloride channel activity,0.03730830990373039,1,2,1,1.0,0.5,brain_xenium_allen,whole_genome_bg
+GO:MF,GO:0140787,phosphate ion uniporter activity,0.03730830990373039,1,2,1,1.0,0.5,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0044305,calyx of Held,0.03861797910331244,2,27,19,0.10526315789473684,0.07407407407407407,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0005576,extracellular region,0.03908699555766937,6,2340,11,0.5454545454545454,0.002564102564102564,brain_xenium_allen,whole_genome_bg
+KEGG,KEGG:05033,Nicotine addiction,0.03979748460236466,2,40,10,0.2,0.05,brain_xenium_allen,whole_genome_bg
+GO:CC,GO:0034707,chloride channel complex,0.039915394800357856,2,53,10,0.2,0.03773584905660377,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0031102,neuron projection regeneration,0.042027251395412524,2,55,4,0.5,0.03636363636363636,brain_xenium_allen,whole_genome_bg
+KEGG,KEGG:04082,Neuroactive ligand signaling,0.04300205175357624,3,194,10,0.3,0.015463917525773196,brain_xenium_allen,whole_genome_bg
+GO:BP,GO:0042127,regulation of cell population proliferation,0.044940004350206196,12,1499,50,0.24,0.008005336891260841,brain_xenium_allen,whole_genome_bg

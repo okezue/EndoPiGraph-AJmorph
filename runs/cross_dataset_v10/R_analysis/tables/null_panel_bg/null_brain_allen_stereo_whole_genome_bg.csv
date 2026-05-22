@@ -1,0 +1,183 @@
+source,native,name,p_value,intersection_size,term_size,query_size,precision,recall,panel,background
+GO:BP,GO:0099536,synaptic signaling,6.441361600537459e-08,14,808,43,0.32558139534883723,0.017326732673267328,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0007267,cell-cell signaling,6.986203586489908e-08,16,1179,43,0.37209302325581395,0.013570822731128074,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0023051,regulation of signaling,2.1787885767607091e-07,19,3194,30,0.6333333333333333,0.005948653725735754,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0010646,regulation of cell communication,2.2271321110973004e-07,19,3198,30,0.6333333333333333,0.0059412132582864294,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0006865,amino acid transport,4.316448845167652e-07,7,151,28,0.25,0.046357615894039736,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0099537,trans-synaptic signaling,5.972000711581544e-07,13,780,43,0.3023255813953488,0.016666666666666666,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0023052,signaling,6.95089127453216e-07,25,6987,30,0.8333333333333334,0.0035780735651925,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0065007,biological regulation,7.694423786910182e-07,31,12498,31,1.0,0.00248039686349816,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0007154,cell communication,8.337278245323247e-07,25,7042,30,0.8333333333333334,0.0035501278046009654,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0003333,amino acid transmembrane transport,1.5275500461588037e-06,6,96,28,0.21428571428571427,0.0625,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0008283,cell population proliferation,1.9236665799902305e-06,18,1868,45,0.4,0.009635974304068522,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0089718,amino acid import across plasma membrane,2.53961814502819e-06,5,46,28,0.17857142857142858,0.10869565217391304,brain_allen_stereo,whole_genome_bg
+GO:CC,GO:0098793,presynapse,5.270882171221996e-06,11,631,49,0.22448979591836735,0.017432646592709985,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0050804,modulation of chemical synaptic transmission,6.387892355234121e-06,11,600,43,0.2558139534883721,0.018333333333333333,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0099177,regulation of trans-synaptic signaling,6.499201429928947e-06,11,601,43,0.2558139534883721,0.018302828618968387,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0007268,chemical synaptic transmission,6.967562350525613e-06,12,771,43,0.27906976744186046,0.01556420233463035,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0098916,anterograde trans-synaptic signaling,6.967562350525613e-06,12,771,43,0.27906976744186046,0.01556420233463035,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0015800,acidic amino acid transport,7.74381396758021e-06,4,74,8,0.5,0.05405405405405406,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0007399,nervous system development,7.788881040641502e-06,19,2310,45,0.4222222222222222,0.008225108225108226,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:1905039,carboxylic acid transmembrane transport,1.04977837470394e-05,6,132,28,0.21428571428571427,0.045454545454545456,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0010001,glial cell differentiation,1.897426904841484e-05,6,255,17,0.35294117647058826,0.023529411764705882,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0006835,dicarboxylic acid transport,1.9602102581718076e-05,4,93,8,0.5,0.043010752688172046,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0010647,positive regulation of cell communication,2.7518033370086916e-05,13,1715,29,0.4482758620689655,0.007580174927113703,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0023056,positive regulation of signaling,2.7710550024659208e-05,13,1716,29,0.4482758620689655,0.007575757575757576,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0031099,regeneration,3.2131890733229404e-05,6,180,25,0.24,0.03333333333333333,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0046942,carboxylic acid transport,3.4804492941591904e-05,7,284,28,0.25,0.02464788732394366,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0015849,organic acid transport,3.56543917384369e-05,7,285,28,0.25,0.02456140350877193,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0032502,developmental process,4.0359389093169086e-05,16,6327,18,0.8888888888888888,0.002528844634107792,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0048522,positive regulation of cellular process,5.931824322528664e-05,21,5332,31,0.6774193548387096,0.003938484621155289,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0007275,multicellular organism development,7.38369952915029e-05,15,4535,20,0.75,0.0033076074972436605,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0042063,gliogenesis,9.767545656790321e-05,6,336,17,0.35294117647058826,0.017857142857142856,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0021675,nerve development,0.00012453508116036334,5,95,29,0.1724137931034483,0.05263157894736842,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0016202,regulation of striated muscle tissue development,0.0001383520971929976,3,42,6,0.5,0.07142857142857142,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0032501,multicellular organismal process,0.00014557430683437888,24,8009,30,0.8,0.0029966287926083157,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0048731,system development,0.00015005265465869853,13,3806,18,0.7222222222222222,0.003415659485023647,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:1901861,regulation of muscle tissue development,0.00015958224239890598,3,44,6,0.5,0.06818181818181818,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0048634,regulation of muscle organ development,0.0001709655278542796,3,45,6,0.5,0.06666666666666667,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0050789,regulation of biological process,0.0001714355882032531,29,12137,31,0.9354838709677419,0.0023893878223613745,brain_allen_stereo,whole_genome_bg
+GO:MF,GO:0005313,L-glutamate transmembrane transporter activity,0.00018821236631973574,3,13,28,0.10714285714285714,0.23076923076923078,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0065008,regulation of biological quality,0.00019576903617913016,15,2745,30,0.5,0.00546448087431694,brain_allen_stereo,whole_genome_bg
+GO:MF,GO:0015179,L-amino acid transmembrane transporter activity,0.00019845988433116063,4,53,28,0.14285714285714285,0.07547169811320754,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0015711,organic anion transport,0.00020401840707050207,7,368,28,0.25,0.019021739130434784,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0022008,neurogenesis,0.00020440285352353455,15,1685,45,0.3333333333333333,0.008902077151335312,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0048518,positive regulation of biological process,0.00021018809167327486,21,5712,31,0.6774193548387096,0.003676470588235294,brain_allen_stereo,whole_genome_bg
+GO:MF,GO:0005520,insulin-like growth factor binding,0.0002275192529200411,3,16,24,0.125,0.1875,brain_allen_stereo,whole_genome_bg
+GO:CC,GO:0097449,astrocyte projection,0.00024097210850222172,3,19,28,0.10714285714285714,0.15789473684210525,brain_allen_stereo,whole_genome_bg
+GO:CC,GO:0030424,axon,0.0002470364412393773,9,566,49,0.1836734693877551,0.015901060070671377,brain_allen_stereo,whole_genome_bg
+GO:CC,GO:0009986,cell surface,0.00029725114191203746,8,753,29,0.27586206896551724,0.010624169986719787,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0048708,astrocyte differentiation,0.0003362192114378701,4,79,17,0.23529411764705882,0.05063291139240506,brain_allen_stereo,whole_genome_bg
+GO:CC,GO:0044300,cerebellar mossy fiber,0.00038226429592490697,2,7,8,0.25,0.2857142857142857,brain_allen_stereo,whole_genome_bg
+GO:MF,GO:0015172,acidic amino acid transmembrane transporter activity,0.00044607231854457667,3,17,28,0.10714285714285714,0.17647058823529413,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0014706,striated muscle tissue development,0.0006264400370907085,6,431,18,0.3333333333333333,0.013921113689095127,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0048856,anatomical structure development,0.0006785965426401847,20,5738,30,0.6666666666666666,0.003485535029627048,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0050794,regulation of cellular process,0.0007389763252602761,28,11716,31,0.9032258064516129,0.002389894161829976,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0001503,ossification,0.0007544900328409652,5,459,10,0.5,0.010893246187363835,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0060537,muscle tissue development,0.0008490893004372796,6,454,18,0.3333333333333333,0.013215859030837005,brain_allen_stereo,whole_genome_bg
+GO:CC,GO:0005615,extracellular space,0.0008863006234873741,9,1136,30,0.3,0.007922535211267605,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0070779,D-aspartate import across plasma membrane,0.0010550157982664962,2,5,7,0.2857142857142857,0.4,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0070777,D-aspartate transmembrane transport,0.0010550157982664962,2,5,7,0.2857142857142857,0.4,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:1902475,L-alpha-amino acid transmembrane transport,0.001205058282039349,4,64,28,0.14285714285714285,0.0625,brain_allen_stereo,whole_genome_bg
+GO:CC,GO:0045202,synapse,0.0012332111209759193,13,1570,49,0.2653061224489796,0.008280254777070064,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0007169,cell surface receptor protein tyrosine kinase signaling pathway,0.001364995372184484,7,554,25,0.28,0.01263537906137184,brain_allen_stereo,whole_genome_bg
+GO:CC,GO:0030054,cell junction,0.001466449798378612,14,2153,43,0.32558139534883723,0.006502554575011612,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0042940,D-amino acid transport,0.0015823121272349019,2,6,7,0.2857142857142857,0.3333333333333333,brain_allen_stereo,whole_genome_bg
+GO:MF,GO:0015171,amino acid transmembrane transporter activity,0.001606823407287002,4,89,28,0.14285714285714285,0.0449438202247191,brain_allen_stereo,whole_genome_bg
+GO:CC,GO:0043005,neuron projection,0.0016525454286803836,11,1130,49,0.22448979591836735,0.009734513274336283,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0071705,nitrogen compound transport,0.0016954959307601243,8,742,28,0.2857142857142857,0.01078167115902965,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0051240,positive regulation of multicellular organismal process,0.0017100726261708474,10,1541,25,0.4,0.006489292667099286,brain_allen_stereo,whole_genome_bg
+GO:CC,GO:0120025,plasma membrane bounded cell projection,0.0017484637313449835,14,2186,43,0.32558139534883723,0.006404391582799634,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0014009,glial cell proliferation,0.00188298797501481,3,55,10,0.3,0.05454545454545454,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0051716,cellular response to stimulus,0.0019438178774784463,22,7885,29,0.7586206896551724,0.0027901077996195307,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0006810,transport,0.0019748150987554413,16,3943,29,0.5517241379310345,0.004057823991884352,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0009611,response to wounding,0.0020312454552973485,7,518,28,0.25,0.013513513513513514,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0030154,cell differentiation,0.002046936888367351,9,4372,10,0.9,0.0020585544373284536,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0048869,cellular developmental process,0.0020510704383812756,9,4373,10,0.9,0.002058083695403613,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0009653,anatomical structure morphogenesis,0.002161695212650038,10,2586,17,0.5882352941176471,0.0038669760247486465,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0051896,regulation of phosphatidylinositol 3-kinase/protein kinase B signal transduction,0.002167904921403812,5,252,20,0.25,0.01984126984126984,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0042127,regulation of cell population proliferation,0.002369222384849859,13,1499,45,0.28888888888888886,0.00867244829886591,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0048732,gland development,0.002426104111187593,4,452,6,0.6666666666666666,0.008849557522123894,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0048009,insulin-like growth factor receptor signaling pathway,0.002479710382547841,4,94,23,0.17391304347826086,0.0425531914893617,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0048583,regulation of response to stimulus,0.002564799839197153,15,3487,29,0.5172413793103449,0.004301691998852882,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0048468,cell development,0.0026411329993907104,14,2873,30,0.4666666666666667,0.004872955099199443,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0050793,regulation of developmental process,0.002806680447371024,13,2444,30,0.43333333333333335,0.005319148936170213,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0050896,response to stimulus,0.0029126381679258104,24,9759,29,0.8275862068965517,0.002459268367660621,brain_allen_stereo,whole_genome_bg
+GO:CC,GO:0098590,plasma membrane region,0.0029534041711921028,11,1202,49,0.22448979591836735,0.009151414309484194,brain_allen_stereo,whole_genome_bg
+GO:CC,GO:0005576,extracellular region,0.0029602040743008477,12,2340,32,0.375,0.005128205128205128,brain_allen_stereo,whole_genome_bg
+GO:CC,GO:0042995,cell projection,0.003010824155613286,14,2292,43,0.32558139534883723,0.006108202443280977,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0051239,regulation of multicellular organismal process,0.003093379597129439,11,2766,20,0.55,0.0039768618944323935,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0009967,positive regulation of signal transduction,0.003140380108896018,10,1382,29,0.3448275862068966,0.00723589001447178,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0098657,import into cell,0.003277969736736098,8,779,29,0.27586206896551724,0.010269576379974325,brain_allen_stereo,whole_genome_bg
+GO:CC,GO:0044297,cell body,0.003373300568526466,7,499,42,0.16666666666666666,0.014028056112224449,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0015807,L-amino acid transport,0.0034345951519130567,4,83,28,0.14285714285714285,0.04819277108433735,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0098739,import across plasma membrane,0.0035040318873537377,5,193,28,0.17857142857142858,0.025906735751295335,brain_allen_stereo,whole_genome_bg
+GO:CC,GO:0097386,glial cell projection,0.0037005265715130712,3,46,28,0.10714285714285714,0.06521739130434782,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0051234,establishment of localization,0.003917562793292073,16,4145,29,0.5517241379310345,0.0038600723763570566,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0009966,regulation of signal transduction,0.00408461779199544,12,2634,25,0.48,0.004555808656036446,brain_allen_stereo,whole_genome_bg
+GO:CC,GO:0042734,presynaptic membrane,0.004101339231898536,5,171,49,0.10204081632653061,0.029239766081871343,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0007610,behavior,0.004213383829991964,9,726,42,0.21428571428571427,0.012396694214876033,brain_allen_stereo,whole_genome_bg
+GO:MF,GO:0031995,insulin-like growth factor II binding,0.004371500564700505,2,5,24,0.08333333333333333,0.4,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0043491,phosphatidylinositol 3-kinase/protein kinase B signal transduction,0.004691075860084477,5,295,20,0.25,0.01694915254237288,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0009888,tissue development,0.004792970138040933,9,1978,18,0.5,0.00455005055611729,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0051094,positive regulation of developmental process,0.0052714682147497315,8,1278,20,0.4,0.006259780907668232,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0097402,neuroblast migration,0.006324511292129108,2,8,10,0.2,0.25,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0042104,positive regulation of activated T cell proliferation,0.006326201929269991,2,21,4,0.5,0.09523809523809523,brain_allen_stereo,whole_genome_bg
+GO:CC,GO:0097450,astrocyte end-foot,0.00673487417571677,2,10,22,0.09090909090909091,0.2,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0060384,innervation,0.006767318245495082,3,32,25,0.12,0.09375,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0070661,leukocyte proliferation,0.006870302869301933,5,319,20,0.25,0.01567398119122257,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0015813,L-glutamate transmembrane transport,0.007098438687881562,3,29,28,0.10714285714285714,0.10344827586206896,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0021780,glial cell fate specification,0.008129775168845726,2,9,10,0.2,0.2222222222222222,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:2000026,regulation of multicellular organismal development,0.00814403130614624,8,1355,20,0.4,0.005904059040590406,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0051128,regulation of cellular component organization,0.008171468134992515,12,2251,30,0.4,0.0053309640159928924,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0007417,central nervous system development,0.008525654354988452,10,943,45,0.2222222222222222,0.010604453870625663,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0141124,intracellular signaling cassette,0.008538030473048892,10,1545,29,0.3448275862068966,0.006472491909385114,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0035295,tube development,0.008708040659799325,7,1148,17,0.4117647058823529,0.006097560975609756,brain_allen_stereo,whole_genome_bg
+GO:MF,GO:0046943,carboxylic acid transmembrane transporter activity,0.009407774095980192,4,139,28,0.14285714285714285,0.02877697841726619,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0048699,generation of neurons,0.009728334204241408,6,1437,10,0.6,0.0041753653444676405,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:1901700,response to oxygen-containing compound,0.01104129127165245,5,1646,6,0.8333333333333334,0.003037667071688943,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0045944,positive regulation of transcription by RNA polymerase II,0.011172776335970218,6,1157,12,0.5,0.005185825410544511,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0040008,regulation of growth,0.012315285370861455,6,546,23,0.2608695652173913,0.01098901098901099,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0048666,neuron development,0.012717343244090393,10,1093,41,0.24390243902439024,0.009149130832570906,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0007517,muscle organ development,0.012803588226767842,4,358,10,0.4,0.0111731843575419,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:1902533,positive regulation of intracellular signal transduction,0.013376030629858386,9,962,37,0.24324324324324326,0.009355509355509356,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0048584,positive regulation of response to stimulus,0.014041903966384427,11,2034,29,0.3793103448275862,0.005408062930186824,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0007166,cell surface receptor signaling pathway,0.014187354636618335,11,2433,25,0.44,0.004521167283189478,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0015810,aspartate transmembrane transport,0.014325211251956666,2,17,7,0.2857142857142857,0.11764705882352941,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0051049,regulation of transport,0.01472209210565194,11,1414,40,0.275,0.007779349363507779,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0048641,regulation of skeletal muscle tissue development,0.015049902577461811,2,25,5,0.4,0.08,brain_allen_stereo,whole_genome_bg
+GO:CC,GO:0043025,neuronal cell body,0.015495362709487806,6,433,42,0.14285714285714285,0.013856812933025405,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0045844,positive regulation of striated muscle tissue development,0.01579944144878406,2,21,6,0.3333333333333333,0.09523809523809523,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0048636,positive regulation of muscle organ development,0.01579944144878406,2,21,6,0.3333333333333333,0.09523809523809523,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:1901863,positive regulation of muscle tissue development,0.01579944144878406,2,21,6,0.3333333333333333,0.09523809523809523,brain_allen_stereo,whole_genome_bg
+GO:CC,GO:0150034,distal axon,0.016165804571443416,5,261,43,0.11627906976744186,0.019157088122605363,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0030900,forebrain development,0.016370071125393723,7,426,45,0.15555555555555556,0.01643192488262911,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0040007,growth,0.016624714647494886,8,935,30,0.26666666666666666,0.008556149732620321,brain_allen_stereo,whole_genome_bg
+REAC,REAC:R-MMU-112313,Neurotransmitter uptake and metabolism In glial cells,0.016633766146880342,2,4,27,0.07407407407407407,0.5,brain_allen_stereo,whole_genome_bg
+REAC,REAC:R-MMU-210455,Astrocytic Glutamate-Glutamine Uptake And Metabolism,0.016633766146880342,2,4,27,0.07407407407407407,0.5,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0042098,T cell proliferation,0.01704888202465323,3,206,6,0.5,0.014563106796116505,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0009449,gamma-aminobutyric acid biosynthetic process,0.017605559998439314,2,5,27,0.07407407407407407,0.4,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0051938,L-glutamate import,0.01762088044850727,3,39,28,0.10714285714285714,0.07692307692307693,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0016049,cell growth,0.017711849835566423,6,435,30,0.2,0.013793103448275862,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0021782,glial cell development,0.018409750777452737,4,122,29,0.13793103448275862,0.03278688524590164,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0045926,negative regulation of growth,0.01864334790125876,4,203,18,0.2222222222222222,0.019704433497536946,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0046006,regulation of activated T cell proliferation,0.01896337915386118,2,36,4,0.5,0.05555555555555555,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0010977,negative regulation of neuron projection development,0.01901330259858437,4,123,29,0.13793103448275862,0.032520325203252036,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0030001,metal ion transport,0.019032808665471752,6,778,18,0.3333333333333333,0.007712082262210797,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0006996,organelle organization,0.01930543706375819,10,3041,18,0.5555555555555556,0.003288391976323578,brain_allen_stereo,whole_genome_bg
+GO:MF,GO:0000978,RNA polymerase II cis-regulatory region sequence-specific DNA binding,0.019448388145674563,4,519,10,0.4,0.007707129094412331,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0001649,osteoblast differentiation,0.01964972962135828,3,216,6,0.5,0.013888888888888888,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0055085,transmembrane transport,0.020209137844173223,9,1385,28,0.32142857142857145,0.006498194945848376,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0042592,homeostatic process,0.020463684274036407,6,1634,10,0.6,0.0036719706242350062,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0006813,potassium ion transport,0.021304912622056502,4,210,18,0.2222222222222222,0.01904761904761905,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0043408,regulation of MAPK cascade,0.021629567316508305,7,548,37,0.1891891891891892,0.012773722627737226,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0035272,exocrine system development,0.023186134075510803,2,56,3,0.6666666666666666,0.03571428571428571,brain_allen_stereo,whole_genome_bg
+GO:MF,GO:0031994,insulin-like growth factor I binding,0.02395342012528597,2,11,24,0.08333333333333333,0.18181818181818182,brain_allen_stereo,whole_genome_bg
+GO:MF,GO:0000987,cis-regulatory region sequence-specific DNA binding,0.024043323937339142,4,548,10,0.4,0.0072992700729927005,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0030282,bone mineralization,0.0241275127509235,3,128,10,0.3,0.0234375,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0021683,cerebellar granular layer morphogenesis,0.025082089432973197,2,11,14,0.14285714285714285,0.18181818181818182,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0031175,neuron projection development,0.02530144660207101,9,931,41,0.21951219512195122,0.00966702470461869,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0050798,activated T cell proliferation,0.02590829691484835,2,42,4,0.5,0.047619047619047616,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0045685,regulation of glial cell differentiation,0.026936658546653596,3,75,17,0.17647058823529413,0.04,brain_allen_stereo,whole_genome_bg
+GO:MF,GO:0015370,solute:sodium symporter activity,0.027016668760466593,3,67,27,0.1111111111111111,0.04477611940298507,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0035239,tube morphogenesis,0.027504847664261926,6,887,17,0.35294117647058826,0.006764374295377677,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0051179,localization,0.02829419192156339,16,4803,29,0.5517241379310345,0.0033312513012700396,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0015740,C4-dicarboxylate transport,0.02904455116140505,2,24,7,0.2857142857142857,0.08333333333333333,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0007167,enzyme-linked receptor protein signaling pathway,0.03125623900674098,7,892,25,0.28,0.007847533632286996,brain_allen_stereo,whole_genome_bg
+GO:CC,GO:0030426,growth cone,0.03240258949201594,4,160,43,0.09302325581395349,0.025,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0043410,positive regulation of MAPK cascade,0.0329836850135351,6,388,37,0.16216216216216217,0.015463917525773196,brain_allen_stereo,whole_genome_bg
+GO:MF,GO:0019900,kinase binding,0.03385792058664694,5,614,18,0.2777777777777778,0.008143322475570033,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0021781,glial cell fate commitment,0.034485084361135586,2,18,10,0.2,0.1111111111111111,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0070887,cellular response to chemical stimulus,0.034580871836115114,5,2074,6,0.8333333333333334,0.0024108003857280617,brain_allen_stereo,whole_genome_bg
+GO:CC,GO:0030427,site of polarized growth,0.034798343968677585,4,163,43,0.09302325581395349,0.024539877300613498,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0009448,gamma-aminobutyric acid metabolic process,0.03692227572327542,2,7,27,0.07407407407407407,0.2857142857142857,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0015804,neutral amino acid transport,0.03979204892570172,3,51,28,0.10714285714285714,0.058823529411764705,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0009887,animal organ morphogenesis,0.04053803781044888,5,1036,10,0.5,0.004826254826254826,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0007165,signal transduction,0.04093465042220224,17,6451,26,0.6538461538461539,0.0026352503487831343,brain_allen_stereo,whole_genome_bg
+GO:MF,GO:0000977,RNA polymerase II transcription regulatory region sequence-specific DNA binding,0.042636614858315366,4,635,10,0.4,0.006299212598425197,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0046651,lymphocyte proliferation,0.04407066268107532,3,283,6,0.5,0.01060070671378092,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0007420,brain development,0.045427694380565396,8,691,45,0.17777777777777778,0.011577424023154847,brain_allen_stereo,whole_genome_bg
+GO:CC,GO:0008021,synaptic vesicle,0.046681237053300295,4,176,43,0.09302325581395349,0.022727272727272728,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0032943,mononuclear cell proliferation,0.046918383714177773,3,289,6,0.5,0.010380622837370242,brain_allen_stereo,whole_genome_bg
+GO:BP,GO:0021681,cerebellar granular layer development,0.04782257123744667,2,15,14,0.14285714285714285,0.13333333333333333,brain_allen_stereo,whole_genome_bg
+GO:CC,GO:0036477,somatodendritic compartment,0.04803755987067319,7,743,43,0.16279069767441862,0.009421265141318977,brain_allen_stereo,whole_genome_bg

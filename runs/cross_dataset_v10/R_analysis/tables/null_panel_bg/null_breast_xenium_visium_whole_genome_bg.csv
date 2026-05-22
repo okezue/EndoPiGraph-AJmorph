@@ -1,0 +1,131 @@
+source,native,name,p_value,intersection_size,term_size,query_size,precision,recall,panel,background
+GO:CC,GO:0070062,extracellular exosome,5.9494350278176544e-09,22,2111,46,0.4782608695652174,0.010421601136901942,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0030155,regulation of cell adhesion,6.323430432663722e-09,14,780,33,0.42424242424242425,0.017948717948717947,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:1903561,extracellular vesicle,7.855541599441531e-09,22,2141,46,0.4782608695652174,0.010275572162540868,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0043230,extracellular organelle,7.928046956088398e-09,22,2142,46,0.4782608695652174,0.01027077497665733,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0065010,extracellular membrane-bounded organelle,7.928046956088398e-09,22,2142,46,0.4782608695652174,0.01027077497665733,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0007155,cell adhesion,2.3316381510419123e-08,17,1512,33,0.5151515151515151,0.011243386243386243,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0031982,vesicle,7.533659894530319e-08,28,4032,47,0.5957446808510638,0.006944444444444444,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0005615,extracellular space,9.252276578176597e-08,25,3252,46,0.5434782608695652,0.007687576875768758,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0007162,negative regulation of cell adhesion,5.452038414235266e-07,9,287,32,0.28125,0.0313588850174216,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0005576,extracellular region,4.824147979655185e-06,26,4249,46,0.5652173913043478,0.006119086843963286,breast_xenium_visium,whole_genome_bg
+GO:MF,GO:0050839,cell adhesion molecule binding,5.864697024789059e-06,9,563,25,0.36,0.015985790408525755,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0070161,anchoring junction,5.919423329053741e-06,13,911,46,0.2826086956521739,0.014270032930845226,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0030334,regulation of cell migration,1.3698288697015932e-05,14,944,46,0.30434782608695654,0.014830508474576272,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0048513,animal organ development,1.9467850302839998e-05,23,3018,46,0.5,0.007620941020543406,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0022407,regulation of cell-cell adhesion,2.362681249946243e-05,8,493,21,0.38095238095238093,0.016227180527383367,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:2000145,regulation of cell motility,3.025205755560614e-05,14,1005,46,0.30434782608695654,0.013930348258706468,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0030335,positive regulation of cell migration,3.269973925516659e-05,11,544,46,0.2391304347826087,0.02022058823529412,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0030154,cell differentiation,4.5042243356230126e-05,24,4443,38,0.631578947368421,0.0054017555705604325,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0048869,cellular developmental process,4.525065290786395e-05,24,4444,38,0.631578947368421,0.0054005400540054005,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0051239,regulation of multicellular organismal process,4.779181474518969e-05,21,2923,42,0.5,0.007184399589462881,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0040012,regulation of locomotion,5.0007445336892076e-05,14,1046,46,0.30434782608695654,0.01338432122370937,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0040011,locomotion,5.158370293587209e-05,15,1236,46,0.32608695652173914,0.012135922330097087,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:2000147,positive regulation of cell motility,5.3674838992149946e-05,11,571,46,0.2391304347826087,0.01926444833625219,breast_xenium_visium,whole_genome_bg
+KEGG,KEGG:05219,Bladder cancer,6.224469442007382e-05,5,41,38,0.13157894736842105,0.12195121951219512,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0040017,positive regulation of locomotion,6.991426769695684e-05,11,586,46,0.2391304347826087,0.01877133105802048,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0009653,anatomical structure morphogenesis,8.740546496682044e-05,21,2699,46,0.45652173913043476,0.007780659503519822,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0009888,tissue development,0.00015643822167153842,18,2014,46,0.391304347826087,0.00893743793445879,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0048870,cell motility,0.00017735126399048606,17,1794,46,0.3695652173913043,0.00947603121516165,breast_xenium_visium,whole_genome_bg
+REAC,REAC:R-HSA-9006931,Signaling by Nuclear Receptors,0.00023123166542928143,9,289,40,0.225,0.031141868512110725,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0031099,regeneration,0.0002855550753504306,6,165,32,0.1875,0.03636363636363636,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0031252,cell leading edge,0.0003104337764963033,8,423,43,0.18604651162790697,0.018912529550827423,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0071944,cell periphery,0.0004161876517699104,29,6263,47,0.6170212765957447,0.004630368832827718,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0098609,cell-cell adhesion,0.00044436767390618285,9,965,22,0.4090909090909091,0.00932642487046632,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0006915,apoptotic process,0.0005574531676474294,16,1898,42,0.38095238095238093,0.008429926238145416,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0032501,multicellular organismal process,0.0006318925179206451,32,7337,44,0.7272727272727273,0.0043614556358184545,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0022408,negative regulation of cell-cell adhesion,0.0008115244181222907,6,197,32,0.1875,0.030456852791878174,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0016477,cell migration,0.000851100456020909,15,1532,46,0.32608695652173914,0.0097911227154047,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0012501,programmed cell death,0.0008518144619195777,16,1958,42,0.38095238095238093,0.008171603677221655,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0008219,cell death,0.0008757485777807411,16,1962,42,0.38095238095238093,0.00815494393476045,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0031012,extracellular matrix,0.00100777882425408,6,339,29,0.20689655172413793,0.017699115044247787,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0030312,external encapsulating structure,0.0010249633587442858,6,340,29,0.20689655172413793,0.01764705882352941,breast_xenium_visium,whole_genome_bg
+REAC,REAC:R-HSA-9029558,NR1H2 & NR1H3 regulate gene expression linked to lipogenesis,0.0015673891686804038,2,8,5,0.4,0.25,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0048856,anatomical structure development,0.001741471257536764,29,5948,46,0.6304347826086957,0.0048755884330867515,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0015629,actin cytoskeleton,0.001806727757520594,8,537,43,0.18604651162790697,0.0148975791433892,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0071674,mononuclear cell migration,0.002030008664956972,6,223,33,0.18181818181818182,0.026905829596412557,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0022008,neurogenesis,0.0020693277333441533,13,1769,33,0.3939393939393939,0.007348784624081402,breast_xenium_visium,whole_genome_bg
+GO:MF,GO:0003779,actin binding,0.002549589234836186,8,447,45,0.17777777777777778,0.017897091722595078,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0060429,epithelium development,0.0026948871064530226,13,1234,46,0.2826086956521739,0.01053484602917342,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0030054,cell junction,0.0027920435879297584,16,2370,46,0.34782608695652173,0.006751054852320675,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0042221,response to chemical,0.0032988361609246025,23,3863,47,0.48936170212765956,0.00595392182241781,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0009925,basal plasma membrane,0.0037004558034962384,5,290,25,0.2,0.017241379310344827,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0009605,response to external stimulus,0.0037036565471002384,18,2427,47,0.3829787234042553,0.007416563658838072,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0005938,cell cortex,0.004098157673058361,6,316,39,0.15384615384615385,0.0189873417721519,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0001725,stress fiber,0.004701771482020978,4,83,43,0.09302325581395349,0.04819277108433735,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0097517,contractile actin filament bundle,0.004701771482020978,4,83,43,0.09302325581395349,0.04819277108433735,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0045178,basal part of cell,0.005020494346409637,5,309,25,0.2,0.016181229773462782,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0006950,response to stress,0.005727026907872457,23,3984,47,0.48936170212765956,0.0057730923694779114,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0016328,lateral plasma membrane,0.006456036866325057,3,66,20,0.15,0.045454545454545456,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0042641,actomyosin,0.006473689094281409,4,90,43,0.09302325581395349,0.044444444444444446,breast_xenium_visium,whole_genome_bg
+REAC,REAC:R-HSA-1266738,Developmental Biology,0.006520487541681245,14,1394,33,0.42424242424242425,0.010043041606886656,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0032432,actin filament bundle,0.006761810739623423,4,91,43,0.09302325581395349,0.04395604395604396,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0034097,response to cytokine,0.0067824988330632534,10,979,36,0.2777777777777778,0.010214504596527068,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:1901652,response to peptide,0.007695731929066536,10,993,36,0.2777777777777778,0.010070493454179255,breast_xenium_visium,whole_genome_bg
+GO:MF,GO:0005515,protein binding,0.008030573906861578,46,15082,47,0.9787234042553191,0.003049993369579631,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0061564,axon development,0.008483385803032099,7,513,29,0.2413793103448276,0.01364522417153996,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0030182,neuron differentiation,0.009152003347804801,11,1444,32,0.34375,0.007617728531855956,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0043066,negative regulation of apoptotic process,0.00940988652823035,10,856,42,0.23809523809523808,0.011682242990654205,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0030027,lamellipodium,0.009431686018248696,5,199,43,0.11627906976744186,0.02512562814070352,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0065008,regulation of biological quality,0.009685819002458193,18,2963,42,0.42857142857142855,0.006074924063449207,breast_xenium_visium,whole_genome_bg
+REAC,REAC:R-HSA-8939211,ESR-mediated signaling,0.010256150663949701,6,215,32,0.1875,0.027906976744186046,breast_xenium_visium,whole_genome_bg
+KEGG,KEGG:04152,AMPK signaling pathway,0.01078552093766701,3,121,8,0.375,0.024793388429752067,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0043292,contractile muscle fiber,0.011579494105816079,5,250,36,0.1388888888888889,0.02,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0005856,cytoskeleton,0.011587728866212952,15,2544,43,0.3488372093023256,0.00589622641509434,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0045785,positive regulation of cell adhesion,0.011592568965984575,7,483,32,0.21875,0.014492753623188406,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0043069,negative regulation of programmed cell death,0.01287312097116683,10,887,42,0.23809523809523808,0.011273957158962795,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0048522,positive regulation of cellular process,0.01364094421112539,27,5739,46,0.5869565217391305,0.004704652378463147,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0032502,developmental process,0.01418168044829169,29,6535,46,0.6304347826086957,0.004437643458301454,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0098590,plasma membrane region,0.01431156060404318,8,1303,25,0.32,0.0061396776669224865,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:1901700,response to oxygen-containing compound,0.01435763748435155,14,1632,47,0.2978723404255319,0.00857843137254902,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0031410,cytoplasmic vesicle,0.014573846572295506,14,2548,39,0.358974358974359,0.005494505494505495,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0048518,positive regulation of biological process,0.014824767707358098,28,6150,46,0.6086956521739131,0.0045528455284552845,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0097708,intracellular vesicle,0.0150886150760429,14,2556,39,0.358974358974359,0.005477308294209703,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0048699,generation of neurons,0.015258897677093987,11,1523,32,0.34375,0.007222586999343401,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0048468,cell development,0.016258968388268395,16,2842,37,0.43243243243243246,0.005629838142153413,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0031594,neuromuscular junction,0.016996348297585614,2,78,4,0.5,0.02564102564102564,breast_xenium_visium,whole_genome_bg
+KEGG,KEGG:04936,Alcoholic liver disease,0.017338246704325263,3,142,8,0.375,0.02112676056338028,breast_xenium_visium,whole_genome_bg
+KEGG,KEGG:05205,Proteoglycans in cancer,0.01751686791750429,6,204,38,0.15789473684210525,0.029411764705882353,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0009628,response to abiotic stimulus,0.017708731996992976,11,1108,43,0.2558139534883721,0.009927797833935019,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0042127,regulation of cell population proliferation,0.019780051467027736,13,1639,42,0.30952380952380953,0.007931665649786455,breast_xenium_visium,whole_genome_bg
+REAC,REAC:R-HSA-9018519,Estrogen-dependent gene expression,0.020041027298032633,5,147,32,0.15625,0.034013605442176874,breast_xenium_visium,whole_genome_bg
+KEGG,KEGG:05216,Thyroid cancer,0.020514423900407117,3,37,30,0.1,0.08108108108108109,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0038143,ERBB3:ERBB2 complex,0.020993738617421907,1,2,1,1.0,0.5,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0005882,intermediate filament,0.021619961963128532,4,215,25,0.16,0.018604651162790697,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0072359,circulatory system development,0.022216912678347283,11,1135,43,0.2558139534883721,0.009691629955947136,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0009719,response to endogenous stimulus,0.023336822052316512,13,1467,47,0.2765957446808511,0.008861622358554875,breast_xenium_visium,whole_genome_bg
+KEGG,KEGG:05213,Endometrial cancer,0.02402888101741496,3,59,20,0.15,0.05084745762711865,breast_xenium_visium,whole_genome_bg
+KEGG,KEGG:04382,Cornified envelope formation,0.024030724685103602,5,215,25,0.2,0.023255813953488372,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0007275,multicellular organism development,0.024172147689103852,23,4690,44,0.5227272727272727,0.004904051172707889,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0030855,epithelial cell differentiation,0.0244041373692043,7,745,24,0.2916666666666667,0.009395973154362415,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0071345,cellular response to cytokine stimulus,0.024960110268138033,9,891,36,0.25,0.010101010101010102,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0042981,regulation of apoptotic process,0.026202300902928247,12,1426,42,0.2857142857142857,0.008415147265077139,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0030863,cortical cytoskeleton,0.027350065996613982,3,107,20,0.15,0.028037383177570093,breast_xenium_visium,whole_genome_bg
+KEGG,KEGG:05200,Pathways in cancer,0.02742117679310277,9,530,38,0.23684210526315788,0.016981132075471698,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0044331,cell-cell adhesion mediated by cadherin,0.029057765582768878,3,53,20,0.15,0.05660377358490566,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0048812,neuron projection morphogenesis,0.030165168089598272,7,648,28,0.25,0.010802469135802469,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0001666,response to hypoxia,0.031139667162544404,6,278,42,0.14285714285714285,0.02158273381294964,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0005911,cell-cell junction,0.031297334898763844,5,522,22,0.22727272727272727,0.009578544061302681,breast_xenium_visium,whole_genome_bg
+KEGG,KEGG:01212,Fatty acid metabolism,0.03221595564669006,2,57,5,0.4,0.03508771929824561,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0001944,vasculature development,0.03235875662395285,9,758,43,0.20930232558139536,0.011873350923482849,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0043067,regulation of programmed cell death,0.03482205163169597,12,1467,42,0.2857142857142857,0.0081799591002045,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0120039,plasma membrane bounded cell projection morphogenesis,0.035301707226823284,7,664,28,0.25,0.010542168674698794,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0040007,growth,0.03567333452630761,7,920,21,0.3333333333333333,0.007608695652173913,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0048732,gland development,0.036875602317431457,6,425,29,0.20689655172413793,0.01411764705882353,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0048858,cell projection morphogenesis,0.037048134149256735,7,669,28,0.25,0.01046337817638266,breast_xenium_visium,whole_genome_bg
+REAC,REAC:R-HSA-75105,Fatty acyl-CoA biosynthesis,0.03708617476925131,2,37,5,0.4,0.05405405405405406,breast_xenium_visium,whole_genome_bg
+GO:MF,GO:0005522,profilin binding,0.03727135696490827,2,10,28,0.07142857142857142,0.2,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0045111,intermediate filament cytoskeleton,0.03746717277534556,4,248,25,0.16,0.016129032258064516,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:1990138,neuron projection extension,0.03772950005313272,4,169,21,0.19047619047619047,0.023668639053254437,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0044419,biological process involved in interspecies interaction between organisms,0.037836467247182225,14,1777,47,0.2978723404255319,0.007878446820483961,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0050678,regulation of epithelial cell proliferation,0.03843913929708899,5,356,21,0.23809523809523808,0.014044943820224719,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0036293,response to decreased oxygen levels,0.0395111655957372,6,290,42,0.14285714285714285,0.020689655172413793,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0038160,CXCL12-activated CXCR4 signaling pathway,0.041275503305308305,2,5,33,0.06060606060606061,0.4,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:2000047,regulation of cell-cell adhesion mediated by cadherin,0.041517650045768704,2,23,7,0.2857142857142857,0.08695652173913043,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0007409,axonogenesis,0.042100321871360945,6,452,28,0.21428571428571427,0.01327433628318584,breast_xenium_visium,whole_genome_bg
+REAC,REAC:R-HSA-2426168,Activation of gene expression by SREBF (SREBP),0.04341064892863436,2,40,5,0.4,0.05,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0005604,basement membrane,0.04572323496512156,3,97,26,0.11538461538461539,0.030927835051546393,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0050900,leukocyte migration,0.04689162935541943,6,386,33,0.18181818181818182,0.015544041450777202,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0030029,actin filament-based process,0.047339739464045,9,816,42,0.21428571428571427,0.011029411764705883,breast_xenium_visium,whole_genome_bg
+GO:BP,GO:0003008,system process,0.047363556803989244,15,2290,43,0.3488372093023256,0.006550218340611353,breast_xenium_visium,whole_genome_bg
+GO:CC,GO:0043296,apical junction complex,0.04891509896802916,4,159,41,0.0975609756097561,0.025157232704402517,breast_xenium_visium,whole_genome_bg

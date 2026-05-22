@@ -1,0 +1,106 @@
+source,native,name,p_value,intersection_size,term_size,query_size,precision,recall,panel,background
+GO:CC,GO:0005615,extracellular space,8.173651839418641e-15,31,3252,43,0.7209302325581395,0.009532595325953259,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0005576,extracellular region,1.2267803243843825e-13,33,4249,43,0.7674418604651163,0.007766533301953401,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0070062,extracellular exosome,1.5044482072563576e-13,25,2111,41,0.6097560975609756,0.011842728564661297,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:1903561,extracellular vesicle,2.096593995286519e-13,25,2141,41,0.6097560975609756,0.011676786548341896,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0065010,extracellular membrane-bounded organelle,2.1197331868191848e-13,25,2142,41,0.6097560975609756,0.011671335200746966,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0043230,extracellular organelle,2.1197331868191848e-13,25,2142,41,0.6097560975609756,0.011671335200746966,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0031982,vesicle,5.993854448961909e-09,27,4032,41,0.6585365853658537,0.006696428571428571,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0098552,side of membrane,1.2685240879607605e-07,14,731,50,0.28,0.019151846785225718,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0016328,lateral plasma membrane,1.6471224214903277e-06,5,66,23,0.21739130434782608,0.07575757575757576,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0045177,apical part of cell,2.8985570163234976e-06,11,510,49,0.22448979591836735,0.021568627450980392,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0042221,response to chemical,1.4320390054416189e-05,20,3863,30,0.6666666666666666,0.0051773233238415735,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0070887,cellular response to chemical stimulus,1.650478714513713e-05,15,2199,27,0.5555555555555556,0.0068212824010914054,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0009605,response to external stimulus,1.7255670308136078e-05,19,2427,39,0.48717948717948717,0.007828594973217964,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0009986,cell surface,1.7678997995884598e-05,13,904,50,0.26,0.014380530973451327,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0071944,cell periphery,3.919604790901625e-05,32,6263,50,0.64,0.0051093725051892065,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0009897,external side of plasma membrane,5.78111636145531e-05,9,397,50,0.18,0.022670025188916875,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0072359,circulatory system development,0.0003704401520501888,12,1135,36,0.3333333333333333,0.010572687224669603,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0045121,membrane raft,0.0005253113023029779,7,289,46,0.15217391304347827,0.02422145328719723,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0098857,membrane microdomain,0.0005498676742311365,7,291,46,0.15217391304347827,0.024054982817869417,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0030155,regulation of cell adhesion,0.0005559270675789119,9,780,27,0.3333333333333333,0.011538461538461539,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0001944,vasculature development,0.000647343664355044,10,758,36,0.2777777777777778,0.013192612137203167,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0005886,plasma membrane,0.0007342521050561191,29,5906,50,0.58,0.004910260751777853,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0016324,apical plasma membrane,0.0008429786907338286,8,416,49,0.16326530612244897,0.019230769230769232,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0009719,response to endogenous stimulus,0.0008834954884446381,12,1467,31,0.3870967741935484,0.0081799591002045,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0007155,cell adhesion,0.001081102377231031,13,1512,36,0.3611111111111111,0.008597883597883597,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0016477,cell migration,0.0012558897807613875,13,1532,36,0.3611111111111111,0.008485639686684074,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0098590,plasma membrane region,0.0014467330911448954,7,1303,14,0.5,0.005372217958557176,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0001568,blood vessel development,0.0015711739131918014,9,727,32,0.28125,0.012379642365887207,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0051716,cellular response to stimulus,0.0016063644927968507,25,7425,32,0.78125,0.003367003367003367,colon_xenium_cosmx,whole_genome_bg
+GO:MF,GO:0018820,cyanamide hydratase activity,0.0016466884479197524,2,2,40,0.05,1.0,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0016049,cell growth,0.001716651431727907,7,478,25,0.28,0.014644351464435146,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:1901700,response to oxygen-containing compound,0.0017687226843769795,13,1632,35,0.37142857142857144,0.007965686274509803,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0030141,secretory granule,0.0021099243468669393,9,906,35,0.2571428571428571,0.009933774834437087,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0061045,negative regulation of wound healing,0.002409299324730495,4,71,25,0.16,0.056338028169014086,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0007162,negative regulation of cell adhesion,0.002414964071993622,6,287,27,0.2222222222222222,0.020905923344947737,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0016600,flotillin complex,0.0024521176813497073,2,9,12,0.16666666666666666,0.2222222222222222,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0009925,basal plasma membrane,0.0026132145790711,5,290,23,0.21739130434782608,0.017241379310344827,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0044419,biological process involved in interspecies interaction between organisms,0.0030826624366816,14,1777,39,0.358974358974359,0.007878446820483961,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0045178,basal part of cell,0.003550478386771479,5,309,23,0.21739130434782608,0.016181229773462782,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0050896,response to stimulus,0.0039330856637704555,38,9051,50,0.76,0.004198431112584245,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0016323,basolateral plasma membrane,0.004228080314060408,4,259,14,0.2857142857142857,0.015444015444015444,colon_xenium_cosmx,whole_genome_bg
+GO:MF,GO:0019899,enzyme binding,0.004896171739414323,14,2060,38,0.3684210526315789,0.006796116504854369,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0071680,response to indole-3-methanol,0.00499746109473598,2,5,12,0.16666666666666666,0.4,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0071681,cellular response to indole-3-methanol,0.00499746109473598,2,5,12,0.16666666666666666,0.4,colon_xenium_cosmx,whole_genome_bg
+GO:MF,GO:0043394,proteoglycan binding,0.00501046613010783,3,36,25,0.12,0.08333333333333333,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0007154,cell communication,0.005172958123081607,23,6598,32,0.71875,0.003485904819642316,colon_xenium_cosmx,whole_genome_bg
+REAC,REAC:R-HSA-9823730,Formation of definitive endoderm,0.005201672976744837,3,15,36,0.08333333333333333,0.2,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0019897,extrinsic component of plasma membrane,0.00521664642464417,4,106,34,0.11764705882352941,0.03773584905660377,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0044331,cell-cell adhesion mediated by cadherin,0.005498818341974974,3,53,12,0.25,0.05660377358490566,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0051707,response to other organism,0.006236136248970903,13,1610,39,0.3333333333333333,0.008074534161490683,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0043207,response to external biotic stimulus,0.0063660218612438466,13,1613,39,0.3333333333333333,0.008059516429014259,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0043408,regulation of MAPK cascade,0.006449118865966661,8,638,32,0.25,0.012539184952978056,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0005788,endoplasmic reticulum lumen,0.006675858457753267,5,322,25,0.2,0.015527950310559006,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0010647,positive regulation of cell communication,0.006707229027013066,13,1778,36,0.3611111111111111,0.007311586051743532,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0023056,positive regulation of signaling,0.006749219945670198,13,1779,36,0.3611111111111111,0.007307476110174255,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0043410,positive regulation of MAPK cascade,0.007047740306904806,7,450,32,0.21875,0.015555555555555555,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0048870,cell motility,0.007407874313859897,13,1794,36,0.3611111111111111,0.007246376811594203,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:1903035,negative regulation of response to wounding,0.007423457778167798,4,94,25,0.16,0.0425531914893617,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0009607,response to biotic stimulus,0.008288387320357986,13,1652,39,0.3333333333333333,0.007869249394673124,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0099503,secretory vesicle,0.008792233186763913,9,1084,35,0.2571428571428571,0.008302583025830259,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0001558,regulation of cell growth,0.009924073621161855,6,399,25,0.24,0.015037593984962405,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0016327,apicolateral plasma membrane,0.01171512354958755,2,23,10,0.2,0.08695652173913043,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0071634,regulation of transforming growth factor beta production,0.012581343333704767,3,30,27,0.1111111111111111,0.1,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0048856,anatomical structure development,0.012739463483238182,28,5948,47,0.5957446808510638,0.004707464694014795,colon_xenium_cosmx,whole_genome_bg
+REAC,REAC:R-HSA-8876493,InlA-mediated entry of Listeria monocytogenes into host cells,0.014339100841700718,2,9,12,0.16666666666666666,0.2222222222222222,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0071604,transforming growth factor beta production,0.01686386284004146,3,33,27,0.1111111111111111,0.09090909090909091,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0061041,regulation of wound healing,0.0169286194084682,5,129,47,0.10638297872340426,0.03875968992248062,colon_xenium_cosmx,whole_genome_bg
+KEGG,KEGG:04518,Integrin signaling,0.017592502228456014,4,154,18,0.2222222222222222,0.025974025974025976,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0043296,apical junction complex,0.019313072199824425,3,159,12,0.25,0.018867924528301886,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0000165,MAPK cascade,0.020871692580415064,8,749,32,0.25,0.010680907877169559,colon_xenium_cosmx,whole_genome_bg
+REAC,REAC:R-HSA-351906,Apoptotic cleavage of cell adhesion  proteins,0.021880544936120117,2,11,12,0.16666666666666666,0.18181818181818182,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0023052,signaling,0.02208125456021363,24,6558,36,0.6666666666666666,0.0036596523330283625,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0005911,cell-cell junction,0.022702461037235985,6,522,32,0.1875,0.011494252873563218,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0071345,cellular response to cytokine stimulus,0.024128106592533432,9,891,36,0.25,0.010101010101010102,colon_xenium_cosmx,whole_genome_bg
+GO:MF,GO:0004064,arylesterase activity,0.02457670923419098,2,6,40,0.05,0.3333333333333333,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0032502,developmental process,0.02514690723932481,29,6535,47,0.6170212765957447,0.004437643458301454,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0016020,membrane,0.02567799892461645,36,9975,50,0.72,0.0036090225563909775,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0072182,regulation of nephron tubule epithelial cell differentiation,0.026528438714370228,2,13,10,0.2,0.15384615384615385,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0031410,cytoplasmic vesicle,0.027008141300991266,13,2548,36,0.3611111111111111,0.00510204081632653,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0030193,regulation of blood coagulation,0.02705011486067654,4,68,47,0.0851063829787234,0.058823529411764705,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0006915,apoptotic process,0.027187438603291158,13,1898,38,0.34210526315789475,0.00684931506849315,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0019898,extrinsic component of membrane,0.027324259795542805,4,162,34,0.11764705882352941,0.024691358024691357,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0097708,intracellular vesicle,0.02789639073294684,13,2556,36,0.3611111111111111,0.005086071987480438,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0051049,regulation of transport,0.028085092466378508,12,1566,39,0.3076923076923077,0.007662835249042145,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0023051,regulation of signaling,0.029991250987355587,17,3473,36,0.4722222222222222,0.0048949035416066804,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:1900046,regulation of hemostasis,0.030355369800755407,4,70,47,0.0851063829787234,0.05714285714285714,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0010646,regulation of cell communication,0.03082143811219114,17,3480,36,0.4722222222222222,0.004885057471264368,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0050793,regulation of developmental process,0.03099933492832734,12,2431,27,0.4444444444444444,0.0049362402303578775,colon_xenium_cosmx,whole_genome_bg
+GO:CC,GO:0016342,catenin complex,0.03146416573637335,2,31,12,0.16666666666666666,0.06451612903225806,colon_xenium_cosmx,whole_genome_bg
+REAC,REAC:R-HSA-216083,Integrin cell surface interactions,0.03511532685055877,4,84,32,0.125,0.047619047619047616,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0072160,nephron tubule epithelial cell differentiation,0.03569319624143753,2,15,10,0.2,0.13333333333333333,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0009628,response to abiotic stimulus,0.03574527255354552,7,1108,18,0.3888888888888889,0.00631768953068592,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0009410,response to xenobiotic stimulus,0.03646361502466794,5,396,19,0.2631578947368421,0.012626262626262626,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0012501,programmed cell death,0.03797721110835668,13,1958,38,0.34210526315789475,0.006639427987742594,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0030334,regulation of cell migration,0.03818697601087597,9,944,36,0.25,0.009533898305084746,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0008219,cell death,0.03881540495937699,13,1962,38,0.34210526315789475,0.006625891946992864,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0032879,regulation of localization,0.04092601816295878,13,1914,39,0.3333333333333333,0.006792058516196447,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0050818,regulation of coagulation,0.04205952633234308,4,76,47,0.0851063829787234,0.05263157894736842,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0003013,circulatory system process,0.04320941167085602,7,595,32,0.21875,0.011764705882352941,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0035295,tube development,0.043449949747191366,8,1094,25,0.32,0.007312614259597806,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0019058,viral life cycle,0.04387636051736057,6,290,43,0.13953488372093023,0.020689655172413793,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:2000696,regulation of epithelial cell differentiation involved in kidney development,0.04620767315163147,2,17,10,0.2,0.11764705882352941,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0030195,negative regulation of blood coagulation,0.047104671334054625,3,50,25,0.12,0.06,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0009725,response to hormone,0.04834541913265219,8,904,30,0.26666666666666666,0.008849557522123894,colon_xenium_cosmx,whole_genome_bg
+GO:BP,GO:0050865,regulation of cell activation,0.04841274757068719,7,627,31,0.22580645161290322,0.011164274322169059,colon_xenium_cosmx,whole_genome_bg

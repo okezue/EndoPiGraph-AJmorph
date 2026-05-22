@@ -1,0 +1,86 @@
+source,native,name,p_value,intersection_size,term_size,query_size,precision,recall,panel,background
+GO:CC,GO:0043005,neuron projection,2.698952246953387e-07,14,1130,41,0.34146341463414637,0.012389380530973451,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0120025,plasma membrane bounded cell projection,6.992665731463637e-07,13,2186,22,0.5909090909090909,0.005946935041171089,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0042995,cell projection,1.248178465366732e-06,13,2292,22,0.5909090909090909,0.005671902268760907,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0045202,synapse,4.315109462394264e-06,16,1570,49,0.32653061224489793,0.01019108280254777,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0098793,presynapse,1.0058570693787516e-05,10,631,41,0.24390243902439024,0.01584786053882726,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0030424,axon,1.458414941337911e-05,7,566,18,0.3888888888888889,0.012367491166077738,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0048731,system development,1.9158755663678724e-05,22,3806,41,0.5365853658536586,0.005780346820809248,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0030054,cell junction,2.783284815878769e-05,11,2153,20,0.55,0.005109150023223409,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0007275,multicellular organism development,5.159579415463733e-05,24,4535,43,0.5581395348837209,0.005292171995589856,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0061200,clathrin-sculpted gamma-aminobutyric acid transport vesicle,5.228629148502588e-05,2,2,13,0.15384615384615385,1.0,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0061202,clathrin-sculpted gamma-aminobutyric acid transport vesicle membrane,5.228629148502588e-05,2,2,13,0.15384615384615385,1.0,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0007268,chemical synaptic transmission,6.619586040072309e-05,8,771,19,0.42105263157894735,0.010376134889753566,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0098916,anterograde trans-synaptic signaling,6.619586040072309e-05,8,771,19,0.42105263157894735,0.010376134889753566,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0099537,trans-synaptic signaling,7.240441567708338e-05,8,780,19,0.42105263157894735,0.010256410256410256,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0099536,synaptic signaling,7.383168683442049e-05,11,808,41,0.2682926829268293,0.013613861386138614,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0065008,regulation of biological quality,0.00010897917286400221,12,2745,19,0.631578947368421,0.004371584699453552,brain_xenium_stereo,whole_genome_bg
+GO:MF,GO:0004351,glutamate decarboxylase activity,0.00011857331635713205,2,2,13,0.15384615384615385,1.0,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0022008,neurogenesis,0.0003585127877068993,14,1685,41,0.34146341463414637,0.00830860534124629,brain_xenium_stereo,whole_genome_bg
+REAC,REAC:R-MMU-888568,GABA synthesis,0.0005198858270417063,2,2,13,0.15384615384615385,1.0,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0031410,cytoplasmic vesicle,0.0008059336334754315,9,1807,20,0.45,0.004980630879911455,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0097708,intracellular vesicle,0.0008321257525724149,9,1814,20,0.45,0.004961411245865491,brain_xenium_stereo,whole_genome_bg
+GO:MF,GO:0140788,L-glutamate uniporter activity,0.0008660550333317714,2,3,20,0.1,0.6666666666666666,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0048666,neuron development,0.000868120699623244,11,1093,39,0.28205128205128205,0.010064043915827997,brain_xenium_stereo,whole_genome_bg
+GO:MF,GO:0099534,calcium ion binding involved in regulation of presynaptic cytosolic calcium ion concentration,0.0009045015799037633,2,2,35,0.05714285714285714,1.0,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0031982,vesicle,0.0013065890827291282,9,1916,20,0.45,0.004697286012526096,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0060198,clathrin-sculpted vesicle,0.001461483038284802,2,8,13,0.15384615384615385,0.25,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0097450,astrocyte end-foot,0.0016559529178078142,2,10,11,0.18181818181818182,0.2,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0007267,cell-cell signaling,0.0016995627978735183,8,1179,19,0.42105263157894735,0.006785411365564037,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0048699,generation of neurons,0.0017193510841116161,12,1437,39,0.3076923076923077,0.008350730688935281,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0010001,glial cell differentiation,0.0019011004725454645,4,255,9,0.4444444444444444,0.01568627450980392,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0001649,osteoblast differentiation,0.0027038445621969586,6,216,43,0.13953488372093023,0.027777777777777776,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0007399,nervous system development,0.0027475666384097117,15,2310,41,0.36585365853658536,0.006493506493506494,brain_xenium_stereo,whole_genome_bg
+GO:MF,GO:0022810,membrane potential driven uniporter activity,0.0028839039859560145,2,5,20,0.1,0.4,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0050804,modulation of chemical synaptic transmission,0.00328934228176665,8,600,37,0.21621621621621623,0.013333333333333334,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0099177,regulation of trans-synaptic signaling,0.0033302246721722993,8,601,37,0.21621621621621623,0.013311148086522463,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0048708,astrocyte differentiation,0.0037290013948072737,3,79,9,0.3333333333333333,0.0379746835443038,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0044297,cell body,0.004294619555477925,5,499,18,0.2777777777777778,0.01002004008016032,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0030425,dendrite,0.004341172035897197,7,530,41,0.17073170731707318,0.013207547169811321,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0097447,dendritic tree,0.004393973008463863,7,531,41,0.17073170731707318,0.013182674199623353,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0048856,anatomical structure development,0.004997853857849165,24,5738,43,0.5581395348837209,0.004182642035552457,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0043679,axon terminus,0.005163314868838029,4,104,41,0.0975609756097561,0.038461538461538464,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0042063,gliogenesis,0.005688483398369955,4,336,9,0.4444444444444444,0.011904761904761904,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0097449,astrocyte projection,0.006279261493131002,2,19,11,0.18181818181818182,0.10526315789473684,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0030182,neuron differentiation,0.006995015257035695,11,1354,39,0.28205128205128205,0.00812407680945347,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0032502,developmental process,0.007539775988882674,25,6327,43,0.5813953488372093,0.003951319740793425,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0030659,cytoplasmic vesicle membrane,0.008849647567890724,6,871,20,0.3,0.006888633754305396,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0044306,neuron projection terminus,0.009054149059807715,4,120,41,0.0975609756097561,0.03333333333333333,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0012506,vesicle membrane,0.009493304033448028,6,882,20,0.3,0.006802721088435374,brain_xenium_stereo,whole_genome_bg
+REAC,REAC:R-MMU-112310,Neurotransmitter release cycle,0.009818952253879241,3,46,13,0.23076923076923078,0.06521739130434782,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0060077,inhibitory synapse,0.009882919438843443,2,20,13,0.15384615384615385,0.1,brain_xenium_stereo,whole_genome_bg
+GO:MF,GO:0005509,calcium ion binding,0.011210356193418853,8,676,43,0.18604651162790697,0.011834319526627219,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0007417,central nervous system development,0.012625250647371371,8,943,29,0.27586206896551724,0.008483563096500531,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0150034,distal axon,0.013185467165810644,5,261,41,0.12195121951219512,0.019157088122605363,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0048786,presynaptic active zone,0.014296162934800348,2,85,4,0.5,0.023529411764705882,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0008283,cell population proliferation,0.014296451274506374,13,1868,43,0.3023255813953488,0.006959314775160599,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0007610,behavior,0.01500312238340254,4,726,6,0.6666666666666666,0.005509641873278237,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0031175,neuron projection development,0.01540213118930668,9,931,39,0.23076923076923078,0.00966702470461869,brain_xenium_stereo,whole_genome_bg
+GO:MF,GO:0015292,uniporter activity,0.01581296620819941,2,11,20,0.1,0.18181818181818182,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0030136,clathrin-coated vesicle,0.01689314601902395,3,135,16,0.1875,0.022222222222222223,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0006836,neurotransmitter transport,0.0186386587424566,4,184,20,0.2,0.021739130434782608,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0098588,bounding membrane of organelle,0.020980458513301055,6,1687,13,0.46153846153846156,0.0035566093657379964,brain_xenium_stereo,whole_genome_bg
+KEGG,KEGG:00430,Taurine and hypotaurine metabolism,0.021051797177858756,2,22,13,0.15384615384615385,0.09090909090909091,brain_xenium_stereo,whole_genome_bg
+GO:MF,GO:0005313,L-glutamate transmembrane transporter activity,0.022402780905513436,2,13,20,0.1,0.15384615384615385,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0048009,insulin-like growth factor receptor signaling pathway,0.02293408148555899,4,94,40,0.1,0.0425531914893617,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0048710,regulation of astrocyte differentiation,0.02674607337511911,2,28,6,0.3333333333333333,0.07142857142857142,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0048732,gland development,0.03065726602875853,6,452,32,0.1875,0.01327433628318584,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0007626,locomotory behavior,0.03074384899170702,3,256,6,0.5,0.01171875,brain_xenium_stereo,whole_genome_bg
+KEGG,KEGG:00650,Butanoate metabolism,0.03187667898638403,2,27,13,0.15384615384615385,0.07407407407407407,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0071944,cell periphery,0.03195677258188348,14,6371,22,0.6363636363636364,0.002197457228064668,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0032501,multicellular organismal process,0.03351791433994516,23,8009,34,0.6764705882352942,0.002871769259582969,brain_xenium_stereo,whole_genome_bg
+GO:MF,GO:0008068,extracellularly glutamate-gated chloride channel activity,0.03574073385735516,1,2,1,1.0,0.5,brain_xenium_stereo,whole_genome_bg
+GO:MF,GO:0140787,phosphate ion uniporter activity,0.03574073385735516,1,2,1,1.0,0.5,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0036477,somatodendritic compartment,0.03632278217330266,7,743,41,0.17073170731707318,0.009421265141318977,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0005737,cytoplasm,0.03723045043972566,18,10727,22,0.8181818181818182,0.001678008762934651,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0097386,glial cell projection,0.03776450326432499,2,46,11,0.18181818181818182,0.043478260869565216,brain_xenium_stereo,whole_genome_bg
+GO:MF,GO:0015172,acidic amino acid transmembrane transporter activity,0.03898160116492484,2,17,20,0.1,0.11764705882352941,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0008021,synaptic vesicle,0.039895041866906206,4,176,41,0.0975609756097561,0.022727272727272728,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0015800,acidic amino acid transport,0.04055869888330214,3,74,20,0.15,0.04054054054054054,brain_xenium_stereo,whole_genome_bg
+KEGG,KEGG:00410,beta-Alanine metabolism,0.044888646432636174,2,32,13,0.15384615384615385,0.0625,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0031090,organelle membrane,0.04526435637433117,8,3276,15,0.5333333333333333,0.002442002442002442,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0043025,neuronal cell body,0.04554979330825438,4,433,18,0.2222222222222222,0.009237875288683603,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0030135,coated vesicle,0.045695482703011235,3,189,16,0.1875,0.015873015873015872,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0042127,regulation of cell population proliferation,0.04914131534084254,9,1499,29,0.3103448275862069,0.00600400266844563,brain_xenium_stereo,whole_genome_bg
+GO:CC,GO:0070382,exocytic vesicle,0.04928103279006206,4,186,41,0.0975609756097561,0.021505376344086023,brain_xenium_stereo,whole_genome_bg
+GO:BP,GO:0045668,negative regulation of osteoblast differentiation,0.049958472527502296,3,63,25,0.12,0.047619047619047616,brain_xenium_stereo,whole_genome_bg
